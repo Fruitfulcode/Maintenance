@@ -5,13 +5,10 @@ function get_custom_login_code() {
 		   $error; 
 	$mt_options = mt_get_plugin_options(true);
     if (!is_array($wp_query->query_vars)) $wp_query->query_vars = array();	   
-	nocache_headers();
 	$error_message  = 	$user_login = $user_pass = $error = '';
 	$is_role_check  = false;
 	$class_login 	= "user-icon";
 	$class_password = "pass-icon";
-		  
-	header('Content-Type: '.get_bloginfo('html_type').'; charset='.get_bloginfo('charset'));
 	$using_cookie = false;
 	
 	if(isset($_POST['is_custom_login'])) {
@@ -60,19 +57,16 @@ function get_custom_login_code() {
 			}
 		}	
 	} 	
-	if (!isset($mt_options['503_enabled'])) {
-		header('HTTP/1.1 503 Service Temporarily Unavailable');
-		header('Status:  503 Service Temporarily Unavailable');
-		header('Retry-After: 3600');
-		header('X-Powered-By:');
-	}
 	
 		return array($error_message, $class_login, $class_password, $user_login);
 	}			
 
 	function add_custom_style() {
-			echo '<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext" media="all" />';
-			echo '<link rel="stylesheet" type="text/css" href="'. MAINTENANCE_URI .'load/style.css" media="all" />';
+		global $wp_styles;
+		wp_register_style('_opensans','http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext');
+		wp_register_style('_style', MAINTENANCE_URI .'load/style.css');
+		$wp_styles->do_items('_opensans');
+		$wp_styles->do_items('_style');
 	}	
 		
 	function add_custom_scripts() {
@@ -82,6 +76,7 @@ function get_custom_login_code() {
 		wp_register_script( '_backstretch', 	MAINTENANCE_URI  .'load/js/jquery.backstretch.min.js', 'jquery');
 		wp_register_script( '_frontend', 		MAINTENANCE_URI  .'load/js/jquery.frontend.js', 'jquery');
 		
+		$wp_scripts->do_items('jquery');
 		$wp_scripts->do_items('_placeholder');
 		$wp_scripts->do_items('_backstretch');		
 		$wp_scripts->do_items('_frontend');
@@ -151,13 +146,14 @@ function get_custom_login_code() {
 	function add_single_background() {
 		$out_ = '';
 		$mt_options  = mt_get_plugin_options(true);
+		
 		if (isset($mt_options['body_bg'])) {
 			if (!isset($mt_options['gallery_array'])) {
 			$out_ .= '<script type="text/javascript">';
-				$out_ .= '$(document).ready(function() { ';
+				$out_ .= 'jQuery(document).ready(function() { ';
 					if ($mt_options['body_bg'] != '') {
 							$bg    = wp_get_attachment_image_src( $mt_options['body_bg'], 'full');
-							$out_ .= '$.backstretch("'. $bg[0] .'");';
+							$out_ .= 'jQuery.backstretch("'. $bg[0] .'");';
 					}
 				
 				$out_ .= '});';
@@ -166,7 +162,7 @@ function get_custom_login_code() {
 		echo $out_;
 		}
 	}	
-	add_action ('add_single_backstretch_background', 'add_single_background');
+	add_action ('add_single_backstretch_background', 'add_single_background', 10);
 	
 	function get_footer_section() {
 		$out_ftext = '';
@@ -187,4 +183,15 @@ function get_custom_login_code() {
 				$out_login_form .= '<input type="hidden" name="is_custom_login" value="1" />';
 		$out_login_form .= '</form>';
 		echo $out_login_form;
+	}
+	
+	function get_headers_503() {
+		$mt_options  = mt_get_plugin_options(true);
+		nocache_headers();
+		if (isset($mt_options['503_enabled'])) {
+			header('HTTP/1.1 503 Service Temporarily Unavailable');
+			header('Status:  503 Service Temporarily Unavailable');
+			header('Retry-After: 3600');
+			header('X-Powered-By:');
+		}
 	}

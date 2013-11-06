@@ -1,4 +1,4 @@
- <?php
+<?php
 	add_action( 'init', 'maintenance_version_check' );
 	
 	function maintenance_version_check() {
@@ -24,3 +24,4 @@
 		update_option( 'maintenance_db_version', MAINTENANCE_DB_VERSION);
 		update_option( 'maintenance_options',  $options);
 	}
+?>	

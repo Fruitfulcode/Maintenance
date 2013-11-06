@@ -89,7 +89,7 @@ class maintenance {
 			add_action('admin_bar_menu', 'maintenace_add_toolbar_items', 100);
 			if (!is_admin() ) {
 				$mt_options = mt_get_plugin_options(true);
-				if (isset($mt_options['admin_bar_enabled'])) { 
+				if (isset($mt_options['admin_bar_enabled']) && is_user_logged_in()) { 
 					add_filter('show_admin_bar', '__return_true');  																	 
 				} else {
 					add_filter('show_admin_bar', '__return_false');  																	 

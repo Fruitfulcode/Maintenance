@@ -157,17 +157,17 @@
 	}
 	function load_maintenace_page() {
 		global $mt_options;
+		$vCurrDate = '';
 		$mt_options	= mt_get_plugin_options(true);
 			if (!is_user_logged_in()) {
 				if ($mt_options['state']) {
 					if ( isset($mt_options['expiry_date'])) {
 						if ($mt_options['expiry_date'] != '') {
-							
-							list( $date,$time ) 			 = explode( '|', $mt_options['expiry_date'] );
-							list( $month, $day, $year ) 	 = explode( '.', $date );
-							list( $hour, $minute, $second ) = explode ( ':', $time );
+							$vCurrDate =  DateTime::createFromFormat('d/m/Y', $mt_options['expiry_date']);
+							list( $date, $time ) = explode( ' ', current($vCurrDate));
+							list( $day, $month, $year ) 	 = explode(  '-', $date );
+							list( $hour, $minute, $second )  = explode ( ':', $time );
 							$timestamp = mktime( $hour, $minute, $second, $month, $day, $year );
-						
 							if ( time() > $timestamp ) {
 								return true;
 							}
@@ -221,8 +221,6 @@
 			'body_bg_color'   	=> '#333333',
 			'font_color' 		=> '#ffffff',
 			'admin_bar_enabled' => true,
-			'503_enabled'		=> true,
-			'roles_array' 		=> array(),
-			'gallery_array'		=> array()		
+			'503_enabled'		=> true
 		);
 	}

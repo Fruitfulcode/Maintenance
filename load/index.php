@@ -13,6 +13,7 @@
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
+	<?php get_headers_503(); ?>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -41,9 +42,10 @@
 			<?php do_action('footer_section'); ?>
 		</div>
 	</footer>
+	
 	<?php do_action('after_content_section'); ?>
 	<?php do_action('load_custom_scripts'); ?>
-	<?php do_action('add_single_backstretch_background'); ?>
 	<?php do_action('options_style'); ?>
+	<?php do_action('add_single_backstretch_background'); ?>
 </body>
 </html>
