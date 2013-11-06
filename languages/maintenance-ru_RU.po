@@ -1,0 +1,97 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: maintenance\n"
+"POT-Creation-Date: 2013-09-18 15:37+0200\n"
+"PO-Revision-Date: 2013-09-18 15:38+0200\n"
+"Last-Translator: \n"
+"Language-Team: fruitfulcode\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;_e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: C:\\wamp\\www\\yakovlev\\fruitfultheme\\wp-content"
+"\\plugins\\maintenance\n"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/page-options.php:44
+msgid "Save changes"
+msgstr "Сохранить"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/page-options.php:51
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/page-options.php:52
+msgid "Contact Support"
+msgstr "Обратиться в службу поддержки"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/page-options.php:54
+msgid "Premium version"
+msgstr "Премиум версия"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/page-options.php:55
+msgid "Check out our extended version of plugin with new features"
+msgstr "Проверьте возможности расширенной версии плагина"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/index.php:74
+msgid "Permission access denied!"
+msgstr "Доступ запрещен!"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/index.php:83
+msgid "The login and password you entered are incorrect!"
+msgstr "Вы ввели неверный логин или пароль!"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/index.php:118
+msgid "Your session has expired."
+msgstr "Ваша сессия истекла."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/index.php:207
+msgid "Sign In"
+msgstr "Войти"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/options.php:6
+msgid "Page title"
+msgstr "Заголовок страницы"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/options.php:7
+msgid "Website is under construction"
+msgstr "Сайт находится в стадии разработки"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/options.php:10
+msgid "Headline"
+msgstr "Заголовок"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/options.php:11
+msgid "Customer login"
+msgstr "Вход для клиентов"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/options.php:14
+msgid "Description"
+msgstr "Описание"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/options.php:15
+msgid "Please login to see website"
+msgstr "Пожалуйста авторезируйтесь"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/options.php:17
+msgid "Logo"
+msgstr "Логотип"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/options.php:22
+msgid "Background image"
+msgstr "Фоновое изображение"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/options.php:27
+msgid "Background color"
+msgstr "Цвет фона"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/options.php:31
+msgid "Show admin bar"
+msgstr "Показать админ-панель"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/options.php:35
+msgid "User roles"
+msgstr "Роли пользователей"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/options.php:36
+msgid "Choose users access permissions in maintenance mode."
+msgstr "Выберите права доступа пользователей в режиме обслуживания."
