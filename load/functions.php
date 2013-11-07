@@ -58,6 +58,10 @@ function get_custom_login_code() {
 		}	
 	} 	
 	
+	if (!$user_connect) {
+		get_headers_503();
+	}	
+		
 		return array($error_message, $class_login, $class_password, $user_login);
 	}			
 
@@ -171,7 +175,6 @@ function get_custom_login_code() {
 		$out_ftext .= '</a>';
 		echo $out_ftext;
 	}
-	
 	add_action('footer_section', 'get_footer_section', 10);
 	
 	function do_login_form($user_login, $class_login, $class_password) {

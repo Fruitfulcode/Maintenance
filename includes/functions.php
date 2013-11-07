@@ -102,8 +102,8 @@
 	function maintenance_page_create_meta_boxes() {
 		global $maintenance_variable;
 		add_meta_box( 'maintenance-general', _x( 'General Settings', 'meta box', 'maintenance' ),  'add_data_fields', 				 $maintenance_variable->options_page, 'normal', 'default');
-	 	add_meta_box( 'promo-contant',   	 _x( 'Contact support', 'meta box', 'maintenance' ),   'maintenanace_contact_support',   $maintenance_variable->options_page, 'side',   'default' );
 		add_meta_box( 'promo-extended',   	 _x( 'Extended version', 'meta box', 'maintenance' ),  'maintenanace_extended_version',  $maintenance_variable->options_page, 'side',   'default' );
+		add_meta_box( 'promo-content',   	 _x( 'Contact support', 'meta box', 'maintenance' ),   'maintenanace_contact_support',   $maintenance_variable->options_page, 'side',   'default' );
 	}
 	add_action('add_meta_boxes', 'maintenance_page_create_meta_boxes', 10);
 	
@@ -163,20 +163,21 @@
 				if ($mt_options['state']) {
 					if ( isset($mt_options['expiry_date'])) {
 						if ($mt_options['expiry_date'] != '') {
-							$vCurrDate =  DateTime::createFromFormat('d/m/Y', $mt_options['expiry_date']);
-							list( $date, $time ) = explode( ' ', current($vCurrDate));
-							list( $day, $month, $year ) 	 = explode(  '-', $date );
-							list( $hour, $minute, $second )  = explode ( ':', $time );
-							$timestamp = mktime( $hour, $minute, $second, $month, $day, $year );
-							if ( time() > $timestamp ) {
-								return true;
-							}
+								$vCurrDate =  DateTime::createFromFormat('d/m/Y', $mt_options['expiry_date']);
+								list( $date, $time ) = explode( ' ', current($vCurrDate));
+								list( $year, $month, $day ) 	 = explode(  '-', $date );
+								list( $hour, $minute, $second )  = explode ( ':', $time );
+								$timestamp = mktime( $hour, $minute, $second, $month, $day, $year );
+								
+								if ( time() > $timestamp ) {
+									return true;
+								}
 						}
 					}	
 
 					if ( file_exists (MAINTENANCE_LOAD . 'index.php')) {
 					  	 include_once MAINTENANCE_LOAD . 'index.php';
-						 exit();
+						 exit;
 					}
 				}
 			}

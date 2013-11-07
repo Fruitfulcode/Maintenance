@@ -1,6 +1,5 @@
 <?php
-	add_action( 'init', 'maintenance_version_check' );
-	
+	add_action( 'admin_init', 'maintenance_version_check' );
 	function maintenance_version_check() {
 	  $old_version = get_option( 'maintenance_db_version' );
 	  $options     = get_option( 'maintenance_options' );
@@ -24,4 +23,3 @@
 		update_option( 'maintenance_db_version', MAINTENANCE_DB_VERSION);
 		update_option( 'maintenance_options',  $options);
 	}
-?>	

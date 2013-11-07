@@ -33,7 +33,7 @@
 #maintenance-options textarea { width:100%; }
 #maintenance-options input[type="checkbox"] { margin:0 5px 0 0; }
 #maintenance-options  #poststuff .metabox-holder .postbox-container.column-1 {float: left;  width: 65%;}
-#maintenance-options  #poststuff .metabox-holder .postbox-container.column-2 {float: right; width: 25%; min-width:450px;}
+#maintenance-options  #poststuff .metabox-holder .postbox-container.column-2 {float: right; width: 28%; min-width:300px;}
 #maintenance-options.wrap form p.submit {clear:both;}
 @media screen and (max-width: 1024px) {
 	#maintenance-options  #poststuff .metabox-holder .postbox-container.column-1 {float: left; width: 100%;}

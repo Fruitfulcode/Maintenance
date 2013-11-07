@@ -13,7 +13,6 @@
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
-	<?php get_headers_503(); ?>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
