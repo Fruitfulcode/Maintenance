@@ -1,18 +1,14 @@
 #maintenance-options { position: relative; }
-#maintenance-options h1  {font-size:35px;} 
-#maintenance-options h1, 
-#maintenance-options h2 {float:left;font-family: 'Open Sans ',Arial,Helvetica,sans-serif;font-size:35px;font-weight:bold;}
+#maintenance-options #icon-maintenance {background:url('../images/icon.png') no-repeat center center transparent;}
 #maintenance-options input.upload_btn { clear: left; display: block; float: left; margin: 20px 0; padding: 5px; text-align: center; width: 100%; }
-#maintenance-options #credits{color:#d54e21;font-size:11px;}
-.title{display:block;float:left;width:100%; margin-bottom: 20px;} 
+#maintenance-options h2 {float:left}
 /*Checkbox*/
-.tzCheckBox {background:url( '../images/background.png ') no-repeat right bottom;display:inline-block;min-width:60px;height:33px;white-space:nowrap;position:relative;cursor:pointer;margin:18px 0 0 20px;}
-.tzCheckBox.checked{background-position:top left;margin:18px 0 0 6px;}
+.tzCheckBox {background:url( '../images/background.png ') no-repeat right bottom;display:inline-block;min-width:60px;height:33px;white-space:nowrap;position:relative;cursor:pointer;margin:8px 0 0 20px;}
+.tzCheckBox.checked{background-position:top left;margin:8px 0 0 6px;}
 .tzCheckBox .tzCBContent{color:white;line-height:31px;padding-right:38px;text-align:right;}
 .tzCheckBox.checked .tzCBContent{text-align:left;padding:0 0 0 38px;}
 .tzCBPart{background:url( '../images/background.png ') no-repeat left bottom;width:14px;position:absolute;top:0;left:-14px;height:33px;overflow:hidden;}
 .tzCheckBox.checked .tzCBPart{background-position:top right;left:auto;right:-14px;}
-.logo{float:left;margin-right:20px;padding-top:15px;}
 .img-container {float:left; display:block;  width: 300px;}
 .upload_logo, .upload_background { float:right; }
 .box-logo	{max-width:298px; max-height:148px; height:148px; }

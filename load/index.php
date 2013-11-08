@@ -20,6 +20,9 @@
 	<?php get_page_title($mess_arr[0]); ?>
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+	<?php do_action('load_custom_scripts'); ?>
+	<?php do_action('options_style'); ?>
+	<?php do_action('add_single_backstretch_background'); ?>
 </head>
 <body>
 	<?php do_action('before_content_section'); ?>
@@ -30,11 +33,13 @@
 				<?php do_login_form($mess_arr[3], $mess_arr[1], $mess_arr[2]); ?>
 			</header>
 		</div>
-		<div class="center">
-			<div id="content" class="site-content">
+		
+		<div id="content" class="site-content">
+			<div class="center">
 				<?php do_action('content_section'); ?>
-			</div>
+			</div>	
 		</div>
+		
 	</div> <!-- end wrapper -->		
 	<footer role="contentinfo">
 		<div class="center">
@@ -43,8 +48,5 @@
 	</footer>
 	
 	<?php do_action('after_content_section'); ?>
-	<?php do_action('load_custom_scripts'); ?>
-	<?php do_action('options_style'); ?>
-	<?php do_action('add_single_backstretch_background'); ?>
 </body>
 </html>

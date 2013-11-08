@@ -68,7 +68,9 @@ function get_custom_login_code() {
 	function add_custom_style() {
 		global $wp_styles;
 		wp_register_style('_opensans','http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext');
-		wp_register_style('_style', MAINTENANCE_URI .'load/style.css');
+		wp_register_style('_iconstyle', MAINTENANCE_URI .'load/images/fonts-icon/icons.style.css');
+		wp_register_style('_style', 	MAINTENANCE_URI .'load/style.css');
+		$wp_styles->do_items('_iconstyle');
 		$wp_styles->do_items('_opensans');
 		$wp_styles->do_items('_style');
 	}	
@@ -79,10 +81,12 @@ function get_custom_login_code() {
 		wp_register_script( '_placeholder', 	MAINTENANCE_URI  .'load/js/jquery.placeholder.js', 	   'jquery');
 		wp_register_script( '_backstretch', 	MAINTENANCE_URI  .'load/js/jquery.backstretch.min.js', 'jquery');
 		wp_register_script( '_frontend', 		MAINTENANCE_URI  .'load/js/jquery.frontend.js', 'jquery');
+		wp_register_script( '_blur',			MAINTENANCE_URI  .'load/js/jquery.blur.min.js', 'jquery');
 		
 		$wp_scripts->do_items('jquery');
 		$wp_scripts->do_items('_placeholder');
 		$wp_scripts->do_items('_backstretch');		
+		$wp_scripts->do_items('_blur');
 		$wp_scripts->do_items('_frontend');
 	}
 	
@@ -91,11 +95,17 @@ function get_custom_login_code() {
 	
 	function get_page_title($error_message) {
 		$mt_options = mt_get_plugin_options(true);
-		$title = '';
-		if ($error_message != '') {
-		    $title =  $mt_options['page_title'] . ' - ' . $error_message;
+		$title = $options_title = '';
+		if (empty($mt_options['page_title'])) {
+			$options_title = wp_title( '|', false);
 		} else {
-		    $title =  $mt_options['page_title'];
+			$options_title = $mt_options['page_title'];
+		}
+		
+		if ($error_message != '') {
+		    $title =  $options_title . ' - ' . $error_message;
+		} else {
+		    $title =  $options_title;
 		}
 		echo "<title>$title</title>";
 	}
@@ -109,11 +119,11 @@ function get_custom_login_code() {
 			$options_style .= 'body {background-color: '. $mt_options['body_bg_color'] .'}';
 		}
 		
-		if ( $mt_options['body_bg_color'] ) {
+		if ( $mt_options['font_color'] ) {
 			 $options_style .= '.site-title   {color: '. $mt_options['font_color'] .'} ';
 			 $options_style .= '.login-form   {color: '. $mt_options['font_color'] .'} ';
 			 $options_style .= '.site-content {color: '. $mt_options['font_color'] .'} ';
-			 $options_style .= '.company-name {color: '. $mt_options['font_color'] .'} ';
+			 $options_style .= 'footer {color: '. $mt_options['font_color'] .'} ';
 			 
 		}
 		$options_style .= '</style>';
@@ -140,8 +150,16 @@ function get_custom_login_code() {
 	function get_content_section() {
 		$mt_options  = mt_get_plugin_options(true);
 		$out_content = '';
-		$out_content .= '<h3 class="heading font-center">'     . stripslashes($mt_options['heading']) .'</h3>';
-		$out_content .= '<h4 class="description font-center">' . stripslashes($mt_options['description']) .'</h4>';
+		if (isset($mt_options['heading'])) {
+			if (!empty($mt_options['heading'])) {
+			$out_content .= '<h2 class="heading font-center">'     . stripslashes($mt_options['heading']) .'</h3>';
+			}
+		}	
+		if (isset($mt_options['description'])) {
+			if (!empty($mt_options['description'])) {
+			$out_content .= '<h3 class="description font-center">' . stripslashes($mt_options['description']) .'</h4>';
+			}
+		}		
 		echo $out_content;
 	}
 	add_action('content_section', 'get_content_section', 10);
@@ -150,14 +168,25 @@ function get_custom_login_code() {
 	function add_single_background() {
 		$out_ = '';
 		$mt_options  = mt_get_plugin_options(true);
+		$intensity = 5;
 		
 		if (isset($mt_options['body_bg'])) {
 			if (!isset($mt_options['gallery_array'])) {
-			$out_ .= '<script type="text/javascript">';
-				$out_ .= 'jQuery(document).ready(function() { ';
+			$out_ .= '<script type="text/javascript">'. "\r\n";
+				$out_ .= 'jQuery(document).ready(function() { ' . "\r\n";
 					if ($mt_options['body_bg'] != '') {
-							$bg    = wp_get_attachment_image_src( $mt_options['body_bg'], 'full');
-							$out_ .= 'jQuery.backstretch("'. $bg[0] .'");';
+						$bg    = wp_get_attachment_image_src( $mt_options['body_bg'], 'full');
+						$out_ .= 'jQuery.backstretch("'. $bg[0] .'");' . "\r\n" ;
+					}
+					
+					if ($mt_options['is_blur']) {
+						/*Blur image background*/
+						if (isset($mt_options['blur_intensity'])) {
+							if ($mt_options['blur_intensity'] != '') {
+								$intensity = absint($mt_options['blur_intensity']);
+							}
+						}				
+						$out_ .= 'var vblur = jQuery(".backstretch").Vague({intensity:'.$intensity.'}); vblur.blur()' . "\r\n";
 					}
 				
 				$out_ .= '});';
@@ -178,10 +207,13 @@ function get_custom_login_code() {
 	add_action('footer_section', 'get_footer_section', 10);
 	
 	function do_login_form($user_login, $class_login, $class_password) {
-		$out_login_form = '';
-		$out_login_form .= '<form name="login-form" id="login-form" class="login-form" method="post">';
-				$out_login_form .= '<input type="text" 	   name="log" id="log" value="'. wp_specialchars(stripslashes($user_login), 1) .'" size="20"  class="input username '.$class_login.'" placeholder="Username"/>';
-				$out_login_form .= '<input type="password" name="pwd" id="login_password" value="" size="20"  class="input password '.$class_password.'" placeholder="Password" />';
+		$out_login_form = $form_error_class = '';
+		if (($class_login == 'error') || ($class_password == 'error')) {
+			 $form_error = ' active error';
+		}
+		$out_login_form .= '<form name="login-form" id="login-form" class="login-form'.$form_error.'" method="post">';
+				$out_login_form .= '<span class="licon '.$class_login.'"><input type="text" name="log" id="log" value="'. wp_specialchars(stripslashes($user_login), 1) .'" size="20"  class="input username" placeholder="Username"/></span>';
+				$out_login_form .= '<span class="picon '.$class_password.'"><input type="password" name="pwd" id="login_password" value="" size="20"  class="input password" placeholder="Password" /></span>';
 				$out_login_form .= '<input type="submit" class="button" name="submit" id="submit" value="'.__('Sign In','maintenance') .'" tabindex="4" />';
 				$out_login_form .= '<input type="hidden" name="is_custom_login" value="1" />';
 		$out_login_form .= '</form>';

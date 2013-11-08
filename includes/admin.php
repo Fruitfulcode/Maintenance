@@ -60,11 +60,9 @@
 			<?php wp_nonce_field('maintenance_edit_post','maintenance_nonce'); ?>
 			<?php wp_nonce_field('meta-box-order',  'meta-box-order-nonce', false ); ?>
 			<?php wp_nonce_field('closedpostboxes', 'closedpostboxesnonce', false ); ?>
-				<div class="title">
-					<img src="<?php echo MAINTENANCE_URI; ?>images/icon.png" alt="Logo" class="logo" />
-					<h1>Maintenance -</h1>						
-					<input type="checkbox" id="state" name="lib_options[state]" <?php checked($mt_option['state'], 1); ?> />
-				</div>						
+			<?php screen_icon(); ?>
+			<h2>Maintenance</h2>						
+			<input type="checkbox" id="state" name="lib_options[state]" <?php checked($mt_option['state'], 1); ?> />
 				<div id="poststuff">
 					 <div class="metabox-holder">
 						 <div id="all-fileds" class="postbox-container column-1 normal">

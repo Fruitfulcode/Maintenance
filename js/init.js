@@ -39,7 +39,8 @@ jQuery(window).ready(function(){
 		palettes: true
 	};
  
-	jQuery('#body_bg_color').wpColorPicker(vColorPickerOptions);
-	jQuery('#font_color').wpColorPicker(vColorPickerOptions);
+	jQuery('#body_bg_color, #font_color, #body_bg_blur_color').wpColorPicker(vColorPickerOptions);
 	
-	});
+	
+	
+});

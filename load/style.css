@@ -55,26 +55,26 @@ header {
 	text-align:center;
 }
 
-.site-content h3, 
-.site-content h4 {
+.site-content h2, 
+.site-content h3 {
 	width:100%;
 	display:block;
 }
 
-.site-content h3.heading {
+.site-content h2.heading {
 	font-size:45px; 
 	font-weight:lighter;
 }
 
-.site-content h4.description {
+.site-content h3.description {
 	font-size:28px; 
 	font-weight:lighter;
 }
 
 .site-content p {
-	font-size:14px;
-	margin:0 0 15px 0;
-	line-height:20px;
+	font-size: 16px;
+	margin: 0 0 15px 0;
+	line-height: 24px;
 }
 
 footer {
@@ -94,7 +94,7 @@ footer {
 	text-decoration:none;
 	font-family: 'Open Sans';
 	font-weight:bold;
-	color:#fff;
+	color:inherit;
 	font-size:16px;
 	text-align:center;
 	float:left;
@@ -135,6 +135,16 @@ footer {
     max-width: 100px;
     padding: 5px 16px 5px 40px;
     width: 100px;
+	display:block;
+	line-height: 28px;
+	outline:none;
+}
+
+
+.login-form .licon,
+.login-form .picon {
+	position:relative;
+	float:left;
 	display:none;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 	filter: alpha(opacity=50);
@@ -146,20 +156,43 @@ footer {
 	-ms-transition: opacity .3s ease-in-out;
 	-o-transition: opacity .3s ease-in-out;
 	transition: opacity .3s ease-in-out;
-	line-height: 28px;
 }
 
-.login-form input#log {
-	background-image:url('images/user-icon.png');
+.login-form .licon:before,
+.login-form .picon:before {
+	position:absolute;
+	font-weight: normal;
+	font-style: normal;
+	font-size:20px;
+	color:inherit;
+	text-decoration: inherit;
+	display: block;
+	width: auto;
+	height: auto;
+	line-height: inherit;
+	vertical-align: baseline;
+	background-image: none;
+	background-position: 0 0;
+	background-repeat: repeat;
+	top: 8px;
+	left: 10px;
 }
 
-.login-form input#login_password {
-	background-image:url('images/pass-icon.png');
+.login-form .licon:before {
+	content: "\f019";
+	font-family: "SocialFoundicons";
 }
 
-.login-form input#log.error, 
-.login-form input#login_password.error {
-	background-image:url('images/error.png');
+.login-form .picon:before {
+	content: "\f01b";
+	font-family: "GeneralFoundicons";
+}
+
+.login-form .licon.error:before,
+.login-form .picon.error:before {
+	content: "\f006";
+	font-family: "GeneralFoundicons";
+	color:red;
 }
 
 .login-form input[type="submit"] {
@@ -181,9 +214,9 @@ footer {
 	-o-transition: opacity .3s ease-in-out;
 	transition: opacity .3s ease-in-out;
 }
-.login-form.active:hover > input[type="text"], 
-.login-form.active:hover > input[type="password"], 
-.login-form.active:hover > input[type="submit"] {
+.login-form.active:hover .licon, 
+.login-form.active:hover .picon, 
+.login-form.active:hover input[type="submit"] {
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 	filter: alpha(opacity=100);
 	-moz-opacity: 1;

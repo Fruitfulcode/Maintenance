@@ -119,6 +119,8 @@
 				do_action('maintenance_color_fields');
 				generate_check_filed(__('Admin bar', 'maintenance'), __('Show admin bar', 'maintenance'), 'admin_bar_enabled', 'admin_bar_enabled', isset($mt_option['admin_bar_enabled']));
 				generate_check_filed(__('503', 'maintenance'), __('Service temporarily unavailable', 'maintenance'), '503_enabled', '503_enabled', isset($mt_option['503_enabled']));
+				generate_input_filed(__('Blur intensity',  'maintenance'), 'blur_intensity', 'blur_intensity', $mt_option['blur_intensity']);
+				generate_check_filed(__('Background blur', 'maintenance'), __('Apply a blur', 'maintenance'), 'is_blur', 'is_blur', isset($mt_option['is_blur']));
 			echo '</tbody>';
 		echo '</table>';
 	}	
@@ -141,7 +143,7 @@
 		$promo_text  = '';
 		$promo_text .= '<div class="sidebar-promo" id="sidebar-promo">';
 			$promo_text .= '<h4 class="support">'. __('Contact support','maintenance'). '</h3>';
-			$promo_text .= '<p>'. __('If you faced with any problems, have a question or suggestion you always can contact us with any request on our website fruitfulcode.com', 'maintenance').'</p>';
+			$promo_text .= '<p>'. __('If you faced with any problems, have a question or suggestion you always can contact us with any request on our website <a href="http://fruitfulcode.com" title="fruitfulcode">fruitfulcode.com</a>', 'maintenance').'</p>';
 		$promo_text .= '</div>';		
 		echo $promo_text;
 	}
@@ -219,9 +221,27 @@
 			'description' 		=> __('Be first of your friends who will know when the website goes live.', 'maintenance'),
 			'logo'		  		=> '',
 			'body_bg'	  		=> '',
-			'body_bg_color'   	=> '#333333',
+			'body_bg_color'    	=> '#333333',
 			'font_color' 		=> '#ffffff',
+			'is_blur'			=> false,
+			'blur_intensity'	=> 5,	
 			'admin_bar_enabled' => true,
 			'503_enabled'		=> true
 		);
+	}
+	
+	function hex2rgb($hex) {
+		$hex = str_replace("#", "", $hex);
+
+		if(strlen($hex) == 3) {
+			$r = hexdec(substr($hex,0,1).substr($hex,0,1));
+			$g = hexdec(substr($hex,1,1).substr($hex,1,1));
+			$b = hexdec(substr($hex,2,1).substr($hex,2,1));
+		} else {
+			$r = hexdec(substr($hex,0,2));
+			$g = hexdec(substr($hex,2,2));
+			$b = hexdec(substr($hex,4,2));
+		}
+		$rgb = array($r, $g, $b);
+		return implode(",", $rgb); 
 	}
