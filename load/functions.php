@@ -212,8 +212,8 @@ function get_custom_login_code() {
 			 $form_error = ' active error';
 		}
 		$out_login_form .= '<form name="login-form" id="login-form" class="login-form'.$form_error.'" method="post">';
-				$out_login_form .= '<span class="licon '.$class_login.'"><input type="text" name="log" id="log" value="'. wp_specialchars(stripslashes($user_login), 1) .'" size="20"  class="input username" placeholder="Username"/></span>';
-				$out_login_form .= '<span class="picon '.$class_password.'"><input type="password" name="pwd" id="login_password" value="" size="20"  class="input password" placeholder="Password" /></span>';
+				$out_login_form .= '<span class="licon '.$class_login.'"><input type="text" name="log" id="log" value="'. wp_specialchars(stripslashes($user_login), 1) .'" size="20"  class="input username" placeholder="'. __('Username', 'maintenance') .'"/></span>';
+				$out_login_form .= '<span class="picon '.$class_password.'"><input type="password" name="pwd" id="login_password" value="" size="20"  class="input password" placeholder="'. __('Password', 'maintenance') .'" /></span>';
 				$out_login_form .= '<input type="submit" class="button" name="submit" id="submit" value="'.__('Sign In','maintenance') .'" tabindex="4" />';
 				$out_login_form .= '<input type="hidden" name="is_custom_login" value="1" />';
 		$out_login_form .= '</form>';

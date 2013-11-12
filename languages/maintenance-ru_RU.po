@@ -1,97 +1,189 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
-"POT-Creation-Date: 2013-09-18 15:37+0200\n"
-"PO-Revision-Date: 2013-09-18 15:38+0200\n"
+"POT-Creation-Date: 2013-11-12 13:02+0200\n"
+"PO-Revision-Date: 2013-11-12 13:02+0200\n"
 "Last-Translator: \n"
 "Language-Team: fruitfulcode\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
-"X-Poedit-KeywordsList: _;_e;__\n"
+"X-Poedit-KeywordsList: _;_e;__;_x\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-SearchPath-0: C:\\wamp\\www\\yakovlev\\fruitfultheme\\wp-content"
-"\\plugins\\maintenance\n"
+"X-Poedit-SearchPath-0: C:\\wamp\\www\\yakovlev\\ambq\\wp-content\\plugins"
+"\\maintenance\n"
 
-#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/page-options.php:44
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/admin.php:79
 msgid "Save changes"
 msgstr "Сохранить"
 
-#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/page-options.php:51
-#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/page-options.php:52
-msgid "Contact Support"
-msgstr "Обратиться в службу поддержки"
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:104
+msgid "General Settings"
+msgstr "Общие настройки"
 
-#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/page-options.php:54
-msgid "Premium version"
-msgstr "Премиум версия"
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:105
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:157
+msgid "Extended version"
+msgstr "Расширенная версия"
 
-#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/page-options.php:55
-msgid "Check out our extended version of plugin with new features"
-msgstr "Проверьте возможности расширенной версии плагина"
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:106
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:145
+msgid "Contact support"
+msgstr "Служба поддержки"
 
-#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/index.php:74
-msgid "Permission access denied!"
-msgstr "Доступ запрещен!"
-
-#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/index.php:83
-msgid "The login and password you entered are incorrect!"
-msgstr "Вы ввели неверный логин или пароль!"
-
-#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/index.php:118
-msgid "Your session has expired."
-msgstr "Ваша сессия истекла."
-
-#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/index.php:207
-msgid "Sign In"
-msgstr "Войти"
-
-#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/options.php:6
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:114
 msgid "Page title"
 msgstr "Заголовок страницы"
 
-#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/options.php:7
-msgid "Website is under construction"
-msgstr "Сайт находится в стадии разработки"
-
-#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/options.php:10
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:115
 msgid "Headline"
 msgstr "Заголовок"
 
-#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/options.php:11
-msgid "Customer login"
-msgstr "Вход для клиентов"
-
-#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/options.php:14
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:116
 msgid "Description"
 msgstr "Описание"
 
-#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/options.php:15
-msgid "Please login to see website"
-msgstr "Пожалуйста авторезируйтесь"
-
-#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/options.php:17
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:117
 msgid "Logo"
 msgstr "Логотип"
 
-#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/options.php:22
-msgid "Background image"
-msgstr "Фоновое изображение"
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:117
+msgid "Upload Logo"
+msgstr "Загрузить логотип"
 
-#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/options.php:27
-msgid "Background color"
-msgstr "Цвет фона"
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:120
+msgid "Admin bar"
+msgstr "Админ-панель"
 
-#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/options.php:31
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:120
 msgid "Show admin bar"
 msgstr "Показать админ-панель"
 
-#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/options.php:35
-msgid "User roles"
-msgstr "Роли пользователей"
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:121
+msgid "503"
+msgstr ""
 
-#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\plugins\maintenance/lib/options.php:36
-msgid "Choose users access permissions in maintenance mode."
-msgstr "Выберите права доступа пользователей в режиме обслуживания."
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:121
+msgid "Service temporarily unavailable"
+msgstr "Сервис врменно недоступен"
+
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:122
+msgid "Blur intensity"
+msgstr "Интенсивность размытия"
+
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:123
+msgid "Background blur"
+msgstr "Размытие фона"
+
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:123
+msgid "Apply a blur"
+msgstr "Применить размытие"
+
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:130
+msgid "Background image"
+msgstr "Фоновое изображение"
+
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:130
+msgid "Upload Background"
+msgstr "Загрузить фон"
+
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:136
+msgid "Background color"
+msgstr "Цвет фона"
+
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:137
+msgid "Font color"
+msgstr "Цвет фона"
+
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:146
+#, php-format
+msgid ""
+"If you faced with any problems, have a question or suggestion you always can "
+"contact us with any request on our website <a href=\"%1$s\" title=\"%2$s\">"
+"%2$s</a>"
+msgstr ""
+"Если вы столкнулись с любыми проблемами, есть вопрос или предложение, вы "
+"всегда можете обратиться к нам с любым предложением  на нашем сайте <a href="
+"\"%1$s\" title=\"%2$s\">%2$s</a>"
+
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:158
+#, php-format
+msgid ""
+"If you like our plugin please rate it, %1$s <a title=\"leave feedback\" href="
+"\"%2$s\" target=\"_blank\">leave feedback</a> or purchase extended version "
+"%1$s with more other features."
+msgstr ""
+"Если Вам нравиться наш плагин, оцените его %1$s <a title=\"оставить "
+"комментарий\" href=\"%2$s\" target=\"_blank\">оставить комментарий</a> или "
+"купите расширенную версию %1$s с дополнительными возможностями."
+
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:162
+msgid "Purchase"
+msgstr "Купить"
+
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:220
+msgid "Maintenace"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:243
+msgid "Website is under construction"
+msgstr "Сайт находится в стадии разработки"
+
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:244
+msgid "Maintenance mode is on"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:245
+msgid "Be first of your friends who will know when the website goes live."
+msgstr "Будь первым из твоих друзей, кто узнает о запуске сайта."
+
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/load/functions.php:36
+msgid "Permission access denied!"
+msgstr "Доступ запрещен!"
+
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/load/functions.php:43
+msgid "You entered your login are incorrect!"
+msgstr "Вы ввели неверный логин! "
+
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/load/functions.php:47
+msgid "You entered your password are incorrect!"
+msgstr "Вы ввели неверный пароль!"
+
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/load/functions.php:50
+msgid "You entered your login and password are incorrect!"
+msgstr "Вы ввели неверный логин или пароль!"
+
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/load/functions.php:215
+msgid "Username"
+msgstr "Логин"
+
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/load/functions.php:216
+msgid "Password"
+msgstr "Пароль"
+
+#: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/load/functions.php:217
+msgid "Sign In"
+msgstr "Войти"
+
+#~ msgid "Premium version"
+#~ msgstr "Премиум версия"
+
+#~ msgid "Check out our extended version of plugin with new features"
+#~ msgstr "Проверьте возможности расширенной версии плагина"
+
+#~ msgid "Your session has expired."
+#~ msgstr "Ваша сессия истекла."
+
+#~ msgid "Customer login"
+#~ msgstr "Вход для клиентов"
+
+#~ msgid "Please login to see website"
+#~ msgstr "Пожалуйста авторезируйтесь"
+
+#~ msgid "User roles"
+#~ msgstr "Роли пользователей"
+
+#~ msgid "Choose users access permissions in maintenance mode."
+#~ msgstr "Выберите права доступа пользователей в режиме обслуживания."

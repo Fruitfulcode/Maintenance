@@ -47,3 +47,7 @@ and (max-device-width : 1024px)  {
 	#maintenance-options  #poststuff .metabox-holder .postbox-container.column-1 {float: left;  width: 100%;}
 	#maintenance-options  #poststuff .metabox-holder .postbox-container.column-2 {float: left; width: 100%;}
 }
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	#maintenance-options input.upload_btn {padding:0;}	
+}

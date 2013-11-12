@@ -101,9 +101,9 @@
 				
 	function maintenance_page_create_meta_boxes() {
 		global $maintenance_variable;
-		add_meta_box( 'maintenance-general', _x( 'General Settings', 'meta box', 'maintenance' ),  'add_data_fields', 				 $maintenance_variable->options_page, 'normal', 'default');
-		add_meta_box( 'promo-extended',   	 _x( 'Extended version', 'meta box', 'maintenance' ),  'maintenanace_extended_version',  $maintenance_variable->options_page, 'side',   'default' );
-		add_meta_box( 'promo-content',   	 _x( 'Contact support', 'meta box', 'maintenance' ),   'maintenanace_contact_support',   $maintenance_variable->options_page, 'side',   'default' );
+		add_meta_box( 'maintenance-general', __( 'General Settings', 'maintenance' ),  'add_data_fields', 				 $maintenance_variable->options_page, 'normal', 'default');
+		add_meta_box( 'promo-extended',   	 __( 'Extended version', 'maintenance' ),  'maintenanace_extended_version',  $maintenance_variable->options_page, 'side',   'default' );
+		add_meta_box( 'promo-content',   	 __( 'Contact support',  'maintenance' ),  'maintenanace_contact_support',   $maintenance_variable->options_page, 'side',   'default' );
 	}
 	add_action('add_meta_boxes', 'maintenance_page_create_meta_boxes', 10);
 	
@@ -143,7 +143,10 @@
 		$promo_text  = '';
 		$promo_text .= '<div class="sidebar-promo" id="sidebar-promo">';
 			$promo_text .= '<h4 class="support">'. __('Contact support','maintenance'). '</h3>';
-			$promo_text .= '<p>'. __('If you faced with any problems, have a question or suggestion you always can contact us with any request on our website <a href="http://fruitfulcode.com" title="fruitfulcode">fruitfulcode.com</a>', 'maintenance').'</p>';
+			$promo_text .= '<p>'. sprintf(__('If you faced with any problems, have a question or suggestion you always can contact us with any request on our website <a href="%1$s" title="%2$s">%2$s</a>', 'maintenance'), 
+											 'http://fruitfulcode.com',
+											 'fruitfulcode.com'
+										 ).'</p>';
 		$promo_text .= '</div>';		
 		echo $promo_text;
 	}
@@ -152,8 +155,13 @@
 		$promo_text  = '';
 		$promo_text .= '<div class="sidebar-promo worker" id="sidebar-promo">';
 			$promo_text .= '<h4 class="star">'. __('Extended version','maintenance') .'</h3>';
-			$promo_text .= '<p>' . __('If you like our plugin please rate it, <br /> <a title="leave feedback" href="http://wordpress.org/support/view/plugin-reviews/maintenance" target="_blank">leave feedback</a> or purchase extended vesion <br /> with more other features.', 'maintenance') .'</p>';
-			$promo_text .= '<a class="button button-primary" title="'. __('Purchase', 'maintenance') .'" href="http://codecanyon.net/item/maintenance-wordpress-plugin/2781350" target="_blank">'. __('Purchase', 'maintenance') .'</a>';
+			$promo_text .= '<p>' . sprintf(__('If you like our plugin please rate it, %1$s <a title="leave feedback" href="%2$s" target="_blank">leave feedback</a> or purchase extended version %1$s with more other features.', 'maintenance'), 
+										   '<br />',
+										   'http://wordpress.org/support/view/plugin-reviews/maintenance') .'</p>';
+			$promo_text .= sprintf('<a class="button button-primary" title="%1$s" href="%2$s" target="_blank">%1$s</a>', 
+							__('Purchase', 'maintenance'),
+							'http://codecanyon.net/item/maintenance-wordpress-plugin/2781350'
+							);
 		$promo_text .= '</div>';	
 		echo $promo_text;
 	}
@@ -213,6 +221,22 @@
 	} 
 	
 	
+	function hex2rgb($hex) {
+		$hex = str_replace("#", "", $hex);
+
+		if(strlen($hex) == 3) {
+			$r = hexdec(substr($hex,0,1).substr($hex,0,1));
+			$g = hexdec(substr($hex,1,1).substr($hex,1,1));
+			$b = hexdec(substr($hex,2,1).substr($hex,2,1));
+		} else {
+			$r = hexdec(substr($hex,0,2));
+			$g = hexdec(substr($hex,2,2));
+			$b = hexdec(substr($hex,4,2));
+		}
+		$rgb = array($r, $g, $b);
+		return implode(",", $rgb); 
+	}
+	
 	function mt_get_default_array() {
 		return array(
 			'state'		  		=> true,
@@ -228,20 +252,4 @@
 			'admin_bar_enabled' => true,
 			'503_enabled'		=> true
 		);
-	}
-	
-	function hex2rgb($hex) {
-		$hex = str_replace("#", "", $hex);
-
-		if(strlen($hex) == 3) {
-			$r = hexdec(substr($hex,0,1).substr($hex,0,1));
-			$g = hexdec(substr($hex,1,1).substr($hex,1,1));
-			$b = hexdec(substr($hex,2,1).substr($hex,2,1));
-		} else {
-			$r = hexdec(substr($hex,0,2));
-			$g = hexdec(substr($hex,2,2));
-			$b = hexdec(substr($hex,4,2));
-		}
-		$rgb = array($r, $g, $b);
-		return implode(",", $rgb); 
 	}
