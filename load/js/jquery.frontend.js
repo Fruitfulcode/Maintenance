@@ -27,9 +27,10 @@ jQuery(document).ready(function() {
 				jQuery('#login-form').removeClass('active');
 		}	
 	}
-	
+});
+
+jQuery(window).load(function() { 
 	jQuery('#content').center();
-	
 });
 
 jQuery(window).resize(function() { 
