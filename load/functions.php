@@ -25,7 +25,7 @@ function get_custom_login_code() {
 		$user = new WP_User(0, $user_login);
 		$current_role = $user->roles[0];
 					 
-		if (count($mt_options['roles_array']) > 0) {
+		if (isset($mt_options['roles_array']) && (count($mt_options['roles_array']) > 0)) {
 			foreach (array_keys($mt_options['roles_array']) as $key) {
 				if ($key == $current_role) { $is_role_check = true; }	
 			}
@@ -185,8 +185,8 @@ function get_custom_login_code() {
 					if ($mt_options['is_blur']) {
 						/*Blur image background*/
 						if (isset($mt_options['blur_intensity'])) {
-							if ($mt_options['blur_intensity'] != '') {
-								$intensity = absint($mt_options['blur_intensity']);
+							  if ($mt_options['blur_intensity'] != '') {
+								  $intensity = absint($mt_options['blur_intensity']);
 							}
 						}				
 						$out_ .= 'var vblur = jQuery(".backstretch").Vague({intensity:'.$intensity.'}); vblur.blur()' . "\r\n";

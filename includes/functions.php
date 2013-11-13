@@ -194,11 +194,12 @@
 	}
 
 	function maintenace_metaboxes_scripts() {
-		global $maintenance_variable; ?>
+		global $maintenance_variable; 
+	?>
 		<script type="text/javascript">
 		//<![CDATA[
-		jQuery(document).ready( function($) {
-			$('.if-js-closed').removeClass('if-js-closed').addClass('closed');
+		jQuery(document).ready( function() {
+			jQuery('.if-js-closed').removeClass('if-js-closed').addClass('closed');
 			postboxes.add_postbox_toggles( '<?php echo $maintenance_variable->options_page; ?>' );
 		});
 		//]]>

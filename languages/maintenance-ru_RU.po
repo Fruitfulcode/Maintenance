@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
 "POT-Creation-Date: 2013-11-12 13:02+0200\n"
-"PO-Revision-Date: 2013-11-12 16:27+0200\n"
+"PO-Revision-Date: 2013-11-13 11:29+0200\n"
 "Last-Translator: \n"
 "Language-Team: fruitfulcode\n"
 "MIME-Version: 1.0\n"
@@ -133,7 +133,7 @@ msgstr "Сайт находится в стадии разработки"
 
 #: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:244
 msgid "Maintenance mode is on"
-msgstr ""
+msgstr "Режим обслуживания включен"
 
 #: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:245
 msgid "Be first of your friends who will know when the website goes live."

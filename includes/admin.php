@@ -13,6 +13,7 @@
 	function maintenance_page_add_meta_boxes() {
 		global	$maintenance_variable;
 		do_action('add_meta_boxes', $maintenance_variable->options_page);
+		
 	}
 	
 	function mt_register_settings() {
