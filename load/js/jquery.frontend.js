@@ -1,5 +1,5 @@
 jQuery(document).ready(function() {
-	jQuery('input[placeholder]').placeholder();
+	jQuery('input[placeholder], textarea[placeholder]').placeholder();
 	jQuery('#login-form').submit(function() {
 	   if (!jQuery(this).hasClass('active')) {
 			jQuery(this).find('span.licon').fadeIn(300);

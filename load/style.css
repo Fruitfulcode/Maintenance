@@ -39,6 +39,7 @@ header {
 	padding:25px 20px;
 	max-width:980px
 	min-width:640px;
+	z-index:9999999;
 }
 
 .site-content {
@@ -85,6 +86,7 @@ footer {
 	display:block;
 	width:100%;
 	float:left;
+	color:#fff;
 }
 
 
@@ -141,6 +143,15 @@ footer {
 }
 
 
+
+.ie8 .login-form input[type="text"],
+.ie8 .login-form input[type="password"],
+.ie7 .login-form input[type="text"],
+.ie7 .login-form input[type="password"] {
+	background-color:#717171;
+}
+
+
 .login-form .licon,
 .login-form .picon {
 	position:relative;
@@ -156,6 +167,11 @@ footer {
 	-ms-transition: opacity .3s ease-in-out;
 	-o-transition: opacity .3s ease-in-out;
 	transition: opacity .3s ease-in-out;
+}
+
+.ie7 .login-form .licon,
+.ie7 .login-form .picon {
+	margin:8px 0 0 0;
 }
 
 .login-form .licon:before,
@@ -182,6 +198,11 @@ footer {
 	content: "\f019";
 	font-family: "SocialFoundicons";
 }
+
+.ie7 .login-form .licon:before {
+	*zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf019;");
+}	
+ 
 
 .login-form .picon:before {
 	content: "\f01b";

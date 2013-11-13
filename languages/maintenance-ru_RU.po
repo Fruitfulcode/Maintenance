@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
 "POT-Creation-Date: 2013-11-12 13:02+0200\n"
-"PO-Revision-Date: 2013-11-12 13:02+0200\n"
+"PO-Revision-Date: 2013-11-12 16:27+0200\n"
 "Last-Translator: \n"
 "Language-Team: fruitfulcode\n"
 "MIME-Version: 1.0\n"
@@ -95,7 +95,7 @@ msgstr "Цвет фона"
 
 #: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:137
 msgid "Font color"
-msgstr "Цвет фона"
+msgstr "Цвет шрифта"
 
 #: C:\wamp\www\yakovlev\ambq\wp-content\plugins\maintenance/includes/functions.php:146
 #, php-format

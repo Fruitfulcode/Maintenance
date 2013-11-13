@@ -4,6 +4,7 @@ function get_custom_login_code() {
 	global $wp_query, 
 		   $error; 
 	$mt_options = mt_get_plugin_options(true);
+	$user_connect = false;
     if (!is_array($wp_query->query_vars)) $wp_query->query_vars = array();	   
 	$error_message  = 	$user_login = $user_pass = $error = '';
 	$is_role_check  = false;
@@ -37,6 +38,7 @@ function get_custom_login_code() {
 			  $class_login 		= 'error';
 			  $class_password 	= 'error';
 		} else {
+			
 			$user_connect = wp_signon( $access, false);
 			if ( is_wp_error($user_connect) )  {
 				if ($user_connect->get_error_code() == 'invalid_username') {
@@ -122,9 +124,10 @@ function get_custom_login_code() {
 		if ( $mt_options['font_color'] ) {
 			 $options_style .= '.site-title   {color: '. $mt_options['font_color'] .'} ';
 			 $options_style .= '.login-form   {color: '. $mt_options['font_color'] .'} ';
+			 $options_style .= '.ie7 .login-form input[type="text"], .ie7 .login-form input[type="password"], .ie7 .login-form input[type="submit"],  {color: '. $mt_options['font_color'] .'} ';
 			 $options_style .= '.site-content {color: '. $mt_options['font_color'] .'} ';
 			 $options_style .= 'footer {color: '. $mt_options['font_color'] .'} ';
-			 
+			 $options_style .= '.ie7 .company-name {color: '. $mt_options['font_color'] .'} ';
 		}
 		$options_style .= '</style>';
 		echo $options_style;
@@ -134,7 +137,7 @@ function get_custom_login_code() {
 	function get_logo_box() {
 		$mt_options = mt_get_plugin_options(true);
 		$out_html = '';
-			$out_html = '<a class="logo" rel="home" href="'.get_bloginfo('home') .'">';
+			$out_html = '<a class="logo" rel="home" href="'.site_url('') .'">';
 			if ( $mt_options['logo'] ) { 
 				 $logo = wp_get_attachment_image_src( $mt_options['logo'], 'full'); 
 				 $out_html .= '<img src="'. $logo[0] .'" alt="logo"/>';
@@ -199,7 +202,7 @@ function get_custom_login_code() {
 	
 	function get_footer_section() {
 		$out_ftext = '';
-		$out_ftext .= '<a class="company-name" rel="footer" href="'.get_bloginfo('home') .'">';
+		$out_ftext .= '<a class="company-name" rel="footer" href="'.site_url('') .'">';
 			$out_ftext .= '&copy; ' . get_bloginfo( 'name' ) . ' ' . date('Y');
 		$out_ftext .= '</a>';
 		echo $out_ftext;
@@ -207,12 +210,12 @@ function get_custom_login_code() {
 	add_action('footer_section', 'get_footer_section', 10);
 	
 	function do_login_form($user_login, $class_login, $class_password) {
-		$out_login_form = $form_error_class = '';
+		$out_login_form = $form_error = '';
 		if (($class_login == 'error') || ($class_password == 'error')) {
 			 $form_error = ' active error';
 		}
 		$out_login_form .= '<form name="login-form" id="login-form" class="login-form'.$form_error.'" method="post">';
-				$out_login_form .= '<span class="licon '.$class_login.'"><input type="text" name="log" id="log" value="'. wp_specialchars(stripslashes($user_login), 1) .'" size="20"  class="input username" placeholder="'. __('Username', 'maintenance') .'"/></span>';
+				$out_login_form .= '<span class="licon '.$class_login.'"><input type="text" name="log" id="log" value="'.  $user_login .'" size="20"  class="input username" placeholder="'. __('Username', 'maintenance') .'"/></span>';
 				$out_login_form .= '<span class="picon '.$class_password.'"><input type="password" name="pwd" id="login_password" value="" size="20"  class="input password" placeholder="'. __('Password', 'maintenance') .'" /></span>';
 				$out_login_form .= '<input type="submit" class="button" name="submit" id="submit" value="'.__('Sign In','maintenance') .'" tabindex="4" />';
 				$out_login_form .= '<input type="hidden" name="is_custom_login" value="1" />';
