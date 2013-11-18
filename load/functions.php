@@ -182,7 +182,7 @@ function get_custom_login_code() {
 						$out_ .= 'jQuery.backstretch("'. $bg[0] .'");' . "\r\n" ;
 					}
 					
-					if ($mt_options['is_blur']) {
+					if (!empty($mt_options['is_blur'])) {
 						/*Blur image background*/
 						if (isset($mt_options['blur_intensity'])) {
 							  if ($mt_options['blur_intensity'] != '') {
