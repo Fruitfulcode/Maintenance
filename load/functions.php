@@ -172,22 +172,19 @@ function get_custom_login_code() {
 		$out_ = '';
 		$mt_options  = mt_get_plugin_options(true);
 		$intensity = 5;
-		
-		if (isset($mt_options['body_bg'])) {
-			if (!isset($mt_options['gallery_array'])) {
+		if (!empty($mt_options['body_bg'])) {
+			if (empty($mt_options['gallery_array']['attachment_ids'])) {
 			$out_ .= '<script type="text/javascript">'. "\r\n";
 				$out_ .= 'jQuery(document).ready(function() { ' . "\r\n";
-					if ($mt_options['body_bg'] != '') {
-						$bg    = wp_get_attachment_image_src( $mt_options['body_bg'], 'full');
-						$out_ .= 'jQuery.backstretch("'. $bg[0] .'");' . "\r\n" ;
+					if (!empty($mt_options['body_bg'])) {
+						$bg    =  wp_get_attachment_image_src( $mt_options['body_bg'], 'full');
+						$out_ .= 'jQuery.backstretch("'. esc_url($bg[0]) .'");' . "\r\n" ;
 					}
 					
 					if (!empty($mt_options['is_blur'])) {
 						/*Blur image background*/
-						if (isset($mt_options['blur_intensity'])) {
-							  if ($mt_options['blur_intensity'] != '') {
-								  $intensity = absint($mt_options['blur_intensity']);
-							}
+						if (!empty($mt_options['blur_intensity'])) {
+						    $intensity = absint($mt_options['blur_intensity']);
 						}				
 						$out_ .= 'var vblur = jQuery(".backstretch").Vague({intensity:'.$intensity.'}); vblur.blur()' . "\r\n";
 					}
