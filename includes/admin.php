@@ -58,12 +58,13 @@
 	?>
 		<div id="maintenance-options" class="wrap">	
 			<form method="post" action="" enctype="multipart/form-data" name="options-form">
-			<?php wp_nonce_field('maintenance_edit_post','maintenance_nonce'); ?>
-			<?php wp_nonce_field('meta-box-order',  'meta-box-order-nonce', false ); ?>
-			<?php wp_nonce_field('closedpostboxes', 'closedpostboxesnonce', false ); ?>
-			<?php screen_icon(); ?>
-			<h2>Maintenance</h2>						
-			<input type="checkbox" id="state" name="lib_options[state]" <?php checked($mt_option['state'], 1); ?> />
+				<?php wp_nonce_field('maintenance_edit_post','maintenance_nonce'); ?>
+				<?php wp_nonce_field('meta-box-order',  'meta-box-order-nonce', false ); ?>
+				<?php wp_nonce_field('closedpostboxes', 'closedpostboxesnonce', false ); ?>
+				<?php screen_icon(); ?>
+				<h2>Maintenance</h2>						
+				<input type="checkbox" id="state" name="lib_options[state]" <?php checked($mt_option['state'], 1); ?> />
+				<div class="clear"></div>
 				<div id="poststuff">
 					 <div class="metabox-holder">
 						 <div id="all-fileds" class="postbox-container column-1 normal">
