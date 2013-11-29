@@ -17,10 +17,10 @@
 	function generate_input_filed($title, $id, $name, $value) {
 		$out_filed = '';
 		$out_filed .= '<tr valign="top">';
-		$out_filed .= '<th scope="row">' . $title .'</th>';
+		$out_filed .= '<th scope="row">' . esc_attr($title) .'</th>';
 			$out_filed .= '<td>';
 				$out_filed .= '<filedset>';
-					$out_filed .= '<input type="text" id="'.$id.'" name="lib_options['.$name.']" value="'. stripslashes($value) .'" />';
+					$out_filed .= '<input type="text" id="'.esc_attr($id).'" name="lib_options['.$name.']" value="'. wp_kses_post(stripslashes($value)) .'" />';
 				$out_filed .= '</filedset>';
 			$out_filed .= '</td>';
 		$out_filed .= '</tr>';			
@@ -31,10 +31,10 @@
 	function generate_textarea_filed($title, $id, $name, $value) {
 		$out_filed = '';
 		$out_filed .= '<tr valign="top">';
-		$out_filed .= '<th scope="row">' . $title .'</th>';
+		$out_filed .= '<th scope="row">' . esc_attr($title) .'</th>';
 			$out_filed .= '<td>';
 				$out_filed .= '<filedset>';
-					$out_filed .= '<textarea name="lib_options['.$name.']" id="'.$id.'" cols="30" rows="10">'. stripslashes($value) .'</textarea>';
+					$out_filed .= '<textarea name="lib_options['.$name.']" id="'.esc_attr($id).'" cols="30" rows="10">'. wp_kses_post(stripslashes($value)) .'</textarea>';
 				$out_filed .= '</filedset>';
 			$out_filed .= '</td>';
 		$out_filed .= '</tr>';			
@@ -44,11 +44,11 @@
 	function generate_check_filed($title, $label, $id, $name, $value) {
 		$out_filed = '';
 		$out_filed .= '<tr valign="top">';
-		$out_filed .= '<th scope="row">' . $title .'</th>';
+		$out_filed .= '<th scope="row">' . esc_attr($title) .'</th>';
 			$out_filed .= '<td>';
 				$out_filed .= '<filedset>';
-					$out_filed .= '<label for='.$id.'>';
-						$out_filed .= '<input type="checkbox"  id="'.$id.'" name="lib_options['.$name.']" value="1" '. checked( true, $value, false ) .'/>';
+					$out_filed .= '<label for='.esc_attr($id).'>';
+						$out_filed .= '<input type="checkbox"  id="'.esc_attr($id).'" name="lib_options['.$name.']" value="1" '. checked( true, $value, false ) .'/>';
 						$out_filed .= $label;
 					$out_filed .= '</label>';
 				$out_filed .= '</filedset>';
@@ -61,23 +61,23 @@
 		$out_filed = '';
 		
 		$out_filed .= '<tr valign="top">';
-		$out_filed .= '<th scope="row">' . $title .'</th>';
+		$out_filed .= '<th scope="row">' . esc_attr($title) .'</th>';
 			$out_filed .= '<td>';
 				$out_filed .= '<filedset>';
-					$out_filed .= '<input type="hidden" id="'.$id.'" name="lib_options['.$name.']" value="'.$value.'" />';
+					$out_filed .= '<input type="hidden" id="'.esc_attr($id).'" name="lib_options['.$name.']" value="'.esc_attr($value).'" />';
 					$out_filed .= '<div class="img-container">';
 						$url = ''; 
 						if($value != '') { 
 							$image = wp_get_attachment_image_src( $value, 'full'); 
-							$url   = $image[0];
+							$url   = esc_url($image[0]);
 						} 
 					
-						$out_filed .= '<div class="'.$class.'" style="background-image:url('.$url.')">';
+						$out_filed .= '<div class="'.esc_attr($class).'" style="background-image:url('.$url.')">';
 							if ( $value ) { 
 								$out_filed .= '<input class="button button-primary delete-img remove" type="button" value="x" />';
 							}	
 						$out_filed .= '</div>';
-						$out_filed .= '<input type="button" class="'.$class_btn.'" value="'.$name_btn.'"/>';
+						$out_filed .= '<input type="button" class="'.esc_attr($class_btn).'" value="'.esc_attr($name_btn).'"/>';
 						
 					$out_filed .= '</div>';
 				$out_filed .= '</filedset>';
@@ -89,10 +89,10 @@
 	function get_color_field($title, $id, $name, $value, $default_color) {
 			$out_filed = '';
 			$out_filed .= '<tr valign="top">';
-					$out_filed .= '<th scope="row">'. $title .'</th>';
+					$out_filed .= '<th scope="row">'. esc_attr($title) .'</th>';
 					$out_filed .= '<td>';
 						$out_filed .= '<filedset>';
-							$out_filed .= '<input type="text" id="'.$id.'" name="lib_options['.$name.']" data-default-color="'.$default_color.'" value="'. stripslashes($value) .'" />';
+							$out_filed .= '<input type="text" id="'.esc_attr($id).'" name="lib_options['.$name.']" data-default-color="'.esc_attr($default_color).'" value="'. wp_kses_post(stripslashes($value)) .'" />';
 						$out_filed .= '<filedset>';
 					$out_filed .= '</td>';	
 				$out_filed .= '</tr>';
@@ -111,15 +111,15 @@
 		$mt_option = mt_get_plugin_options(true);
 		echo '<table class="form-table">';
 			echo '<tbody>';
-				generate_input_filed(__('Page title', 'maintenance'), 'page_title', 'page_title', $mt_option['page_title']);
-				generate_input_filed(__('Headline', 'maintenance'),	'heading', 'heading', 		  $mt_option['heading']);
-				generate_textarea_filed(__('Description', 'maintenance'), 'description', 'description', $mt_option['description']);
-				generate_image_filed(__('Logo', 'maintenance'), 'logo', 'logo', $mt_option['logo'], 'boxes box-logo', __('Upload Logo', 'maintenance'), 'upload_logo upload_btn button');
+				generate_input_filed(__('Page title', 'maintenance'), 'page_title', 'page_title', wp_kses_post($mt_option['page_title']));
+				generate_input_filed(__('Headline', 'maintenance'),	'heading', 'heading', 		  wp_kses_post($mt_option['heading']));
+				generate_textarea_filed(__('Description', 'maintenance'), 'description', 'description', wp_kses_post($mt_option['description']));
+				generate_image_filed(__('Logo', 'maintenance'), 'logo', 'logo', intval($mt_option['logo']), 'boxes box-logo', __('Upload Logo', 'maintenance'), 'upload_logo upload_btn button');
 				do_action('maintenance_background_field');
 				do_action('maintenance_color_fields');
 				generate_check_filed(__('Admin bar', 'maintenance'), __('Show admin bar', 'maintenance'), 'admin_bar_enabled', 'admin_bar_enabled', isset($mt_option['admin_bar_enabled']));
-				generate_check_filed(__('503', 'maintenance'), __('Service temporarily unavailable', 'maintenance'), '503_enabled', '503_enabled', isset($mt_option['503_enabled']));
-				generate_input_filed(__('Blur intensity',  'maintenance'), 'blur_intensity', 'blur_intensity', $mt_option['blur_intensity']);
+				generate_check_filed(__('503', 'maintenance'), __('Service temporarily unavailable', 'maintenance'), '503_enabled', '503_enabled',  isset($mt_option['503_enabled']));
+				generate_input_filed(__('Blur intensity',  'maintenance'), 'blur_intensity', 'blur_intensity', intval($mt_option['blur_intensity']));
 				generate_check_filed(__('Background blur', 'maintenance'), __('Apply a blur', 'maintenance'), 'is_blur', 'is_blur', isset($mt_option['is_blur']));
 			echo '</tbody>';
 		echo '</table>';
@@ -127,14 +127,14 @@
 	
 	function get_background_fileds_action() {
 		$mt_option = mt_get_plugin_options(true);
-		generate_image_filed(__('Background image', 'maintenance'), 'body_bg', 'body_bg', $mt_option['body_bg'], 'boxes box-bg', __('Upload Background', 'maintenance'), 'upload_background upload_btn button');
+		generate_image_filed(__('Background image', 'maintenance'), 'body_bg', 'body_bg', esc_attr($mt_option['body_bg']), 'boxes box-bg', __('Upload Background', 'maintenance'), 'upload_background upload_btn button');
 	}
 	add_action ('maintenance_background_field', 'get_background_fileds_action', 10);
 	
 	function get_color_fileds_action() {
 		$mt_option = mt_get_plugin_options(true);
-		get_color_field(__('Background color', 'maintenance'), 'body_bg_color', 'body_bg_color', $mt_option['body_bg_color'], '#333333');
-		get_color_field(__('Font color', 'maintenance'), 'font_color', 'font_color', $mt_option['font_color'], 	  '#ffffff');
+		get_color_field(__('Background color', 'maintenance'), 'body_bg_color', 'body_bg_color', esc_attr($mt_option['body_bg_color']), '#333333');
+		get_color_field(__('Font color', 'maintenance'), 'font_color', 'font_color', esc_attr($mt_option['font_color']), 	  '#ffffff');
 	}	
 	add_action ('maintenance_color_fields', 'get_color_fileds_action', 10);
 	
@@ -171,17 +171,15 @@
 		$mt_options	= mt_get_plugin_options(true);
 			if (!is_user_logged_in()) {
 				if ($mt_options['state']) {
-					if ( isset($mt_options['expiry_date'])) {
-						if ($mt_options['expiry_date'] != '') {
-								$vCurrDate =  DateTime::createFromFormat('d/m/Y', $mt_options['expiry_date']);
-								list( $date, $time ) = explode( ' ', current($vCurrDate));
-								list( $year, $month, $day ) 	 = explode(  '-', $date );
-								list( $hour, $minute, $second )  = explode ( ':', $time );
-								$timestamp = mktime( $hour, $minute, $second, $month, $day, $year );
+					if (!empty($mt_options['expiry_date'])) {
+						$vCurrDate =  DateTime::createFromFormat('d/m/Y', $mt_options['expiry_date']);
+						list( $date, $time ) = explode( ' ', current($vCurrDate));
+						list( $year, $month, $day ) 	 = explode(  '-', $date );
+						list( $hour, $minute, $second )  = explode ( ':', $time );
+						$timestamp = mktime( $hour, $minute, $second, $month, $day, $year );
 								
-								if ( time() > $timestamp ) {
-									return true;
-								}
+						if ( time() > $timestamp ) {
+							return true;
 						}
 					}	
 
@@ -200,7 +198,7 @@
 		//<![CDATA[
 		jQuery(document).ready( function() {
 			jQuery('.if-js-closed').removeClass('if-js-closed').addClass('closed');
-			postboxes.add_postbox_toggles( '<?php echo $maintenance_variable->options_page; ?>' );
+			postboxes.add_postbox_toggles( '<?php echo esc_js($maintenance_variable->options_page); ?>' );
 		});
 		//]]>
 		</script>
@@ -243,7 +241,7 @@
 			'state'		  		=> true,
 			'page_title'  		=> __('Website is under construction', 'maintenance'),
 			'heading'	  		=> __('Maintenance mode is on', 'maintenance'),	
-			'description' 		=> __('Be first of your friends who will know when the website goes live.', 'maintenance'),
+			'description' 		=> __('We have time until launch', 'maintenance'),
 			'logo'		  		=> '',
 			'body_bg'	  		=> '',
 			'body_bg_color'    	=> '#333333',

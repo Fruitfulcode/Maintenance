@@ -12,14 +12,21 @@
 		maintenance_update();
 	}
 	
-   function maintenance_install() {
+	function maintenance_install() {
 		$options = mt_get_plugin_options();
 		add_option( 'maintenance_db_version',  MAINTENANCE_DB_VERSION );
 		add_option( 'maintenance_options', 	   $options);
-   }
+	}
 	
-   function maintenance_update() {
-		$options = mt_get_plugin_options();
+	function maintenance_update() {
+		$options   = mt_get_plugin_options();
+		$settings  = get_option( 'maintenance_options' );
+		
 		update_option( 'maintenance_db_version', MAINTENANCE_DB_VERSION);
+		
+		foreach ( $options as $key => $value ) {
+		if ( !isset( $settings[$key] ) )
+					 $settings[$key] = $value;
+		}
 		update_option( 'maintenance_options',  $options);
 	}

@@ -13,19 +13,19 @@ function get_custom_login_code() {
 	$using_cookie = false;
 	
 	if(isset($_POST['is_custom_login'])) {
-		$user_login = $_POST['log'];
+		$user_login = esc_attr($_POST['log']);
 		$user_login = sanitize_user( $user_login );
-		$user_pass  = $_POST['pwd'];
+		$user_pass  = esc_attr($_POST['pwd']);
 		$access = array();
-		$access['user_login'] 	 = $user_login;
-		$access['user_password'] = $user_pass;
+		$access['user_login'] 	 = esc_attr($user_login);
+		$access['user_password'] = esc_attr($user_pass);
 		$access['remember']  	 = true;
 					
 		$user = null;
 		$user = new WP_User(0, $user_login);
-		$current_role = $user->roles[0];
+		$current_role = current($user->roles);
 					 
-		if (isset($mt_options['roles_array']) && (count($mt_options['roles_array']) > 0)) {
+		if (!empty($mt_options['roles_array'])) {
 			foreach (array_keys($mt_options['roles_array']) as $key) {
 				if ($key == $current_role) { $is_role_check = true; }	
 			}
@@ -79,7 +79,6 @@ function get_custom_login_code() {
 		
 	function add_custom_scripts() {
 		global $wp_scripts;
-		
 		wp_register_script( '_placeholder', 	MAINTENANCE_URI  .'load/js/jquery.placeholder.js', 	   'jquery');
 		wp_register_script( '_backstretch', 	MAINTENANCE_URI  .'load/js/jquery.backstretch.min.js', 'jquery');
 		wp_register_script( '_frontend', 		MAINTENANCE_URI  .'load/js/jquery.frontend.js', 'jquery');
@@ -117,17 +116,18 @@ function get_custom_login_code() {
 		$options_style = '';
 		$options_style = '<style type="text/css">';
 
-		if ( isset($mt_options['body_bg_color']) ) {
-			$options_style .= 'body {background-color: '. $mt_options['body_bg_color'] .'}';
+		if ( !empty($mt_options['body_bg_color']) ) {
+			 $options_style .= 'body {background-color: '. esc_attr($mt_options['body_bg_color']) .'}';
 		}
 		
-		if ( $mt_options['font_color'] ) {
-			 $options_style .= '.site-title   {color: '. $mt_options['font_color'] .'} ';
-			 $options_style .= '.login-form   {color: '. $mt_options['font_color'] .'} ';
-			 $options_style .= '.ie7 .login-form input[type="text"], .ie7 .login-form input[type="password"], .ie7 .login-form input[type="submit"],  {color: '. $mt_options['font_color'] .'} ';
-			 $options_style .= '.site-content {color: '. $mt_options['font_color'] .'} ';
-			 $options_style .= 'footer {color: '. $mt_options['font_color'] .'} ';
-			 $options_style .= '.ie7 .company-name {color: '. $mt_options['font_color'] .'} ';
+		if ( !empty($mt_options['font_color']) ) {
+			 $font_color = esc_attr($mt_options['font_color']);
+			 $options_style .= '.site-title   {color: '. $font_color .'} ';
+			 $options_style .= '.login-form   {color: '. $font_color .'} ';
+			 $options_style .= '.ie7 .login-form input[type="text"], .ie7 .login-form input[type="password"], .ie7 .login-form input[type="submit"],  {color: '. $font_color .'} ';
+			 $options_style .= '.site-content {color: '. $font_color .'} ';
+			 $options_style .= 'footer {color: '. $font_color .'} ';
+			 $options_style .= '.ie7 .company-name {color: '. $font_color .'} ';
 		}
 		$options_style .= '</style>';
 		echo $options_style;
@@ -137,10 +137,10 @@ function get_custom_login_code() {
 	function get_logo_box() {
 		$mt_options = mt_get_plugin_options(true);
 		$out_html = '';
-			$out_html = '<a class="logo" rel="home" href="'.site_url('') .'">';
-			if ( $mt_options['logo'] ) { 
+			$out_html = '<a class="logo" rel="home" href="'.esc_url(site_url('')) .'">';
+			if ( !empty($mt_options['logo']) ) { 
 				 $logo = wp_get_attachment_image_src( $mt_options['logo'], 'full'); 
-				 $out_html .= '<img src="'. $logo[0] .'" alt="logo"/>';
+				 $out_html .= '<img src="'. esc_url($logo[0]) .'" alt="logo"/>';
 			} else { 
 				 $out_html .= '<h1 class="site-title">'. get_bloginfo( 'name' ) .'</h1>';
 			} 
@@ -153,16 +153,14 @@ function get_custom_login_code() {
 	function get_content_section() {
 		$mt_options  = mt_get_plugin_options(true);
 		$out_content = '';
-		if (isset($mt_options['heading'])) {
-			if (!empty($mt_options['heading'])) {
-			$out_content .= '<h2 class="heading font-center">'     . stripslashes($mt_options['heading']) .'</h3>';
-			}
-		}	
-		if (isset($mt_options['description'])) {
-			if (!empty($mt_options['description'])) {
-			$out_content .= '<h3 class="description font-center">' . stripslashes($mt_options['description']) .'</h4>';
-			}
-		}		
+		if (!empty($mt_options['heading'])) {
+			$out_content .= '<h2 class="heading font-center">'     . wp_kses_post(stripslashes($mt_options['heading'])) .'</h3>';
+		}
+		
+		if (!empty($mt_options['description'])) {
+			$out_content .= '<h3 class="description font-center">' . wp_kses_post(stripslashes($mt_options['description'])) .'</h4>';
+		}
+		
 		echo $out_content;
 	}
 	add_action('content_section', 'get_content_section', 10);
@@ -199,7 +197,7 @@ function get_custom_login_code() {
 	
 	function get_footer_section() {
 		$out_ftext = '';
-		$out_ftext .= '<a class="company-name" rel="footer" href="'.site_url('') .'">';
+		$out_ftext .= '<a class="company-name" rel="footer" href="'.esc_url(site_url('')) .'">';
 			$out_ftext .= '&copy; ' . get_bloginfo( 'name' ) . ' ' . date('Y');
 		$out_ftext .= '</a>';
 		echo $out_ftext;

@@ -17,7 +17,7 @@
 	<meta name="viewport" content="width=device-width" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="viewport" content="width=640" />
-	<?php get_page_title($mess_arr[0]); ?>
+	<?php get_page_title(esc_attr($mess_arr[0])); ?>
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<?php do_action('load_custom_scripts'); ?>
@@ -30,7 +30,7 @@
 		<div class="center">
 			<header>
 				<?php do_action('logo_box'); ?>
-				<?php do_login_form($mess_arr[3], $mess_arr[1], $mess_arr[2]); ?>
+				<?php do_login_form(esc_attr($mess_arr[3]), esc_attr($mess_arr[1]), esc_attr($mess_arr[2])); ?>
 			</header>
 		</div>
 		
