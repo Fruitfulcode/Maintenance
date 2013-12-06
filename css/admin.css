@@ -2,6 +2,7 @@
 #maintenance-options #icon-maintenance {background:url('../images/icon.png') no-repeat center center transparent;}
 #maintenance-options input.upload_btn { clear: left; display: block; float: left; margin: 20px 0; padding: 5px; text-align: center; width: 100%; }
 #maintenance-options h2 {float:left}
+#wpbody-content .metabox-holder {float:left; width:100%;}
 /*Checkbox*/
 .tzCheckBox {background:url( '../images/background.png ') no-repeat right bottom;display:inline-block;min-width:60px;height:33px;white-space:nowrap;position:relative;cursor:pointer;margin:8px 0 0 20px;}
 .tzCheckBox.checked{background-position:top left;margin:8px 0 0 6px;}
@@ -31,16 +32,19 @@
 #maintenance-options  #poststuff .metabox-holder .postbox-container.column-1 {float: left;  width: 65%;}
 #maintenance-options  #poststuff .metabox-holder .postbox-container.column-2 {float: right; width: 28%; min-width:300px;}
 #maintenance-options.wrap form p.submit {clear:both;}
+
 @media screen and (max-width: 1024px) {
 	#maintenance-options  #poststuff .metabox-holder .postbox-container.column-1 {float: left; width: 100%;}
 	#maintenance-options  #poststuff .metabox-holder .postbox-container.column-2 {float: left; width: 100%;}
 }
+
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 568px) { 
 	#maintenance-options  #poststuff .metabox-holder .postbox-container.column-1 {float: left;  width: 100%;}
 	#maintenance-options  #poststuff .metabox-holder .postbox-container.column-2 {float: left; width: 100%;}
 }
+
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px)  { 

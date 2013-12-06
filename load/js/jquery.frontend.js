@@ -27,10 +27,19 @@ jQuery(document).ready(function() {
 				jQuery('#login-form').removeClass('active');
 		}	
 	}
+	jQuery('body > div:not(".preloader")').each(function() {
+		jQuery(this).css({'visibility': 'hidden'});
+	});
+	
+	
 });
 
 jQuery(window).load(function() { 
 	jQuery('#content').center();
+	jQuery('body > div:not(".preloader")').each(function() {
+		jQuery(this).css({'visibility': 'visible'});
+	});
+	setInterval( function() { jQuery('body > .preloader').fadeOut(300); }, 1000); 
 });
 
 jQuery(window).resize(function() { 
@@ -47,7 +56,7 @@ jQuery(window).resize(function() {
 });
  
 jQuery.fn.center = function () {
-    this.css("position","fixed");
+    this.css("position","absolute");
     this.css("top", Math.max(0, ((jQuery(window).height() - jQuery(this).outerHeight()) / 2) +  jQuery(window).scrollTop()) + "px");
     return this;
 }

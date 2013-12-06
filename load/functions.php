@@ -117,12 +117,14 @@ function get_custom_login_code() {
 		$options_style = '<style type="text/css">';
 
 		if ( !empty($mt_options['body_bg_color']) ) {
-			 $options_style .= 'body {background-color: '. esc_attr($mt_options['body_bg_color']) .'}';
+			  $options_style .= 'body {background-color: '. esc_attr($mt_options['body_bg_color']) .'}';
+			  $options_style .= '.preloader {background-color: '. esc_attr($mt_options['body_bg_color']) .'}';
 		}
 		
 		if ( !empty($mt_options['font_color']) ) {
 			 $font_color = esc_attr($mt_options['font_color']);
 			 $options_style .= '.site-title   {color: '. $font_color .'} ';
+			 $options_style .= '.preloader i  {color: '. $font_color .'} ';
 			 $options_style .= '.login-form   {color: '. $font_color .'} ';
 			 $options_style .= '.ie7 .login-form input[type="text"], .ie7 .login-form input[type="password"], .ie7 .login-form input[type="submit"],  {color: '. $font_color .'} ';
 			 $options_style .= '.site-content {color: '. $font_color .'} ';
@@ -216,6 +218,28 @@ function get_custom_login_code() {
 				$out_login_form .= '<input type="hidden" name="is_custom_login" value="1" />';
 		$out_login_form .= '</form>';
 		echo $out_login_form;
+	}
+	
+	function get_preloader_element() {
+		$out = '';
+		$out = '<div class="preloader"><i></i></div>';
+		echo $out; 
+	}
+	add_action('before_content_section', 'get_preloader_element', 5);
+	
+	function maintenance_fruitful_metadevice() {
+		$browser 		= '';				
+		$browser_ip		= strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");		
+		$browser_an		= strpos($_SERVER['HTTP_USER_AGENT'],"Android");		
+		$browser_ipad 	= strpos($_SERVER['HTTP_USER_AGENT'],"iPad");			 
+		
+		if ($browser_ip  	== true) { $browser = 'iphone'; }	 
+		if ($browser_an		== true) { $browser = 'android'; } 	 
+		if ($browser_ipad 	== true) { $browser = 'ipad';   }
+
+		if($browser == 'iphone') 	{ echo '<meta name="viewport" content="width=480px, initial-scale=0.4">';  } 
+		if($browser == 'android') 	{ echo '<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width" />'; } 
+		if($browser == 'ipad') 		{ echo '<meta name="viewport" content="width=768px, minimum-scale=1.0, maximum-scale=1.0" />'; } 
 	}
 	
 	function get_headers_503() {
