@@ -126,7 +126,7 @@ function get_custom_login_code() {
 			 $options_style .= '.site-title   {color: '. $font_color .'} ';
 			 $options_style .= '.preloader i  {color: '. $font_color .'} ';
 			 $options_style .= '.login-form   {color: '. $font_color .'} ';
-			 $options_style .= '.ie7 .login-form input[type="text"], .ie7 .login-form input[type="password"], .ie7 .login-form input[type="submit"],  {color: '. $font_color .'} ';
+			 $options_style .= '.ie7 .login-form input[type="text"], .ie7 .login-form input[type="password"], .ie7 .login-form input[type="submit"]  {color: '. $font_color .'} ';
 			 $options_style .= '.site-content {color: '. $font_color .'} ';
 			 $options_style .= 'footer {color: '. $font_color .'} ';
 			 $options_style .= '.ie7 .company-name {color: '. $font_color .'} ';

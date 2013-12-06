@@ -241,7 +241,7 @@
 			'state'		  		=> true,
 			'page_title'  		=> __('Website is under construction', 'maintenance'),
 			'heading'	  		=> __('Maintenance mode is on', 'maintenance'),	
-			'description' 		=> __('We have time until launch', 'maintenance'),
+			'description' 		=> __('Website will be available soon', 'maintenance'),
 			'logo'		  		=> '',
 			'body_bg'	  		=> '',
 			'body_bg_color'    	=> '#333333',

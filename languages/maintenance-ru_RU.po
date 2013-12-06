@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
-"POT-Creation-Date: 2013-11-29 15:08+0200\n"
-"PO-Revision-Date: 2013-12-06 10:29+0200\n"
+"POT-Creation-Date: 2013-12-06 14:52+0200\n"
+"PO-Revision-Date: 2013-12-06 14:53+0200\n"
 "Last-Translator: \n"
 "Language-Team: fruitfulcode\n"
 "MIME-Version: 1.0\n"
@@ -21,11 +21,13 @@ msgstr "Сохранить"
 msgid "General Settings"
 msgstr "Общие настройки"
 
-#: includes/functions.php:105 includes/functions.php:157
+#: includes/functions.php:105
+#: includes/functions.php:157
 msgid "Extended version"
 msgstr "Расширенная версия"
 
-#: includes/functions.php:106 includes/functions.php:145
+#: includes/functions.php:106
+#: includes/functions.php:145
 msgid "Contact support"
 msgstr "Служба поддержки"
 
@@ -132,8 +134,8 @@ msgid "Maintenance mode is on"
 msgstr "Режим обслуживания включен"
 
 #: includes/functions.php:244
-msgid "We have time until launch"
-msgstr "Осталось времени до запуска"
+msgid "Website will be available soon"
+msgstr "Сайт скоро бдует доступен "
 
 #: load/functions.php:37
 msgid "Permission access denied!"
@@ -151,17 +153,20 @@ msgstr "Вы ввели неверный пароль!"
 msgid "You entered your login and password are incorrect!"
 msgstr "Вы ввели неверный логин или пароль!"
 
-#: load/functions.php:213
+#: load/functions.php:215
 msgid "Username"
 msgstr "Логин"
 
-#: load/functions.php:214
+#: load/functions.php:216
 msgid "Password"
 msgstr "Пароль"
 
-#: load/functions.php:215
+#: load/functions.php:217
 msgid "Sign In"
 msgstr "Войти"
+
+#~ msgid "We have time until launch"
+#~ msgstr "Осталось времени до запуска"
 
 #~ msgid "Be first of your friends who will know when the website goes live."
 #~ msgstr "Будь первым из твоих друзей, кто узнает о запуске сайта."
