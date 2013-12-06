@@ -30,8 +30,6 @@ jQuery(document).ready(function() {
 	jQuery('body > div:not(".preloader")').each(function() {
 		jQuery(this).css({'visibility': 'hidden'});
 	});
-	
-	
 });
 
 jQuery(window).load(function() { 

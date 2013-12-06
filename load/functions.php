@@ -81,7 +81,7 @@ function get_custom_login_code() {
 		global $wp_scripts;
 		wp_register_script( '_placeholder', 	MAINTENANCE_URI  .'load/js/jquery.placeholder.js', 	   'jquery');
 		wp_register_script( '_backstretch', 	MAINTENANCE_URI  .'load/js/jquery.backstretch.min.js', 'jquery');
-		wp_register_script( '_frontend', 		MAINTENANCE_URI  .'load/js/jquery.frontend.js', 'jquery');
+		wp_register_script( '_frontend', 		MAINTENANCE_URI  .'load/js/jquery.frontend.min.js', 'jquery');
 		wp_register_script( '_blur',			MAINTENANCE_URI  .'load/js/jquery.blur.min.js', 'jquery');
 		
 		$wp_scripts->do_items('jquery');
