@@ -16,17 +16,7 @@ jQuery(document).ready(function() {
 			jQuery('#login-form').find('input[type="text"]').focus();
 	}
 		
-	if (jQuery(window).width() < 768) {
-		jQuery('#login-form').find('span.licon').fadeIn(300);
-		jQuery('#login-form').find('span.picon').fadeIn(300);
-		jQuery('#login-form').addClass('active');
-	} else {
-		if (!jQuery('#login-form').hasClass('error')) {
-				jQuery('#login-form').find('span.licon').fadeOut(300);
-				jQuery('#login-form').find('span.picon').fadeOut(300);
-				jQuery('#login-form').removeClass('active');
-		}	
-	}
+	jQuery(window).resize();
 	jQuery('body > div:not(".preloader")').each(function() {
 		jQuery(this).css({'visibility': 'hidden'});
 	});
@@ -41,15 +31,18 @@ jQuery(window).load(function() {
 });
 
 jQuery(window).resize(function() { 
-	if (jQuery(window).width() < 768) {
+	if ((jQuery(window).width() < 1025) || (jQuery(window).width() < 769)) {
 		jQuery('#login-form').find('span.licon').fadeIn(300);
 		jQuery('#login-form').find('span.picon').fadeIn(300);
 		jQuery('#login-form').addClass('active');
 	} else {
-		jQuery('#login-form').find('span.licon').fadeOut(400);
-		jQuery('#login-form').find('span.picon').fadeOut(400);
-		jQuery('#login-form').removeClass('active');
+		if (!jQuery('#login-form').hasClass('error')) {
+				jQuery('#login-form').find('span.licon').fadeOut(300);
+				jQuery('#login-form').find('span.picon').fadeOut(300);
+				jQuery('#login-form').removeClass('active');
+		}	
 	}
+	
 	jQuery('#content').center();
 });
  

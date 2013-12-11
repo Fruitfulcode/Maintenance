@@ -13,6 +13,7 @@ body {
 	font-family:"Open Sans", sans-serif;
 	height:100%;
 	width: 100%;
+	overflow:auto;
 }
 
 body > #wrapper {height: auto; min-height: 100%; width:100%;}

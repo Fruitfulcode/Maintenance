@@ -237,7 +237,7 @@ function get_custom_login_code() {
 		if ($browser_an		== true) { $browser = 'android'; } 	 
 		if ($browser_ipad 	== true) { $browser = 'ipad';   }
 
-		if($browser == 'iphone') 	{ echo '<meta name="viewport" content="width=480px, initial-scale=0.4">';  } 
+		if($browser == 'iphone') 	{ /*echo '<meta name="viewport" content="width=480px, initial-scale=0.4">'; */ } 
 		if($browser == 'android') 	{ echo '<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width" />'; } 
 		if($browser == 'ipad') 		{ echo '<meta name="viewport" content="width=768px, minimum-scale=1.0, maximum-scale=1.0" />'; } 
 	}
