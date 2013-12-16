@@ -102,8 +102,8 @@
 	function maintenance_page_create_meta_boxes() {
 		global $maintenance_variable;
 		add_meta_box( 'maintenance-general', __( 'General Settings', 'maintenance' ),  'add_data_fields', 				 $maintenance_variable->options_page, 'normal', 'default');
-		add_meta_box( 'promo-extended',   	 __( 'Extended version', 'maintenance' ),  'maintenanace_extended_version',  $maintenance_variable->options_page, 'side',   'default' );
-		add_meta_box( 'promo-content',   	 __( 'Contact support',  'maintenance' ),  'maintenanace_contact_support',   $maintenance_variable->options_page, 'side',   'default' );
+		add_meta_box( 'promo-extended',   	 __( 'Pro version', 'maintenance' ),  'maintenanace_extended_version',  $maintenance_variable->options_page, 'side',   'default' );
+		add_meta_box( 'promo-content',   	 __( 'Support',  'maintenance' ),  'maintenanace_contact_support',   $maintenance_variable->options_page, 'side',   'default' );
 	}
 	add_action('add_meta_boxes', 'maintenance_page_create_meta_boxes', 10);
 	
@@ -142,8 +142,8 @@
 	function maintenanace_contact_support() {
 		$promo_text  = '';
 		$promo_text .= '<div class="sidebar-promo" id="sidebar-promo">';
-			$promo_text .= '<h4 class="support">'. __('Contact support','maintenance'). '</h3>';
-			$promo_text .= '<p>'. sprintf(__('If you faced with any problems, have a question or suggestion you always can contact us with any request on our website <a href="%1$s" title="%2$s">%2$s</a>', 'maintenance'), 
+			$promo_text .= '<h4 class="support">'. __('Have any questions?','maintenance'). '</h3>';
+			$promo_text .= '<p>'. sprintf(__('You may find answers to your questions at <a target="_blank" href="http://wordpress.org/support/plugin/maintenance">support forum</a><br>You may  <a target="_blank" href="mailto:mail@fruitfulcode.com?subject=Maintenance plugin">contact us</a> with customization requests and suggestions.<br> Please visit our website to learn about us and our services <a href="%1$s" title="%2$s">%2$s</a>', 'maintenance'), 
 											 'http://fruitfulcode.com',
 											 'fruitfulcode.com'
 										 ).'</p>';
@@ -154,13 +154,13 @@
 	function maintenanace_extended_version() {
 		$promo_text  = '';
 		$promo_text .= '<div class="sidebar-promo worker" id="sidebar-promo">';
-			$promo_text .= '<h4 class="star">'. __('Extended version','maintenance') .'</h3>';
-			$promo_text .= '<p>' . sprintf(__('If you like our plugin please rate it, %1$s <a title="leave feedback" href="%2$s" target="_blank">leave feedback</a> or purchase extended version %1$s with more other features.', 'maintenance'), 
+			$promo_text .= '<h4 class="star">'. __('Extended functionality','maintenance') .'</h3>';
+			$promo_text .= '<p>' . sprintf(__('Purchase <a href="http://codecanyon.net/item/maintenance-wordpress-plugin/2781350?ref=fruitfulcode" target="_blank">PRO</a> version  with extended functionality. %1$s If you like our plugin please <a target="_blank" href="http://wordpress.org/support/view/plugin-reviews/maintenance?filter=5">rate it</a>, <a title="leave feedbacks" href="%2$s" target="_blank">leave feedbacks</a>.', 'maintenance'), 
 										   '<br />',
 										   'http://wordpress.org/support/view/plugin-reviews/maintenance') .'</p>';
 			$promo_text .= sprintf('<a class="button button-primary" title="%1$s" href="%2$s" target="_blank">%1$s</a>', 
-							__('Purchase', 'maintenance'),
-							'http://codecanyon.net/item/maintenance-wordpress-plugin/2781350'
+							__('Demo website', 'maintenance'),
+							'http://plugins.fruitfulcode.com/maintenance/'
 							);
 		$promo_text .= '</div>';	
 		echo $promo_text;
