@@ -142,7 +142,9 @@ function get_custom_login_code() {
 			$out_html = '<a class="logo" rel="home" href="'.esc_url(site_url('')) .'">';
 			if ( !empty($mt_options['logo']) ) { 
 				 $logo = wp_get_attachment_image_src( $mt_options['logo'], 'full'); 
-				 $out_html .= '<img src="'. esc_url($logo[0]) .'" alt="logo"/>';
+				 $out_html .= '<div class="img-inner">';
+					$out_html .= '<img src="'. esc_url($logo[0]) .'" alt="logo"/>';
+				 $out_html .= '</div>';
 			} else { 
 				 $out_html .= '<h1 class="site-title">'. get_bloginfo( 'name' ) .'</h1>';
 			} 

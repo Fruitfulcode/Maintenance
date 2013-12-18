@@ -111,9 +111,14 @@ footer {
 	font-weight:normal;
 	text-decoration:none;
 	float:left;
+}
+
+.logo .img-inner {
 	max-width:200px;
 	max-height:200px;
-}
+	float:left;
+	display:block;
+}	
 
 .logo img {
 	float:left;
