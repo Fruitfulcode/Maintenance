@@ -111,6 +111,14 @@ footer {
 	font-weight:normal;
 	text-decoration:none;
 	float:left;
+	max-width:200px;
+	max-height:200px;
+}
+
+.logo img {
+	float:left;
+	height:100%;
+	width:100%;
 }
 
 .site-title {
