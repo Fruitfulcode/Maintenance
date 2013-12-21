@@ -1,52 +1,74 @@
 === Plugin Name ===
 Contributors: fruitfulcode
 Donate link: http://fruitfulcode.com/
-Tags: maintenance, coming soon, under-construction, 503, unavailable, customize page, upload logo, background image, blur, color picker, login form, administration, offline
+Tags: maintenance, coming soon, under-construction, 503 error, administration, login, customize page, background, fullscreen, blur
 Requires at least: 3.0
 Tested up to: 3.8
 Stable tag: 2.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Maintenance - easy configure and customize coming soon, under construction pages when site have updates or changes.
+Maintenance - easy configure and customize coming soon, under construction page when site have updates or changes.
 
 == Description ==
 
 Maintenance plugin allow WordPress site administrator close the website for maintenance, enable "503 Service temporarily unavailable”, set a temporary page with authorization, which can be edited via the plugin settings. Easy customize, good look on all devices. Add your logo, background image, select the desired color, add text. Extended version of the plugin includes more settings that appear after installation PRO extension plugin.
 
-<h3>FEATURES</h3>
+<h3>Features</h3>
 <ul>
 <li>Html/CSS layout without images (retina ready) </li>
-<li>Backstretch fullscreen background</li>
+<li>Fullscreen background (<a target="_blank" href="https://github.com/srobbin/jquery-backstretch">Backstretch</a>)</li>
+<li>Blur background effect</li>
 <li>Upload own logo</li>
-<li>Select color scheme</li>
+<li>Configurable colors: fonts, icons, background</li>
 <li>Add your title, headline, text</li>
 <li>User login with validation</li>
 <li>Admin bar: show/hide</li>
-<li>503 error switcher</li>
-<li>Blur background effect</li>
+<li>503 error on/off</li>
+
 </ul>
 
 
 <a target="_blank" href="http://plugins.fruitfulcode.com/maintenance/">View demo</a>
 
 
-<h3>Maintenance PRO</h3>
-<strong>Required Free version installation</strong>
-<p>All features from FREE version included +</p>
+<a target="_blank" href="http://codecanyon.net/item/maintenance-wordpress-plugin/2781350?ref=fruitfulcode"><h3>Maintenance PRO</h3></a>
+<strong>Required Free version.</strong> All features from FREE version included + 
 
 <ul>
 <li>Unique jQuery timer count down</li>
 <li>User permissions</li>
-<li>Full screen background gallery with patterns overlays</li>
+<li>Fullscreen background gallery</li>
+<li>Gallery patterns overlays</li> 
 <li>Background video support</li>
 <li>Additional HTML area</li>
-<li>Social media profiles</li>
-<li>Mailchimp integration</li>
-<li>Developers support</li>
+<li>Social media profiles (<a target="_blank" href="http://zurb.com/playground/foundation-icons">Foundation icons</a>)</li>
+<li>Email newsletter subscribe form (<a target="_blank" href="http://mailchimp.com/">MailChimp</a> integration) </li>
 </ul>
 
 <a target="_blank" href="http://codecanyon.net/item/maintenance-wordpress-plugin/2781350?ref=fruitfulcode">Get additional functionality</a>
+
+<h3>Translation</h3>
+
+<ul>
+<li>Russian (ru_RU)</li>
+<li>Brazilian Portuguese (pt_BR) (thanks to Luiz Felipe Silva Cristofari)</li>
+</ul>
+
+<p>If you would like to create translation to your native language, you can send the <a target="_blank" href="http://codex.wordpress.org/Translating_WordPress">text of PO and MO files</a> to the <a href="http://fruitfulcode.com" target="_blank">Fruitful Code</a> and we'll add it to the next plugin update.</p><p> You can download the latest version of the program for work with PO and MO files <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.</p>
+
+<h3>Technical support</h3>
+If you have any questions or recommendations regarding the functionality of our plugins (existing options, new options, current issues), please feel free to contact us.
+
+<h3>How to thank a developers</h3>
+<ol>
+<li>If you like our plugin and want to say us thank you, please <a href="http://wordpress.org/support/view/plugin-reviews/maintenance?filter=5">leave us review</a></li>
+<li>Make review in your blog or journal with URL link to official plugin page and plugin demo </li>
+<li>Recommend "Maintenance plugin" to your friends</li>
+<li>Each purchasing of <a target="_blank" href="http://codecanyon.net/item/maintenance-wordpress-plugin/2781350?ref=fruitfulcode">PRO</a> version make us more happy</li>
+</ol>
+
+Thanks for using.
 
 == Installation ==
 
@@ -55,9 +77,17 @@ Maintenance plugin allow WordPress site administrator close the website for main
 3.	Go to Dashboard > Maintenance
 
 == Screenshots ==
-1. Dashboard
+1. Maintenance options page
 
 == Frequently Asked Questions ==
+
+= I have activated plugin and don’t see any changes, looks like plugin is not working. =
+
+Try to check in different browser. If you a logged as wordpress user you see website in normal mode.
+
+= Will my site remain visible to search engines while maintenance mode is on? =
+
+The site will not be visible to search engines. "503 Service Temporarily Unavailable" can be changed in plugin options.
 
 = Where can I find out the username and password to get to the site? = 
 
@@ -66,6 +96,9 @@ http://yousite.com/wp-admin/users.php
 
 = If I incorrectly write a login and password I will see the error on the page wp-login? =
 No, it will be display error on current maintenance page, without redirect to wp-login page
+
+= I haven’t found an answer to my question, what should I do? = 
+You can check <a href="http://wordpress.org/support/plugin/maintenance">support forum</a> or <a class="send-mail" target="_blank" href="mailto:mail@fruitfulcode.com?subject=Maintenance%20Plugin">send email to us</a>
 
 
 == Changelog ==
