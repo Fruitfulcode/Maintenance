@@ -165,7 +165,7 @@
 		$promo_text .= '</div>';	
 		echo $promo_text;
 	}
-	function load_maintenace_page() {
+	function load_maintenance_page() {
 		global $mt_options;
 		$vCurrDate = '';
 		$mt_options	= mt_get_plugin_options(true);
@@ -191,7 +191,7 @@
 			}
 	}
 
-	function maintenace_metaboxes_scripts() {
+	function maintenance_metaboxes_scripts() {
 		global $maintenance_variable; 
 	?>
 		<script type="text/javascript">
@@ -204,7 +204,7 @@
 		</script>
 	<?php }	
 	
-	function maintenace_add_toolbar_items(){
+	function maintenance_add_toolbar_items(){
 		global $wp_admin_bar, $wpdb;
 			   $mt_options	= mt_get_plugin_options(true);
 			   $check = '';
@@ -216,7 +216,7 @@
 		} else {
 			$check = 'Off';
 		}
-		$wp_admin_bar->add_menu( array( 'id' => 'maintenance_options', 'title' => __( 'Maintenace', 'maintenance' ) . ' is ' . $check, 'href' => $url_to, 'meta'  => array( 'title' => __( 'Maintenace', 'maintenance' ) . ' is ' . $check)));	
+		$wp_admin_bar->add_menu( array( 'id' => 'maintenance_options', 'title' => __( 'Maintenance', 'maintenance' ) . ' is ' . $check, 'href' => $url_to, 'meta'  => array( 'title' => __( 'maintenance', 'maintenance' ) . ' is ' . $check)));	
 	} 
 	
 	

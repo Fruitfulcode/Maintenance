@@ -59,6 +59,13 @@ No, it will be display error on current maintenance page, without redirect to wp
 
 == Changelog ==
 
+= 2.0.1 = (21.12.2013)
+* New translation Brazilian Portuguese
+* Bug fix in title
+* Bug fix blur background image scroll
+
+
+
 = 2.0 = (17.12.2013)
 * New features
 * New PRO version

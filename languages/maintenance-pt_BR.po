@@ -2,62 +2,61 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
 "POT-Creation-Date: 2013-12-06 14:52+0200\n"
-"PO-Revision-Date: 2013-12-06 14:53+0200\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2013-12-18 22:31-0300\n"
+"Last-Translator: Luiz Felipe S. Cristofari - meroviggiO <meroviggio@gmail."
+"com>\n"
 "Language-Team: fruitfulcode\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.5.7\n"
 "X-Poedit-KeywordsList: _;_e;__;_x\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #: includes/admin.php:84
 msgid "Save changes"
-msgstr "Сохранить"
+msgstr "Salvar alterações"
 
 #: includes/functions.php:104
 msgid "General Settings"
-msgstr "Общие настройки"
+msgstr "Configurações gerais"
 
-#: includes/functions.php:105
-#: includes/functions.php:157
+#: includes/functions.php:105 includes/functions.php:157
 msgid "Extended version"
-msgstr "Расширенная версия"
+msgstr "Versão extendida"
 
-#: includes/functions.php:106
-#: includes/functions.php:145
+#: includes/functions.php:106 includes/functions.php:145
 msgid "Contact support"
-msgstr "Служба поддержки"
+msgstr "Contatar suporte"
 
 #: includes/functions.php:114
 msgid "Page title"
-msgstr "Заголовок страницы"
+msgstr "Título da página"
 
 #: includes/functions.php:115
 msgid "Headline"
-msgstr "Заголовок"
+msgstr "Cabeçalho"
 
 #: includes/functions.php:116
 msgid "Description"
-msgstr "Описание"
+msgstr "Descrição"
 
 #: includes/functions.php:117
 msgid "Logo"
-msgstr "Логотип"
+msgstr "Logo"
 
 #: includes/functions.php:117
 msgid "Upload Logo"
-msgstr "Загрузить логотип"
+msgstr "Enviar logo"
 
 #: includes/functions.php:120
 msgid "Admin bar"
-msgstr "Админ-панель"
+msgstr "Barra administrativa"
 
 #: includes/functions.php:120
 msgid "Show admin bar"
-msgstr "Показать админ-панель"
+msgstr "Mostrar barra administrativa"
 
 #: includes/functions.php:121
 msgid "503"
@@ -65,35 +64,35 @@ msgstr ""
 
 #: includes/functions.php:121
 msgid "Service temporarily unavailable"
-msgstr "Сервис врменно недоступен"
+msgstr "Serviço temporariamente indisponível"
 
 #: includes/functions.php:122
 msgid "Blur intensity"
-msgstr "Интенсивность размытия"
+msgstr "Intensidade do efeito Blur"
 
 #: includes/functions.php:123
 msgid "Background blur"
-msgstr "Размытие фона"
+msgstr "Efeito blur no fundo"
 
 #: includes/functions.php:123
 msgid "Apply a blur"
-msgstr "Применить размытие"
+msgstr "Aplicar blur"
 
 #: includes/functions.php:130
 msgid "Background image"
-msgstr "Фоновое изображение"
+msgstr "Imagem de fundo"
 
 #: includes/functions.php:130
 msgid "Upload Background"
-msgstr "Загрузить фон"
+msgstr "Enviar imagem de fundo"
 
 #: includes/functions.php:136
 msgid "Background color"
-msgstr "Цвет фона"
+msgstr "Cor do plano de fundo"
 
 #: includes/functions.php:137
 msgid "Font color"
-msgstr "Цвет шрифта"
+msgstr "Cor da fonte"
 
 #: includes/functions.php:146
 #, php-format
@@ -102,9 +101,8 @@ msgid ""
 "contact us with any request on our website <a href=\"%1$s\" title=\"%2$s\">"
 "%2$s</a>"
 msgstr ""
-"Если вы столкнулись с любыми проблемами, есть вопрос или предложение, вы "
-"всегда можете обратиться к нам с любым предложением  на нашем сайте <a href="
-"\"%1$s\" title=\"%2$s\">%2$s</a>"
+"Se você viu algum problem, tem alguma dúvida ou sugestão, você pode nos "
+"contatar em nosso site <a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
 
 #: includes/functions.php:158
 #, php-format
@@ -113,57 +111,57 @@ msgid ""
 "\"%2$s\" target=\"_blank\">leave feedback</a> or purchase extended version "
 "%1$s with more other features."
 msgstr ""
-"Если Вам нравиться наш плагин, оцените его %1$s <a title=\"оставить "
-"комментарий\" href=\"%2$s\" target=\"_blank\">оставить комментарий</a> или "
-"купите расширенную версию %1$s с дополнительными возможностями."
+"Se você gostou de nosso plugin, por-favor avalie-o, %1$s <a title=\"deixe um "
+"comentário\" href=\"%2$s\" target=\"_blank\">deixe um comentário</a> ou "
+"adquira a versão extendida %1$s com mais funcionalidades."
 
 #: includes/functions.php:162
 msgid "Purchase"
-msgstr "Купить"
+msgstr "Comprar"
 
 #: includes/functions.php:219
-msgid "maintenance"
-msgstr ""
+msgid "Maintenace"
+msgstr "Manutenção"
 
 #: includes/functions.php:242
 msgid "Website is under construction"
-msgstr "Сайт находится в стадии разработки"
+msgstr "Site em construção"
 
 #: includes/functions.php:243
 msgid "Maintenance mode is on"
-msgstr "Режим обслуживания включен"
+msgstr "Modo de manutenção ativado"
 
 #: includes/functions.php:244
 msgid "Website will be available soon"
-msgstr "Сайт скоро бдует доступен "
+msgstr "O site estará disponível em breve"
 
 #: load/functions.php:37
 msgid "Permission access denied!"
-msgstr "Доступ запрещен!"
+msgstr "Permissão de acesso negada!"
 
 #: load/functions.php:45
 msgid "You entered your login are incorrect!"
-msgstr "Вы ввели неверный логин! "
+msgstr "Você digitou seu usuário incorretamente!"
 
 #: load/functions.php:49
 msgid "You entered your password are incorrect!"
-msgstr "Вы ввели неверный пароль!"
+msgstr "Você digitou sua senha incorretamente!"
 
 #: load/functions.php:52
 msgid "You entered your login and password are incorrect!"
-msgstr "Вы ввели неверный логин или пароль!"
+msgstr "Você digitou seu usuário e senha incorretamente!"
 
 #: load/functions.php:215
 msgid "Username"
-msgstr "Логин"
+msgstr "Usuário"
 
 #: load/functions.php:216
 msgid "Password"
-msgstr "Пароль"
+msgstr "Senha"
 
 #: load/functions.php:217
 msgid "Sign In"
-msgstr "Войти"
+msgstr "Entrar"
 
 #~ msgid "We have time until launch"
 #~ msgstr "Осталось времени до запуска"
