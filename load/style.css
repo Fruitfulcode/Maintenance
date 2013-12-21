@@ -13,7 +13,6 @@ body {
 	font-family:"Open Sans", sans-serif;
 	height:100%;
 	width: 100%;
-	overflow:auto;
 }
 
 body > #wrapper {height: auto; min-height: 100%; width:100%;}
@@ -365,9 +364,7 @@ footer {
 }
 
 
-#vague-svg-blur {
-	display:none;
-}
+
 
 @media screen and (max-width: 768px) {
 	.logo {width:100%; text-align:center; margin:0 0 20px 0;}
