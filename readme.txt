@@ -27,30 +27,26 @@ Maintenance plugin allow WordPress site administrator close the website for main
 <li>Blur background effect</li>
 </ul>
 
-<h3>DEMO</h3>
-<a target="_blank" href="http://plugins.fruitfulcode.com/maintenance/">View demo website</a>
+
+<a target="_blank" href="http://plugins.fruitfulcode.com/maintenance/">View demo</a>
 
 
 <h3>Maintenance PRO</h3>
-<a target="_blank" href="http://codecanyon.net/item/maintenance-wordpress-plugin/2781350?ref=fruitfulcode">Get additional functionality</a>
-
-All features from FREE version included +
+<strong>Required Free version installation</strong>
+<p>All features from FREE version included +</p>
 
 <ul>
 <li>Unique jQuery timer count down</li>
-<li>Full screen background gallery with patterns overlay</li>
-<li>Background video support</li>
 <li>User permissions</li>
+<li>Full screen background gallery with patterns overlays</li>
+<li>Background video support</li>
 <li>Additional HTML area</li>
 <li>Social media profiles</li>
 <li>Mailchimp integration</li>
 <li>Developers support</li>
 </ul>
 
-<h3>Maintenance in action</h3>
-<strong>with theme switcher</strong>
-<a target="_blank" href="http://plugins.fruitfulcode.com/maintenance/live-demo/">Live preview</a>
-
+<a target="_blank" href="http://codecanyon.net/item/maintenance-wordpress-plugin/2781350?ref=fruitfulcode">Get additional functionality</a>
 
 == Installation ==
 
