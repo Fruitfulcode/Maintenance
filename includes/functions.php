@@ -102,10 +102,20 @@
 	function maintenance_page_create_meta_boxes() {
 		global $maintenance_variable;
 		add_meta_box( 'maintenance-general', __( 'General Settings', 'maintenance' ),  'add_data_fields', 				 $maintenance_variable->options_page, 'normal', 'default');
-		add_meta_box( 'promo-extended',   	 __( 'Pro version', 'maintenance' ),  'maintenanace_extended_version',  $maintenance_variable->options_page, 'side',   'default' );
-		add_meta_box( 'promo-content',   	 __( 'Support',  'maintenance' ),  'maintenanace_contact_support',   $maintenance_variable->options_page, 'side',   'default' );
 	}
 	add_action('add_meta_boxes', 'maintenance_page_create_meta_boxes', 10);
+	
+	function maintenance_page_create_meta_boxes_widget_pro() {
+		global $maintenance_variable;
+		add_meta_box( 'promo-extended',   	 __( 'Pro version', 'maintenance' ),  'maintenanace_extended_version',  $maintenance_variable->options_page, 'side',   'default' );
+	}
+	add_action('add_meta_boxes', 'maintenance_page_create_meta_boxes_widget_pro', 11);	
+	
+	function maintenance_page_create_meta_boxes_widget_support() {
+		global $maintenance_variable;
+		add_meta_box( 'promo-content',   	 __( 'Support',  'maintenance' ),  'maintenanace_contact_support',   $maintenance_variable->options_page, 'side',   'default' );
+	}	
+	add_action('add_meta_boxes', 'maintenance_page_create_meta_boxes_widget_support', 12);	
 	
 	function add_data_fields ($object, $box) {
 		$mt_option = mt_get_plugin_options(true);
