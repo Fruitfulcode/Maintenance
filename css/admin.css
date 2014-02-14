@@ -12,7 +12,7 @@
 .tzCheckBox.checked .tzCBPart{background-position:top right;left:auto;right:-14px;}
 .img-container {float:left; display:block;  width: 300px;}
 .upload_logo, .upload_background { float:right; }
-.box-logo	{max-width:298px; max-height:148px; height:148px; }
+.box-logo	{max-width: 298px; max-height: 148px; height: 148px; background-size: 50% auto;}
 .box-bg   	{max-width:298px; max-height:298px; height:298px; background-size:cover;}
 .box-logo, .box-bg {background-position: center center; background-repeat:no-repeat; position:relative; float:left; border:1px dashed #DFDFDF; width:100%; padding:0; margin:0;}
 .img-container .boxes input.button.remove {position:absolute; display:none !important; right:10px; top:10px; }
