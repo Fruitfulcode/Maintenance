@@ -74,6 +74,8 @@ function get_custom_login_code() {
 		wp_register_style('_style', 	MAINTENANCE_URI .'load/style.css');
 		$wp_styles->do_items('_iconstyle');
 		$wp_styles->do_items('_opensans');
+		/*Add inline custom style*/
+		get_options_style();
 		$wp_styles->do_items('_style');
 	}	
 		
@@ -114,11 +116,13 @@ function get_custom_login_code() {
 	function get_options_style() {
 		$mt_options = mt_get_plugin_options(true);
 		$options_style = '';
-		$options_style = '<style type="text/css">';
-
 		if ( !empty($mt_options['body_bg_color']) ) {
 			  $options_style .= 'body {background-color: '. esc_attr($mt_options['body_bg_color']) .'}';
 			  $options_style .= '.preloader {background-color: '. esc_attr($mt_options['body_bg_color']) .'}';
+		}
+		
+		if (!isset($mt_options['is_login'])) {
+			  $options_style .= '.logo { display: block; float: none;  margin: 0;  text-align: center; width: 100%;} ';
 		}
 		
 		if ( !empty($mt_options['font_color']) ) {
@@ -131,10 +135,10 @@ function get_custom_login_code() {
 			 $options_style .= 'footer {color: '. $font_color .'} ';
 			 $options_style .= '.ie7 .company-name {color: '. $font_color .'} ';
 		}
-		$options_style .= '</style>';
-		echo $options_style;
+		
+		wp_add_inline_style( '_style', $options_style );
 	}
-	add_action('options_style', 'get_options_style', 10);
+	//add_action('options_style', 'get_options_style', 10);
 	
 	function get_logo_box() {
 		$mt_options = mt_get_plugin_options(true);
@@ -209,17 +213,22 @@ function get_custom_login_code() {
 	add_action('footer_section', 'get_footer_section', 10);
 	
 	function do_login_form($user_login, $class_login, $class_password) {
+		$mt_options  = mt_get_plugin_options(true);
 		$out_login_form = $form_error = '';
 		if (($class_login == 'error') || ($class_password == 'error')) {
 			 $form_error = ' active error';
 		}
+		
 		$out_login_form .= '<form name="login-form" id="login-form" class="login-form'.$form_error.'" method="post">';
 				$out_login_form .= '<span class="licon '.$class_login.'"><input type="text" name="log" id="log" value="'.  $user_login .'" size="20"  class="input username" placeholder="'. __('Username', 'maintenance') .'"/></span>';
 				$out_login_form .= '<span class="picon '.$class_password.'"><input type="password" name="pwd" id="login_password" value="" size="20"  class="input password" placeholder="'. __('Password', 'maintenance') .'" /></span>';
 				$out_login_form .= '<input type="submit" class="button" name="submit" id="submit" value="'.__('Sign In','maintenance') .'" tabindex="4" />';
 				$out_login_form .= '<input type="hidden" name="is_custom_login" value="1" />';
 		$out_login_form .= '</form>';
-		echo $out_login_form;
+		
+		if (isset($mt_options['is_login'])) {
+			echo $out_login_form;
+		}	
 	}
 	
 	function get_preloader_element() {
@@ -239,11 +248,33 @@ function get_custom_login_code() {
 		if ($browser_an		== true) { $browser = 'android'; } 	 
 		if ($browser_ipad 	== true) { $browser = 'ipad';   }
 
-		if($browser == 'iphone') 	{ /*echo '<meta name="viewport" content="width=480px, initial-scale=0.4">'; */ } 
+		if($browser == 'iphone') 	{ echo '<meta name="viewport" content="width=device-width, initial-scale=1.0" />';  } 
 		if($browser == 'android') 	{ echo '<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width" />'; } 
 		if($browser == 'ipad') 		{ echo '<meta name="viewport" content="width=768px, minimum-scale=1.0, maximum-scale=1.0" />'; } 
 	}
 	
+	function maintenance_gg_analytics_code() {
+		$mt_options  = mt_get_plugin_options(true);
+			if (!isset($mt_options['503_enabled']) && (isset($mt_options['gg_analytics_id']))) {
+		?>
+		
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+				_gaq.push(['_setAccount', '<?php echo esc_attr($mt_options['gg_analytics_id']); ?>']);
+
+			(function() {
+				var ga = document.createElement('script'); 
+					ga.type = 'text/javascript'; 
+					ga.async = true;
+					ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+		<?php 
+		}
+  }
+  add_action('add_gg_analytics_code', 'maintenance_gg_analytics_code');
+  
 	function get_headers_503() {
 		$mt_options  = mt_get_plugin_options(true);
 		nocache_headers();

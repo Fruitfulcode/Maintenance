@@ -14,13 +14,14 @@
 <!--<![endif]-->
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	<?php maintenance_fruitful_metadevice(); ?>	
 	<?php get_page_title(esc_attr($mess_arr[0])); ?>
+	<?php maintenance_fruitful_metadevice(); ?>
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<?php do_action('load_custom_scripts'); ?>
 	<?php do_action('options_style'); ?>
 	<?php do_action('add_single_backstretch_background'); ?>
+	<?php do_action('add_gg_analytics_code'); ?>
 </head>
 <body>
 	<?php do_action('before_content_section'); ?>

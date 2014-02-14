@@ -14,13 +14,13 @@
 		return $options;
 	}
 	
-	function generate_input_filed($title, $id, $name, $value) {
+	function generate_input_filed($title, $id, $name, $value, $placeholder = '') {
 		$out_filed = '';
 		$out_filed .= '<tr valign="top">';
 		$out_filed .= '<th scope="row">' . esc_attr($title) .'</th>';
 			$out_filed .= '<td>';
 				$out_filed .= '<filedset>';
-					$out_filed .= '<input type="text" id="'.esc_attr($id).'" name="lib_options['.$name.']" value="'. wp_kses_post(stripslashes($value)) .'" />';
+					$out_filed .= '<input type="text" id="'.esc_attr($id).'" name="lib_options['.$name.']" value="'. wp_kses_post(stripslashes($value)) .'" placeholder="'.$placeholder.'"/>';
 				$out_filed .= '</filedset>';
 			$out_filed .= '</td>';
 		$out_filed .= '</tr>';			
@@ -129,8 +129,10 @@
 				do_action('maintenance_color_fields');
 				generate_check_filed(__('Admin bar', 'maintenance'), __('Show admin bar', 'maintenance'), 'admin_bar_enabled', 'admin_bar_enabled', isset($mt_option['admin_bar_enabled']));
 				generate_check_filed(__('503', 'maintenance'), __('Service temporarily unavailable', 'maintenance'), '503_enabled', '503_enabled',  isset($mt_option['503_enabled']));
+				generate_input_filed(__('Google Analytics ID',  'maintenance'), 'gg_analytics_id', 'gg_analytics_id', esc_attr($mt_option['gg_analytics_id']),  __('UA-XXXXX-X', 'maintenance'));
 				generate_input_filed(__('Blur intensity',  'maintenance'), 'blur_intensity', 'blur_intensity', intval($mt_option['blur_intensity']));
 				generate_check_filed(__('Background blur', 'maintenance'), __('Apply a blur', 'maintenance'), 'is_blur', 'is_blur', isset($mt_option['is_blur']));
+				generate_check_filed(__('Login On / Off', 'maintenance'), __('', 'maintenance'), 'is_login', 'is_login', isset($mt_option['is_login']));
 			echo '</tbody>';
 		echo '</table>';
 	}	
@@ -200,7 +202,8 @@
 				}
 			}
 	}
-
+	
+	
 	function maintenance_metaboxes_scripts() {
 		global $maintenance_variable; 
 	?>
@@ -230,7 +233,7 @@
 	} 
 	
 	
-	function hex2rgb($hex) {
+	function maintenance_hex2rgb($hex) {
 		$hex = str_replace("#", "", $hex);
 
 		if(strlen($hex) == 3) {
@@ -259,6 +262,9 @@
 			'is_blur'			=> false,
 			'blur_intensity'	=> 5,	
 			'admin_bar_enabled' => true,
-			'503_enabled'		=> true
+			'503_enabled'		=> true,
+			'gg_analytics_id'   => '',
+			'is_login'			=> true
+			
 		);
 	}

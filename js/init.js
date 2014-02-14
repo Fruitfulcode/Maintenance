@@ -42,5 +42,21 @@ jQuery(window).ready(function(){
 	jQuery('#body_bg_color, #font_color, #body_bg_blur_color').wpColorPicker(vColorPickerOptions);
 	
 	
+	if (jQuery('#503_enabled').length > 0) {
+		if (jQuery('#503_enabled').prop("checked")) {
+			jQuery('#gg_analytics_id').prop('disabled', true);
+		} else {
+			jQuery('#gg_analytics_id').prop('disabled', false);
+		}
+	}
+	
+	jQuery('#503_enabled').on('change', function() {
+		if (jQuery(this).prop("checked")) {
+			jQuery('#gg_analytics_id').prop('disabled', true);
+		} else {
+			jQuery('#gg_analytics_id').prop('disabled', false);
+		}
+		
+	});
 	
 });
