@@ -101,7 +101,7 @@ No, it will be display error on current maintenance page, without redirect to wp
 You can check <a href="http://wordpress.org/support/plugin/maintenance">support forum</a> or <a class="send-mail" target="_blank" href="mailto:mail@fruitfulcode.com?subject=Maintenance%20Plugin">send email to us</a>
 
 
-== Changelog ==
+== Change log ==
 
 = 2.1 = (17.02.2014)
 * New option Login on/off
