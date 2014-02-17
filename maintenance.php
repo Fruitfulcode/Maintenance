@@ -2,13 +2,13 @@
 /*
 	Plugin Name: Maintenance
 	Plugin URI: http://wordpress.org/extend/plugins/maintenance/
-	Description: Take your site down from public view with a click of a button hiding the site when you need to change a few things or run an upgrade, making it only accessible by login and password. There is also an area to add a custom message which will be shown to the users while your site is down. Users stay on the same page when they input wrong initials.
-	Version: 2.0.1
+	Description: Take your website in maintenance mode from public view. Use maintenance plugin if your website in development or you need to change a few things, run an upgrade, make it only accessible by login and password. Plugin has a options to add a logo, background, headline, message, colors, login, etc. Extended PRO version is available with more features.
+	Version: 2.1
 	Author: fruitfulcode
 	Author URI: http://fruitfulcode.com
 	License: GPL2
 */
-/*  Copyright 2013  Fruitful Code  (email : support@fruitfulcode.com)
+/*  Copyright 2013  Fruitful Code  (email : mail@fruitfulcode.com)
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License, version 2, as 
