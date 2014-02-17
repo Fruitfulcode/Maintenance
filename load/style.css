@@ -404,7 +404,7 @@ footer {
 	.social 			{ width:auto !important; margin:0 0 20px 0 !important; padding: 0 5px;}
 	.social .socialicon {margin: 0 0 10px 20px;}
 	.site-content h2, .site-content h3 { display: block; padding: 0 5px; width: auto; }
-	#countdown {max-width:304px;}
+	#countdown {max-width:298px;}
 	#countdown .countDevider { height: 192px; }
 	header {width: 100%;}
 	footer {margin:0;}
@@ -419,6 +419,7 @@ footer {
 	#mailchimp-box form input[type="submit"] { margin: 5px 85px 0; }
 	.login-form input[type="password"] { margin:0; }
 	.user-content {padding:0 5px; width:auto;}
+	#countdown .countDevider.countDiv1 {width:1px;}
 }
 
 
@@ -430,7 +431,7 @@ footer {
 	.social 			{ width:auto !important; margin:0 0 20px 0 !important; padding: 0 5px;}
 	.social .socialicon {margin: 0 0 10px 20px;}
 	.site-content h2, .site-content h3 { display: block; padding: 0 5px; width: auto; }
-	#countdown {max-width:304px;}
+	#countdown {max-width:298px;}
 	header {width: 100%;}
 	footer {margin:0;}
 	footer .company-name {margin: 0 0 10px 0; float:left; display:block;}
@@ -444,6 +445,7 @@ footer {
 	.login-form input[type="text"], .login-form input[type="password"] { max-width: 90px; width: 90px; }
 	.login-form input[type="password"] { margin:0; }
 	.user-content {padding:0 5px; width:auto;}
+	#countdown .countDevider.countDiv1 {width:1px;}
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
