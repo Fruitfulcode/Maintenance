@@ -453,7 +453,7 @@ footer {
 
 
 
-@media screen and (max-height: 960px) {
+@media screen and (max-height: 768px) {
 	html { overflow: auto; }
 	.site-content 	{ margin: 30px 0;	position: inherit !important;	top: 0 !important;	}
 	footer {margin:0;}
