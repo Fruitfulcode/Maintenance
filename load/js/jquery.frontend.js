@@ -65,6 +65,6 @@ jQuery(window).resize(function() {
  
 jQuery.fn.center = function () {
     this.css("position","absolute");
-    this.css("top", Math.max(0, ((jQuery(window).height() - jQuery(this).outerHeight()) / 2) + jQuery(window).scrollTop() + 45) + "px");
+    this.css("top", Math.max(0, ((jQuery(window).height() - jQuery(this).outerHeight()) / 2) + jQuery(window).scrollTop()) + "px");
     return this;
 }

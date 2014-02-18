@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
-"POT-Creation-Date: 2013-12-06 14:52+0200\n"
-"PO-Revision-Date: 2013-12-06 14:53+0200\n"
+"POT-Creation-Date: 2014-02-18 12:25+0200\n"
+"PO-Revision-Date: 2014-02-18 12:27+0200\n"
 "Last-Translator: \n"
 "Language-Team: fruitfulcode\n"
 "MIME-Version: 1.0\n"
@@ -13,166 +13,208 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: includes/admin.php:84
+#: /includes/admin.php:84
 msgid "Save changes"
 msgstr "Сохранить"
 
-#: includes/functions.php:104
+#: /includes/functions.php:104
 msgid "General Settings"
 msgstr "Общие настройки"
 
-#: includes/functions.php:105
-#: includes/functions.php:157
-msgid "Extended version"
-msgstr "Расширенная версия"
+#: /includes/functions.php:110
+#, fuzzy
+msgid "Pro version"
+msgstr "Премиум версия"
 
-#: includes/functions.php:106
-#: includes/functions.php:145
-msgid "Contact support"
-msgstr "Служба поддержки"
+#: /includes/functions.php:116
+msgid "Support"
+msgstr ""
 
-#: includes/functions.php:114
+#: /includes/functions.php:124
 msgid "Page title"
 msgstr "Заголовок страницы"
 
-#: includes/functions.php:115
+#: /includes/functions.php:125
 msgid "Headline"
 msgstr "Заголовок"
 
-#: includes/functions.php:116
+#: /includes/functions.php:126
 msgid "Description"
 msgstr "Описание"
 
-#: includes/functions.php:117
+#: /includes/functions.php:127
 msgid "Logo"
 msgstr "Логотип"
 
-#: includes/functions.php:117
+#: /includes/functions.php:127
 msgid "Upload Logo"
 msgstr "Загрузить логотип"
 
-#: includes/functions.php:120
+#: /includes/functions.php:130
 msgid "Admin bar"
 msgstr "Админ-панель"
 
-#: includes/functions.php:120
+#: /includes/functions.php:130
 msgid "Show admin bar"
 msgstr "Показать админ-панель"
 
-#: includes/functions.php:121
+#: /includes/functions.php:131
 msgid "503"
 msgstr ""
 
-#: includes/functions.php:121
+#: /includes/functions.php:131
 msgid "Service temporarily unavailable"
 msgstr "Сервис врменно недоступен"
 
-#: includes/functions.php:122
+#: /includes/functions.php:132
+msgid "Google Analytics ID"
+msgstr ""
+
+#: /includes/functions.php:132
+msgid "UA-XXXXX-X"
+msgstr ""
+
+#: /includes/functions.php:133
 msgid "Blur intensity"
 msgstr "Интенсивность размытия"
 
-#: includes/functions.php:123
+#: /includes/functions.php:134
 msgid "Background blur"
 msgstr "Размытие фона"
 
-#: includes/functions.php:123
+#: /includes/functions.php:134
 msgid "Apply a blur"
 msgstr "Применить размытие"
 
-#: includes/functions.php:130
+#: /includes/functions.php:135
+msgid "Login On / Off"
+msgstr ""
+
+#: /includes/functions.php:142
 msgid "Background image"
 msgstr "Фоновое изображение"
 
-#: includes/functions.php:130
+#: /includes/functions.php:142
 msgid "Upload Background"
 msgstr "Загрузить фон"
 
-#: includes/functions.php:136
+#: /includes/functions.php:148
 msgid "Background color"
 msgstr "Цвет фона"
 
-#: includes/functions.php:137
+#: /includes/functions.php:149
 msgid "Font color"
 msgstr "Цвет шрифта"
 
-#: includes/functions.php:146
+#: /includes/functions.php:157
+msgid "Have any questions?"
+msgstr ""
+
+#: /includes/functions.php:158
 #, php-format
 msgid ""
-"If you faced with any problems, have a question or suggestion you always can "
-"contact us with any request on our website <a href=\"%1$s\" title=\"%2$s\">"
-"%2$s</a>"
+"You may find answers to your questions at <a target=\"_blank\" href=\"http://"
+"wordpress.org/support/plugin/maintenance\">support forum</a><br>You may  <a "
+"target=\"_blank\" href=\"mailto:mail@fruitfulcode.com?subject=Maintenance "
+"plugin\">contact us</a> with customization requests and suggestions.<br> "
+"Please visit our website to learn about us and our services <a href=\"%1$s\" "
+"title=\"%2$s\">%2$s</a>"
 msgstr ""
-"Если вы столкнулись с любыми проблемами, есть вопрос или предложение, вы "
-"всегда можете обратиться к нам с любым предложением  на нашем сайте <a href="
-"\"%1$s\" title=\"%2$s\">%2$s</a>"
 
-#: includes/functions.php:158
+#: /includes/functions.php:169
+#, fuzzy
+msgid "Extended functionality"
+msgstr "Расширенная версия"
+
+#: /includes/functions.php:170
 #, php-format
 msgid ""
-"If you like our plugin please rate it, %1$s <a title=\"leave feedback\" href="
-"\"%2$s\" target=\"_blank\">leave feedback</a> or purchase extended version "
-"%1$s with more other features."
-msgstr ""
-"Если Вам нравиться наш плагин, оцените его %1$s <a title=\"оставить "
-"комментарий\" href=\"%2$s\" target=\"_blank\">оставить комментарий</a> или "
-"купите расширенную версию %1$s с дополнительными возможностями."
-
-#: includes/functions.php:162
-msgid "Purchase"
-msgstr "Купить"
-
-#: includes/functions.php:219
-msgid "maintenance"
+"Purchase <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
+"plugin/2781350?ref=fruitfulcode\" target=\"_blank\">PRO</a> version  with "
+"extended functionality. %1$s If you like our plugin please <a target=\"_blank"
+"\" href=\"http://wordpress.org/support/view/plugin-reviews/maintenance?"
+"filter=5\">rate it</a>, <a title=\"leave feedbacks\" href=\"%2$s\" target="
+"\"_blank\">leave feedbacks</a>."
 msgstr ""
 
-#: includes/functions.php:242
+#: /includes/functions.php:174
+msgid "Demo website"
+msgstr ""
+
+#: /includes/functions.php:232
+#, fuzzy
+msgid "Maintenance"
+msgstr "Режим обслуживания включен"
+
+#: /includes/functions.php:255
 msgid "Website is under construction"
 msgstr "Сайт находится в стадии разработки"
 
-#: includes/functions.php:243
+#: /includes/functions.php:256
 msgid "Maintenance mode is on"
 msgstr "Режим обслуживания включен"
 
-#: includes/functions.php:244
+#: /includes/functions.php:257
 msgid "Website will be available soon"
 msgstr "Сайт скоро бдует доступен "
 
-#: load/functions.php:37
+#: /load/functions.php:37
 msgid "Permission access denied!"
 msgstr "Доступ запрещен!"
 
-#: load/functions.php:45
+#: /load/functions.php:45
 msgid "You entered your login are incorrect!"
 msgstr "Вы ввели неверный логин! "
 
-#: load/functions.php:49
+#: /load/functions.php:49
 msgid "You entered your password are incorrect!"
 msgstr "Вы ввели неверный пароль!"
 
-#: load/functions.php:52
+#: /load/functions.php:52
 msgid "You entered your login and password are incorrect!"
 msgstr "Вы ввели неверный логин или пароль!"
 
-#: load/functions.php:215
+#: /load/functions.php:223
 msgid "Username"
 msgstr "Логин"
 
-#: load/functions.php:216
+#: /load/functions.php:224
 msgid "Password"
 msgstr "Пароль"
 
-#: load/functions.php:217
+#: /load/functions.php:225
 msgid "Sign In"
 msgstr "Войти"
+
+#~ msgid "Contact support"
+#~ msgstr "Служба поддержки"
+
+#~ msgid ""
+#~ "If you faced with any problems, have a question or suggestion you always "
+#~ "can contact us with any request on our website <a href=\"%1$s\" title="
+#~ "\"%2$s\">%2$s</a>"
+#~ msgstr ""
+#~ "Если вы столкнулись с любыми проблемами, есть вопрос или предложение, вы "
+#~ "всегда можете обратиться к нам с любым предложением  на нашем сайте <a "
+#~ "href=\"%1$s\" title=\"%2$s\">%2$s</a>"
+
+#~ msgid ""
+#~ "If you like our plugin please rate it, %1$s <a title=\"leave feedback\" "
+#~ "href=\"%2$s\" target=\"_blank\">leave feedback</a> or purchase extended "
+#~ "version %1$s with more other features."
+#~ msgstr ""
+#~ "Если Вам нравиться наш плагин, оцените его %1$s <a title=\"оставить "
+#~ "комментарий\" href=\"%2$s\" target=\"_blank\">оставить комментарий</a> "
+#~ "или купите расширенную версию %1$s с дополнительными возможностями."
+
+#~ msgid "Purchase"
+#~ msgstr "Купить"
 
 #~ msgid "We have time until launch"
 #~ msgstr "Осталось времени до запуска"
 
 #~ msgid "Be first of your friends who will know when the website goes live."
 #~ msgstr "Будь первым из твоих друзей, кто узнает о запуске сайта."
-
-#~ msgid "Premium version"
-#~ msgstr "Премиум версия"
 
 #~ msgid "Check out our extended version of plugin with new features"
 #~ msgstr "Проверьте возможности расширенной версии плагина"
