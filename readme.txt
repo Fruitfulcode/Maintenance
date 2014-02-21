@@ -4,7 +4,7 @@ Donate link: http://fruitfulcode.com/
 Tags: maintenance, coming soon, under-construction, 503 error, administration, login, customize page, background, fullscreen, blur
 Requires at least: 3.0
 Tested up to: 3.8.1
-Stable tag: 2.1
+Stable tag: 2.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,8 @@ Maintenance plugin allow WordPress site administrator close the website for main
 <li>User login with validation</li>
 <li>Admin bar: show/hide</li>
 <li>503 error on/off</li>
+<li>Google analytics field</li>
+<li>Login on/off</li>
 
 </ul>
 
@@ -103,18 +105,23 @@ You can check <a href="http://wordpress.org/support/plugin/maintenance">support 
 
 == Change log ==
 
-= 2.1 = (17.02.2014)
+= 2.1.1 =
+* Content alignment fix
+* Added scroll for extra height
+* Translation updates
+
+= 2.1 = 
 * New option Login on/off
 * New option Google Analytics field
 * Responsive bug fix
 
-= 2.0.1 = (21.12.2013)
+= 2.0.1 = 
 * New translation Brazilian Portuguese
 * Bug fix in title
 * Bug fix blur background image scroll
 
 
-= 2.0 = (17.12.2013)
+= 2.0 =
 * New features
 * New PRO version
 * New design
@@ -124,12 +131,12 @@ You can check <a href="http://wordpress.org/support/plugin/maintenance">support 
 * Blur background effect
 * 503 error switcher
 
-= 1.2.3 =  (28.08.2013)
+= 1.2.3 =
 * Wordpress 3.6 support
 * Bug fix 
 * Warning Messages, open_basedir conflict - resolved.
 
-= 1.2.2 = (12.07.2013)
+= 1.2.2 =
 * Re-directed user to the root of the doman (not to subdirectory).
 * Bugfix, Notice in dasboard with debug mode.
 
@@ -144,7 +151,7 @@ You can check <a href="http://wordpress.org/support/plugin/maintenance">support 
 * Css fixes for WP 3.5
 
 = 1.1.1 =
-Css fixes
+*Css fixes
 
 = 1.1 =
 * Any logo images will be in center of page
