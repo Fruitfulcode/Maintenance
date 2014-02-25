@@ -279,9 +279,28 @@ function get_custom_login_code() {
 		$mt_options  = mt_get_plugin_options(true);
 		nocache_headers();
 		if (isset($mt_options['503_enabled'])) {
-			header('HTTP/1.1 503 Service Temporarily Unavailable');
-			header('Status:  503 Service Temporarily Unavailable');
-			header('Retry-After: 3600');
-			header('X-Powered-By:');
+			$protocol = "HTTP/1.0";
+			if ( "HTTP/1.1" == $_SERVER["SERVER_PROTOCOL"] )
+				$protocol = "HTTP/1.1";
+				header( "$protocol 503 Service Unavailable", true, 503 );
+				
+				if ($mt_options['state']) {
+					if (!empty($mt_options['expiry_date'])) {
+						$vCurrDate =  DateTime::createFromFormat('d/m/Y', $mt_options['expiry_date']);
+						list( $date, $time ) = explode( ' ', current($vCurrDate));
+						list( $year, $month, $day ) = explode(  '-', $date );
+						list( $hour, $minute, $second ) = explode ( ':', $time );
+						$timestamp = mktime( $hour, $minute, $second, $month, $day, $year );
+						
+						
+						if ( time() < $timestamp ) {
+							header( "Retry-After: " . gmdate("M d Y H:i:s", $timestamp) );
+						} else {
+							header( "Retry-After: 3600" );
+						}
+					}	
+				} else {
+					header( "Retry-After: 3600" );
+				}	
 		}
 	}
