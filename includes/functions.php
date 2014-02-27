@@ -194,9 +194,9 @@
 						list( $year, $month, $day ) 	 = explode(  '-', $date );
 						list( $hour, $minute, $second )  = explode ( ':', $time );
 						$timestamp = mktime( $hour, $minute, $second, $month, $day, $year );
-								
-						if ( time() > $timestamp ) {
-							return true;
+						
+						if ((time() > $timestamp) && (!empty($mt_options['is_down']))) {
+						    return true;
 						}
 					}	
 
