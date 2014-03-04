@@ -60,6 +60,7 @@
 		$mt_option = mt_get_plugin_options(true);
 	?>
 		<div id="maintenance-options" class="wrap">	
+			<h2></h2>						
 			<form method="post" action="" enctype="multipart/form-data" name="options-form">
 				<?php wp_nonce_field('maintenance_edit_post','maintenance_nonce'); ?>
 				<?php wp_nonce_field('meta-box-order',  'meta-box-order-nonce', false ); ?>
