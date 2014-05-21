@@ -46,6 +46,9 @@
 			wp_enqueue_style  ('arvo', 'http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Arvo:400,400italic,700,700italic' );		
 			wp_enqueue_style  ('wp-color-picker' );
 			
+			wp_enqueue_script ('select2',    MAINTENANCE_URI .'js/select2/select2.min.js' );
+			wp_enqueue_style  ('select2',    MAINTENANCE_URI .'js/select2/select2.css' );	
+			
 			wp_enqueue_script ('uplaods_',    MAINTENANCE_URI .'js/uploads_.min.js' );
 			wp_enqueue_script ('maintenance', MAINTENANCE_URI .'js/init.min.js', array( 'wp-color-picker' ), false, true );
 			wp_enqueue_style  ('maintenance', MAINTENANCE_URI .'css/admin.css' );	

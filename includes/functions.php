@@ -1,4 +1,25 @@
 <?php
+	global $standart_fonts;
+	$standart_fonts = array(
+        "Arial, Helvetica, sans-serif" 			=> "Arial, Helvetica, sans-serif",
+        "Arial Black, Gadget, sans-serif" 		=> "Arial Black, Gadget, sans-serif",
+        "Bookman Old Style, serif" 				=> "Bookman Old Style, serif",
+        "Comic Sans MS, cursive" 				=> "Comic Sans MS, cursive",
+        "Courier, monospace" 					=> "Courier, monospace",
+        "Garamond, serif" 						=> "Garamond, serif",
+        "Georgia, serif" 						=> "Georgia, serif",
+        "Impact, Charcoal, sans-serif" 			=> "Impact, Charcoal, sans-serif",
+        "Lucida Console, Monaco, monospace" 	=> "Lucida Console, Monaco, monospace",
+        "Lucida Sans Unicode, Lucida Grande, sans-serif" => "Lucida Sans Unicode, Lucida Grande, sans-serif",
+        "MS Sans Serif, Geneva, sans-serif" 	=> "MS Sans Serif, Geneva, sans-serif",
+        "MS Serif, New York, sans-serif" 		=> "MS Serif, New York, sans-serif",
+        "Palatino Linotype, Book Antiqua, Palatino, serif" => "Palatino Linotype, Book Antiqua, Palatino, serif",
+        "Tahoma,Geneva, sans-serif" 			=> "Tahoma, Geneva, sans-serif",
+        "Times New Roman, Times,serif" 			=> "Times New Roman, Times, serif",
+        "Trebuchet MS, Helvetica, sans-serif" 	=> "Trebuchet MS, Helvetica, sans-serif",
+        "Verdana, Geneva, sans-serif" 			=> "Verdana, Geneva, sans-serif",
+    );
+		
 	
 	function mt_get_plugin_options($is_current = false) {
 		$saved	  = (array) get_option('maintenance_options');
@@ -98,10 +119,73 @@
 				$out_filed .= '</tr>';
 			echo $out_filed;
 	}		
-				
+	
+	function mt_get_google_font($font = null) {	
+		$font_params = $full_link = $gg_fonts = '';
+		
+		if (file_exists(MAINTENANCE_INCLUDES .'fonts/googlefonts.json')) {
+			$gg_fonts = json_decode(file_get_contents(MAINTENANCE_INCLUDES .'fonts/googlefonts.json'));
+		}	
+			
+		if (property_exists ($gg_fonts, $font)) {
+			$curr_font = $gg_fonts->{$font};
+			if (!empty($curr_font)) {
+				$name_font = str_replace(' ','+',$font);
+				foreach ($curr_font->variants as $values) {
+					$font_params .= $values->id . ',';
+				}
+			
+				$font_params = trim($font_params, ",");
+				$full_link = $name_font . ':' . $font_params;
+				$full_link = 'http'. ( is_ssl() ? 's' : '' ) .'://fonts.googleapis.com/css?family=' . $full_link;
+			}	
+		}	
+		
+		return $full_link;
+	}
+
+    function get_fonts_field($title, $id, $name, $value) {
+			global $standart_fonts;
+			$out_items = $gg_fonts = '';
+			
+			if (file_exists(MAINTENANCE_INCLUDES .'fonts/googlefonts.json')) {
+				$gg_fonts = json_decode(file_get_contents(MAINTENANCE_INCLUDES .'fonts/googlefonts.json'));
+			}	
+			
+			$out_filed = '';
+			$out_filed .= '<tr valign="top">';
+					$out_filed .= '<th scope="row">'. esc_attr($title) .'</th>';
+					$out_filed .= '<td>';
+						$out_filed .= '<filedset>';
+						if(!empty($standart_fonts)) {
+								$out_items .= '<optgroup label="' . __('Standard Fonts', 'anaglyph-framework') . '">';
+								foreach ($standart_fonts as $key => $options) {
+									$out_items .= '<option value="'.$key.'" '. selected( $value, $key, false ) .'>'.$options.'</option>';
+								}
+						}	
+						
+						if (!empty($gg_fonts)) {
+								$out_items .= '<optgroup label="' . __('Google Web Fonts', 'anaglyph-framework') . '">';
+							foreach ($gg_fonts as $key => $options) {
+								$out_items .= '<option value="'.$key .'" '. selected( $value, $key, false ) .'>'.$key.'</option>';
+							}
+						}
+						
+						if (!empty($out_items)) {
+							$out_filed .= '<select class="select2_customize" name="lib_options['.$name.']" id="'.esc_attr($id).'">';
+								$out_filed .= $out_items;
+							$out_filed .= '</select>';
+						}	
+						$out_filed .= '<filedset>';
+					$out_filed .= '</td>';	
+				$out_filed .= '</tr>';
+			return $out_filed;
+	}		
+	
 	function maintenance_page_create_meta_boxes() {
 		global $maintenance_variable;
-		add_meta_box( 'maintenance-general', __( 'General Settings', 'maintenance' ),  'add_data_fields', 				 $maintenance_variable->options_page, 'normal', 'default');
+		add_meta_box( 'maintenance-general', __( 'General Settings', 'maintenance' ),  'add_data_fields', $maintenance_variable->options_page, 'normal', 'default');
+		add_meta_box( 'maintenance-css', 	 __( 'Custom CSS', 'maintenance' ),        'add_css_fields', $maintenance_variable->options_page, 'normal', 'default');
 	}
 	add_action('add_meta_boxes', 'maintenance_page_create_meta_boxes', 10);
 	
@@ -127,6 +211,7 @@
 				generate_image_filed(__('Logo', 'maintenance'), 'logo', 'logo', intval($mt_option['logo']), 'boxes box-logo', __('Upload Logo', 'maintenance'), 'upload_logo upload_btn button');
 				do_action('maintenance_background_field');
 				do_action('maintenance_color_fields');
+				do_action('maintenance_font_fields');
 				generate_check_filed(__('Admin bar', 'maintenance'), __('Show admin bar', 'maintenance'), 'admin_bar_enabled', 'admin_bar_enabled', isset($mt_option['admin_bar_enabled']));
 				generate_check_filed(__('503', 'maintenance'), __('Service temporarily unavailable', 'maintenance'), '503_enabled', '503_enabled',  isset($mt_option['503_enabled']));
 				
@@ -142,6 +227,16 @@
 		echo '</table>';
 	}	
 	
+	
+	function add_css_fields() {
+		$mt_option = mt_get_plugin_options(true);
+		echo '<table class="form-table">';
+			echo '<tbody>';
+				generate_textarea_filed(__('CSS Code', 'maintenance'), 'custom_css', 'custom_css', wp_kses_stripslashes($mt_option['custom_css']));
+			echo '</tbody>';
+		echo '</table>';	
+	}
+	
 	function get_background_fileds_action() {
 		$mt_option = mt_get_plugin_options(true);
 		generate_image_filed(__('Background image', 'maintenance'), 'body_bg', 'body_bg', esc_attr($mt_option['body_bg']), 'boxes box-bg', __('Upload Background', 'maintenance'), 'upload_background upload_btn button');
@@ -154,6 +249,13 @@
 		get_color_field(__('Font color', 'maintenance'), 'font_color', 'font_color', esc_attr($mt_option['font_color']), 	  '#ffffff');
 	}	
 	add_action ('maintenance_color_fields', 'get_color_fileds_action', 10);
+	
+	
+	function get_font_fileds_action() {
+		$mt_option = mt_get_plugin_options(true);
+		echo get_fonts_field(__('Font family', 'maintenance'), 'body_font_family', 'body_font_family', esc_attr($mt_option['body_font_family'])); 	
+	}	
+	add_action ('maintenance_font_fields', 'get_font_fileds_action', 10);
 	
 	
 	function maintenanace_contact_support() {
@@ -264,12 +366,13 @@
 			'body_bg'	  		=> '',
 			'body_bg_color'    	=> '#333333',
 			'font_color' 		=> '#ffffff',
+			'body_font_family' 	=> 'Open Sans',
 			'is_blur'			=> false,
 			'blur_intensity'	=> 5,	
 			'admin_bar_enabled' => true,
 			'503_enabled'		=> true,
 			'gg_analytics_id'   => '',
-			'is_login'			=> true
-			
+			'is_login'			=> true,
+			'custom_css'		=> ''
 		);
 	}

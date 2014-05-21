@@ -10,7 +10,6 @@ html {
 }
 
 body {
-	font-family:"Open Sans", sans-serif;
 	height:100%;
 	width: 100%;
 }
@@ -96,7 +95,7 @@ footer {
 	width:100%;
 	display:block;
 	text-decoration:none;
-	font-family: 'Open Sans';
+	font-family: inherit;
 	font-weight:bold;
 	color:inherit;
 	font-size:16px;
@@ -105,7 +104,7 @@ footer {
 }
 
 .logo {
-	font-family: 'Open Sans', sans-serif;
+	font-family: inherit;
 	font-weight:normal;
 	text-decoration:none;
 	float:left;
@@ -125,7 +124,7 @@ footer {
 }
 
 .site-title {
-	font-family: 'Open Sans', sans-serif;
+	font-family: inherit;
 	font-weight:lighter;
 }
 
@@ -144,7 +143,7 @@ footer {
     background-position: 14px center;
     background-repeat: no-repeat;
     float: left;
-    font-family: 'Open Sans',sans-serif;
+    font-family: inherit;
     font-size: 20px;
     font-weight: 400;
     line-height: 20px;
@@ -234,7 +233,7 @@ footer {
 .login-form input[type="submit"] {
 	color:inherit;
 	font-size:25px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: inherit;
 	background:none;
 	font-weight:bold;
     float: left;
@@ -340,25 +339,25 @@ footer {
 ::-webkit-input-placeholder { /* WebKit browsers */
 	font-size:20px;
 	color:inherit;
-	font-family: 'Open Sans', sans-serif;
+	font-family: inherit;
 	opacity:1;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
 	font-size:20px;
 	color:inherit;
-	font-family: 'Open Sans', sans-serif;
+	font-family: inherit;
 	opacity:1;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
 	font-size:20px;
 	color:inherit;
-	font-family: 'Open Sans', sans-serif;
+	font-family: inherit;
 	opacity:1;
 }
 :-ms-input-placeholder { /* Internet Explorer 10+ */
 	font-size:20px;
 	color:inherit;
-	font-family: 'Open Sans', sans-serif;
+	font-family: inherit;
 	opacity:1;
 }
 
@@ -367,6 +366,7 @@ footer {
 	height:0;
 	display:inline;
 }
+
 
 @media screen and (max-width: 768px) {
 	.logo {width:100%; text-align:center; margin:0 0 20px 0;}
@@ -421,7 +421,6 @@ footer {
 	.user-content {padding:0 5px; width:auto;}
 	#countdown .countDevider.countDiv1 {width:1px;}
 }
-
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) {
 	html 			{ overflow: auto; }

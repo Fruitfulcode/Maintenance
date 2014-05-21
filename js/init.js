@@ -31,15 +31,19 @@ jQuery(window).ready(function(){
 	};
 	
 	jQuery('#state').tzCheckbox({labels:['On','Off']});
-	var vColorPickerOptions = {
-    	defaultColor: false,
-    	change: function(event, ui){},
-    	clear: function() {},
-		hide: true,
-		palettes: true
-	};
- 
+		var vColorPickerOptions = {
+			defaultColor: false,
+			change: function(event, ui){},
+			clear: function() {},
+			hide: true,
+			palettes: true
+		};
+	
 	jQuery('#body_bg_color, #font_color, #body_bg_blur_color').wpColorPicker(vColorPickerOptions);
+	
+	if (jQuery('.select2_customize').length > 0) {
+		jQuery('.select2_customize').select2({});
+	}
 	
 	
 	if (jQuery('#503_enabled').length > 0) {

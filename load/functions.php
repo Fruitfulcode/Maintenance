@@ -69,11 +69,21 @@ function get_custom_login_code() {
 
 	function add_custom_style() {
 		global $wp_styles;
-		wp_register_style('_opensans','http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext');
+		$mt_options = mt_get_plugin_options(true);
+		
+		if (!empty($mt_options['body_font_family'])) {
+			$font_link = '';
+			$font_link = mt_get_google_font(esc_attr($mt_options['body_font_family']));
+			if ($font_link != '') {
+				wp_register_style('_custom_fonts', $font_link);
+				$wp_styles->do_items('_custom_fonts');		
+			}	
+		}
+		
 		wp_register_style('_iconstyle', MAINTENANCE_URI .'load/images/fonts-icon/icons.style.css');
 		wp_register_style('_style', 	MAINTENANCE_URI .'load/style.css');
 		$wp_styles->do_items('_iconstyle');
-		$wp_styles->do_items('_opensans');
+		
 		/*Add inline custom style*/
 		get_options_style();
 		$wp_styles->do_items('_style');
@@ -121,6 +131,12 @@ function get_custom_login_code() {
 			  $options_style .= '.preloader {background-color: '. esc_attr($mt_options['body_bg_color']) .'}';
 		}
 		
+		if (!empty($mt_options['body_font_family'])) { 
+			$options_style .=  'body {font-family: '. esc_attr($mt_options['body_font_family']) .'; }';
+		}
+		
+		
+		
 		if (!isset($mt_options['is_login'])) {
 			  $options_style .= '.logo { display: block; float: none;  margin: 0;  text-align: center; width: 100%;} ';
 		}
@@ -134,6 +150,10 @@ function get_custom_login_code() {
 			 $options_style .= '.site-content {color: '. $font_color .'} ';
 			 $options_style .= 'footer {color: '. $font_color .'} ';
 			 $options_style .= '.ie7 .company-name {color: '. $font_color .'} ';
+		}
+		
+		if (!empty($mt_options['custom_css'])) {
+			$options_style .= wp_kses_stripslashes($mt_options['custom_css']);
 		}
 		
 		wp_add_inline_style( '_style', $options_style );

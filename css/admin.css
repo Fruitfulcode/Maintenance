@@ -33,7 +33,13 @@
 #maintenance-options  #poststuff .metabox-holder .postbox-container.column-2 {float: right; width: 28%; min-width:300px;}
 #maintenance-options.wrap form p.submit {clear:both;}
 
+#get-lists {
+    margin: 0 0 0 10px;
+}
 
+#maintenance-maillists .mailing_fields  input[type="text"] {
+	min-width:35%;
+}
 @media screen and (max-width: 1024px) {
 	#maintenance-options  #poststuff .metabox-holder .postbox-container.column-1 {float: left; width: 100%;}
 	#maintenance-options  #poststuff .metabox-holder .postbox-container.column-2 {float: left; width: 100%;}
