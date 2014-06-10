@@ -33,13 +33,12 @@
 #maintenance-options  #poststuff .metabox-holder .postbox-container.column-2 {float: right; width: 28%; min-width:300px;}
 #maintenance-options.wrap form p.submit {clear:both;}
 
-#get-lists {
-    margin: 0 0 0 10px;
-}
+#get-lists { margin: 0 0 0 10px; }
+#maintenance-maillists .mailing_fields  input[type="text"] { min-width:35%; }
 
-#maintenance-maillists .mailing_fields  input[type="text"] {
-	min-width:35%;
-}
+.start-date, .end-date {float:left; display:inline-block; margin:0 20px 0 0;}
+.start-date label, .end-date label {margin:0 10px 0 0;}
+
 @media screen and (max-width: 1024px) {
 	#maintenance-options  #poststuff .metabox-holder .postbox-container.column-1 {float: left; width: 100%;}
 	#maintenance-options  #poststuff .metabox-holder .postbox-container.column-2 {float: left; width: 100%;}

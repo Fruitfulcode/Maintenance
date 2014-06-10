@@ -284,22 +284,24 @@
 		$promo_text .= '</div>';	
 		echo $promo_text;
 	}
+	
 	function load_maintenance_page() {
 		global $mt_options;
-		$vCurrDate = '';
+		$vCurrDate_start = $vCurrDate_end = $vCurrTime = '';
 		$mt_options	= mt_get_plugin_options(true);
 			if (!is_user_logged_in()) {
 				if ($mt_options['state']) {
-					if (!empty($mt_options['expiry_date'])) {
-						$vCurrDate =  DateTime::createFromFormat('d/m/Y', $mt_options['expiry_date']);
-						list( $date, $time ) = explode( ' ', current($vCurrDate));
-						list( $year, $month, $day ) 	 = explode(  '-', $date );
-						list( $hour, $minute, $second )  = explode ( ':', $time );
-						$timestamp = mktime( $hour, $minute, $second, $month, $day, $year );
-						
-						if ((time() > $timestamp) && (!empty($mt_options['is_down']))) {
-						    return true;
+					if (!empty($mt_options['expiry_date_start']) && !empty($mt_options['expiry_date_end'])) {
+						date_default_timezone_set('Europe/Kiev');
+						$vCurrTime 		 =  strtotime(date('d/m/Y g:i a'));
+						$vCurrDate_start =  strtotime($mt_options['expiry_date_start']);
+						$vCurrDate_end 	 =  strtotime($mt_options['expiry_date_end']);
+												
+						if ($vCurrTime < $vCurrDate_start) return true;
+						if ($vCurrTime >= $vCurrDate_end) {
+							if (!empty($mt_options['is_down'])) return true;
 						}
+						
 					}	
 
 					if ( file_exists (MAINTENANCE_LOAD . 'index.php')) {
