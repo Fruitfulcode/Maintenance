@@ -303,21 +303,18 @@ function get_custom_login_code() {
 				$protocol = "HTTP/1.1";
 				header( "$protocol 503 Service Unavailable", true, 503 );
 				
-				if ($mt_options['state']) {
-					if (!empty($mt_options['expiry_date'])) {
-						$vCurrDate =  DateTime::createFromFormat('d/m/Y', $mt_options['expiry_date']);
-						list( $date, $time ) = explode( ' ', current($vCurrDate));
+				if (($mt_options['state']) && (!empty($mt_options['expiry_date_end']))) {
+						$vCurrDate =  DateTime::createFromFormat('d/m/Y g:i a', $mt_options['expiry_date_end']);
+						list( $date, $time ) 		= explode( ' ', current($vCurrDate));
 						list( $year, $month, $day ) = explode(  '-', $date );
 						list( $hour, $minute, $second ) = explode ( ':', $time );
 						$timestamp = mktime( $hour, $minute, $second, $month, $day, $year );
 						
-						
 						if ( time() < $timestamp ) {
-							header( "Retry-After: " . gmdate("M d Y H:i:s", $timestamp) );
+							header( "Retry-After: " . gmdate("D, d M Y H:i:s", $timestamp) );
 						} else {
 							header( "Retry-After: 3600" );
 						}
-					}	
 				} else {
 					header( "Retry-After: 3600" );
 				}	

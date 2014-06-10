@@ -292,10 +292,9 @@
 			if (!is_user_logged_in()) {
 				if ($mt_options['state']) {
 					if (!empty($mt_options['expiry_date_start']) && !empty($mt_options['expiry_date_end'])) {
-						date_default_timezone_set('Europe/Kiev');
-						$vCurrTime 		 =  strtotime(date('d/m/Y g:i a'));
-						$vCurrDate_start =  strtotime($mt_options['expiry_date_start']);
-						$vCurrDate_end 	 =  strtotime($mt_options['expiry_date_end']);
+						$vCurrTime 		 = strtotime(date('d/m/Y g:i a'));
+						$vCurrDate_start = strtotime($mt_options['expiry_date_start']);
+						$vCurrDate_end 	 = strtotime($mt_options['expiry_date_end']);
 												
 						if ($vCurrTime < $vCurrDate_start) return true;
 						if ($vCurrTime >= $vCurrDate_end) {
