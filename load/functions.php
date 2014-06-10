@@ -304,14 +304,14 @@ function get_custom_login_code() {
 				header( "$protocol 503 Service Unavailable", true, 503 );
 				
 				if (($mt_options['state']) && (!empty($mt_options['expiry_date_end']))) {
-						$vCurrDate =  DateTime::createFromFormat('d/m/Y g:i a', $mt_options['expiry_date_end']);
+						$vCurrDate = new DateTime($mt_options['expiry_date_end']);
 						list( $date, $time ) 		= explode( ' ', current($vCurrDate));
 						list( $year, $month, $day ) = explode(  '-', $date );
 						list( $hour, $minute, $second ) = explode ( ':', $time );
 						$timestamp = mktime( $hour, $minute, $second, $month, $day, $year );
-						
+						$vCurrDate = date_format($vCurrDate, 'd/m/Y g:i a');
 						if ( time() < $timestamp ) {
-							header( "Retry-After: " . gmdate("D, d M Y H:i:s", $timestamp) );
+							header( "Retry-After: " . gmdate("D, d M Y H:i:s", strtotime($vCurrDate)) );
 						} else {
 							header( "Retry-After: 3600" );
 						}
