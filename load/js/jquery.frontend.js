@@ -6,65 +6,59 @@
 
 jQuery(document).ready(function() {
 	jQuery('input[placeholder], textarea[placeholder]').placeholder();
-	jQuery('#login-form').submit(function() {
-	   if (!jQuery(this).hasClass('active')) {
-			jQuery(this).find('span.licon').fadeIn(300);
-			jQuery(this).find('span.picon').fadeIn(300);
-			jQuery(this).addClass('active');
-			jQuery(this).find('input[type="text"]').focus();
-			return false;
-		}
-	});
-	
-	if (jQuery('#login-form').hasClass('error')){
-			jQuery('#login-form').find('span.licon').fadeIn(100);
-			jQuery('#login-form').find('span.picon').fadeIn(100);
-			jQuery('#login-form').find('input[type="text"]').focus();
-	}
 		
 	jQuery(window).resize();
-	jQuery('body > div:not(".preloader")').each(function() {
+	jQuery('.main-container > div:not(".preloader")').each(function() {
 		jQuery(this).css({'visibility': 'hidden'});
 	});
+	
+	if (jQuery('#btn-open-login-form').length > 0) {
+		jQuery('#btn-open-login-form').on('click', function() {
+			jQuery('body').toggleClass('open-login-form');
+			
+			if (jQuery(this).find('i').hasClass('foundicon-lock')) {
+				jQuery(this).find('i').removeClass();
+				jQuery(this).find('i').addClass('foundicon-unlock');
+			} else {
+				jQuery(this).find('i').removeClass();
+				jQuery(this).find('i').addClass('foundicon-lock');
+			}
+			
+		});
+	}	
+	
 });
 
 jQuery(window).load(function() { 
 	var isiPhone = /iphone/i.test(navigator.userAgent.toLowerCase());
-	var isiPad = /ipad/i.test(navigator.userAgent.toLowerCase());
+	var isiPad 	 = /ipad/i.test(navigator.userAgent.toLowerCase());
 
 	if (!isiPhone && !isiPad) {
 		jQuery('#content').center();	
 	}
 	
-	jQuery('body > div:not(".preloader")').each(function() {
+	jQuery('.main-container > div:not(".preloader")').each(function() {
 		jQuery(this).css({'visibility': 'visible'});
 	});
-	setInterval( function() { jQuery('body > .preloader').fadeOut(300); }, 1000); 
+	
+	setTimeout( function() { jQuery('.main-container > .preloader').fadeOut(300, function() {
+		jQuery('.login-form-container').fadeIn(600);
+	}); }, 1000); 
 });
 
 jQuery(window).resize(function() { 
-	if ((jQuery(window).width() < 1025) || (jQuery(window).width() < 769)) {
-		jQuery('#login-form').find('span.licon').fadeIn(300);
-		jQuery('#login-form').find('span.picon').fadeIn(300);
-		jQuery('#login-form').addClass('active');
-	} else {
-		if (!jQuery('#login-form').hasClass('error')) {
-				jQuery('#login-form').find('span.licon').fadeOut(300);
-				jQuery('#login-form').find('span.picon').fadeOut(300);
-				jQuery('#login-form').removeClass('active');
-		}	
-	}
-	
 	var isiPhone = /iphone/i.test(navigator.userAgent.toLowerCase());
 	var isiPad = /ipad/i.test(navigator.userAgent.toLowerCase());
-
-	if (!isiPhone && !isiPad) {
-		jQuery('#content').center();	
-	}
+	if (!isiPhone && !isiPad) jQuery('#content').center();	
 });
  
 jQuery.fn.center = function () {
-    this.css("position","absolute");
-    this.css("top", Math.max(0, ((jQuery(window).height() - jQuery(this).outerHeight()) / 2) + jQuery(window).scrollTop()) + "px");
-    return this;
+    if (jQuery(window).width() > 767) {
+		this.css("position","absolute");
+		this.css("top", Math.max(0, ((jQuery(window).height() - jQuery(this).outerHeight()) / 2) + jQuery(window).scrollTop()) + "px");
+	} else {
+		this.css("position","relative");
+		this.css("top","0");
+	}	
+	return this;
 }

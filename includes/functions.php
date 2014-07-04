@@ -292,10 +292,10 @@
 			if (!is_user_logged_in()) {
 				if ($mt_options['state']) {
 					if (!empty($mt_options['expiry_date_start']) && !empty($mt_options['expiry_date_end'])) {
-						$vCurrTime 		 = strtotime(date('d/m/Y g:i a'));
-						$vCurrDate_start = strtotime($mt_options['expiry_date_start']);
-						$vCurrDate_end 	 = strtotime($mt_options['expiry_date_end']);
-												
+						$vCurrTime 		 = strtotime(current_time('mysql', 1));
+						$vCurrDate_start = strtotime($mt_options['expiry_date_start']); 
+						$vCurrDate_end 	 = strtotime($mt_options['expiry_date_end']); 
+						
 						if ($vCurrTime < $vCurrDate_start) return true;
 						if ($vCurrTime >= $vCurrDate_end) {
 							if (!empty($mt_options['is_down'])) return true;
@@ -365,7 +365,7 @@
 			'description' 		=> __('Website will be available soon', 'maintenance'),
 			'logo'		  		=> '',
 			'body_bg'	  		=> '',
-			'body_bg_color'    	=> '#333333',
+			'body_bg_color'    	=> '#000000',
 			'font_color' 		=> '#ffffff',
 			'body_font_family' 	=> 'Open Sans',
 			'is_blur'			=> false,
