@@ -136,11 +136,6 @@ function get_custom_login_code() {
 		}
 		
 		
-		
-		if (!isset($mt_options['is_login'])) {
-			  $options_style .= '.logo { display: block; float: none;  margin: 0;  text-align: center; width: 100%;} ';
-		}
-		
 		if ( !empty($mt_options['font_color']) ) {
 			 $font_color = esc_attr($mt_options['font_color']);
 			 $options_style .= '.site-title   {color: '. $font_color .'} ';

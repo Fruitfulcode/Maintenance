@@ -3,6 +3,7 @@
 	$ebody_class = '';
 	$mess_arr = get_custom_login_code(); 
 	if (!empty($mess_arr[0])) $ebody_class = 'error';
+	$mt_options = mt_get_plugin_options(true);
 	
 ?>
 <!DOCTYPE html>
@@ -53,10 +54,13 @@
 		<?php do_action('user_content_section'); ?>
 	</div>
 	<?php do_action('after_main_container'); ?>
-	<div class="login-form-container">
-		<?php do_login_form(esc_attr($mess_arr[3]), esc_attr($mess_arr[1]), esc_attr($mess_arr[2])); ?>
-		<?php do_button_login_form(); ?>
-	</div>	
+	<?php if (isset($mt_options['is_login'])) { ?>
+		
+		<div class="login-form-container">
+			<?php do_login_form(esc_attr($mess_arr[3]), esc_attr($mess_arr[1]), esc_attr($mess_arr[2])); ?>
+			<?php do_button_login_form(); ?>
+		</div>	
+	<?php } ?>	
 	
 </body>
 </html>

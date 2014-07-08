@@ -1,116 +1,137 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
-"POT-Creation-Date: 2014-02-18 12:25+0200\n"
-"PO-Revision-Date: 2014-02-18 12:27+0200\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2014-07-08 11:10+0200\n"
+"PO-Revision-Date: 2014-07-08 11:11+0200\n"
+"Last-Translator: fruitfulcode <mail@fruitfulcode.com>\n"
 "Language-Team: fruitfulcode\n"
+"Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.6.6\n"
 "X-Poedit-KeywordsList: _;_e;__;_x\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: /includes/admin.php:84
+#: includes/admin.php:88
 msgid "Save changes"
 msgstr "Сохранить"
 
-#: /includes/functions.php:104
+#: includes/functions.php:161
+msgid "Standard Fonts"
+msgstr "Стандартные шрифты"
+
+#: includes/functions.php:168
+msgid "Google Web Fonts"
+msgstr ""
+
+#: includes/functions.php:187
 msgid "General Settings"
 msgstr "Общие настройки"
 
-#: /includes/functions.php:110
+#: includes/functions.php:188
+msgid "Custom CSS"
+msgstr ""
+
+#: includes/functions.php:194
 #, fuzzy
 msgid "Pro version"
 msgstr "Премиум версия"
 
-#: /includes/functions.php:116
+#: includes/functions.php:200
 msgid "Support"
-msgstr ""
+msgstr "Поддержка"
 
-#: /includes/functions.php:124
+#: includes/functions.php:208
 msgid "Page title"
 msgstr "Заголовок страницы"
 
-#: /includes/functions.php:125
+#: includes/functions.php:209
 msgid "Headline"
 msgstr "Заголовок"
 
-#: /includes/functions.php:126
+#: includes/functions.php:210
 msgid "Description"
 msgstr "Описание"
 
-#: /includes/functions.php:127
+#: includes/functions.php:211
 msgid "Logo"
 msgstr "Логотип"
 
-#: /includes/functions.php:127
+#: includes/functions.php:211
 msgid "Upload Logo"
 msgstr "Загрузить логотип"
 
-#: /includes/functions.php:130
+#: includes/functions.php:215
 msgid "Admin bar"
 msgstr "Админ-панель"
 
-#: /includes/functions.php:130
+#: includes/functions.php:215
 msgid "Show admin bar"
 msgstr "Показать админ-панель"
 
-#: /includes/functions.php:131
+#: includes/functions.php:216
 msgid "503"
 msgstr ""
 
-#: /includes/functions.php:131
+#: includes/functions.php:216
 msgid "Service temporarily unavailable"
 msgstr "Сервис врменно недоступен"
 
-#: /includes/functions.php:132
+#: includes/functions.php:222
 msgid "Google Analytics ID"
 msgstr ""
 
-#: /includes/functions.php:132
+#: includes/functions.php:222
 msgid "UA-XXXXX-X"
 msgstr ""
 
-#: /includes/functions.php:133
+#: includes/functions.php:223
 msgid "Blur intensity"
 msgstr "Интенсивность размытия"
 
-#: /includes/functions.php:134
+#: includes/functions.php:224
 msgid "Background blur"
 msgstr "Размытие фона"
 
-#: /includes/functions.php:134
+#: includes/functions.php:224
 msgid "Apply a blur"
 msgstr "Применить размытие"
 
-#: /includes/functions.php:135
+#: includes/functions.php:225
 msgid "Login On / Off"
 msgstr ""
 
-#: /includes/functions.php:142
+#: includes/functions.php:235
+msgid "CSS Code"
+msgstr ""
+
+#: includes/functions.php:242
 msgid "Background image"
 msgstr "Фоновое изображение"
 
-#: /includes/functions.php:142
+#: includes/functions.php:242
 msgid "Upload Background"
 msgstr "Загрузить фон"
 
-#: /includes/functions.php:148
+#: includes/functions.php:248
 msgid "Background color"
 msgstr "Цвет фона"
 
-#: /includes/functions.php:149
+#: includes/functions.php:249
 msgid "Font color"
 msgstr "Цвет шрифта"
 
-#: /includes/functions.php:157
+#: includes/functions.php:256
+msgid "Font family"
+msgstr ""
+
+#: includes/functions.php:264
 msgid "Have any questions?"
 msgstr ""
 
-#: /includes/functions.php:158
+#: includes/functions.php:265
 #, php-format
 msgid ""
 "You may find answers to your questions at <a target=\"_blank\" href=\"http://"
@@ -121,12 +142,12 @@ msgid ""
 "title=\"%2$s\">%2$s</a>"
 msgstr ""
 
-#: /includes/functions.php:169
+#: includes/functions.php:276
 #, fuzzy
 msgid "Extended functionality"
 msgstr "Расширенная версия"
 
-#: /includes/functions.php:170
+#: includes/functions.php:277
 #, php-format
 msgid ""
 "Purchase <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
@@ -137,54 +158,67 @@ msgid ""
 "\"_blank\">leave feedbacks</a>."
 msgstr ""
 
-#: /includes/functions.php:174
+#: includes/functions.php:281
 msgid "Demo website"
 msgstr ""
 
-#: /includes/functions.php:232
+#: includes/functions.php:340
 #, fuzzy
 msgid "Maintenance"
 msgstr "Режим обслуживания включен"
 
-#: /includes/functions.php:255
+#: includes/functions.php:363
 msgid "Website is under construction"
 msgstr "Сайт находится в стадии разработки"
 
-#: /includes/functions.php:256
+#: includes/functions.php:364
 msgid "Maintenance mode is on"
 msgstr "Режим обслуживания включен"
 
-#: /includes/functions.php:257
+#: includes/functions.php:365
 msgid "Website will be available soon"
 msgstr "Сайт скоро бдует доступен "
 
-#: /load/functions.php:37
+#: load/functions.php:37
 msgid "Permission access denied!"
 msgstr "Доступ запрещен!"
 
-#: /load/functions.php:45
+#: load/functions.php:45
 msgid "You entered your login are incorrect!"
 msgstr "Вы ввели неверный логин! "
 
-#: /load/functions.php:49
+#: load/functions.php:49
 msgid "You entered your password are incorrect!"
 msgstr "Вы ввели неверный пароль!"
 
-#: /load/functions.php:52
+#: load/functions.php:52
 msgid "You entered your login and password are incorrect!"
 msgstr "Вы ввели неверный логин или пароль!"
 
-#: /load/functions.php:223
+#: load/functions.php:259
+#, fuzzy
+msgid "User Login"
+msgstr "Вход для клиентов"
+
+#: load/functions.php:260
 msgid "Username"
 msgstr "Логин"
 
-#: /load/functions.php:224
+#: load/functions.php:261
 msgid "Password"
 msgstr "Пароль"
 
-#: /load/functions.php:225
-msgid "Sign In"
-msgstr "Войти"
+#: load/functions.php:262
+#, fuzzy
+msgid "Lost Password"
+msgstr "Пароль"
+
+#: load/functions.php:263
+msgid "Login"
+msgstr ""
+
+#~ msgid "Sign In"
+#~ msgstr "Войти"
 
 #~ msgid "Contact support"
 #~ msgstr "Служба поддержки"
@@ -221,9 +255,6 @@ msgstr "Войти"
 
 #~ msgid "Your session has expired."
 #~ msgstr "Ваша сессия истекла."
-
-#~ msgid "Customer login"
-#~ msgstr "Вход для клиентов"
 
 #~ msgid "Please login to see website"
 #~ msgstr "Пожалуйста авторезируйтесь"
