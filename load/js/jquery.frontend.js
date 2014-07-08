@@ -6,7 +6,6 @@
 
 jQuery(document).ready(function() {
 	jQuery('input[placeholder], textarea[placeholder]').placeholder();
-		
 	jQuery(window).resize();
 	jQuery('.main-container > div:not(".preloader")').each(function() {
 		jQuery(this).css({'visibility': 'hidden'});
