@@ -1,6 +1,6 @@
 #maintenance-options { position: relative; }
 #maintenance-options #icon-maintenance {background:url('../images/icon.png') no-repeat center center transparent;}
-#maintenance-options input.upload_btn { clear: left; display: block; float: left; margin: 20px 0; padding: 5px; text-align: center; width: 100%; }
+#maintenance-options input.upload_btn { clear: left; display: block; float: left; margin: 20px 0; padding: 0; text-align: center; width: 100%; }
 #maintenance-options h2 {float:left}
 #wpbody-content .metabox-holder {float:left; width:100%;}
 /*Checkbox*/
@@ -38,6 +38,11 @@
 
 .start-date, .end-date {float:left; display:inline-block; margin:0 20px 0 0;}
 .start-date label, .end-date label {margin:0 10px 0 0;}
+
+
+label {
+	font-weight:normal;
+}
 
 @media screen and (max-width: 1024px) {
 	#maintenance-options  #poststuff .metabox-holder .postbox-container.column-1 {float: left; width: 100%;}
