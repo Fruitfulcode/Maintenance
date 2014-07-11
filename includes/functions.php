@@ -203,8 +203,11 @@
 	
 	function add_data_fields ($object, $box) {
 		$mt_option = mt_get_plugin_options(true);
-		echo '<table class="form-table">';
-			echo '<tbody>';
+		$is_blur   = false; 
+		?>
+		<table class="form-table">
+			<tbody>
+		<?php	
 				generate_input_filed(__('Page title', 'maintenance'), 'page_title', 'page_title', wp_kses_post($mt_option['page_title']));
 				generate_input_filed(__('Headline', 'maintenance'),	'heading', 'heading', 		  wp_kses_post($mt_option['heading']));
 				generate_textarea_filed(__('Description', 'maintenance'), 'description', 'description', wp_kses_post($mt_option['description']));
@@ -219,12 +222,20 @@
 				if (!empty($mt_option['gg_analytics_id'])) {
 					$gg_analytics_id = esc_attr($mt_option['gg_analytics_id']);
 				}
+				
 				generate_input_filed(__('Google Analytics ID',  'maintenance'), 'gg_analytics_id', 'gg_analytics_id', $gg_analytics_id,  __('UA-XXXXX-X', 'maintenance'));
 				generate_input_filed(__('Blur intensity',  'maintenance'), 'blur_intensity', 'blur_intensity', intval($mt_option['blur_intensity']));
-				generate_check_filed(__('Background blur', 'maintenance'), __('Apply a blur', 'maintenance'), 'is_blur', 'is_blur', isset($mt_option['is_blur']));
+
+				if (isset($mt_option['is_blur'])) {
+					if ($mt_option['is_blur']) $is_blur = true; 
+				} 
+				
+				generate_check_filed(__('Background blur', 'maintenance'), __('Apply a blur', 'maintenance'), 'is_blur', 'is_blur', $is_blur);
 				generate_check_filed(__('Login On / Off', 'maintenance'),  '', 'is_login', 'is_login', isset($mt_option['is_login']));
-			echo '</tbody>';
-		echo '</table>';
+		?>		
+			</tbody>
+		</table>
+		<?php
 	}	
 	
 	
