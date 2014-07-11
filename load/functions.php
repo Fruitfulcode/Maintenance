@@ -160,16 +160,18 @@ function get_custom_login_code() {
 	function get_logo_box() {
 		$mt_options = mt_get_plugin_options(true);
 		$out_html = '';
-			$out_html = '<a class="logo" rel="home" href="'.esc_url(site_url('')) .'">';
+			
 			if ( !empty($mt_options['logo']) ) { 
-				 $logo = wp_get_attachment_image_src( $mt_options['logo'], 'full'); 
-				 $out_html .= '<div class="img-inner">';
+				$logo = wp_get_attachment_image_src( $mt_options['logo'], 'full'); 
+				$out_html = '<a class="logo" rel="home" href="'.esc_url(site_url('')) .'" style="width:'.$logo[1].'px">';
 					$out_html .= '<img src="'. esc_url($logo[0]) .'" alt="logo"/>';
-				 $out_html .= '</div>';
+				$out_html .= '</a>'; 
 			} else { 
-				 $out_html .= '<h1 class="site-title">'. get_bloginfo( 'name' ) .'</h1>';
+				$out_html = '<a class="logo istext" rel="home" href="'.esc_url(site_url('')) .'">';
+					$out_html .= '<h1 class="site-title">'. get_bloginfo( 'name' ) .'</h1>';
 			} 
-			$out_html .= '</a>';
+			$out_html .= '</a>'; 
+			
 		echo $out_html;
 	}
 	add_action ('logo_box', 'get_logo_box', 10);

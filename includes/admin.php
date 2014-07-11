@@ -84,8 +84,8 @@
 						</div>
 						 
 					</div>
+					<?php submit_button(__('Save changes', 'maintenance'), 'primary'); ?>
 				</div>	
-				<?php submit_button(__('Save changes', 'maintenance'), 'primary'); ?>
 			</form>
 		</div>
 	<?php

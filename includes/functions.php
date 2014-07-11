@@ -245,7 +245,7 @@
 	
 	function get_color_fileds_action() {
 		$mt_option = mt_get_plugin_options(true);
-		get_color_field(__('Background color', 'maintenance'), 'body_bg_color', 'body_bg_color', esc_attr($mt_option['body_bg_color']), '#333333');
+		get_color_field(__('Background color', 'maintenance'), 'body_bg_color', 'body_bg_color', esc_attr($mt_option['body_bg_color']), '#1111111');
 		get_color_field(__('Font color', 'maintenance'), 'font_color', 'font_color', esc_attr($mt_option['font_color']), 	  '#ffffff');
 	}	
 	add_action ('maintenance_color_fields', 'get_color_fileds_action', 10);
@@ -356,6 +356,48 @@
 		$rgb = array($r, $g, $b);
 		return implode(",", $rgb); 
 	}
+		
+		
+	function mt_insert_attach_sample_files() {
+		global $wpdb;
+		$title = '';
+		$attach_id   = 0;
+		$is_attach_exists = $wpdb->get_results( "SELECT p.ID FROM $wpdb->posts p WHERE  p.post_title LIKE '%mt-sample-background%'", OBJECT );
+		if (!empty($is_attach_exists)) {
+			$attach_id = current($is_attach_exists)->ID;
+		} else {
+			require_once(ABSPATH . 'wp-admin/includes/image.php');
+			$upload_dir  = wp_upload_dir();
+			$image_url 	 = MAINTENANCE_URI . 'images/mt-sample-background.jpg';
+			$file_name   = basename( $image_url );
+			$upload      = wp_upload_bits( $file_name, null, file_get_contents($image_url), current_time( 'mysql', $gmt = 0 ));
+				
+			if ($upload['error'] == '') {
+				$title = preg_replace('/\.[^.]+$/', '', basename($image_url));
+						
+				$wp_filetype = wp_check_filetype(basename($upload['file']), null );
+				$attachment = array(
+						'guid' 			 => $upload['url'], 
+						'post_mime_type' => $wp_filetype['type'],
+						'post_title' 	 => $title,
+						'post_content' 	 => '',
+						'post_status' 	 => 'inherit'
+					);
+					
+				$attach_id   = wp_insert_attachment($attachment, $upload['file']);
+				$attach_data = wp_generate_attachment_metadata($attach_id, $upload['file']);
+				wp_update_attachment_metadata($attach_id, $attach_data);
+				
+			}
+		}	
+
+		if (!empty($attach_id)) {
+			return $attach_id;
+		} else {
+			return '';
+		}
+	}
+	
 	
 	function mt_get_default_array() {
 		return array(
@@ -364,8 +406,8 @@
 			'heading'	  		=> __('Maintenance mode is on', 'maintenance'),	
 			'description' 		=> __('Website will be available soon', 'maintenance'),
 			'logo'		  		=> '',
-			'body_bg'	  		=> '',
-			'body_bg_color'    	=> '#000000',
+			'body_bg'	  		=> mt_insert_attach_sample_files(),
+			'body_bg_color'    	=> '#111111',
 			'font_color' 		=> '#ffffff',
 			'body_font_family' 	=> 'Open Sans',
 			'is_blur'			=> false,
