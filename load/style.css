@@ -58,7 +58,9 @@ body > .login-form-container {
 	-moz-transition: all .6s ease-in-out; 
 	-o-transition: all .6s ease-in-out; 
 	z-index:999;
+	outline: 1px solid transparent;
 }	
+
 
 body.open-login-form > .login-form-container {
 	right: 0;

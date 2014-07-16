@@ -28,7 +28,7 @@
 	<?php do_action('add_gg_analytics_code'); ?>
 </head>
 <body <?php body_class('maintenance ' . $ebody_class); ?>>
-	 <?php do_action('before_main_container'); ?>
+	  <?php do_action('before_main_container'); ?>
 	<div class="main-container">
 		<?php do_action('before_content_section'); ?>
 		<div id="wrapper">
