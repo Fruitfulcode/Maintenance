@@ -15,10 +15,10 @@ function get_custom_login_code() {
 	if(isset($_POST['is_custom_login'])) {
 		$user_login = esc_attr($_POST['log']);
 		$user_login = sanitize_user( $user_login );
-		$user_pass  = esc_attr($_POST['pwd']);
+		$user_pass  = $_POST['pwd'];
 		$access = array();
 		$access['user_login'] 	 = esc_attr($user_login);
-		$access['user_password'] = esc_attr($user_pass);
+		$access['user_password'] = $user_pass;
 		$access['remember']  	 = true;
 					
 		$user = null;
