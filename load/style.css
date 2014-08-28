@@ -502,7 +502,7 @@ and (orientation : landscape) {
 	}
 }
 
-@media screen and (max-width: 640px) {	
+@media screen and (max-width: 1366px) {	
 	body.open-login-form > .main-container {
 		-ms-transform-origin: 0 50%;
 		-o-transform-origin: 0 50%;
