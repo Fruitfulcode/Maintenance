@@ -38,7 +38,7 @@ class maintenance {
 			register_activation_hook  ( __FILE__, array( &$this,  'activation' ));
 			register_deactivation_hook( __FILE__, array( &$this,'deactivation') );
 			
-			add_action('template_redirect', array( &$this, 'mt_template_redirect'));
+			add_action('wp', array( &$this, 'mt_template_redirect'), 1);
 			add_action('wp_logout',	array( &$this, 'mt_user_logout'));
 			add_action('init', array( &$this, 'mt_admin_bar'));
 		}

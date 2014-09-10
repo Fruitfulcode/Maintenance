@@ -52,7 +52,7 @@ jQuery(window).resize(function() {
 });
  
 jQuery.fn.center = function () {
-    if ((jQuery(window).width > 767) && (jQuery(window).height> 767)) {
+    if ((jQuery(window).width() > 767) && (jQuery(window).height() > 767)) {
 		this.css("position","absolute");
 		this.css("top", Math.max(0, ((jQuery(window).height() - jQuery(this).outerHeight()) / 2) + jQuery(window).scrollTop()) + "px");
 	} else {

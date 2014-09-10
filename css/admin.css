@@ -18,6 +18,7 @@
 .img-container .boxes input.button.remove {position:absolute; display:none !important; right:10px; top:10px; }
 .img-container .boxes:hover > input.button { display:block !important;cursor:pointer; }
 
+#maintenance-options label {font-weight:normal;}
 .sidebar-promo { display: block; margin: 15px 0 0; min-height: 150px; }
 .sidebar-promo h4 {color: #3E3E3E; font-size: 16px; font-weight: bold; margin: 0 0 20px; padding: 6px 0 6px 40px; }
 .sidebar-promo h4.support {background: url("../images/support.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);}
