@@ -3,6 +3,9 @@
 #maintenance-options input.upload_btn { clear: left; display: block; float: left; margin: 20px 0; padding: 5px; text-align: center; width: 100%; }
 #maintenance-options h2 {float:left}
 #wpbody-content .metabox-holder {float:left; width:100%;}
+
+.thumbnail { margin:0; padding:0; line-height:inherit; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; border:0 none; background-color:inherit; display:inherit; }
+
 /*Checkbox*/
 .tzCheckBox {background:url( '../images/background.png ') no-repeat right bottom;display:inline-block;min-width:60px;height:33px;white-space:nowrap;position:relative;cursor:pointer;margin:8px 0 0 20px;}
 .tzCheckBox.checked{background-position:top left;margin:8px 0 0 6px;}
