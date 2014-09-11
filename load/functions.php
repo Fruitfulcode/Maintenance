@@ -303,8 +303,18 @@ function get_custom_login_code() {
 				$protocol = "HTTP/1.1";
 				header( "$protocol 503 Service Unavailable", true, 503 );
 				
-				if (($mt_options['state']) && (!empty($mt_options['expiry_date_end']))) {
-						$vCurrDate = strtotime($mt_options['expiry_date_end']); 
+				$vCurrDate_end = '';
+				$vdate_end = date_i18n( 'Y-m-d', strtotime( current_time('mysql', 1) )); 
+				$time_end  = date_i18n( 'h:i a', strtotime( '12:00 pm')); 
+
+				if (!empty($mt_options['expiry_date_end']))
+					$vdate_end = $mt_options['expiry_date_end'];
+				if (!empty($mt_options['expiry_time_end']))
+					$vtime_end = $mt_options['expiry_time_end'];		   
+		
+				if (($mt_options['state']) && (!empty($mt_options['expiry_date_end']) && !empty($mt_options['expiry_time_end']))) {
+						$date_concat = $vdate_end . ' ' . $vtime_end;
+						$vCurrDate = strtotime($date_concat); 	
 						if ( strtotime( current_time('mysql', 1)) < $vCurrDate ) {
 							header( "Retry-After: " . gmdate("D, d M Y H:i:s", $vCurrDate) );
 						} else {

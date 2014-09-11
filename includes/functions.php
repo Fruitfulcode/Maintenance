@@ -298,27 +298,42 @@
 	
 	function load_maintenance_page() {
 		global $mt_options;
+		
 		$vCurrDate_start = $vCurrDate_end = $vCurrTime = '';
+		
+		$vdate_start = $vdate_end = date_i18n( 'Y-m-d', strtotime( current_time('mysql', 1) )); 
+		$vtime_start = date_i18n( 'h:i a', strtotime( '12:00 am')); 
+		$time_end  	 = date_i18n( 'h:i a', strtotime( '12:00 pm')); 
+					
 		$mt_options	= mt_get_plugin_options(true);
 			if (!is_user_logged_in()) {
 				if ($mt_options['state']) {
-					if (!empty($mt_options['expiry_date_start']) && !empty($mt_options['expiry_date_end'])) {
+					
+					if (!empty($mt_options['expiry_date_start']))
+						$vdate_start = $mt_options['expiry_date_start'];
+					if (!empty($mt_options['expiry_date_end']))
+						$vdate_end = $mt_options['expiry_date_end'];
+						
+					if (!empty($mt_options['expiry_time_start']))
+						$vtime_start = $mt_options['expiry_time_start'];
+					if (!empty($mt_options['expiry_time_end']))
+						$vtime_end = $mt_options['expiry_time_end'];
+					 
 						$vCurrTime 		 = strtotime(current_time('mysql', 1));
-						$vCurrDate_start = strtotime($mt_options['expiry_date_start']); 
-						$vCurrDate_end 	 = strtotime($mt_options['expiry_date_end']); 
+						$vCurrDate_start = strtotime($vdate_start . ' ' . $vtime_start); 
+						$vCurrDate_end 	 = strtotime($vdate_end . ' ' . $vtime_end); 
 						
 						if ($vCurrTime < $vCurrDate_start) return true;
 						if ($vCurrTime >= $vCurrDate_end) {
 							if (!empty($mt_options['is_down'])) return true;
 						}
-						
 					}	
 
 					if ( file_exists (MAINTENANCE_LOAD . 'index.php')) {
 					  	 include_once MAINTENANCE_LOAD . 'index.php';
 						 exit;
 					}
-				}
+				
 			}
 	}
 	
