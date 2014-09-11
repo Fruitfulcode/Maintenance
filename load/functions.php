@@ -54,7 +54,7 @@ function get_custom_login_code() {
 					$class_password = 'error';
 				}
 			} else {
-				wp_redirect(site_url('/'));
+				wp_redirect(home_url('/'));
 				exit;
 			}
 		}	

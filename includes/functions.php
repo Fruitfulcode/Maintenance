@@ -186,6 +186,7 @@
 		global $maintenance_variable;
 		add_meta_box( 'maintenance-general', __( 'General Settings', 'maintenance' ),  'add_data_fields', $maintenance_variable->options_page, 'normal', 'default');
 		add_meta_box( 'maintenance-css', 	 __( 'Custom CSS', 'maintenance' ),        'add_css_fields', $maintenance_variable->options_page, 'normal', 'default');
+		add_meta_box( 'maintenance-excludepages', 	 __( 'Exclude pages', 'maintenance' ), 'add_exclude_pages_fields', $maintenance_variable->options_page, 'normal', 'default');
 	}
 	add_action('add_meta_boxes', 'maintenance_page_create_meta_boxes', 10);
 	
@@ -248,6 +249,69 @@
 		echo '</table>';	
 	}
 	
+	function add_exclude_pages_fields() {
+		$mt_option = mt_get_plugin_options(true);
+		$out_filed = '';
+		
+		$post_types = get_post_types(array('show_ui' => true, 'public' => true), 'objects' );
+		
+		
+		$out_filed .= '<table class="form-table">';
+			$out_filed .= '<tbody>';
+			$out_filed .= '<tr valign="top">';	
+				$out_filed .= '<th colspan="2" scope="row">' . __('Select the page to be displayed:', 'maintenance') .'</th>';
+			$out_filed .= '</tr>';
+						
+			foreach ($post_types as $post_slug => $type) {
+					
+					if (($post_slug == 'attachment') || 
+						($post_slug == 'revision') || 
+						($post_slug == 'nav_menu_item')
+						) continue;
+					
+					$out_filed .= '<tr valign="top">';	
+						$out_filed .= '<th scope="row">' . $type->labels->name .'</th>';
+						
+						$out_filed .= '<filedset>';	
+						$out_filed .= '<td>';	
+						
+						$args = array();
+						$args = array(
+									'posts_per_page'   => -1,
+									'orderby'          => 'NAME',
+									'order'            => 'ASC',
+									'post_type'        => $post_slug,
+									'post_status'      => 'publish'); 
+	
+						$posts_array = get_posts( $args );
+				
+						if (!empty($posts_array)) {
+							foreach ($posts_array as $post_values) {
+								$current = '';
+								if (isset($mt_option['exclude_pages'][$post_values->ID])) {
+									$current = $mt_option['exclude_pages'][$post_values->ID];
+								}
+									$check = checked($current, $post_values->ID, false);
+								
+								$out_filed .= '<label for="exclude_pages-'.$post_values->ID.'">';
+									$out_filed .= '<input type="checkbox" name="lib_options[exclude_pages]['.$post_values->ID.']" id="exclude_pages-'.$post_values->ID.'" class="exclude_pages" value="'.$post_values->ID.'" '.$check.'/>';
+								$out_filed .= $post_values->post_title.'</label>';
+								$out_filed .= '<br />';
+							}
+						} else {
+							$out_filed .= '<h3>'.__('Not available object.', 'maintenance').'</h3>';
+						}
+					$out_filed .= '</filedset>';	
+				$out_filed .= '</td>';	
+			$out_filed .= '</tr>';						
+		}
+		
+			$out_filed .= '</tbody>';
+		$out_filed .= '</table>';	
+		
+		echo $out_filed;
+	}
+	
 	function get_background_fileds_action() {
 		$mt_option = mt_get_plugin_options(true);
 		generate_image_filed(__('Background image', 'maintenance'), 'body_bg', 'body_bg', esc_attr($mt_option['body_bg']), 'boxes box-bg', __('Upload Background', 'maintenance'), 'upload_background upload_btn button');
@@ -296,6 +360,35 @@
 		echo $promo_text;
 	}
 	
+	function mt_curPageURL() {
+		$pageURL = 'http';
+		if (isset($_SERVER["HTTPS"])) {$pageURL .= "s";}
+			$pageURL .= "://";
+		if ($_SERVER["SERVER_PORT"] != "80") {
+			$pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
+		} else {
+			$pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
+		}
+		return $pageURL;
+	}
+	
+	function mtCheckExclude() {
+		global $mt_options;
+		$mt_options = mt_get_plugin_options(true);
+		$is_skip = false;
+		$curUrl = mt_curPageURL();
+		$exlude_objs = $mt_options['exclude_pages'];
+		foreach ($exlude_objs as $obj_id) {
+			if ( $curUrl == get_the_permalink($obj_id)) {
+				$is_skip = true;
+				break;
+			}
+		}
+		
+        return $is_skip;
+	}
+	
+	
 	function load_maintenance_page() {
 		global $mt_options;
 		
@@ -322,6 +415,8 @@
 						$vCurrTime 		 = strtotime(current_time('mysql', 1));
 						$vCurrDate_start = strtotime($vdate_start . ' ' . $vtime_start); 
 						$vCurrDate_end 	 = strtotime($vdate_end . ' ' . $vtime_end); 
+						
+						if (mtCheckExclude()) return true;
 						
 						if ($vCurrTime < $vCurrDate_start) return true;
 						if ($vCurrTime >= $vCurrDate_end) {
@@ -442,6 +537,7 @@
 			'503_enabled'		=> true,
 			'gg_analytics_id'   => '',
 			'is_login'			=> true,
-			'custom_css'		=> ''
+			'custom_css'		=> '',
+			'exclude_pages'		=> ''
 		);
 	}
