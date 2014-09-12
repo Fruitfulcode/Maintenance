@@ -305,7 +305,7 @@ function get_custom_login_code() {
 				
 				$vCurrDate_end = '';
 				$vdate_end = date_i18n( 'Y-m-d', strtotime( current_time('mysql', 1) )); 
-				$time_end  = date_i18n( 'h:i a', strtotime( '12:00 pm')); 
+				$vtime_end = date_i18n( 'h:i a', strtotime( '12:00 pm')); 
 
 				if (!empty($mt_options['expiry_date_end']))
 					$vdate_end = $mt_options['expiry_date_end'];
