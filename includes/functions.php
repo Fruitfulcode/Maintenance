@@ -377,11 +377,14 @@
 		$mt_options = mt_get_plugin_options(true);
 		$is_skip = false;
 		$curUrl = mt_curPageURL();
-		$exlude_objs = $mt_options['exclude_pages'];
-		foreach ($exlude_objs as $obj_id) {
-			if ( $curUrl == get_the_permalink($obj_id)) {
-				$is_skip = true;
-				break;
+		
+		if (isset($mt_options['exclude_pages']) && !empty($mt_options['exclude_pages'])) {
+			$exlude_objs = $mt_options['exclude_pages'];
+			foreach ($exlude_objs as $obj_id) {
+				if ( $curUrl == get_the_permalink($obj_id)) {
+					$is_skip = true;
+					break;
+				}
 			}
 		}
 		
@@ -396,7 +399,7 @@
 		
 		$vdate_start = $vdate_end = date_i18n( 'Y-m-d', strtotime( current_time('mysql', 1) )); 
 		$vtime_start = date_i18n( 'h:i a', strtotime( '12:00 am')); 
-		$time_end  	 = date_i18n( 'h:i a', strtotime( '12:00 pm')); 
+		$vtime_end 	 = date_i18n( 'h:i a', strtotime( '12:00 pm')); 
 					
 		$mt_options	= mt_get_plugin_options(true);
 			if (!is_user_logged_in()) {
