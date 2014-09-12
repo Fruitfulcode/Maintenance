@@ -181,11 +181,11 @@ function get_custom_login_code() {
 		$mt_options  = mt_get_plugin_options(true);
 		$out_content = '';
 		if (!empty($mt_options['heading'])) {
-			$out_content .= '<h2 class="heading font-center">'     . wp_kses_post(stripslashes($mt_options['heading'])) .'</h3>';
+			$out_content .= '<h2 class="heading font-center">'     . wp_kses_post(stripslashes($mt_options['heading'])) .'</h2>';
 		}
 		
 		if (!empty($mt_options['description'])) {
-			$out_content .= '<h3 class="description font-center">' . wp_kses_post(stripslashes($mt_options['description'])) .'</h4>';
+			$out_content .= '<h3 class="description font-center">' . wp_kses_post(stripslashes($mt_options['description'])) .'</h3>';
 		}
 		
 		echo $out_content;
