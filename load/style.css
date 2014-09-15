@@ -21,6 +21,16 @@ body {
 	overflow: hidden;
 }
 
+input:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px #292b2c inset; /* Change the color to your own background color */
+    -webkit-text-fill-color: #fff;
+}
+
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: /*your box-shadow*/,0 0 0 50px #48494a inset;
+    -webkit-text-fill-color: #fff;
+} 
+
 body > #wrapper {
 	height: 100%; 
 	min-height: 100%; 
@@ -243,6 +253,28 @@ footer {
 	max-width:210px;
 }
 
+.wpcf7 input, .wpcf7 textarea {
+	color:inherit;
+	background-color: rgba(113,113,113, 0.6);
+	padding: 10px 0px;
+}
+
+.wpcf7 .screen-reader-response {
+padding: 10px 5px;
+}
+
+.wpcf7 .screen-reader-response ul {
+font-size: 14px;
+padding: 0px 0px 0px 20px;
+}
+
+.wpcf7 .wpcf7-not-valid-tip
+
+{
+	padding-left: 10px;
+	font-size: 11px;
+}
+
 
 
 .ie8 .login-form input[type="text"],
@@ -343,6 +375,19 @@ footer {
     text-align: center;
 	float:right;
 	display:inline-block;
+}
+
+input[type="submit"] {
+	border:2px solid #fff;
+	padding:5px 10px;
+	font-weight: bold;
+    margin: 10px 0 0;
+    padding: 5px 10px;
+    color:inherit;
+	font-size:20px;
+	font-family: inherit;
+	background:none;
+	cursor:pointer;
 }
 
 .login-form:hover  {
