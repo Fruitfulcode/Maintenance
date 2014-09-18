@@ -590,6 +590,10 @@ and (orientation : landscape) {
 	body > .main-container {
 		overflow-y:scroll !important;
 	}
+
+	body > .login-form-container {
+		background: none repeat scroll 0 0 rgba(0, 0, 0, 1);
+	}
 	
 	.center {
 		max-width:460px;
