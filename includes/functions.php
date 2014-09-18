@@ -194,13 +194,20 @@
 		global $maintenance_variable;
 		add_meta_box( 'promo-extended',   	 __( 'Pro version', 'maintenance' ),  'maintenanace_extended_version',  $maintenance_variable->options_page, 'side',   'default' );
 	}
-	add_action('add_meta_boxes', 'maintenance_page_create_meta_boxes_widget_pro', 11);	
+	add_action('add_meta_boxes', 'maintenance_page_create_meta_boxes_widget_pro', 11);
+	
+
+	function maintenance_page_create_meta_boxes_our_themes() {
+		global $maintenance_variable;
+		add_meta_box( 'promo-our-themes',   	 __( 'Fruitful Code projects',  'maintenance' ),  'maintenanace_our_themes',   $maintenance_variable->options_page, 'side',   'default' );
+	}	
+	add_action('add_meta_boxes', 'maintenance_page_create_meta_boxes_our_themes', 12);	
 	
 	function maintenance_page_create_meta_boxes_widget_support() {
 		global $maintenance_variable;
 		add_meta_box( 'promo-content',   	 __( 'Support',  'maintenance' ),  'maintenanace_contact_support',   $maintenance_variable->options_page, 'side',   'default' );
 	}	
-	add_action('add_meta_boxes', 'maintenance_page_create_meta_boxes_widget_support', 12);	
+	add_action('add_meta_boxes', 'maintenance_page_create_meta_boxes_widget_support', 13);	
 	
 	function add_data_fields ($object, $box) {
 		$mt_option = mt_get_plugin_options(true);
@@ -338,6 +345,18 @@
 		$promo_text .= '<div class="sidebar-promo" id="sidebar-promo">';
 			$promo_text .= '<h4 class="support">'. __('Have any questions?','maintenance'). '</h3>';
 			$promo_text .= '<p>'. sprintf(__('You may find answers to your questions at <a target="_blank" href="http://wordpress.org/support/plugin/maintenance">support forum</a><br>You may  <a target="_blank" href="mailto:mail@fruitfulcode.com?subject=Maintenance plugin">contact us</a> with customization requests and suggestions.<br> Please visit our website to learn about us and our services <a href="%1$s" title="%2$s">%2$s</a>', 'maintenance'), 
+											 'http://fruitfulcode.com',
+											 'fruitfulcode.com'
+										 ).'</p>';
+		$promo_text .= '</div>';		
+		echo $promo_text;
+	}
+
+	function maintenanace_our_themes() {
+		$promo_text  = '';
+		$promo_text .= '<div class="sidebar-promo" id="sidebar-themes">';
+			$promo_text .= '<h4 class="themes">'. __('Premium WordPress themes','maintenance'). '</h3>';
+			$promo_text .= '<p>'. sprintf(__('<a target="_blank" href="http://themeforest.net/item/anaglyph-one-page-multi-page-wordpress-theme/7874320?ref=fruitfulcode">ANAGLYPH - One page / Multi Page WordPress Theme </a> <br> <a target="_blank" href="http://themeforest.net/item/lovely-simple-elegant-wordpress-theme/8428221?ref=fruitfulcode">Love.ly - Simple & Elegant WordPress theme </a>', 'maintenance'), 
 											 'http://fruitfulcode.com',
 											 'fruitfulcode.com'
 										 ).'</p>';
