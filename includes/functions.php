@@ -444,12 +444,15 @@
 						if ($vCurrTime >= $vCurrDate_end) {
 							if (!empty($mt_options['is_down'])) return true;
 						}
-					}	
-
-					if ( file_exists (MAINTENANCE_LOAD . 'index.php')) {
-					  	 include_once MAINTENANCE_LOAD . 'index.php';
-						 exit;
-					}
+				} else {
+					return true;		
+				}				
+				
+				if ( file_exists (MAINTENANCE_LOAD . 'index.php')) {
+				  	 include_once MAINTENANCE_LOAD . 'index.php';
+					 exit;
+				}	
+				
 				
 			}
 	}
