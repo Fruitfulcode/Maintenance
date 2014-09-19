@@ -4,7 +4,7 @@ Donate link: http://fruitfulcode.com/
 Tags: maintenance, coming soon, under-construction, 503 error, administration, login, customize page, background, fullscreen, blur
 Requires at least: 3.4
 Tested up to: 4.0
-Stable tag: 2.2.1
+Stable tag: 2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,6 +27,7 @@ Maintenance plugin allow WordPress site administrator close the website for main
 <li>503 error on/off</li>
 <li>Google analytics field</li>
 <li>Login on/off</li>
+<li>Exclude pages in Maintenance mode</li>
 
 </ul>
 
