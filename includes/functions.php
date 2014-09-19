@@ -356,10 +356,21 @@
 		$promo_text  = '';
 		$promo_text .= '<div class="sidebar-promo" id="sidebar-themes">';
 			$promo_text .= '<h4 class="themes">'. __('Premium WordPress themes','maintenance'). '</h3>';
-			$promo_text .= '<p>'. sprintf(__('<a target="_blank" href="http://themeforest.net/item/anaglyph-one-page-multi-page-wordpress-theme/7874320?ref=fruitfulcode">ANAGLYPH - One page / Multi Page WordPress Theme </a> <br> <a target="_blank" href="http://themeforest.net/item/lovely-simple-elegant-wordpress-theme/8428221?ref=fruitfulcode">Love.ly - Simple & Elegant WordPress theme </a>', 'maintenance'), 
-											 'http://fruitfulcode.com',
-											 'fruitfulcode.com'
-										 ).'</p>';
+			
+			$rand_banner = rand(0, 1);
+			
+			$class ="anaglyph-theme";
+			$link = "http://themeforest.net/item/anaglyph-one-page-multi-page-wordpress-theme/7874320?ref=fruitfulcode";
+			$title = __('ANAGLYPH - One page / Multi Page WordPress Theme', 'maintenance');
+			
+			if ($rand_banner > 0) {
+				$class ="lovely-theme";
+				$link = "http://themeforest.net/item/lovely-simple-elegant-wordpress-theme/8428221?ref=fruitfulcode";
+				$title = __('Love.ly - Simple & Elegant WordPress theme', 'maintenance');
+			}
+			
+			$promo_text .= '<p>'. sprintf ('<a target="_blank" class="%1s" href="%2s" title="%3s"></a>', $class, $link, $title ) . '</p>';
+			
 		$promo_text .= '</div>';		
 		echo $promo_text;
 	}
