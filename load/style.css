@@ -538,10 +538,6 @@ and (orientation : landscape) {
 		overflow-y:scroll !important;
 	}
 	
-	#wrapper {
-		height:auto;
-	}
-	
 	footer {
 		top:0;
 		botom:0;
@@ -567,10 +563,6 @@ and (orientation : landscape) {
 	
 	body > .main-container {
 		overflow-y:scroll !important;
-	}
-	
-	#wrapper {
-		height:auto;
 	}
 	
 	footer {
@@ -628,10 +620,6 @@ and (orientation : landscape) {
 		max-width: 170px; 
 	}
 	
-	#wrapper {
-		height:auto;
-	}
-	
 	footer {
 		top:0;
 		botom:0;
@@ -678,10 +666,6 @@ and (orientation : landscape) {
 	.login-form input[type="text"], 
 	.login-form input[type="password"] { 
 		max-width: 170px; 
-	}
-	
-	#wrapper {
-		height:auto;
 	}
 	
 	footer {
