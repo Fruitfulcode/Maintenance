@@ -39,14 +39,16 @@ Maintenance plugin allow WordPress site administrator close the website for main
 <strong>Required Free version.</strong> All features from FREE version included + 
 
 <ul>
-<li>Unique jQuery timer count down</li>
+<li>Unique scheduler countdown</li>
 <li>User permissions</li>
 <li>Fullscreen background gallery</li>
 <li>Gallery patterns overlays</li> 
-<li>Background video support</li>
+<li>Background gallery with overlay</li>
+<li>Background video from media gallery</li>
+<li>Background video from Youtube/Vimeo</li>
 <li>Additional HTML area</li>
 <li>Social media profiles (<a target="_blank" href="http://zurb.com/playground/foundation-icons">Foundation icons</a>)</li>
-<li>Email newsletter subscribe form (<a target="_blank" href="http://mailchimp.com/">MailChimp</a> integration) </li>
+<li>Email newsletter subscribe form (<a target="_blank" href="http://mailchimp.com/">MailChimp</a> and  <a href="https://www.campaignmonitor.com/">Campaign Monitor</a> integration) </li>
 </ul>
 
 <a target="_blank" href="http://codecanyon.net/item/maintenance-wordpress-plugin/2781350?ref=fruitfulcode">Get additional functionality</a>
