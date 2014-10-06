@@ -227,9 +227,15 @@ function get_custom_login_code() {
 	add_action ('add_single_backstretch_background', 'add_single_background', 10);
 	
 	function get_footer_section() {
+		$mt_options  = mt_get_plugin_options(true);
+		
 		$out_ftext = '';
 		$out_ftext .= '<a class="company-name" rel="footer" href="'.esc_url(site_url('')) .'">';
-			$out_ftext .= '&copy; ' . get_bloginfo( 'name' ) . ' ' . date('Y');
+			if (isset($mt_options['footer_text']) && !empty($mt_options['footer_text'])) {
+				$out_ftext .= $mt_options['footer_text'];
+			} else {			
+				$out_ftext .= '&copy; ' . get_bloginfo( 'name' ) . ' ' . date('Y');
+			}	
 		$out_ftext .= '</a>';
 		echo $out_ftext;
 	}
@@ -304,7 +310,7 @@ function get_custom_login_code() {
 				header( "$protocol 503 Service Unavailable", true, 503 );
 				
 				$vCurrDate_end = '';
-				$vdate_end = date_i18n( 'Y-m-d', strtotime( current_time('mysql', 1) )); 
+				$vdate_end = date_i18n( 'Y-m-d', strtotime( current_time('mysql', 0) )); 
 				$vtime_end = date_i18n( 'h:i a', strtotime( '12:00 pm')); 
 
 				if (!empty($mt_options['expiry_date_end']))
@@ -315,7 +321,7 @@ function get_custom_login_code() {
 				if (($mt_options['state']) && (!empty($mt_options['expiry_date_end']) && !empty($mt_options['expiry_time_end']))) {
 						$date_concat = $vdate_end . ' ' . $vtime_end;
 						$vCurrDate = strtotime($date_concat); 	
-						if ( strtotime( current_time('mysql', 1)) < $vCurrDate ) {
+						if ( strtotime( current_time('mysql', 0)) < $vCurrDate ) {
 							header( "Retry-After: " . gmdate("D, d M Y H:i:s", $vCurrDate) );
 						} else {
 							header( "Retry-After: 3600" );

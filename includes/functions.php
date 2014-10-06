@@ -219,6 +219,7 @@
 				generate_input_filed(__('Page title', 'maintenance'), 'page_title', 'page_title', wp_kses_post($mt_option['page_title']));
 				generate_input_filed(__('Headline', 'maintenance'),	'heading', 'heading', 		  wp_kses_post($mt_option['heading']));
 				generate_textarea_filed(__('Description', 'maintenance'), 'description', 'description', wp_kses_post($mt_option['description']));
+				generate_input_filed(__('Footer Text', 'maintenance'),	'footer_text', 'footer_text', 	wp_kses_post($mt_option['footer_text']));
 				generate_image_filed(__('Logo', 'maintenance'), 'logo', 'logo', intval($mt_option['logo']), 'boxes box-logo', __('Upload Logo', 'maintenance'), 'upload_logo upload_btn button');
 				do_action('maintenance_background_field');
 				do_action('maintenance_color_fields');
@@ -427,7 +428,7 @@
 		
 		$vCurrDate_start = $vCurrDate_end = $vCurrTime = '';
 		
-		$vdate_start = $vdate_end = date_i18n( 'Y-m-d', strtotime( current_time('mysql', 1) )); 
+		$vdate_start = $vdate_end = date_i18n( 'Y-m-d', strtotime( current_time('mysql', 0) )); 
 		$vtime_start = date_i18n( 'h:i a', strtotime( '12:00 am')); 
 		$vtime_end 	 = date_i18n( 'h:i a', strtotime( '12:00 pm')); 
 					
@@ -445,7 +446,7 @@
 					if (!empty($mt_options['expiry_time_end']))
 						$vtime_end = $mt_options['expiry_time_end'];
 					 
-						$vCurrTime 		 = strtotime(current_time('mysql', 1));
+						$vCurrTime 		 = strtotime(current_time('mysql', 0));
 						$vCurrDate_start = strtotime($vdate_start . ' ' . $vtime_start); 
 						$vCurrDate_end 	 = strtotime($vdate_end . ' ' . $vtime_end); 
 						
@@ -527,7 +528,7 @@
 			$upload_dir  = wp_upload_dir();
 			$image_url 	 = MAINTENANCE_URI . 'images/mt-sample-background.jpg';
 			$file_name   = basename( $image_url );
-			$upload      = wp_upload_bits( $file_name, null, file_get_contents($image_url), current_time( 'mysql', $gmt = 0 ));
+			$upload      = wp_upload_bits( $file_name, null, file_get_contents($image_url), current_time( 'mysql', 0));
 				
 			if ($upload['error'] == '') {
 				$title = preg_replace('/\.[^.]+$/', '', basename($image_url));
@@ -562,6 +563,7 @@
 			'page_title'  		=> __('Website is under construction', 'maintenance'),
 			'heading'	  		=> __('Maintenance mode is on', 'maintenance'),	
 			'description' 		=> __('Website will be available soon', 'maintenance'),
+			'footer_text'		=> '&copy; ' . get_bloginfo( 'name' ) . ' ' . date('Y'),
 			'logo'		  		=> '',
 			'body_bg'	  		=> mt_insert_attach_sample_files(),
 			'body_bg_color'    	=> '#111111',
