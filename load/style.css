@@ -95,7 +95,6 @@ body.open-login-form > .main-container {
 
 .btn-open-login-form {
 	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.8);
-	color: #fff;
 	font-size: 30px;
 	left: -54px;
 	padding: 10px 12px 8px;
@@ -346,7 +345,6 @@ padding: 0px 0px 0px 20px;
 
 
 .login-form a.lost-pass {
-	color:#f1f1f1;
 	float:left;
 	display:inline-block;
 	text-decoration:none;

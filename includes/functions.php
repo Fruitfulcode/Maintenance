@@ -263,7 +263,6 @@
 		
 		$post_types = get_post_types(array('show_ui' => true, 'public' => true), 'objects' );
 		
-		
 		$out_filed .= '<table class="form-table">';
 			$out_filed .= '<tbody>';
 			$out_filed .= '<tr valign="top">';	
@@ -292,20 +291,24 @@
 									'post_status'      => 'publish'); 
 	
 						$posts_array = get_posts( $args );
-				
+						$db_pages_ex = $mt_option['exclude_pages'][$post_slug];
+						
 						if (!empty($posts_array)) {
+							$out_filed .= '<select id="exclude-pages" name="lib_options[exclude_pages]['.$post_slug.'][]" style="width:100%;" class="exclude-pages multiple-select-mt" multiple="multiple">';
+							
 							foreach ($posts_array as $post_values) {
 								$current = '';
-								if (isset($mt_option['exclude_pages'][$post_values->ID])) {
-									$current = $mt_option['exclude_pages'][$post_values->ID];
-								}
-									$check = checked($current, $post_values->ID, false);
+								if (!empty($db_pages_ex)) {
+									if (in_array($post_values->ID, $db_pages_ex)) {
+										$current = $post_values->ID;
+									}
+								}	
 								
-								$out_filed .= '<label for="exclude_pages-'.$post_values->ID.'">';
-									$out_filed .= '<input type="checkbox" name="lib_options[exclude_pages]['.$post_values->ID.']" id="exclude_pages-'.$post_values->ID.'" class="exclude_pages" value="'.$post_values->ID.'" '.$check.'/>';
-								$out_filed .= $post_values->post_title.'</label>';
-								$out_filed .= '<br />';
+								$selected = selected($current, $post_values->ID, false);
+								$out_filed .= '<option value="'.$post_values->ID.'" '.$selected .'>'.$post_values->post_title.'</option>';
 							}
+							
+							$out_filed .= '</select>';	
 						} else {
 							$out_filed .= '<h3>'.__('Not available object.', 'maintenance').'</h3>';
 						}
@@ -411,11 +414,14 @@
 		
 		if (isset($mt_options['exclude_pages']) && !empty($mt_options['exclude_pages'])) {
 			$exlude_objs = $mt_options['exclude_pages'];
-			foreach ($exlude_objs as $obj_id) {
-				if ( $curUrl == get_the_permalink($obj_id)) {
-					$is_skip = true;
-					break;
-				}
+			
+			foreach ($exlude_objs as $objs_id) {
+				foreach ($objs_id as $obj_id) {
+					if ( $curUrl == get_the_permalink($obj_id)) {
+						 $is_skip = true;
+						 break;
+					}
+				}	
 			}
 		}
 		
