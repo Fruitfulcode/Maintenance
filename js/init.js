@@ -41,10 +41,9 @@ jQuery(window).ready(function(){
 	
 	jQuery('#body_bg_color, #font_color, #body_bg_blur_color').wpColorPicker(vColorPickerOptions);
 	
-	if (jQuery('.select2_customize').length > 0) {
-		jQuery('.select2_customize').select2({});
+	if (jQuery('.select2_customize, .multiple-select-mt').length > 0) {
+		jQuery('.select2_customize, .multiple-select-mt').select2({});
 	}
-	
 	
 	if (jQuery('#503_enabled').length > 0) {
 		if (jQuery('#503_enabled').prop("checked")) {
