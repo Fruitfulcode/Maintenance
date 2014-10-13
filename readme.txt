@@ -4,7 +4,7 @@ Donate link: http://fruitfulcode.com/
 Tags: maintenance, coming soon, under-construction, 503 error, administration, login, customize page, background, fullscreen, blur
 Requires at least: 3.4
 Tested up to: 4.0
-Stable tag: 2.3
+Stable tag: 2.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -107,6 +107,12 @@ You can check <a href="http://wordpress.org/support/plugin/maintenance">support 
 
 
 == Change log ==
+
+= 2.4 =
+* New option: Footer text
+* Improvements: Exclude / Include pages
+* Improvements: CSS optimization
+* Translation updates
 
 = 2.3 =
 * New: Enable maintenance mode for specific pages

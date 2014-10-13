@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
 "POT-Creation-Date: 2014-07-08 11:10+0200\n"
-"PO-Revision-Date: 2014-07-08 11:11+0200\n"
+"PO-Revision-Date: 2014-10-13 09:51+0200\n"
 "Last-Translator: fruitfulcode <mail@fruitfulcode.com>\n"
 "Language-Team: fruitfulcode\n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.6\n"
+"X-Generator: Poedit 1.6.9\n"
 "X-Poedit-KeywordsList: _;_e;__;_x\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -24,7 +24,7 @@ msgstr "Стандартные шрифты"
 
 #: includes/functions.php:168
 msgid "Google Web Fonts"
-msgstr ""
+msgstr "Google Веб Шрифт"
 
 #: includes/functions.php:187
 msgid "General Settings"
@@ -32,10 +32,9 @@ msgstr "Общие настройки"
 
 #: includes/functions.php:188
 msgid "Custom CSS"
-msgstr ""
+msgstr "Свой CSS"
 
 #: includes/functions.php:194
-#, fuzzy
 msgid "Pro version"
 msgstr "Премиум версия"
 
@@ -73,7 +72,7 @@ msgstr "Показать админ-панель"
 
 #: includes/functions.php:216
 msgid "503"
-msgstr ""
+msgstr "Ошибка 503"
 
 #: includes/functions.php:216
 msgid "Service temporarily unavailable"
@@ -81,11 +80,11 @@ msgstr "Сервис врменно недоступен"
 
 #: includes/functions.php:222
 msgid "Google Analytics ID"
-msgstr ""
+msgstr "Google Аналитикс Идентификатор (ID)"
 
 #: includes/functions.php:222
 msgid "UA-XXXXX-X"
-msgstr ""
+msgstr "UA-XXXXX-X"
 
 #: includes/functions.php:223
 msgid "Blur intensity"
@@ -101,11 +100,11 @@ msgstr "Применить размытие"
 
 #: includes/functions.php:225
 msgid "Login On / Off"
-msgstr ""
+msgstr "Логин Вкл / Выкл"
 
 #: includes/functions.php:235
 msgid "CSS Code"
-msgstr ""
+msgstr "Каскадные таблицы стилей (CSS)"
 
 #: includes/functions.php:242
 msgid "Background image"
@@ -125,11 +124,11 @@ msgstr "Цвет шрифта"
 
 #: includes/functions.php:256
 msgid "Font family"
-msgstr ""
+msgstr "Семейство шрифтов"
 
 #: includes/functions.php:264
 msgid "Have any questions?"
-msgstr ""
+msgstr "У вас возникли вопросы?"
 
 #: includes/functions.php:265
 #, php-format
@@ -141,9 +140,14 @@ msgid ""
 "Please visit our website to learn about us and our services <a href=\"%1$s\" "
 "title=\"%2$s\">%2$s</a>"
 msgstr ""
+"Вы можете найти ответы на ваши вопросы <a target=\"_blank\" href=\"http://"
+"wordpress.org/support/plugin/maintenance\">Официальный форум поддержки</"
+"a><br> You may  <a target=\"_blank\" href=\"mailto:mail@fruitfulcode.com?"
+"subject=Maintenance plugin\">Свяжитесь с нами</a> по вопросам кастомизации и "
+"изменений<br> Посетите наш сайт, что бы узнать о нас и наших услугах и "
+"продуктах <a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
 
 #: includes/functions.php:276
-#, fuzzy
 msgid "Extended functionality"
 msgstr "Расширенная версия"
 
@@ -157,13 +161,18 @@ msgid ""
 "filter=5\">rate it</a>, <a title=\"leave feedbacks\" href=\"%2$s\" target="
 "\"_blank\">leave feedbacks</a>."
 msgstr ""
+"Купите расширенную <a href=\"http://codecanyon.net/item/maintenance-"
+"wordpress-plugin/2781350?ref=fruitfulcode\" target=\"_blank\">ПРО версию</a> "
+"с расширенным функционалом. %1$s Если вам понравился плагин, оставьте отзыв "
+"на этой странице <a target=\"_blank\" href=\"http://wordpress.org/support/"
+"view/plugin-reviews/maintenance?filter=5\">Оценить плагин</a>, <a title="
+"\"leave feedbacks\" href=\"%2$s\" target=\"_blank\">Оставить отзыв</a>."
 
 #: includes/functions.php:281
 msgid "Demo website"
-msgstr ""
+msgstr "Демо сайт"
 
 #: includes/functions.php:340
-#, fuzzy
 msgid "Maintenance"
 msgstr "Режим обслуживания включен"
 
@@ -177,7 +186,7 @@ msgstr "Режим обслуживания включен"
 
 #: includes/functions.php:365
 msgid "Website will be available soon"
-msgstr "Сайт скоро бдует доступен "
+msgstr "Сайт скоро будет доступен "
 
 #: load/functions.php:37
 msgid "Permission access denied!"
@@ -196,9 +205,8 @@ msgid "You entered your login and password are incorrect!"
 msgstr "Вы ввели неверный логин или пароль!"
 
 #: load/functions.php:259
-#, fuzzy
 msgid "User Login"
-msgstr "Вход для клиентов"
+msgstr "Вход для пользователя"
 
 #: load/functions.php:260
 msgid "Username"
@@ -209,13 +217,12 @@ msgid "Password"
 msgstr "Пароль"
 
 #: load/functions.php:262
-#, fuzzy
 msgid "Lost Password"
-msgstr "Пароль"
+msgstr "Потерял Пароль"
 
 #: load/functions.php:263
 msgid "Login"
-msgstr ""
+msgstr "Логин"
 
 #~ msgid "Sign In"
 #~ msgstr "Войти"
