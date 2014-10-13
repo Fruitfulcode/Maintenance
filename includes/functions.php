@@ -212,14 +212,24 @@
 	function add_data_fields ($object, $box) {
 		$mt_option = mt_get_plugin_options(true);
 		$is_blur   = false; 
+		
+		/*Deafult Variable*/
+		$page_title = $heading = $description = '';
+		
+		
+		if (isset($mt_option['page_title'])) $page_title = wp_kses_post($mt_option['page_title']);
+		if (isset($mt_option['heading']))  $heading = wp_kses_post($mt_option['heading']);
+		if (isset($mt_option['description'])) $description = wp_kses_post($mt_option['description']);
+		if (isset($mt_option['footer_text'])) $footer_text = wp_kses_post($mt_option['footer_text']);
+		
 		?>
 		<table class="form-table">
 			<tbody>
 		<?php	
-				generate_input_filed(__('Page title', 'maintenance'), 'page_title', 'page_title', wp_kses_post($mt_option['page_title']));
-				generate_input_filed(__('Headline', 'maintenance'),	'heading', 'heading', 		  wp_kses_post($mt_option['heading']));
-				generate_textarea_filed(__('Description', 'maintenance'), 'description', 'description', wp_kses_post($mt_option['description']));
-				generate_input_filed(__('Footer Text', 'maintenance'),	'footer_text', 'footer_text', 	wp_kses_post($mt_option['footer_text']));
+				generate_input_filed(__('Page title', 'maintenance'), 'page_title', 'page_title', $page_title);
+				generate_input_filed(__('Headline', 'maintenance'),	'heading', 'heading', $heading);
+				generate_textarea_filed(__('Description', 'maintenance'), 'description', 'description', $description);
+				generate_input_filed(__('Footer Text', 'maintenance'),	'footer_text', 'footer_text', 	$footer_text);
 				generate_image_filed(__('Logo', 'maintenance'), 'logo', 'logo', intval($mt_option['logo']), 'boxes box-logo', __('Upload Logo', 'maintenance'), 'upload_logo upload_btn button');
 				do_action('maintenance_background_field');
 				do_action('maintenance_color_fields');
@@ -291,7 +301,10 @@
 									'post_status'      => 'publish'); 
 	
 						$posts_array = get_posts( $args );
-						$db_pages_ex = $mt_option['exclude_pages'][$post_slug];
+						$db_pages_ex = array();
+						
+						/*Exclude pages from maintenance mode*/
+						if (!empty($mt_option['exclude_pages']) && isset($mt_option['exclude_pages'][$post_slug])) { $db_pages_ex = $mt_option['exclude_pages'][$post_slug]; }
 						
 						if (!empty($posts_array)) {
 							$out_filed .= '<select id="exclude-pages" name="lib_options[exclude_pages]['.$post_slug.'][]" style="width:100%;" class="exclude-pages multiple-select-mt" multiple="multiple">';
@@ -303,7 +316,6 @@
 										$current = $post_values->ID;
 									}
 								}	
-								
 								$selected = selected($current, $post_values->ID, false);
 								$out_filed .= '<option value="'.$post_values->ID.'" '.$selected .'>'.$post_values->post_title.'</option>';
 							}
@@ -361,17 +373,24 @@
 		$promo_text .= '<div class="sidebar-promo" id="sidebar-themes">';
 			$promo_text .= '<h4 class="themes">'. __('Premium WordPress themes','maintenance'). '</h3>';
 			
-			$rand_banner = rand(0, 1);
+			$rand_banner = rand(0, 2);
 			
 			$class ="anaglyph-theme";
 			$link = "http://themeforest.net/item/anaglyph-one-page-multi-page-wordpress-theme/7874320?ref=fruitfulcode";
 			$title = __('ANAGLYPH - One page / Multi Page WordPress Theme', 'maintenance');
 			
-			if ($rand_banner > 0) {
+			if ($rand_banner == 1) {
 				$class ="lovely-theme";
 				$link = "http://themeforest.net/item/lovely-simple-elegant-wordpress-theme/8428221?ref=fruitfulcode";
 				$title = __('Love.ly - Simple & Elegant WordPress theme', 'maintenance');
 			}
+			
+			if ($rand_banner == 2) {
+				$class ="zoner-theme";
+				$link = "http://themeforest.net/item/zoner-real-estate-wordpress-theme/9099226?ref=fruitfulcode";
+				$title = __('Zoner - Real Estate WordPress theme', 'maintenance');
+			}
+			
 			
 			$promo_text .= '<p>'. sprintf ('<a target="_blank" class="%1s" href="%2s" title="%3s"></a>', $class, $link, $title ) . '</p>';
 			
