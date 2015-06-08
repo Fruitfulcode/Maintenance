@@ -1,0 +1,252 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: maintenance\n"
+"POT-Creation-Date: 2014-02-18 12:25+0200\n"
+"PO-Revision-Date: 2015-06-06 13:57+0100\n"
+"Last-Translator: René Maurer <rene.maurer@jamos.ch>\n"
+"Language-Team: Massimo Pacifici <pacifici@eumed.it>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.1\n"
+"X-Poedit-KeywordsList: _;_e;__;_x\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: fr\n"
+
+#: /includes/admin.php:84
+msgid "Save changes"
+msgstr "Enregistrer les modifications"
+
+#: /includes/functions.php:104
+msgid "General Settings"
+msgstr "Paramètres Généraux"
+
+#: /includes/functions.php:110
+msgid "Pro version"
+msgstr "Version Pro"
+
+#: /includes/functions.php:116
+msgid "Support"
+msgstr "Support"
+
+#: /includes/functions.php:124
+msgid "Page title"
+msgstr "Titre de la page"
+
+#: /includes/functions.php:125
+msgid "Headline"
+msgstr "Entête"
+
+#: /includes/functions.php:126
+msgid "Description"
+msgstr "Description"
+
+#: /includes/functions.php:127
+msgid "Logo"
+msgstr "Logo"
+
+#: /includes/functions.php:127
+msgid "Upload Logo"
+msgstr "Upload Logo"
+
+#: /includes/functions.php:130
+msgid "Admin bar"
+msgstr "Barre Admin"
+
+#: /includes/functions.php:130
+msgid "Show admin bar"
+msgstr "Afficher la barre Admin"
+
+#: /includes/functions.php:131
+msgid "503"
+msgstr "503"
+
+#: /includes/functions.php:131
+msgid "Service temporarily unavailable"
+msgstr "Site temporairement indisponible"
+
+#: /includes/functions.php:132
+msgid "Google Analytics ID"
+msgstr "ID Google Analytics"
+
+#: /includes/functions.php:132
+msgid "UA-XXXXX-X"
+msgstr "UA-XXXXX-X"
+
+#: /includes/functions.php:133
+msgid "Blur intensity"
+msgstr "Intensité du floutage"
+
+#: /includes/functions.php:134
+msgid "Background blur"
+msgstr "Floutage de l’image de fond"
+
+#: /includes/functions.php:134
+msgid "Apply a blur"
+msgstr "Appliquer un floutage"
+
+#: /includes/functions.php:135
+msgid "Login On / Off"
+msgstr "S’identifier / Se déconnecter"
+
+#: /includes/functions.php:142
+msgid "Background image"
+msgstr "Image de fond"
+
+#: /includes/functions.php:142
+msgid "Upload Background"
+msgstr "Upload image de fond"
+
+#: /includes/functions.php:148
+msgid "Background color"
+msgstr "Couleur de fond"
+
+#: /includes/functions.php:149
+msgid "Font color"
+msgstr "Couleur de la police"
+
+#: /includes/functions.php:157
+msgid "Have any questions?"
+msgstr "Vous avez une question ?"
+
+#: /includes/functions.php:158
+#, php-format
+msgid ""
+"You may find answers to your questions at <a target=\"_blank\" href=\"http://"
+"wordpress.org/support/plugin/maintenance\">support forum</a><br>You may  <a "
+"target=\"_blank\" href=\"mailto:mail@fruitfulcode.com?subject=Maintenance "
+"plugin\">contact us</a> with customization requests and suggestions.<br> "
+"Please visit our website to learn about us and our services <a href=\"%1$s\" "
+"title=\"%2$s\">%2$s</a>"
+msgstr ""
+"Vous pouvez trouver des réponses à vos question sur le <a target=\"_blank\" "
+"href=\"http://wordpress.org/support/plugin/maintenance\">forum de support</"
+"a><br>Vous pouvez  <a target=\"_blank\" href=\"mailto:mail@fruitfulcode.com?"
+"subject=Maintenance plugin\">nous contacter</a> pour des demandes de "
+"personnalisation ou proposer des suggestions.<br> Merci de visiter notre "
+"site pour an apprendre plus sur nous et les services que nous proposons <a "
+"href=\"%1$s\" title=\"%2$s\">%2$s</a>"
+
+#: /includes/functions.php:169
+msgid "Extended functionality"
+msgstr "Fonctionnalités étendues"
+
+#: /includes/functions.php:170
+#, php-format
+msgid ""
+"Purchase <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
+"plugin/2781350?ref=fruitfulcode\" target=\"_blank\">PRO</a> version  with "
+"extended functionality. %1$s If you like our plugin please <a target=\"_blank"
+"\" href=\"http://wordpress.org/support/view/plugin-reviews/maintenance?"
+"filter=5\">rate it</a>, <a title=\"leave feedbacks\" href=\"%2$s\" target="
+"\"_blank\">leave feedbacks</a>."
+msgstr ""
+"Achetez la version <a href=\"http://codecanyon.net/item/maintenance-"
+"wordpress-plugin/2781350?ref=fruitfulcode\" target=\"_blank\">PRO</a> avec "
+"des fonctionnalités étendues. %1$s Si vous aimez notre plugin merci de <a "
+"target=\"_blank\" href=\"http://wordpress.org/support/view/plugin-reviews/"
+"maintenance?filter=5\">l’évaluer</a> et <a title=\"leave feedbacks\" href="
+"\"%2$s\" target=\"_blank\">de laisser des commentaires</a>."
+
+#: /includes/functions.php:174
+msgid "Demo website"
+msgstr "Site de Démonstration"
+
+#: /includes/functions.php:232
+msgid "Maintenance"
+msgstr "Maintenance"
+
+#: /includes/functions.php:255
+msgid "Website is under construction"
+msgstr "Le site est en construction"
+
+#: /includes/functions.php:256
+msgid "Maintenance mode is on"
+msgstr "Le mode maintenance est actif"
+
+#: /includes/functions.php:257
+msgid "Website will be available soon"
+msgstr "Le site sera bientôt disponible"
+
+#: /load/functions.php:37
+msgid "Permission access denied!"
+msgstr "Accès refusé !"
+
+#: /load/functions.php:45
+msgid "You entered your login are incorrect!"
+msgstr "Vous avez entré un identifiant incorrect !"
+
+#: /load/functions.php:49
+msgid "You entered your password are incorrect!"
+msgstr "Vous avez entré un mot de passe incorrect !"
+
+#: /load/functions.php:52
+msgid "You entered your login and password are incorrect!"
+msgstr "Vous avez entré un identifiant et un mot de passe erronés !"
+
+#: /load/functions.php:223
+msgid "Username"
+msgstr "Nom d’utilisateur"
+
+#: /load/functions.php:224
+msgid "Password"
+msgstr "Mot de passe\t"
+
+#: /load/functions.php:225
+msgid "Sign In"
+msgstr "S’identifier"
+
+msgid "maintenance"
+msgstr "Maintenance"
+
+msgid "Contact support"
+msgstr "Contacter le support"
+
+msgid ""
+"If you faced with any problems, have a question or suggestion you always can "
+"contact us with any request on our website <a href=\"%1$s\" title=\"%2$s\">"
+"%2$s</a>"
+msgstr ""
+"Si vous rencontrez un problème ou que vous avez une question ou une "
+"suggestion, vous pouvez nous contacter sur notre site <a href=\"%1$s\" title="
+"\"%2$s\">%2$s</a>"
+
+msgid ""
+"If you like our plugin please rate it, %1$s <a title=\"leave feedback\" href="
+"\"%2$s\" target=\"_blank\">leave feedback</a> or purchase extended version "
+"%1$s with more other features."
+msgstr ""
+"Si vous aimez notre plugin, merci de l’évaluer, %1$s <a title=\"leave "
+"feedback\" href=\"%2$s\" target=\"_blank\">laisser un commentaire</a> ou "
+"achetez la version étendue %1$s avec plus de fonctionnalités."
+
+msgid "Purchase"
+msgstr "Acheter"
+
+msgid "We have time until launch"
+msgstr "Nous avons le temps avant le lancement"
+
+msgid "Be first of your friends who will know when the website goes live."
+msgstr "Soyez le premier des vos amis à savoir quand le site sera en ligne."
+
+msgid "Check out our extended version of plugin with new features"
+msgstr ""
+"Achetez notre version étendue du plugin avec de nouvelles fonctionnalités"
+
+msgid "Your session has expired."
+msgstr "Votre session a expiré."
+
+msgid "Customer login"
+msgstr "Identification client"
+
+msgid "Please login to see website"
+msgstr "Merci de vous identifier pour voir le site"
+
+msgid "User roles"
+msgstr "Rôles utilisateurs"
+
+# not really sur about « We have time until launch » Because I can’t find it on the demo version…
+msgid "Choose users access permissions in maintenance mode."
+msgstr "Choix des utilisateurs ayant accès au site en mode maintenance."
