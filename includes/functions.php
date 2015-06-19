@@ -473,7 +473,7 @@
 					 
 						$vCurrTime 		 = strtotime(current_time('mysql', 0));
 						$vCurrDate_start = strtotime($vdate_start . ' ' . $vtime_start); 
-						$vCurrDate_end 	 = strtotime($vdate_end . ' ' . $vtime_end); 
+						$vCurrDate_end 	 = strtotime($vdate_end   . ' ' . $vtime_end); 
 						
 						if (mtCheckExclude()) return true;
 						

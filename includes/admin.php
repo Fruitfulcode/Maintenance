@@ -22,7 +22,7 @@
 			else {	   $_POST['lib_options']['state'] = 1; }
 			
 			if (isset($_POST['lib_options']['htmlcss'])) {
-				$_POST['lib_options']['htmlcss'] = wp_kses_post(stripslashes($_POST['lib_options']['htmlcss']));
+				$_POST['lib_options']['htmlcss'] = wp_kses_stripslashes($_POST['lib_options']['htmlcss']);
 			}
 			
 			if (isset($_POST['lib_options'])) {
