@@ -538,7 +538,7 @@ and (orientation : landscape) {
 	
 	footer {
 		top:0;
-		botom:0;
+		bottom:0;
 		margin: 40px 0 0 0;
 	}
 	
@@ -565,7 +565,7 @@ and (orientation : landscape) {
 	
 	footer {
 		top:0;
-		botom:0;
+		bottom:20px;
 		margin: 40px 0 0 0;
 	}
 	
@@ -574,7 +574,38 @@ and (orientation : landscape) {
 	}
 	
 }	
-	
+
+
+@media screen and (min-width: 320px) and (max-width: 640px) and (orientation: landscape) {
+
+		#countdown .box-digits {
+			padding:30px 16px;
+		}
+		
+		#countdown .digits {
+			height:120px;
+			min-width:80px;
+		}
+		
+		#wrapper {
+			height:auto;
+		} 
+		
+		#mailchimp-box {
+			margin:40px 0 0 0;
+		}
+		
+		footer {
+			top:0;
+			bottom:0;
+			margin: 10px 0 30px 0;
+		}
+
+		footer .social {
+			text-align:center;
+		}		
+}
+
 @media screen and (max-width: 480px) {	
 
 	body > .main-container {
@@ -584,6 +615,10 @@ and (orientation : landscape) {
 	body > .login-form-container {
 		background: none repeat scroll 0 0 rgba(0, 0, 0, 1);
 	}
+
+ 	#wrapper {
+		height:auto;
+	} 
 	
 	.center {
 		max-width:460px;
@@ -620,8 +655,12 @@ and (orientation : landscape) {
 	
 	footer {
 		top:0;
-		botom:0;
-		margin: 40px 0 0 0;
+		bottom:0;
+		margin: 10px 0 30px 0;
+	}
+
+	footer .social {
+		text-align:center;
 	}
 	
 }
@@ -668,7 +707,7 @@ and (orientation : landscape) {
 	
 	footer {
 		top:0;
-		botom:0;
-		margin: 40px 0 0 0;
+		bottom:0;
+		margin: 10px 0 30px 0;
 	}
 }
