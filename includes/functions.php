@@ -426,17 +426,17 @@
 	}
 	
 	function mtCheckExclude() {
-		global $mt_options;
+		global $mt_options, $post;
 		$mt_options = mt_get_plugin_options(true);
-		$is_skip = false;
-		$curUrl = mt_curPageURL();
+		$is_skip 	= false;
+		$curUrl 	= mt_curPageURL();
+		$currID     = $post->ID;
 		
 		if (isset($mt_options['exclude_pages']) && !empty($mt_options['exclude_pages'])) {
 			$exlude_objs = $mt_options['exclude_pages'];
-			
 			foreach ($exlude_objs as $objs_id) {
 				foreach ($objs_id as $obj_id) {
-					if ( $curUrl == get_the_permalink($obj_id)) {
+					if ( $currID == $obj_id) {
 						 $is_skip = true;
 						 break;
 					}
