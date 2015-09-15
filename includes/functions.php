@@ -434,7 +434,6 @@
 			$currID = $post->ID;	
 		} else {
 			if (is_home()) {
-				var_dump('wdwdw');
 				$blog_id = get_option( 'page_for_posts');
 				if ($blog_id) $currID = $blog_id;
 			}

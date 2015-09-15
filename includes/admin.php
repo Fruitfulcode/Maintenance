@@ -70,7 +70,7 @@
 				<?php wp_nonce_field('meta-box-order',  'meta-box-order-nonce', false ); ?>
 				<?php wp_nonce_field('closedpostboxes', 'closedpostboxesnonce', false ); ?>
 				<?php screen_icon(); ?>
-				<h2>Maintenance</h2>						
+				<h2><?php _e('Maintenance', 'maintenance'); ?></h2>						
 				<input type="checkbox" id="state" name="lib_options[state]" <?php checked($mt_option['state'], 1); ?> />
 				<div class="clear"></div>
 				<div id="poststuff">
