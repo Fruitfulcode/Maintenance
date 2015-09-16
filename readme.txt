@@ -3,8 +3,8 @@ Contributors: fruitfulcode
 Donate link: http://fruitfulcode.com/
 Tags: maintenance, coming soon, under-construction, 503 error, administration, login, customize page, background, fullscreen, blur
 Requires at least: 3.4
-Tested up to: 4.0
-Stable tag: 2.4
+Tested up to: 4.3.1
+Stable tag: 2.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -107,6 +107,13 @@ You can check <a href="http://wordpress.org/support/plugin/maintenance">support 
 
 
 == Change log ==
+
+= 2.5 = 
+* New: French translation
+* Update: WordPress 4.3 support
+* Bug fix: Footer and social media icons for mobiles
+* Bug fix: Exclude pages now by post id 
+* Bug fix: Check exclude pages with empty reading options
 
 = 2.4 =
 * New option: Footer text
