@@ -15,12 +15,12 @@ jQuery(document).ready(function() {
 		jQuery('#btn-open-login-form').on('click', function() {
 			jQuery('body').toggleClass('open-login-form');
 			
-			if (jQuery(this).find('i').hasClass('foundicon-lock')) {
+			if (jQuery(this).find('i').hasClass('fa fa-lock')) {
 				jQuery(this).find('i').removeClass();
-				jQuery(this).find('i').addClass('foundicon-unlock');
+				jQuery(this).find('i').addClass('fa fa-unlock-alt');
 			} else {
 				jQuery(this).find('i').removeClass();
-				jQuery(this).find('i').addClass('foundicon-lock');
+				jQuery(this).find('i').addClass('fa fa-lock');
 			}
 			
 		});

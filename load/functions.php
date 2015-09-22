@@ -80,7 +80,8 @@ function get_custom_login_code() {
 			}	
 		}
 		
-		wp_register_style('_iconstyle', MAINTENANCE_URI .'load/images/fonts-icon/icons.style.css');
+		//wp_register_style('_iconstyle', MAINTENANCE_URI .'load/images/fonts-icon/icons.style.css');
+		wp_register_style('_iconstyle', MAINTENANCE_URI .'load/images/fonts-icon/fontawesome/css/font-awesome.min.css');// my code
 		wp_register_style('_style', 	MAINTENANCE_URI .'load/style.css');
 		$wp_styles->do_items('_iconstyle');
 		
@@ -240,7 +241,7 @@ function get_custom_login_code() {
 	function do_button_login_form($error = -1) {
 		?>
 			<div id="btn-open-login-form" class="btn-open-login-form">
-				<i class="foundicon-lock"></i>
+				<i class="fa fa-lock"></i>
 			</div>
 		<?php
 	

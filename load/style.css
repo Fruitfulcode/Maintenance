@@ -95,9 +95,9 @@ body.open-login-form > .main-container {
 
 .btn-open-login-form {
 	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.8);
-	font-size: 30px;
+	font-size: 32px;
 	left: -54px;
-	padding: 10px 12px 8px;
+	padding: 10px 19px 8px;
 	position: absolute;
 	top: 23%;
 	-webkit-border-top-left-radius: 4px;
@@ -322,24 +322,24 @@ padding: 0px 0px 0px 20px;
 }
 
 .login-form .licon:before {
-	content: "\f019";
-	font-family: "SocialFoundicons";
+	content: "\f007";
+	font-family: "FontAwesome";
 }
 
 .ie7 .login-form .licon:before {
-	*zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf019;");
+	*zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf007;");
 }	
  
 
 .login-form .picon:before {
-	content: "\f01b";
-	font-family: "GeneralFoundicons";
+	content: "\f023";
+	font-family: "FontAwesome";
 }
 
 .login-form .licon.error:before,
 .login-form .picon.error:before {
-	content: "\f006";
-	font-family: "GeneralFoundicons";
+	content: "\f00d";
+	font-family: "FontAwesome";
 	color:red;
 }
 
@@ -457,10 +457,8 @@ input[type="submit"] {
 }
 
 .preloader i:before {
-	content: "\f000";
-	font-family: "GeneralFoundicons";
-	
-	
+	content: "\f013";
+	font-family: "FontAwesome";	
 }
 	
 @-ms-keyframes spin {
