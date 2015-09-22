@@ -37,7 +37,7 @@ class maintenance {
 			
 			register_activation_hook  ( __FILE__, array( &$this,  'mt_activation' ));
 			register_deactivation_hook( __FILE__, array( &$this,'mt_deactivation') );
-			register_uninstall_hook   ( __FILE__, array( &$this,'mt_uninstall') );
+			register_uninstall_hook   ( 'maintenance', 'mt_uninstall');
 			
 			add_action('wp', array( &$this, 'mt_template_redirect'), 1);
 			add_action('wp_logout',	array( &$this, 'mt_user_logout'));
@@ -78,7 +78,7 @@ class maintenance {
 			/*Deactivation Plugin*/
 		}
 		
-		function mt_uninstall() {
+		public static function mt_uninstall() {
 			delete_option('maintenance_options');
 			delete_option('maintenance_db_version');
 		}	
