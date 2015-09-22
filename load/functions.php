@@ -223,19 +223,16 @@ function get_custom_login_code() {
 	
 	function get_footer_section() {
 		$mt_options  = mt_get_plugin_options(true);
+		$out_ftext   = null;
 		
-		$out_ftext = '';
-		$out_ftext .= '<a class="company-name" rel="footer" href="'.esc_url(site_url('')) .'">';
-			if (isset($mt_options['footer_text']) && !empty($mt_options['footer_text'])) {
-				$out_ftext .= $mt_options['footer_text'];
-			} else {			
-				$out_ftext .= '&copy; ' . get_bloginfo( 'name' ) . ' ' . date('Y');
-			}	
-		$out_ftext .= '</a>';
+		if (isset($mt_options['footer_text']) && !empty($mt_options['footer_text'])) {
+			$out_ftext .= '<a class="company-name" rel="footer" href="'.esc_url(site_url('')) .'">';
+				$out_ftext .= wp_kses_post(stripslashes($mt_options['footer_text']));
+			$out_ftext .= '</a>';
+		}
 		echo $out_ftext;
 	}
 	add_action('footer_section', 'get_footer_section', 10);
-	
 	
 	function do_button_login_form($error = -1) {
 		?>
