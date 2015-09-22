@@ -35,8 +35,9 @@ class maintenance {
 			add_action( 'plugins_loaded', array( &$this, 'admin'),	 	4);
 
 			
-			register_activation_hook  ( __FILE__, array( &$this,  'activation' ));
-			register_deactivation_hook( __FILE__, array( &$this,'deactivation') );
+			register_activation_hook  ( __FILE__, array( &$this,  'mt_activation' ));
+			register_deactivation_hook( __FILE__, array( &$this,'mt_deactivation') );
+			register_uninstall_hook   ( __FILE__, array( &$this,'mt_uninstall') );
 			
 			add_action('wp', array( &$this, 'mt_template_redirect'), 1);
 			add_action('wp_logout',	array( &$this, 'mt_user_logout'));
@@ -69,12 +70,18 @@ class maintenance {
 			}	
 		}
 		
-		function activation() {
+		function mt_activation() {
+			/*Activation Plugin*/
 		}
-		function deactivation() {
+		
+		function mt_deactivation() {
+			/*Deactivation Plugin*/
+		}
+		
+		function mt_uninstall() {
 			delete_option('maintenance_options');
 			delete_option('maintenance_db_version');
-		}
+		}	
 		
 		function mt_user_logout() { 
 			wp_safe_redirect(get_bloginfo('url'));
