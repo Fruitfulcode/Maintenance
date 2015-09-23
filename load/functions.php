@@ -80,11 +80,11 @@ function get_custom_login_code() {
 			}	
 		}
 		
-		//wp_register_style('_iconstyle', MAINTENANCE_URI .'load/images/fonts-icon/icons.style.css');
-		wp_register_style('_iconstyle', MAINTENANCE_URI .'load/images/fonts-icon/fontawesome/css/font-awesome.min.css');// my code
+			
+		wp_register_style('_iconstyle', MAINTENANCE_URI .'load/images/fonts-icon/fontawesome/css/font-awesome.min.css');
 		wp_register_style('_style', 	MAINTENANCE_URI .'load/style.css');
 		$wp_styles->do_items('_iconstyle');
-		
+				
 		/*Add inline custom style*/
 		get_options_style();
 		$wp_styles->do_items('_style');

@@ -413,12 +413,12 @@ input[type="submit"] {
 .preloader i {
 	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
     display: block;
-    height: 58px;
+    height: 64px;
     left: 50%;
     margin: -29px 0 0 -25px;
     position: absolute;
     top: 50%;
-    width: 50px;
+    width: 48px;
 	
 	-webkit-animation-name: spin;
     -webkit-animation-duration: 2200ms;
@@ -443,7 +443,7 @@ input[type="submit"] {
 	position:absolute;
 	font-weight: normal;
 	font-style: normal;
-	font-size:50px;
+	font-size:54px;
 	color:inherit;
 	text-decoration: inherit;
 	display: block;
