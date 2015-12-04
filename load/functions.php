@@ -27,7 +27,9 @@ function get_custom_login_code() {
 					 
 		if (!empty($mt_options['roles_array'])) {
 			foreach (array_keys($mt_options['roles_array']) as $key) {
-				if ($key == $current_role) { $is_role_check = true; }	
+				if ($key == $current_role) { 
+					$is_role_check = false; 
+				}	
 			}
 		}  else {
 			$is_role_check = true;
