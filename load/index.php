@@ -1,10 +1,9 @@
 <?php 
-	$mess_arr = array();
-	$ebody_class = '';
+	$mess_arr 	 = array();
+	$ebody_class = null;
 	$mess_arr = get_custom_login_code(); 
 	if (!empty($mess_arr[0])) $ebody_class = 'error';
 	$mt_options = mt_get_plugin_options(true);
-	
 ?>
 <!DOCTYPE html>
 <!--[if IE 7]>

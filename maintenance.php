@@ -36,12 +36,12 @@ class maintenance {
 
 			
 			register_activation_hook  ( __FILE__, array( &$this,  'mt_activation' ));
-			register_deactivation_hook( __FILE__, array( &$this,'mt_deactivation') );
+			register_deactivation_hook( __FILE__, array( &$this, 'mt_deactivation') );
 			register_uninstall_hook   ( 'maintenance', 'mt_uninstall');
 			
-			add_action('wp', array( &$this, 'mt_template_redirect'), 1);
+			add_action('wp', 		array( &$this, 'mt_template_redirect'), 1);
 			add_action('wp_logout',	array( &$this, 'mt_user_logout'));
-			add_action('init', array( &$this, 'mt_admin_bar'));
+			add_action('init', 		array( &$this, 'mt_admin_bar'));
 		}
 		
 		function constants() {
