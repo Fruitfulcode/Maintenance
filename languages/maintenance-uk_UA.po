@@ -1,0 +1,276 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: maintenance\n"
+"POT-Creation-Date: 2014-07-08 11:10+0200\n"
+"PO-Revision-Date: 2015-03-04 12:37+0200\n"
+"Last-Translator: fruitfulcode <mail@fruitfulcode.com>\n"
+"Language-Team: fruitfulcode\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.4\n"
+"X-Poedit-KeywordsList: _;_e;__;_x\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: uk_UA\n"
+
+#: includes/admin.php:88
+msgid "Save changes"
+msgstr "Зберегти зміни"
+
+#: includes/functions.php:161
+msgid "Standard Fonts"
+msgstr "Стандартні шрифти"
+
+#: includes/functions.php:168
+msgid "Google Web Fonts"
+msgstr "Google Web Fonts"
+
+#: includes/functions.php:187
+msgid "General Settings"
+msgstr "Загальні налаштування"
+
+#: includes/functions.php:188
+msgid "Custom CSS"
+msgstr "Свій CSS"
+
+#: includes/functions.php:194
+msgid "Pro version"
+msgstr "Pro версія"
+
+#: includes/functions.php:200
+msgid "Support"
+msgstr "Підтримка"
+
+#: includes/functions.php:208
+msgid "Page title"
+msgstr "Заголовок сторінки"
+
+#: includes/functions.php:209
+msgid "Headline"
+msgstr "Тема"
+
+#: includes/functions.php:210
+msgid "Description"
+msgstr "Опис"
+
+#: includes/functions.php:211
+msgid "Logo"
+msgstr "Лого"
+
+#: includes/functions.php:211
+msgid "Upload Logo"
+msgstr "Завантажити лого"
+
+#: includes/functions.php:215
+msgid "Admin bar"
+msgstr "Панель адміністратора"
+
+#: includes/functions.php:215
+msgid "Show admin bar"
+msgstr "Показати панель адміністратора"
+
+#: includes/functions.php:216
+msgid "503"
+msgstr "503"
+
+#: includes/functions.php:216
+msgid "Service temporarily unavailable"
+msgstr "Сервіс тимчасово недоступний"
+
+#: includes/functions.php:222
+msgid "Google Analytics ID"
+msgstr "Google Analytics ID"
+
+#: includes/functions.php:222
+msgid "UA-XXXXX-X"
+msgstr "UA-XXXXX-X"
+
+#: includes/functions.php:223
+msgid "Blur intensity"
+msgstr "інтенсивність розмиття"
+
+#: includes/functions.php:224
+msgid "Background blur"
+msgstr "Розмиття фону"
+
+#: includes/functions.php:224
+msgid "Apply a blur"
+msgstr "Застосовувати розмиття"
+
+#: includes/functions.php:225
+msgid "Login On / Off"
+msgstr "Вхід вкл / викл"
+
+#: includes/functions.php:235
+msgid "CSS Code"
+msgstr "Код CSS"
+
+#: includes/functions.php:242
+msgid "Background image"
+msgstr "Фонове зображення"
+
+#: includes/functions.php:242
+msgid "Upload Background"
+msgstr "Завантажити фон"
+
+#: includes/functions.php:248
+msgid "Background color"
+msgstr "Колір фону"
+
+#: includes/functions.php:249
+msgid "Font color"
+msgstr "Колір шрифту"
+
+#: includes/functions.php:256
+msgid "Font family"
+msgstr "Шрифт"
+
+#: includes/functions.php:264
+msgid "Have any questions?"
+msgstr "Є запитання?"
+
+#: includes/functions.php:265
+#, php-format
+msgid ""
+"You may find answers to your questions at <a target=\"_blank\" href=\"http://"
+"wordpress.org/support/plugin/maintenance\">support forum</a><br>You may  <a "
+"target=\"_blank\" href=\"mailto:mail@fruitfulcode.com?subject=Maintenance "
+"plugin\">contact us</a> with customization requests and suggestions.<br> "
+"Please visit our website to learn about us and our services <a href=\"%1$s\" "
+"title=\"%2$s\">%2$s</a>"
+msgstr ""
+"Ви можете знайти відповіді на <a target=\"_blank\" href=\"http://wordpress."
+"org/support/plugin/maintenance\">офіційному форумі підтримки</a><br>Можете "
+"<a target=\"_blank\" href=\"mailto:mail@fruitfulcode.com?subject=Maintenance "
+"plugin\">зв'язатися з нами</a> з питань кастомізації і змін.<br> Відвідайте "
+"наш сайт, щоб дізнатися про нас і наші послуги <a href=\"%1$s\" title=\"%2$s"
+"\">%2$s</a>"
+
+#: includes/functions.php:276
+msgid "Extended functionality"
+msgstr "Maintenance PRO"
+
+#: includes/functions.php:277
+#, php-format
+msgid ""
+"Purchase <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
+"plugin/2781350?ref=fruitfulcode\" target=\"_blank\">PRO</a> version  with "
+"extended functionality. %1$s If you like our plugin please <a target=\"_blank"
+"\" href=\"http://wordpress.org/support/view/plugin-reviews/maintenance?"
+"filter=5\">rate it</a>, <a title=\"leave feedbacks\" href=\"%2$s\" target="
+"\"_blank\">leave feedbacks</a>."
+msgstr ""
+"Купуйте <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
+"plugin/2781350?ref=fruitfulcode\" target=\"_blank\">Maintenance PRO</a> і "
+"отримаєте функцію зворотного відліку і можливість відкривати доступ "
+"декільком користувачам. %1$s Якщо вам сподобався плагін, залиште відгук на "
+"цих сторінках: <a target=\"_blank\" href=\"http://wordpress.org/support/view/"
+"plugin-reviews/maintenance?filter=5\">Оцінити плагін</a>, <a title=\"leave "
+"feedbacks\" href=\"%2$s\" target=\"_blank\">залишити відгук</a>."
+
+#: includes/functions.php:281
+msgid "Demo website"
+msgstr "Демо сайт"
+
+#: includes/functions.php:340
+msgid "Maintenance"
+msgstr "Режим обслуговування"
+
+#: includes/functions.php:363
+msgid "Website is under construction"
+msgstr "Сайт знаходиться в стадії розробки"
+
+#: includes/functions.php:364
+msgid "Maintenance mode is on"
+msgstr "Режим обслуговування"
+
+#: includes/functions.php:365
+msgid "Website will be available soon"
+msgstr "Сайт буде доступний незабаром"
+
+#: load/functions.php:37
+msgid "Permission access denied!"
+msgstr "Дозвіл на доступ заборонений!"
+
+#: load/functions.php:45
+msgid "You entered your login are incorrect!"
+msgstr "Наданий логін невірний!"
+
+#: load/functions.php:49
+msgid "You entered your password are incorrect!"
+msgstr "Наданий пароль невірний!"
+
+#: load/functions.php:52
+msgid "You entered your login and password are incorrect!"
+msgstr "Наданий логін і пароль невірні!"
+
+#: load/functions.php:259
+msgid "User Login"
+msgstr "Логін"
+
+#: load/functions.php:260
+msgid "Username"
+msgstr "ім'я користувача"
+
+#: load/functions.php:261
+msgid "Password"
+msgstr "Пароль"
+
+#: load/functions.php:262
+msgid "Lost Password"
+msgstr "Забув пароль"
+
+#: load/functions.php:263
+msgid "Login"
+msgstr "Логін"
+
+msgid "Sign In"
+msgstr "Увійти"
+
+msgid "Contact support"
+msgstr "Зв'язатися зі службою підтримки"
+
+msgid ""
+"If you faced with any problems, have a question or suggestion you always can "
+"contact us with any request on our website <a href=\"%1$s\" title=\"%2$s\">"
+"%2$s</a>"
+msgstr ""
+"Якщо ви зіткнулися з будь-якими проблемами, є питання або пропозиції, ви "
+"завжди можете звернутися до нас на нашому сайті <a href=\"%1$s\" title=\"%2$s"
+"\">%2$s</a>"
+
+msgid ""
+"If you like our plugin please rate it, %1$s <a title=\"leave feedback\" href="
+"\"%2$s\" target=\"_blank\">leave feedback</a> or purchase extended version "
+"%1$s with more other features."
+msgstr ""
+"Якщо вам подобається наш плагін, оцініть його %1$s <a title=\"оставить "
+"комментарий\" href=\"%2$s\" target=\"_blank\">залишити коментар</a> або "
+"купіть розширену версію %1$s з додатковими можливостями."
+
+msgid "Purchase"
+msgstr "Купити"
+
+msgid "We have time until launch"
+msgstr "Залишилося часу до запуску"
+
+msgid "Be first of your friends who will know when the website goes live."
+msgstr "Будь першим з твоїх друзів, хто дізнається про запуск сайту."
+
+msgid "Check out our extended version of plugin with new features"
+msgstr "Перевірте можливості розширеної версії плагіна."
+
+msgid "Your session has expired."
+msgstr "Ваша сесія минула."
+
+msgid "Please login to see website"
+msgstr "Будь ласка авторизуйтесь"
+
+msgid "User roles"
+msgstr "Ролі користувачів"
+
+msgid "Choose users access permissions in maintenance mode."
+msgstr "Оберіть права доступу користувачів в режимі обслуговування."
