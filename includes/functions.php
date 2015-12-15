@@ -366,7 +366,7 @@
 		$promo_text  = '';
 		$promo_text .= '<div class="sidebar-promo" id="sidebar-promo">';
 			$promo_text .= '<h4 class="support">'. __('Have any questions?','maintenance'). '</h3>';
-			$promo_text .= '<p>'. sprintf(__('You may find answers to your questions at <a target="_blank" href="http://wordpress.org/support/plugin/maintenance">support forum</a><br>You may  <a target="_blank" href="mailto:mail@fruitfulcode.com?subject=Maintenance plugin">contact us</a> with customization requests and suggestions.<br> Please visit our website to learn about us and our services <a href="%1$s" title="%2$s">%2$s</a>', 'maintenance'), 
+			$promo_text .= '<p>'. sprintf(__('You may find answers to your questions at <a target="_blank" href="http://support.fruitfulcode.com/hc/en-us/sections/200406386">support forum</a><br>You may  <a target="_blank" href="http://support.fruitfulcode.com/hc/en-us/requests/new">contact us</a> with customization requests and suggestions.<br> Please visit our website to learn about us and our services <a href="%1$s" title="%2$s">%2$s</a>', 'maintenance'), 
 											 'http://fruitfulcode.com',
 											 'fruitfulcode.com'
 										 ).'</p>';
