@@ -2,21 +2,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
 "POT-Creation-Date: 2014-07-08 11:10+0200\n"
-"PO-Revision-Date: 2014-10-13 09:51+0200\n"
+"PO-Revision-Date: 2015-03-03 17:22+0200\n"
 "Last-Translator: fruitfulcode <mail@fruitfulcode.com>\n"
 "Language-Team: fruitfulcode\n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.9\n"
+"X-Generator: Poedit 1.7.4\n"
 "X-Poedit-KeywordsList: _;_e;__;_x\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #: includes/admin.php:88
 msgid "Save changes"
-msgstr "Сохранить"
+msgstr "Сохранить изменения"
 
 #: includes/functions.php:161
 msgid "Standard Fonts"
@@ -24,7 +24,7 @@ msgstr "Стандартные шрифты"
 
 #: includes/functions.php:168
 msgid "Google Web Fonts"
-msgstr "Google Веб Шрифт"
+msgstr "Веб Шрифт Google"
 
 #: includes/functions.php:187
 msgid "General Settings"
@@ -80,7 +80,7 @@ msgstr "Сервис врменно недоступен"
 
 #: includes/functions.php:222
 msgid "Google Analytics ID"
-msgstr "Google Аналитикс Идентификатор (ID)"
+msgstr "Google Analytics ID"
 
 #: includes/functions.php:222
 msgid "UA-XXXXX-X"
@@ -104,7 +104,7 @@ msgstr "Логин Вкл / Выкл"
 
 #: includes/functions.php:235
 msgid "CSS Code"
-msgstr "Каскадные таблицы стилей (CSS)"
+msgstr "CSS Код"
 
 #: includes/functions.php:242
 msgid "Background image"
@@ -124,7 +124,7 @@ msgstr "Цвет шрифта"
 
 #: includes/functions.php:256
 msgid "Font family"
-msgstr "Семейство шрифтов"
+msgstr "Шрифт"
 
 #: includes/functions.php:264
 msgid "Have any questions?"
@@ -140,16 +140,16 @@ msgid ""
 "Please visit our website to learn about us and our services <a href=\"%1$s\" "
 "title=\"%2$s\">%2$s</a>"
 msgstr ""
-"Вы можете найти ответы на ваши вопросы <a target=\"_blank\" href=\"http://"
-"wordpress.org/support/plugin/maintenance\">Официальный форум поддержки</"
-"a><br> You may  <a target=\"_blank\" href=\"mailto:mail@fruitfulcode.com?"
-"subject=Maintenance plugin\">Свяжитесь с нами</a> по вопросам кастомизации и "
-"изменений<br> Посетите наш сайт, что бы узнать о нас и наших услугах и "
-"продуктах <a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
+"Вы можете найти ответы на <a target=\"_blank\" href=\"http://wordpress.org/"
+"support/plugin/maintenance\">официальном форуме поддержки</a><br> Можете <a "
+"target=\"_blank\" href=\"mailto:mail@fruitfulcode.com?subject=Maintenance "
+"plugin\">связаться с нами</a> по вопросам кастомизации и изменений<br> "
+"Посетите наш сайт, чтобы узнать о нас и наших услугах <a href=\"%1$s\" title="
+"\"%2$s\">%2$s</a>"
 
 #: includes/functions.php:276
 msgid "Extended functionality"
-msgstr "Расширенная версия"
+msgstr "Maintenance PRO"
 
 #: includes/functions.php:277
 #, php-format
@@ -161,12 +161,13 @@ msgid ""
 "filter=5\">rate it</a>, <a title=\"leave feedbacks\" href=\"%2$s\" target="
 "\"_blank\">leave feedbacks</a>."
 msgstr ""
-"Купите расширенную <a href=\"http://codecanyon.net/item/maintenance-"
-"wordpress-plugin/2781350?ref=fruitfulcode\" target=\"_blank\">ПРО версию</a> "
-"с расширенным функционалом. %1$s Если вам понравился плагин, оставьте отзыв "
-"на этой странице <a target=\"_blank\" href=\"http://wordpress.org/support/"
-"view/plugin-reviews/maintenance?filter=5\">Оценить плагин</a>, <a title="
-"\"leave feedbacks\" href=\"%2$s\" target=\"_blank\">Оставить отзыв</a>."
+"Купите <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
+"plugin/2781350?ref=fruitfulcode\" target=\"_blank\">Maintenance PRO</a> и "
+"получите функцию обратного отсчета и возможность открывать доступ нескольким "
+"пользователям. %1$s Если вам понравился плагин, оставьте отзыв на этих "
+"страницах <a target=\"_blank\" href=\"http://wordpress.org/support/view/"
+"plugin-reviews/maintenance?filter=5\">Оценить плагин</a>, <a title=\"leave "
+"feedbacks\" href=\"%2$s\" target=\"_blank\">Оставить отзыв</a>."
 
 #: includes/functions.php:281
 msgid "Demo website"
@@ -174,7 +175,7 @@ msgstr "Демо сайт"
 
 #: includes/functions.php:340
 msgid "Maintenance"
-msgstr "Режим обслуживания включен"
+msgstr "Режим обслуживания"
 
 #: includes/functions.php:363
 msgid "Website is under construction"
@@ -182,7 +183,7 @@ msgstr "Сайт находится в стадии разработки"
 
 #: includes/functions.php:364
 msgid "Maintenance mode is on"
-msgstr "Режим обслуживания включен"
+msgstr "Режим обслуживания"
 
 #: includes/functions.php:365
 msgid "Website will be available soon"
