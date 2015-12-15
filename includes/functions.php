@@ -209,6 +209,12 @@
 	}	
 	add_action('add_meta_boxes', 'maintenance_page_create_meta_boxes_widget_support', 13);	
 	
+	function maintenance_page_create_meta_boxes_improve_translate() {
+		global $maintenance_variable;
+		add_meta_box( 'promo-translate',   	 __( 'Translation',  'maintenance' ),  'maintenanace_improve_translate',   $maintenance_variable->options_page, 'side',   'default' );
+	}	
+	add_action('add_meta_boxes', 'maintenance_page_create_meta_boxes_improve_translate', 14);		
+	
 	function add_data_fields ($object, $box) {
 		$mt_option = mt_get_plugin_options(true);
 		$is_blur   = false; 
@@ -363,6 +369,18 @@
 			$promo_text .= '<p>'. sprintf(__('You may find answers to your questions at <a target="_blank" href="http://wordpress.org/support/plugin/maintenance">support forum</a><br>You may  <a target="_blank" href="mailto:mail@fruitfulcode.com?subject=Maintenance plugin">contact us</a> with customization requests and suggestions.<br> Please visit our website to learn about us and our services <a href="%1$s" title="%2$s">%2$s</a>', 'maintenance'), 
 											 'http://fruitfulcode.com',
 											 'fruitfulcode.com'
+										 ).'</p>';
+		$promo_text .= '</div>';		
+		echo $promo_text;
+	}
+	
+	function maintenanace_improve_translate() {
+		$promo_text  = '';
+		$promo_text .= '<div class="sidebar-promo" id="sidebar-translate">';
+			$promo_text .= '<h4 class="translate">'. __('This plugin is translation friendly','maintenance'). '</h3>';
+			$promo_text .= '<p>'. sprintf(__('Want to improve translation or make one for your native language? <a href="%1$s" title="%2$s">%2$s</a>', 'maintenance'), 
+											 'http://support.fruitfulcode.com/hc/en-us/articles/204268628',
+											 __('Follow this tutorial', 'maintenance')
 										 ).'</p>';
 		$promo_text .= '</div>';		
 		echo $promo_text;
