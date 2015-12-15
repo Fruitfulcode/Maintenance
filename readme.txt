@@ -3,8 +3,8 @@ Contributors: fruitfulcode
 Donate link: http://fruitfulcode.com/
 Tags: maintenance, coming soon, under-construction, 503 error, administration, login, customize page, background, fullscreen, blur
 Requires at least: 3.4
-Tested up to: 4.3.1
-Stable tag: 2.5
+Tested up to: 4.4
+Stable tag: 2.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -57,7 +57,17 @@ Maintenance plugin allow WordPress site administrator close the website for main
 
 <ul>
 <li>Russian (ru_RU)</li>
-<li>Brazilian Portuguese (pt_BR) (thanks to Luiz Felipe Silva Cristofari)</li>
+<li>Brazilian Portuguese (pt_BR)</li>
+<li>German (de_DE)</li>
+<li>Spanish (es_ES)</li>
+<li>Farsi Persian (fa_IR)</li>
+<li>Turkish (tr_TR)</li>
+<li>French (fr_FR)</li>
+<li>Chinese (zh_CN)</li>
+<li>Czech (cs_CZ)</li>
+<li>Ukrainian (uk_UA)</li>
+<li>Finnish (fi_FI)</li>
+<li>Italian (it_IT)</li>
 </ul>
 
 <p>If you would like to create translation to your native language, you can send the <a target="_blank" href="http://codex.wordpress.org/Translating_WordPress">text of PO and MO files</a> to the <a href="http://fruitfulcode.com" target="_blank">Fruitful Code</a> and we'll add it to the next plugin update.</p><p> You can download the latest version of the program for work with PO and MO files <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.</p>
@@ -107,6 +117,14 @@ You can check <a href="http://wordpress.org/support/plugin/maintenance">support 
 
 
 == Change log ==
+
+= 2.6 =
+* Update: WordPress 4.4 support
+* Update: translation files
+* New: Meta fields for sharing
+* Bug fix: callback function to uninstall hook
+* Bug fix: save content and settings if plugin disabled
+* Bug fix: if footer text is empty not showing text
 
 = 2.5 = 
 * New: French translation
