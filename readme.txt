@@ -1,7 +1,7 @@
 === Plugin Name ===
 Contributors: fruitfulcode
 Donate link: http://fruitfulcode.com/
-Tags: maintenance, coming soon, under-construction, 503 error, administration, login, customize page, background, fullscreen, blur
+Tags: maintenance, maintenance mode, coming soon, splash page, under-construction, 503 error, administration, login, customize page, background, fullscreen, blur
 Requires at least: 3.4
 Tested up to: 4.4
 Stable tag: 2.6
@@ -13,6 +13,8 @@ Maintenance - easy configure and customize coming soon, under construction page 
 == Description ==
 
 Maintenance plugin allow WordPress site administrator close the website for maintenance, enable "503 Service temporarily unavailable”, set a temporary page with authorization, which can be edited via the plugin settings. Easy customize, good look on all devices. Add your logo, background image, select the desired color, add text. Extended version of the plugin includes more settings that appear after installation PRO extension plugin.
+
+https://www.youtube.com/watch?v=Z5v9Ju52nmg
 
 <h3>Features</h3>
 <ul>
