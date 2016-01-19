@@ -486,8 +486,8 @@
 		$vCurrDate_start = $vCurrDate_end = $vCurrTime = '';
 		
 		$vdate_start = $vdate_end = date_i18n( 'Y-m-d', strtotime( current_time('mysql', 0) )); 
-		$vtime_start = date_i18n( 'h:i a', strtotime( '12:00 am')); 
-		$vtime_end 	 = date_i18n( 'h:i a', strtotime( '12:00 pm')); 
+		$vtime_start = date_i18n( 'h:i:s A', strtotime( '01:00:00 am')); 
+		$vtime_end 	 = date_i18n( 'h:i:s A', strtotime( '12:59:59 pm')); 
 			
 		
 		$mt_options	= mt_get_plugin_options(true);
@@ -505,12 +505,14 @@
 						$vtime_end = $mt_options['expiry_time_end'];
 					 
 						$vCurrTime 		 = strtotime(current_time('mysql', 0));
+						
 						$vCurrDate_start = strtotime($vdate_start . ' ' . $vtime_start); 
 						$vCurrDate_end 	 = strtotime($vdate_end   . ' ' . $vtime_end); 
 						
 						if (mtCheckExclude()) return true;
 						
-						if ($vCurrTime < $vCurrDate_start) return true;
+						if ($vCurrTime >= $vCurrDate_start && $vCurrTime >= $vCurrDate_end) return true;
+						
 						if ($vCurrTime >= $vCurrDate_end) {
 							if (!empty($mt_options['is_down'])) return true;
 						}
