@@ -511,11 +511,8 @@
 						
 						if (mtCheckExclude()) return true;
 						
-						if ($vCurrTime >= $vCurrDate_start && $vCurrTime >= $vCurrDate_end) return true;
-						
-						if ($vCurrTime >= $vCurrDate_end) {
+						if (($vCurrTime > $vCurrDate_start) && ($vCurrTime > $vCurrDate_end)) 
 							if (!empty($mt_options['is_down'])) return true;
-						}
 						
 				} else {
 					return true;		
@@ -525,8 +522,6 @@
 				  	 include_once MAINTENANCE_LOAD . 'index.php';
 					 exit;
 				}	
-				
-				
 			}
 	}
 	
