@@ -180,6 +180,10 @@ footer {
 	color:#fff;
 }
 
+footer .center {
+	padding:0;
+}
+
 .company-name {
 	width:100%;
 	display:block;
