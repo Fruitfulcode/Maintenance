@@ -121,6 +121,7 @@ body.error .btn-open-login-form {
     max-width: 1020px;
     width: 100%;
 	padding:0 10px;
+	box-sizing: border-box;
 }
 
 #wrapper {
