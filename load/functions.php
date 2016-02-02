@@ -140,7 +140,7 @@ function get_custom_login_code() {
 		
 		if ( !empty($mt_options['font_color']) ) {
 			 $font_color = esc_attr($mt_options['font_color']);
-			 $options_style .= '.site-title, .preloader i, .login-form, .login-form a.lost-pass, .btn-open-login-form, .site-content, .user-content-wrapper, .user-content, footer {color: '. $font_color .';} ';
+			 $options_style .= '.site-title, .preloader i, .login-form, .login-form a.lost-pass, .btn-open-login-form, .site-content, .user-content-wrapper, .user-content, footer, .maintenance a {color: '. $font_color .';} ';
 			 $options_style .= '.ie7 .login-form input[type="text"], .ie7 .login-form input[type="password"], .ie7 .login-form input[type="submit"]  {color: '. $font_color .'} ';
 			 $options_style .= 'a.close-user-content, #mailchimp-box form input[type="submit"], .login-form input#submit.button  {border-color:'. $font_color .'} ';
 			 $options_style .= '.ie7 .company-name {color: '. $font_color .'} ';
