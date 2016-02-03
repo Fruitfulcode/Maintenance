@@ -72,11 +72,17 @@ class maintenance {
 		
 		function mt_activation() {
 			/*Activation Plugin*/
+			mt_clear_cache();
 		}
 		
 		function mt_deactivation() {
 			/*Deactivation Plugin*/
+			mt_clear_cache();
 		}
+		
+		public static function mt_clear_cache() {
+			if ( function_exists( 'w3tc_pgcache_flush' ) ) w3tc_pgcache_flush(); 
+		}	
 		
 		public static function mt_uninstall() {
 			delete_option('maintenance_options');

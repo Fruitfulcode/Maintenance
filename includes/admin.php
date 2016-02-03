@@ -17,6 +17,7 @@
 	}
 	
 	function mt_register_settings() {
+		global	$maintenance;
 		if ( !empty($_POST['lib_options']) && check_admin_referer('maintenance_edit_post','maintenance_nonce') ) {
 			if (!isset($_POST['lib_options']['state'])) { $_POST['lib_options']['state'] = 0; } 
 			else {	   $_POST['lib_options']['state'] = 1; }
@@ -27,6 +28,7 @@
 			
 			if (isset($_POST['lib_options'])) {
 			    update_option( 'maintenance_options',  $_POST['lib_options']);
+				$maintenance->mt_clear_cache();
 			}	
 		}
 	}
