@@ -81,7 +81,9 @@ class maintenance {
 		}
 		
 		public static function mt_clear_cache() {
+			global $file_prefix;
 			if ( function_exists( 'w3tc_pgcache_flush' ) ) w3tc_pgcache_flush(); 
+			if ( function_exists( 'wp_cache_clean_cache' ) ) wp_cache_clean_cache( $file_prefix, true );
 		}	
 		
 		public static function mt_uninstall() {
