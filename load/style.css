@@ -121,6 +121,7 @@ body.error .btn-open-login-form {
     max-width: 1020px;
     width: 100%;
 	padding:0 10px;
+	box-sizing: border-box;
 }
 
 #wrapper {
@@ -178,6 +179,10 @@ footer {
 	display:inline-block;
 	width:100%;
 	color:#fff;
+}
+
+footer .center {
+	padding:0;
 }
 
 .company-name {
@@ -570,7 +575,7 @@ and (orientation : landscape) {
 	}
 	
 	.center {
-		max-width:620px;
+		max-width:628px;
 	}
 	
 }	
