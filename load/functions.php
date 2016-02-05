@@ -97,12 +97,21 @@ function get_custom_login_code() {
 		wp_register_script( '_backstretch', 	MAINTENANCE_URI  .'load/js/jquery.backstretch.min.js', 'jquery');
 		wp_register_script( '_frontend', 		MAINTENANCE_URI  .'load/js/jquery.frontend.min.js', 'jquery');
 		wp_register_script( '_blur',			MAINTENANCE_URI  .'load/js/jquery.blur.min.js', 'jquery');
+		if(class_exists('WPCF7')) {
+			wp_register_script( '_cf7form',		MAINTENANCE_URI  .'../contact-form-7/includes/js/jquery.form.min.js', 'jquery');
+			wp_register_script( '_cf7scripts',	MAINTENANCE_URI  .'../contact-form-7/includes/js/scripts.js', 'jquery');
+		}
+		
 		
 		$wp_scripts->do_items('jquery');
 		$wp_scripts->do_items('_placeholder');
 		$wp_scripts->do_items('_backstretch');		
 		$wp_scripts->do_items('_blur');
 		$wp_scripts->do_items('_frontend');
+		if(class_exists('WPCF7')) {
+			$wp_scripts->do_items('_cf7form');
+			$wp_scripts->do_items('_cf7scripts');
+		}
 	}
 	
 	add_action ('load_custom_scripts', 'add_custom_style',   5);
