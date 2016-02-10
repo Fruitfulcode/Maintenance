@@ -72,12 +72,12 @@ class maintenance {
 		
 		function mt_activation() {
 			/*Activation Plugin*/
-			mt_clear_cache();
+			self::mt_clear_cache();
 		}
 		
 		function mt_deactivation() {
 			/*Deactivation Plugin*/
-			mt_clear_cache();
+			self::mt_clear_cache();
 		}
 		
 		public static function mt_clear_cache() {

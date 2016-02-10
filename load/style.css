@@ -467,6 +467,16 @@ input[type="submit"] {
 	
 	
 }
+
+.wpcf7 {    
+	max-width: 400px;
+    margin: 0 auto;
+}
+
+.wpcf7 input, .wpcf7 textarea {
+    width: 100%;
+	padding: 10px;
+}
 	
 @-ms-keyframes spin {
     from { -ms-transform: rotate(0deg); }
