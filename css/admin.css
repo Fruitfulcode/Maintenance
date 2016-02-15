@@ -35,7 +35,9 @@
 #maintenance-options input#heading,
 #maintenance-options textarea,
 #maintenance-options input#subscribe_form_title, 
-#maintenance-options input#footer_text { width:100%; }
+#maintenance-options input#footer_text,
+#maintenance-options input#logo_width,
+#maintenance-options input#logo_height { width:100%; }
 #maintenance-options input.social-input {width:50%;}
 #maintenance-options input[type="checkbox"] { margin:0 5px 0 0; }
 #maintenance-options  #poststuff .metabox-holder .postbox-container.column-1 {float: left;  width: 65%;}
