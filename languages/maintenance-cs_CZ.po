@@ -92,7 +92,7 @@ msgid "503"
 msgstr "503"
 
 #: includes/functions.php:238
-msgid "Service temporarily unavailable"
+msgid "Service temporarily unavailable, Google analytics will be disable"
 msgstr "Služba je dočasně nedostupná"
 
 #: includes/functions.php:245
