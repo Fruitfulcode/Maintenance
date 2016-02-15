@@ -47,6 +47,7 @@ body > .main-container {
 	z-index:0;
 	overflow:hidden;
 	position:relative;
+	overflow-y: scroll;
 }
 
 body > .login-form-container {
