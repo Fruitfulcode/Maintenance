@@ -118,7 +118,7 @@ body.error .btn-open-login-form {
     content: "";
     display: block;
     margin: 0 auto;
-    max-width: 1020px;
+    max-width: 100%;
     width: 100%;
 	padding:0 10px;
 	box-sizing: border-box;
@@ -586,13 +586,7 @@ and (orientation : landscape) {
 		bottom:20px;
 		margin: 40px 0 0 0;
 	}
-	
-	.center {
-		max-width:628px;
-	}
-	
 }	
-
 
 @media screen and (min-width: 320px) and (max-width: 640px) and (orientation: landscape) {
 
@@ -650,7 +644,6 @@ and (orientation : landscape) {
 	}
  
 	.logo, .logo-retina { 
-		max-width:100px; 
 		max-height:100px; 
 	}
  

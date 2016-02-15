@@ -49,12 +49,16 @@ jQuery(window).resize(function() {
 	var isiPhone = /iphone/i.test(navigator.userAgent.toLowerCase());
 	var isiPad = /ipad/i.test(navigator.userAgent.toLowerCase());
 	if (!isiPhone && !isiPad) jQuery('#content').center();	
+	
+	var window_w = jQuery('.logotype').width();
+	jQuery('.logo').css("max-width", window_w + "px" );
+	jQuery('.logo-retina').css("max-width", window_w + "px" );
+	
 });
  
 jQuery.fn.center = function () {
 	var window_h = Math.max(0, ((jQuery(window).height() - jQuery(this).outerHeight()) / 2 ) + jQuery(window).scrollTop());
 	var content_h = jQuery('.logotype').height();
-
   if ((jQuery(window).width() > 767) && (jQuery(window).height() > 767) && window_h > content_h ) {
 		this.css("position","absolute");
 		this.css("top", window_h + "px");
