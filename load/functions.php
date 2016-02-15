@@ -166,6 +166,7 @@ function get_custom_login_code() {
 	
 	function get_logo_box() {
 		$mt_options = mt_get_plugin_options(true);
+		$logo_w = $logo_h = '';
 
 			if ( !empty($mt_options['logo_width']) ) { $logo_w = $mt_options['logo_width']; }
 			if ( !empty($mt_options['logo_height']) ) { $logo_h = $mt_options['logo_height']; }
