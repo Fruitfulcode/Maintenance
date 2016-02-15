@@ -238,12 +238,10 @@
 				generate_input_filed(__('Headline', 'maintenance'),	'heading', 'heading', $heading);
 				generate_textarea_filed(__('Description', 'maintenance'), 'description', 'description', $description);
 				generate_input_filed(__('Footer Text', 'maintenance'),	'footer_text', 'footer_text', 	$footer_text);
-				generate_image_filed(__('Logo', 'maintenance'), 'logo', 'logo', intval($mt_option['logo']), 'boxes box-logo', __('Upload Logo', 'maintenance'), 'upload_logo upload_btn button');
-
 				generate_input_filed(__('Logo width', 'maintenance'), 'logo_width', 'logo_width', $logo_width);
 				generate_input_filed(__('Logo height', 'maintenance'), 'logo_height', 'logo_height', $logo_height);
+				generate_image_filed(__('Logo', 'maintenance'), 'logo', 'logo', intval($mt_option['logo']), 'boxes box-logo', __('Upload Logo', 'maintenance'), 'upload_logo upload_btn button');
 				generate_image_filed(__('Retina logo', 'maintenance'), 'retina_logo', 'retina_logo', intval($mt_option['retina_logo']), 'boxes box-logo', __('Upload Retina Logo', 'maintenance'), 'upload_logo upload_btn button');
-
 				do_action('maintenance_background_field');
 				do_action('maintenance_color_fields');
 				do_action('maintenance_font_fields');

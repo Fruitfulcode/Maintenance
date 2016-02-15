@@ -186,14 +186,14 @@ function get_custom_login_code() {
 					$image_link_retina = $mt_options['retina_logo'];
 				}
 
-				if (!empty($mt_options['logo'])) echo '<a class="logo" rel="home" href="'.esc_url(site_url('')) .'" style="width:'.$logo_w.'px; height:'.$logo_h.'px"><img src="'. esc_url($logo[0]) .'" alt="logo"/></a>';
-				if (!empty($mt_options['retina_logo'])) echo '<a class="logo-retina" rel="home" href="'.esc_url(site_url('')) .'" style="width:'.$logo_w.'px; height:'.$logo_h.'px"><img src="'. esc_url($retina_logo[0]) .'" alt="logo"/></a>';
-				if (!empty($mt_options['logo']) && empty($mt_options['retina_logo'])) echo '<a class="logo-retina" rel="home" href="'.esc_url(site_url('')) .'" style="width:'.$logo_w.'px; height:'.$logo_h.'px"><img src="'. esc_url($logo[0]) .'" alt="logo"/></a>';
-				if (empty($mt_options['logo']) && !empty($mt_options['retina_logo'])) echo '<a class="logo" rel="home" href="'.esc_url(site_url('')) .'" style="width:'.$logo_w.'px; height:'.$logo_h.'px"><img src="'. esc_url($retina_logo[0]) .'" alt="logo"/></a>';		
+				if (!empty($mt_options['logo'])) echo '<div class="logo" rel="home" href="'.esc_url(site_url('')) .'" style="width:'.$logo_w.'px; height:'.$logo_h.'px"><img src="'. esc_url($logo[0]) .'" alt="logo"/></div>';
+				if (!empty($mt_options['retina_logo'])) echo '<div class="logo-retina" rel="home" href="'.esc_url(site_url('')) .'" style="width:'.$logo_w.'px; height:'.$logo_h.'px"><img src="'. esc_url($retina_logo[0]) .'" alt="logo"/></div>';
+				if (!empty($mt_options['logo']) && empty($mt_options['retina_logo'])) echo '<div class="logo-retina" rel="home" href="'.esc_url(site_url('')) .'" style="width:'.$logo_w.'px; height:'.$logo_h.'px"><img src="'. esc_url($logo[0]) .'" alt="logo"/></div>';
+				if (empty($mt_options['logo']) && !empty($mt_options['retina_logo'])) echo '<div class="logo" rel="home" href="'.esc_url(site_url('')) .'" style="width:'.$logo_w.'px; height:'.$logo_h.'px"><img src="'. esc_url($retina_logo[0]) .'" alt="logo"/></div>';		
 			
 			} else { 
-				echo '<a class="logo istext" rel="home" href="'.esc_url(site_url('')) .'"><h1 class="site-title">'. get_bloginfo( 'name' ) .'</h1></a>';
-				echo '<a class="logo-retina istext" rel="home" href="'.esc_url(site_url('')) .'"><h1 class="site-title">'. get_bloginfo( 'name' ) .'</h1></a>';
+				echo '<div class="logo istext" rel="home" href="'.esc_url(site_url('')) .'"><h1 class="site-title">'. get_bloginfo( 'name' ) .'</h1></div>';
+				echo '<div class="logo-retina istext" rel="home" href="'.esc_url(site_url('')) .'"><h1 class="site-title">'. get_bloginfo( 'name' ) .'</h1></div>';
 			} 
 			
 	}
