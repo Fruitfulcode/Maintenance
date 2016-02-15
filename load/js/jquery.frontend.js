@@ -52,9 +52,12 @@ jQuery(window).resize(function() {
 });
  
 jQuery.fn.center = function () {
-    if ((jQuery(window).width() > 767) && (jQuery(window).height() > 767)) {
+	var window_h = Math.max(0, ((jQuery(window).height() - jQuery(this).outerHeight()) / 2 ) + jQuery(window).scrollTop());
+	var content_h = jQuery('.logotype').height();
+
+  if ((jQuery(window).width() > 767) && (jQuery(window).height() > 767) && window_h > content_h ) {
 		this.css("position","absolute");
-		this.css("top", Math.max(0, ((jQuery(window).height() - jQuery(this).outerHeight()) / 2) + jQuery(window).scrollTop()) + "px");
+		this.css("top", window_h + "px");
 	} else {
 		this.css("position","relative");
 		this.css("top","0");

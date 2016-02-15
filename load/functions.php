@@ -166,20 +166,35 @@ function get_custom_login_code() {
 	
 	function get_logo_box() {
 		$mt_options = mt_get_plugin_options(true);
-		$out_html = '';
+
+			if ( !empty($mt_options['logo_width']) ) { $logo_w = $mt_options['logo_width']; }
+			if ( !empty($mt_options['logo_height']) ) { $logo_h = $mt_options['logo_height']; }
+			if ( !empty($mt_options['logo']) || !empty($mt_options['retina_logo']) ) { 
+				$logo = wp_get_attachment_image_src( $mt_options['logo'], 'full');
+				$retina_logo = wp_get_attachment_image_src( $mt_options['retina_logo'], 'full');
+				if (!empty($logo)) {
+					$image_link = esc_url_raw($logo[0]);
+				}
+				else {
+					$image_link = $mt_options['logo'];
+				}
+				if (!empty($retina_logo)) {
+					$image_link_retina = esc_url_raw($retina_logo[0]);
+				}
+				else {
+					$image_link_retina = $mt_options['retina_logo'];
+				}
+
+				if (!empty($mt_options['logo'])) echo '<a class="logo" rel="home" href="'.esc_url(site_url('')) .'" style="width:'.$logo_w.'px; height:'.$logo_h.'px"><img src="'. esc_url($logo[0]) .'" alt="logo"/></a>';
+				if (!empty($mt_options['retina_logo'])) echo '<a class="logo-retina" rel="home" href="'.esc_url(site_url('')) .'" style="width:'.$logo_w.'px; height:'.$logo_h.'px"><img src="'. esc_url($retina_logo[0]) .'" alt="logo"/></a>';
+				if (!empty($mt_options['logo']) && empty($mt_options['retina_logo'])) echo '<a class="logo-retina" rel="home" href="'.esc_url(site_url('')) .'" style="width:'.$logo_w.'px; height:'.$logo_h.'px"><img src="'. esc_url($logo[0]) .'" alt="logo"/></a>';
+				if (empty($mt_options['logo']) && !empty($mt_options['retina_logo'])) echo '<a class="logo" rel="home" href="'.esc_url(site_url('')) .'" style="width:'.$logo_w.'px; height:'.$logo_h.'px"><img src="'. esc_url($retina_logo[0]) .'" alt="logo"/></a>';		
 			
-			if ( !empty($mt_options['logo']) ) { 
-				$logo = wp_get_attachment_image_src( $mt_options['logo'], 'full'); 
-				$out_html = '<a class="logo" rel="home" href="'.esc_url(site_url('')) .'" style="width:'.$logo[1].'px">';
-					$out_html .= '<img src="'. esc_url($logo[0]) .'" alt="logo"/>';
-				$out_html .= '</a>'; 
 			} else { 
-				$out_html = '<a class="logo istext" rel="home" href="'.esc_url(site_url('')) .'">';
-					$out_html .= '<h1 class="site-title">'. get_bloginfo( 'name' ) .'</h1>';
+				echo '<a class="logo istext" rel="home" href="'.esc_url(site_url('')) .'"><h1 class="site-title">'. get_bloginfo( 'name' ) .'</h1></a>';
+				echo '<a class="logo-retina istext" rel="home" href="'.esc_url(site_url('')) .'"><h1 class="site-title">'. get_bloginfo( 'name' ) .'</h1></a>';
 			} 
-			$out_html .= '</a>'; 
 			
-		echo $out_html;
 	}
 	add_action ('logo_box', 'get_logo_box', 10);
 	

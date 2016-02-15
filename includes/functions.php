@@ -220,13 +220,15 @@
 		$is_blur   = false; 
 		
 		/*Deafult Variable*/
-		$page_title = $heading = $description = '';
+		$page_title = $heading = $description = $logo_width = $logo_height = '';
 		
 		
 		if (isset($mt_option['page_title'])) $page_title = wp_kses_post($mt_option['page_title']);
 		if (isset($mt_option['heading']))  $heading = wp_kses_post($mt_option['heading']);
 		if (isset($mt_option['description'])) $description = wp_kses_post($mt_option['description']);
 		if (isset($mt_option['footer_text'])) $footer_text = wp_kses_post($mt_option['footer_text']);
+		if (isset($mt_option['logo_width'])) $logo_width = wp_kses_post($mt_option['logo_width']);
+		if (isset($mt_option['logo_height'])) $logo_height = wp_kses_post($mt_option['logo_height']);
 		
 		?>
 		<table class="form-table">
@@ -237,6 +239,11 @@
 				generate_textarea_filed(__('Description', 'maintenance'), 'description', 'description', $description);
 				generate_input_filed(__('Footer Text', 'maintenance'),	'footer_text', 'footer_text', 	$footer_text);
 				generate_image_filed(__('Logo', 'maintenance'), 'logo', 'logo', intval($mt_option['logo']), 'boxes box-logo', __('Upload Logo', 'maintenance'), 'upload_logo upload_btn button');
+
+				generate_input_filed(__('Logo width', 'maintenance'), 'logo_width', 'logo_width', $logo_width);
+				generate_input_filed(__('Logo height', 'maintenance'), 'logo_height', 'logo_height', $logo_height);
+				generate_image_filed(__('Retina logo', 'maintenance'), 'retina_logo', 'retina_logo', intval($mt_option['retina_logo']), 'boxes box-logo', __('Upload Retina Logo', 'maintenance'), 'upload_logo upload_btn button');
+
 				do_action('maintenance_background_field');
 				do_action('maintenance_color_fields');
 				do_action('maintenance_font_fields');
@@ -612,17 +619,19 @@
 		}
 	}
 	
-	
 	function mt_get_default_array() {
 		return array(
 			'state'		  		=> true,
-			'page_title'  		=> __('Website is under construction', 'maintenance'),
+			'page_title'  	=> __('Website is under construction', 'maintenance'),
 			'heading'	  		=> __('Maintenance mode is on', 'maintenance'),	
-			'description' 		=> __('Website will be available soon', 'maintenance'),
+			'description' 	=> __('Website will be available soon', 'maintenance'),
 			'footer_text'		=> '&copy; ' . get_bloginfo( 'name' ) . ' ' . date('Y'),
+			'logo_width'  	=> 220,
+			'logo_height'  	=> '',
 			'logo'		  		=> '',
+			'retina_logo'		=> '',
 			'body_bg'	  		=> mt_insert_attach_sample_files(),
-			'body_bg_color'    	=> '#111111',
+			'body_bg_color' => '#111111',
 			'font_color' 		=> '#ffffff',
 			'body_font_family' 	=> 'Open Sans',
 			'is_blur'			=> false,

@@ -196,15 +196,18 @@ footer .center {
 	text-align:center;
 }
 
-.logo {
+.logo, .logo-retina {
 	font-family: inherit;
 	font-weight:normal;
 	text-decoration:none;
-	max-width: 220px;
 	margin-left:auto;
 	margin-right:auto;
 	display: block;
 	padding: 30px 0;
+}
+
+.logo-retina {
+	display: none;
 }
 
 .logo.istext {
@@ -213,7 +216,7 @@ footer .center {
 }
 
 
-.logo img {
+.logo img, .logo-retina img {
 	height:100%;
 	width:100%;
 }
@@ -646,7 +649,7 @@ and (orientation : landscape) {
 		font-size: 18px; 
 	}
  
-	.logo { 
+	.logo, .logo-retina { 
 		max-width:100px; 
 		max-height:100px; 
 	}
@@ -697,7 +700,7 @@ and (orientation : landscape) {
 		font-size: 18px; 
 	}
  
-	.logo  { 
+	.logo, .logo-retina  { 
 		max-width:100px; 
 		max-height:100px; 
 		padding:20px 0; 
@@ -726,3 +729,20 @@ and (orientation : landscape) {
 		margin: 10px 0 30px 0;
 	}
 }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+	   only screen and (   min--moz-device-pixel-ratio: 2),
+	   only screen and (     -o-min-device-pixel-ratio: 2/1),
+	   only screen and (        min-device-pixel-ratio: 2),
+	   only screen and (                min-resolution: 192dpi),
+	   only screen and (                min-resolution: 2dppx) { 
+		.logo	{display: none;}
+		.logo-retina  {display:block; width:100%; margin:0 auto;}
+		.logo-retina {width:50%}
+}
+
+@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) { 
+	.logo	{display: none;}
+	.logo-retina  {display:block; width:100%; margin:0 auto;}
+	.logo-retina {width:50%}
+} 
