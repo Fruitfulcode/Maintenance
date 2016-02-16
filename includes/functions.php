@@ -21,18 +21,8 @@
     );
 		
 	
-	function mt_get_plugin_options($is_current = false) {
-		$saved	  = (array) get_option('maintenance_options');
-		if (!$is_current) {
-			$defaults = mt_get_default_array();
-			$defaults = apply_filters('mt_plugin_default_options', $defaults );
-			$options  = wp_parse_args($saved, $defaults );
-			$options  = array_intersect_key( $options, $defaults );
-		} else {
-			$options  = $saved;
-		}
-		
-		return $options;
+	function mt_get_plugin_options() {
+    return wp_parse_args(get_option('maintenance_options', array()),  mt_get_default_array());
 	}
 	
 	function generate_input_filed($title, $id, $name, $value, $placeholder = '') {
@@ -47,7 +37,19 @@
 		$out_filed .= '</tr>';			
 		echo $out_filed;
 	}	
-	
+
+	function generate_number_filed($title, $id, $name, $value, $placeholder = '') {
+		$out_filed = '';
+		$out_filed .= '<tr valign="top">';
+		$out_filed .= '<th scope="row">' . esc_attr($title) .'</th>';
+			$out_filed .= '<td>';
+				$out_filed .= '<filedset>';
+					$out_filed .= '<input type="number" min="0" step="1" pattern="[0-9]{10}" id="'.esc_attr($id).'" name="lib_options['.$name.']" value="'. wp_kses_post(stripslashes($value)) .'" placeholder="'.$placeholder.'"/>';
+				$out_filed .= '</filedset>';
+			$out_filed .= '</td>';
+		$out_filed .= '</tr>';			
+		echo $out_filed;
+	}
 	
 	function generate_textarea_filed($title, $id, $name, $value) {
 		$out_filed = '';
@@ -238,8 +240,8 @@
 				generate_input_filed(__('Headline', 'maintenance'),	'heading', 'heading', $heading);
 				generate_textarea_filed(__('Description', 'maintenance'), 'description', 'description', $description);
 				generate_input_filed(__('Footer Text', 'maintenance'),	'footer_text', 'footer_text', 	$footer_text);
-				generate_input_filed(__('Logo width', 'maintenance'), 'logo_width', 'logo_width', $logo_width);
-				generate_input_filed(__('Logo height', 'maintenance'), 'logo_height', 'logo_height', $logo_height);
+				generate_number_filed(__('Logo width', 'maintenance'), 'logo_width', 'logo_width', $logo_width);
+				generate_number_filed(__('Logo height', 'maintenance'), 'logo_height', 'logo_height', $logo_height);
 				generate_image_filed(__('Logo', 'maintenance'), 'logo', 'logo', intval($mt_option['logo']), 'boxes box-logo', __('Upload Logo', 'maintenance'), 'upload_logo upload_btn button');
 				generate_image_filed(__('Retina logo', 'maintenance'), 'retina_logo', 'retina_logo', intval($mt_option['retina_logo']), 'boxes box-logo', __('Upload Retina Logo', 'maintenance'), 'upload_logo upload_btn button');
 				do_action('maintenance_background_field');
@@ -618,7 +620,7 @@
 	}
 	
 	function mt_get_default_array() {
-		return array(
+		$defaults = array(
 			'state'		  		=> true,
 			'page_title'  	=> __('Website is under construction', 'maintenance'),
 			'heading'	  		=> __('Maintenance mode is on', 'maintenance'),	
@@ -641,4 +643,5 @@
 			'custom_css'		=> '',
 			'exclude_pages'		=> ''
 		);
+		return apply_filters( 'mt_get_default_array', $defaults );
 	}
