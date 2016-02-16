@@ -35,7 +35,7 @@
 	<div class="main-container">
 		<?php do_action('before_content_section'); ?>
 		<div id="wrapper">
-			<div class="center">
+			<div class="center logotype">
 				<header>
 					<?php do_action('logo_box'); ?>
 				</header>

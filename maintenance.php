@@ -37,7 +37,6 @@ class maintenance {
 			
 			register_activation_hook  ( __FILE__, array( &$this,  'mt_activation' ));
 			register_deactivation_hook( __FILE__, array( &$this, 'mt_deactivation') );
-			register_uninstall_hook   ( 'maintenance', 'mt_uninstall');
 			
 			add_action('wp', 		array( &$this, 'mt_template_redirect'), 1);
 			add_action('wp_logout',	array( &$this, 'mt_user_logout'));
@@ -84,11 +83,6 @@ class maintenance {
 			global $file_prefix;
 			if ( function_exists( 'w3tc_pgcache_flush' ) ) w3tc_pgcache_flush(); 
 			if ( function_exists( 'wp_cache_clean_cache' ) ) wp_cache_clean_cache( $file_prefix, true );
-		}	
-		
-		public static function mt_uninstall() {
-			delete_option('maintenance_options');
-			delete_option('maintenance_db_version');
 		}	
 		
 		function mt_user_logout() { 
