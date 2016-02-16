@@ -719,9 +719,11 @@ only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) { 
 	.logo	{display: none;}
 	.logo-retina  {display:block; width:100%; margin:0 auto;}
+	.logo-retina {width:50%;}
 }
 
 @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) { 
 	.logo	{display: none;}
 	.logo-retina  {display:block; width:100%; margin:0 auto;}
+	.logo-retina {width:50%;}
 } 
