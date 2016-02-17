@@ -203,22 +203,18 @@ footer .center {
 	margin-left:auto;
 	margin-right:auto;
 	display: block;
+}
+.logo-box {
 	padding: 30px 0;
 }
 
-.logo-retina {
+.logo-box-retina {
 	display: none;
 }
 
 .logo.istext {
 	max-width: 100%;
 	padding: 30px 60px;
-}
-
-
-.logo img, .logo-retina img {
-	height:100%;
-	width:100%;
 }
 
 .site-title {
@@ -587,10 +583,6 @@ and (orientation : landscape) {
 		min-width:80px;
 	}
 	
-	#wrapper {
-		height:auto;
-	} 
-	
 	#mailchimp-box {
 		margin:40px 0 0 0;
 	}
@@ -615,10 +607,6 @@ and (orientation : landscape) {
 	body > .login-form-container {
 		background: none repeat scroll 0 0 rgba(0, 0, 0, 1);
 	}
-
-	#wrapper {
-		height:auto;
-	} 
 	
 	.center {
 		max-width:460px;
@@ -629,10 +617,6 @@ and (orientation : landscape) {
 	}
 	.site-content h3.description { 
 		font-size: 18px; 
-	}
-	
-	.logo, .logo-retina { 
-		max-height:100px; 
 	}
 	
 	.btn-open-login-form { 
@@ -681,9 +665,7 @@ and (orientation : landscape) {
 		font-size: 18px; 
 	}
 	
-	.logo, .logo-retina  { 
-		max-width:100px; 
-		max-height:100px; 
+	.logo-box, .logo-box-retina  { 
 		padding:20px 0; 
 	}
 	
@@ -717,13 +699,11 @@ only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) { 
-	.logo	{display: none;}
-	.logo-retina  {display:block; width:100%; margin:0 auto;}
-	.logo-retina {width:50%;}
+	.logo-box	{display: none;}
+	.logo-box-retina  {display:block; width:100%; margin:10px auto;}
 }
 
 @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) { 
-	.logo	{display: none;}
-	.logo-retina  {display:block; width:100%; margin:0 auto;}
-	.logo-retina {width:50%;}
+	.logo-box	{display: none;}
+	.logo-box-retina  {display:block; width:100%; margin:10px auto;}
 } 
