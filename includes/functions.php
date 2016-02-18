@@ -182,7 +182,38 @@
 					$out_filed .= '</td>';	
 				$out_filed .= '</tr>';
 			return $out_filed;
-	}		
+	}
+
+	function get_fonts_subsets($title, $id, $name, $value) {
+			global $standart_fonts;
+			$out_items = $gg_fonts = $curr_font = $mt_option = '';
+			$mt_option = mt_get_plugin_options(true);
+			$curr_font = esc_attr($mt_option['body_font_family']);
+			$vars 	   = "subsets";
+			
+			if (file_exists(MAINTENANCE_INCLUDES .'fonts/googlefonts.json')) {
+				$gg_fonts = json_decode(file_get_contents(MAINTENANCE_INCLUDES .'fonts/googlefonts.json'), true);
+			}	
+			
+			if (!empty($gg_fonts)) {
+			
+				$out_filed = '';
+				$out_filed .= '<tr valign="top">';
+						$out_filed .= '<th scope="row">'. esc_attr($title) .'</th>';
+						$out_filed .= '<td>';
+							$out_filed .= '<filedset>';
+								$out_filed .= '<select class="select2_customize" name="lib_options['.$name.']" id="'.esc_attr($id).'">';
+								foreach ($gg_fonts[$curr_font][$vars] as $key) {
+									$out_filed .= '<option value="'.$key['id'] .'" '. selected( $value, $key['id'], false ) .'>'.$key['name'].'</option>';
+								}
+								$out_filed .= '</select>';
+							
+							$out_filed .= '<filedset>';
+						$out_filed .= '</td>';	
+					$out_filed .= '</tr>';
+			}
+			return $out_filed;
+	}	
 	
 	function maintenance_page_create_meta_boxes() {
 		global $maintenance_variable;
@@ -365,6 +396,7 @@
 	function get_font_fileds_action() {
 		$mt_option = mt_get_plugin_options(true);
 		echo get_fonts_field(__('Font family', 'maintenance'), 'body_font_family', 'body_font_family', esc_attr($mt_option['body_font_family'])); 	
+		echo get_fonts_subsets(__('Subsets', 'maintenance'), 'body_font_subset', 'body_font_subset', esc_attr($mt_option['body_font_subset'])); 			
 	}	
 	add_action ('maintenance_font_fields', 'get_font_fileds_action', 10);
 	
@@ -634,6 +666,7 @@
 			'body_bg_color' => '#111111',
 			'font_color' 		=> '#ffffff',
 			'body_font_family' 	=> 'Open Sans',
+			'body_font_subset'	=> 'Latin',
 			'is_blur'			=> false,
 			'blur_intensity'	=> 5,	
 			'admin_bar_enabled' => true,
