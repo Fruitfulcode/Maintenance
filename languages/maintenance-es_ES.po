@@ -3,18 +3,18 @@ msgstr ""
 "Project-Id-Version: Maintenance v2.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2014-09-22 20:42+0100\n"
+"PO-Revision-Date: 2016-02-18 16:57+0200\n"
 "Last-Translator: Digital03.net <info@digital03.net>\n"
 "Language-Team: Digital03.net <info@digital03.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 1.6.9\n"
+"X-Generator: Poedit 1.8.7\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
-"X-Poedit-Basepath: ../\n"
+"X-Poedit-Basepath: ..\n"
 "X-Textdomain-Support: yes\n"
 "Language: es_ES\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -53,6 +53,38 @@ msgstr "Cabecera"
 #: includes/functions.php:221
 msgid "Description"
 msgstr "Descripción"
+
+# #-#-#-#-#  0catalog.po (Maintenance v2.3)  #-#-#-#-#
+# @ maintenance
+#: includes/functions.php:191 includes/functions.php:189
+msgid "Exclude pages"
+msgstr "Excluir páginas"
+
+#: includes/functions.php:242
+msgid "Footer Text"
+msgstr "Texto de pie de página"
+
+#: includes/functions.php:243
+msgid "Logo width"
+msgstr "Logotipo de ancho"
+
+#: includes/functions.php:244
+msgid "Logo height"
+msgstr "La altura del logotipo"
+
+#: includes/functions.php:246
+msgid "Retina logo"
+msgstr "Retina logo"
+
+#: includes/functions.php:246
+msgid "Upload Retina Logo"
+msgstr "Subir Retina Logo"
+
+# #-#-#-#-#  0catalog.po (Maintenance v2.3)  #-#-#-#-#
+# @ maintenance
+#: includes/functions.php:244 includes/functions.php:269
+msgid "Select the page to be displayed:"
+msgstr "Seleccione la página que se mostrará:"
 
 # @ maintenance
 #: includes/functions.php:222
@@ -252,11 +284,6 @@ msgid "Custom CSS"
 msgstr "CSS personalizado"
 
 # @ maintenance
-#: includes/functions.php:189
-msgid "Exclude pages"
-msgstr "Excluir páginas"
-
-# @ maintenance
 #: includes/functions.php:202
 msgid "Fruitful Code projects"
 msgstr "Proyectos de Fruitful Code"
@@ -265,11 +292,6 @@ msgstr "Proyectos de Fruitful Code"
 #: includes/functions.php:254
 msgid "CSS Code"
 msgstr "Código CSS"
-
-# @ maintenance
-#: includes/functions.php:269
-msgid "Select the page to be displayed:"
-msgstr "Selecciona la página a mostrar"
 
 # @ maintenance
 #: includes/functions.php:309

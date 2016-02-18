@@ -54,6 +54,26 @@ msgstr "Başlık"
 msgid "Description"
 msgstr "Açıklama"
 
+#: includes/functions.php:242
+msgid "Footer Text"
+msgstr "Altbilgi metni"
+
+#: includes/functions.php:243
+msgid "Logo width"
+msgstr "Logo genişliği"
+
+#: includes/functions.php:244
+msgid "Logo height"
+msgstr "Logo yüksekliği"
+
+#: includes/functions.php:246
+msgid "Retina logo"
+msgstr "Retina logo"
+
+#: includes/functions.php:246
+msgid "Upload Retina Logo"
+msgstr "Yükle Retina Logo"
+
 # @ maintenance
 #: includes/functions.php:222
 msgid "Logo"

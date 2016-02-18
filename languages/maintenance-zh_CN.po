@@ -77,6 +77,22 @@ msgstr "描述"
 msgid "Footer Text"
 msgstr "页脚文本"
 
+#: includes/functions.php:243
+msgid "Logo width"
+msgstr "徽标宽度"
+
+#: includes/functions.php:244
+msgid "Logo height"
+msgstr "徽标高度"
+
+#: includes/functions.php:246
+msgid "Retina logo"
+msgstr "Retina 标志"
+
+#: includes/functions.php:246
+msgid "Upload Retina Logo"
+msgstr "上传徽标 Retina"
+
 #: includes/functions.php:233
 msgid "Logo"
 msgstr "Logo"

@@ -56,6 +56,34 @@ msgstr "Тема"
 msgid "Description"
 msgstr "Опис"
 
+#: includes/functions.php:191
+msgid "Exclude pages"
+msgstr "виняток сторінок"
+
+#: includes/functions.php:242
+msgid "Footer Text"
+msgstr "Текст футеру"
+
+#: includes/functions.php:243
+msgid "Logo width"
+msgstr "Ширина логотипу"
+
+#: includes/functions.php:244
+msgid "Logo height"
+msgstr "Висота логотипу"
+
+#: includes/functions.php:246
+msgid "Retina logo"
+msgstr "Retina логотип"
+
+#: includes/functions.php:246
+msgid "Upload Retina Logo"
+msgstr "Завантажити Retina лого"
+
+#: includes/functions.php:244
+msgid "Select the page to be displayed:"
+msgstr "Виберіть сторінку, яка буде відображатися:"
+
 #: includes/functions.php:211
 msgid "Logo"
 msgstr "Лого"

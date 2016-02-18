@@ -43,13 +43,41 @@ msgstr "Kop"
 msgid "Description"
 msgstr "Omschrijving"
 
+#: includes/functions.php:191
+msgid "Exclude pages"
+msgstr "Uitsluiten pagina's"
+
+#: includes/functions.php:242
+msgid "Footer Text"
+msgstr "Footer Text"
+
+#: includes/functions.php:243
+msgid "Logo width"
+msgstr "Logo breedte"
+
+#: includes/functions.php:244
+msgid "Logo height"
+msgstr "Logo hoogte"
+
+#: includes/functions.php:246
+msgid "Retina logo"
+msgstr "Retina logo"
+
+#: includes/functions.php:246
+msgid "Upload Retina Logo"
+msgstr "Retina logo uploaden"
+
+#: includes/functions.php:244
+msgid "Select the page to be displayed:"
+msgstr "Selecteer de pagina die moet worden weergegeven:"
+
 #: /includes/functions.php:127
 msgid "Logo"
 msgstr "Logo"
 
 #: /includes/functions.php:127
 msgid "Upload Logo"
-msgstr "logo uploaden"
+msgstr "Logo uploaden"
 
 #: /includes/functions.php:130
 msgid "Admin bar"
