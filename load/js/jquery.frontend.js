@@ -29,12 +29,7 @@ jQuery(document).ready(function() {
 });
 
 jQuery(window).load(function() { 
-	var isiPhone = /iphone/i.test(navigator.userAgent.toLowerCase());
-	var isiPad 	 = /ipad/i.test(navigator.userAgent.toLowerCase());
-
-	if (!isiPhone && !isiPad) {
-		jQuery('#content').center();	
-	}
+	jQuery('#content').center();	
 	
 	jQuery('.main-container > div:not(".preloader")').each(function() {
 		jQuery(this).css({'visibility': 'visible'});
@@ -46,9 +41,7 @@ jQuery(window).load(function() {
 });
 
 jQuery(window).resize(function() { 
-	var isiPhone = /iphone/i.test(navigator.userAgent.toLowerCase());
-	var isiPad = /ipad/i.test(navigator.userAgent.toLowerCase());
-	if (!isiPhone && !isiPad) jQuery('#content').center();	
+	jQuery('#content').center();	
 	
 	var window_w = jQuery('.logotype').width();
 	jQuery('.logo').css("max-width", window_w + "px" );
