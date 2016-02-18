@@ -10,23 +10,23 @@ html {
 body {
 	height:100%;
 	box-sizing: border-box;
-    min-height: 100%;
-    min-width: 100%;
-    position: relative;
-    z-index: 1;
+	min-height: 100%;
+	min-width: 100%;
+	position: relative;
+	z-index: 1;
 	margin:0;
 	padding:0;
 	overflow: hidden;
 }
 
 input:-webkit-autofill {
-    -webkit-box-shadow:0 0 0 50px #292b2c inset; /* Change the color to your own background color */
-    -webkit-text-fill-color: #fff;
+	-webkit-box-shadow:0 0 0 50px #292b2c inset; /* Change the color to your own background color */
+	-webkit-text-fill-color: #fff;
 }
 
 input:-webkit-autofill:focus {
-    -webkit-box-shadow: /*your box-shadow*/,0 0 0 50px #48494a inset;
-    -webkit-text-fill-color: #fff;
+	-webkit-box-shadow: /*your box-shadow*/,0 0 0 50px #48494a inset;
+	-webkit-text-fill-color: #fff;
 } 
 
 body > #wrapper {
@@ -39,15 +39,15 @@ body > #wrapper {
 body > .main-container {
 	height: 100%; 
 	min-height: 100%; 
-    min-width: 100%;
+	min-width: 100%;
 	transition: all .6s ease-in-out;
 	-webkit-transition: all .6s ease-in-out;
 	-moz-transition: all .6s ease-in-out; 
 	-o-transition: all .6s ease-in-out; 
 	z-index:0;
 	overflow:hidden;
-	position:relative;
-	overflow-y: scroll;
+	position: initial !important;
+	overflow-y: auto;
 }
 
 body > .login-form-container {
@@ -74,7 +74,7 @@ body > .login-form-container {
 body.open-login-form > .login-form-container {
 	right: 0;
 }
-	 
+
 body.open-login-form > .main-container {
 	-webkit-perspective: 1000px;
 	perspective: 1000px;
@@ -84,9 +84,8 @@ body.open-login-form > .main-container {
 	-webkit-transform-origin: 0 50%;
 	transform-origin: 0 50%;
 	-ms-transform:  perspective(1920px)  rotate3d(0, 1, 0, 9deg);
-    -webkit-transform:  perspective(1920px) rotate3d(0, 1, 0, 9deg);
-    transform:   perspective(1920px) rotate3d(0, 1, 0, 9deg);
-	
+	-webkit-transform:  perspective(1920px) rotate3d(0, 1, 0, 9deg);
+	transform:   perspective(1920px) rotate3d(0, 1, 0, 9deg);
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
 	-ms-backface-visibility: hidden;
@@ -109,25 +108,25 @@ body.open-login-form > .main-container {
 	border-bottom-left-radius: 4px;
 	cursor:pointer;
 }
-		 
+
 body.error .btn-open-login-form {
 	color:red;
 }
 
 .center {
 	clear: both;
-    content: "";
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-    width: 100%;
+	content: "";
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+	width: 100%;
 	padding:0 10px;
 	box-sizing: border-box;
 }
 
 #wrapper {
 	width:100%;
-	height:100%;
+	height:90%;
 	position:relative;
 	display: inline-block;
 }
@@ -175,11 +174,11 @@ header {
 
 footer {
 	position: relative;
-	top: -120px;
-	height: 100px;
+	top: 0px;
 	display:inline-block;
 	width:100%;
 	color:#fff;
+	margin:20px 0px;
 }
 
 footer .center {
@@ -204,22 +203,18 @@ footer .center {
 	margin-left:auto;
 	margin-right:auto;
 	display: block;
+}
+.logo-box {
 	padding: 30px 0;
 }
 
-.logo-retina {
+.logo-box-retina {
 	display: none;
 }
 
 .logo.istext {
 	max-width: 100%;
 	padding: 30px 60px;
-}
-
-
-.logo img, .logo-retina img {
-	height:100%;
-	width:100%;
 }
 
 .site-title {
@@ -233,8 +228,8 @@ footer .center {
 
 .login-form {
 	display: inline-block;
-    margin: 25px 0 0;
-    padding: 20px;
+	margin: 25px 0 0;
+	padding: 20px;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 	filter: alpha(opacity=50);
 	-moz-opacity: .5;
@@ -251,16 +246,16 @@ footer .center {
 .login-form input[type="password"] {
 	color:inherit;
 	background-color: rgba(113,113,113, 0.6);
-    background-position: 14px center;
-    background-repeat: no-repeat;
-    float: left;
-    font-family: inherit;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 20px;
-    margin: 0 0 10px 0;
-    padding: 5px 16px 5px 40px;
-    width: 100%;
+	background-position: 14px center;
+	background-repeat: no-repeat;
+	float: left;
+	font-family: inherit;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 20px;
+	margin: 0 0 10px 0;
+	padding: 5px 16px 5px 40px;
+	width: 100%;
 	display:block;
 	line-height: 28px;
 	outline:none;
@@ -274,12 +269,12 @@ footer .center {
 }
 
 .wpcf7 .screen-reader-response {
-padding: 10px 5px;
+	padding: 10px 5px;
 }
 
 .wpcf7 .screen-reader-response ul {
-font-size: 14px;
-padding: 0px 0px 0px 20px;
+	font-size: 14px;
+	padding: 0px 0px 0px 20px;
 }
 
 .wpcf7 .wpcf7-not-valid-tip
@@ -338,7 +333,7 @@ padding: 0px 0px 0px 20px;
 .ie7 .login-form .licon:before {
 	*zoom: expression(this.runtimeStyle['zoom'] = "1", this.innerHTML = "&#xf019;");
 }	
- 
+
 
 .login-form .picon:before {
 	content: "\f01b";
@@ -378,14 +373,14 @@ padding: 0px 0px 0px 20px;
 	font-family: inherit;
 	background:none;
 	font-weight:bold;
-    float: left;
+	float: left;
 	cursor:pointer;
 	border:2px solid #fff;
 	padding:5px 10px;
 	font-weight: bold;
-    margin: 10px 0 0;
-    padding: 5px 10px;
-    text-align: center;
+	margin: 10px 0 0;
+	padding: 5px 10px;
+	text-align: center;
 	float:right;
 	display:inline-block;
 }
@@ -394,9 +389,9 @@ input[type="submit"] {
 	border:2px solid #fff;
 	padding:5px 10px;
 	font-weight: bold;
-    margin: 10px 0 0;
-    padding: 5px 10px;
-    color:inherit;
+	margin: 10px 0 0;
+	padding: 5px 10px;
+	color:inherit;
 	font-size:20px;
 	font-family: inherit;
 	background:none;
@@ -412,40 +407,40 @@ input[type="submit"] {
 }
 
 .preloader {
-    display: block;
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    z-index: 99999991;
+	display: block;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	z-index: 99999991;
 }
 
 .preloader i {
 	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
-    display: block;
-    height: 58px;
-    left: 50%;
-    margin: -29px 0 0 -25px;
-    position: absolute;
-    top: 50%;
-    width: 50px;
+	display: block;
+	height: 58px;
+	left: 50%;
+	margin: -29px 0 0 -25px;
+	position: absolute;
+	top: 50%;
+	width: 50px;
 	
 	-webkit-animation-name: spin;
-    -webkit-animation-duration: 2200ms;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-name: spin;
-    -moz-animation-duration: 2200ms;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-timing-function: linear;
-    -ms-animation-name: spin;
-    -ms-animation-duration: 2200ms;
-    -ms-animation-iteration-count: infinite;
-    -ms-animation-timing-function: linear;
-    
-    animation-name: spin;
-    animation-duration: 2200ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+	-webkit-animation-duration: 2200ms;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-name: spin;
+	-moz-animation-duration: 2200ms;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: linear;
+	-ms-animation-name: spin;
+	-ms-animation-duration: 2200ms;
+	-ms-animation-iteration-count: infinite;
+	-ms-animation-timing-function: linear;
+
+	animation-name: spin;
+	animation-duration: 2200ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
 }
 
 .preloader i:before {
@@ -468,39 +463,37 @@ input[type="submit"] {
 .preloader i:before {
 	content: "\f000";
 	font-family: "GeneralFoundicons";
-	
-	
 }
 
 .wpcf7 {    
 	max-width: 400px;
-    margin: 0 auto;
+	margin: 0 auto;
 }
 
 .wpcf7 input, .wpcf7 textarea {
-    width: 100%;
+	width: 100%;
 	padding: 10px;
 }
-	
+
 @-ms-keyframes spin {
-    from { -ms-transform: rotate(0deg); }
-    to { -ms-transform: rotate(360deg); }
+	from { -ms-transform: rotate(0deg); }
+	to { -ms-transform: rotate(360deg); }
 }
 @-moz-keyframes spin {
-    from { -moz-transform: rotate(0deg); }
-    to { -moz-transform: rotate(360deg); }
+	from { -moz-transform: rotate(0deg); }
+	to { -moz-transform: rotate(360deg); }
 }
 @-webkit-keyframes spin {
-    from { -webkit-transform: rotate(0deg); }
-    to { -webkit-transform: rotate(360deg); }
+	from { -webkit-transform: rotate(0deg); }
+	to { -webkit-transform: rotate(360deg); }
 }
 @keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    }
+	from {
+		transform:rotate(0deg);
+	}
+	to {
+		transform:rotate(360deg);
+	}
 }
 
 ::-webkit-input-placeholder { /* WebKit browsers */
@@ -577,46 +570,32 @@ and (orientation : landscape) {
 		-webkit-transform: rotateY(0deg);
 		transform: rotateY(0deg);
 	}
-	
-	body > .main-container {
-		overflow-y:scroll !important;
-	}
-	
-	footer {
-		top:0;
-		bottom:20px;
-		margin: 40px 0 0 0;
-	}
 }	
 
 @media screen and (min-width: 320px) and (max-width: 640px) and (orientation: landscape) {
 
-		#countdown .box-digits {
-			padding:30px 16px;
-		}
-		
-		#countdown .digits {
-			height:120px;
-			min-width:80px;
-		}
-		
-		#wrapper {
-			height:auto;
-		} 
-		
-		#mailchimp-box {
-			margin:40px 0 0 0;
-		}
-		
-		footer {
-			top:0;
-			bottom:0;
-			margin: 10px 0 30px 0;
-		}
+	#countdown .box-digits {
+		padding:30px 16px;
+	}
+	
+	#countdown .digits {
+		height:120px;
+		min-width:80px;
+	}
+	
+	#mailchimp-box {
+		margin:40px 0 0 0;
+	}
+	
+	footer {
+		top:0;
+		bottom:0;
+		margin: 10px 0 30px 0;
+	}
 
-		footer .social {
-			text-align:center;
-		}		
+	footer .social {
+		text-align:center;
+	}		
 }
 
 @media screen and (max-width: 480px) {	
@@ -628,10 +607,6 @@ and (orientation : landscape) {
 	body > .login-form-container {
 		background: none repeat scroll 0 0 rgba(0, 0, 0, 1);
 	}
-
- 	#wrapper {
-		height:auto;
-	} 
 	
 	.center {
 		max-width:460px;
@@ -643,23 +618,19 @@ and (orientation : landscape) {
 	.site-content h3.description { 
 		font-size: 18px; 
 	}
- 
-	.logo, .logo-retina { 
-		max-height:100px; 
-	}
- 
+	
 	.btn-open-login-form { 
 		top:10%; 
 		font-size: 20px; 
 		left: -44px;
 	}
- 
+	
 	body > .login-form-container {
 		min-width: 266px; 
 		max-width: 266px; 
 		right:-266px;
 	}
- 
+	
 	.login-form input[type="text"], 
 	.login-form input[type="password"] { 
 		max-width: 170px; 
@@ -693,25 +664,23 @@ and (orientation : landscape) {
 	.site-content h3.description { 
 		font-size: 18px; 
 	}
- 
-	.logo, .logo-retina  { 
-		max-width:100px; 
-		max-height:100px; 
+	
+	.logo-box, .logo-box-retina  { 
 		padding:20px 0; 
 	}
- 
+	
 	.btn-open-login-form { 
 		top:10%; 
 		font-size: 20px; 
 		left: -44px;
 	}
- 
+	
 	body > .login-form-container {
 		min-width: 266px; 
 		max-width: 266px; 
 		right:-266px;
 	}
- 
+	
 	.login-form input[type="text"], 
 	.login-form input[type="password"] { 
 		max-width: 170px; 
@@ -725,18 +694,16 @@ and (orientation : landscape) {
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
-	   only screen and (   min--moz-device-pixel-ratio: 2),
-	   only screen and (     -o-min-device-pixel-ratio: 2/1),
-	   only screen and (        min-device-pixel-ratio: 2),
-	   only screen and (                min-resolution: 192dpi),
-	   only screen and (                min-resolution: 2dppx) { 
-		.logo	{display: none;}
-		.logo-retina  {display:block; width:100%; margin:0 auto;}
-		.logo-retina {width:50%}
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+	.logo-box	{display: none;}
+	.logo-box-retina  {display:block; width:100%; margin:10px auto;}
 }
 
 @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) { 
-	.logo	{display: none;}
-	.logo-retina  {display:block; width:100%; margin:0 auto;}
-	.logo-retina {width:50%}
+	.logo-box	{display: none;}
+	.logo-box-retina  {display:block; width:100%; margin:10px auto;}
 } 
