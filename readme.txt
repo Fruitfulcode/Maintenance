@@ -8,7 +8,7 @@ Stable tag: 2.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Maintenance - easy configure and customize coming soon, under construction page when site have updates or changes.
+Maintenance - easy configure and customize coming soon, under construction page when site have updates, changes or in development process.
 
 == Description ==
 
@@ -121,7 +121,6 @@ You can check <a href="http://wordpress.org/support/plugin/maintenance">support 
 == Change log ==
 
 = 2.7 =
-
 * New: Google fonts subsets
 * New: WP Super Cache support
 * New: WP Total Cache support
