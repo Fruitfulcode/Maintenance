@@ -2,17 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
 "POT-Creation-Date: 2014-02-18 12:25+0200\n"
-"PO-Revision-Date: 2016-02-18 18:42+0200\n"
+"PO-Revision-Date: 2014-02-18 12:27+0200\n"
 "Last-Translator: \n"
 "Language-Team: fruitfulcode\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7\n"
+"X-Generator: Poedit 1.5.4\n"
 "X-Poedit-KeywordsList: _;_e;__;_x\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"Language: pt_BR\n"
 
 #: /includes/admin.php:84
 msgid "Save changes"
@@ -29,7 +28,7 @@ msgstr "Премиум версия"
 
 #: /includes/functions.php:116
 msgid "Support"
-msgstr ""
+msgstr "Apoio"
 
 #: /includes/functions.php:124
 msgid "Page title"
@@ -42,6 +41,34 @@ msgstr "Cabeçalho"
 #: /includes/functions.php:126
 msgid "Description"
 msgstr "Descrição"
+
+#: includes/functions.php:191
+msgid "Exclude pages"
+msgstr "Excluir páginas"
+
+#: includes/functions.php:242
+msgid "Footer Text"
+msgstr "Texto de rodapé"
+
+#: includes/functions.php:243
+msgid "Logo width"
+msgstr "Logo width"
+
+#: includes/functions.php:244
+msgid "Logo height"
+msgstr "Logo altura"
+
+#: includes/functions.php:246
+msgid "Retina logo"
+msgstr "Retina logo"
+
+#: includes/functions.php:246
+msgid "Upload Retina Logo"
+msgstr "Enviar Retina logo "
+
+#: includes/functions.php:244
+msgid "Select the page to be displayed:"
+msgstr "Seleccione a página a ser exibida:"
 
 #: /includes/functions.php:127
 msgid "Logo"
@@ -65,7 +92,7 @@ msgstr ""
 
 #: /includes/functions.php:131
 msgid "Service temporarily unavailable, Google analytics will be disable"
-msgstr "Serviço temporariamente indisponível"
+msgstr "Serviço temporariamente indisponível, o Google Analytics será desativado"
 
 #: /includes/functions.php:132
 msgid "Google Analytics ID"
@@ -186,6 +213,18 @@ msgstr "Senha"
 #: /load/functions.php:225
 msgid "Sign In"
 msgstr "Entrar"
+
+#: load/functions.php:262
+msgid "Lost Password"
+msgstr "Senha perdida"
+
+#: load/functions.php:263
+msgid "Login"
+msgstr "Entrar"
+
+#: load/functions.php:259
+msgid "User Login"
+msgstr "Login de usuário"
 
 #, fuzzy
 #~ msgid "maintenance"

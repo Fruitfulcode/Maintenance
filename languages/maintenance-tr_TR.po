@@ -3,14 +3,14 @@ msgstr ""
 "Project-Id-Version: Maintenance v2.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2016-02-18 18:42+0200\n"
+"PO-Revision-Date: 2015-10-07 00:42+0300\n"
 "Last-Translator: Digital03.net <info@digital03.net>\n"
 "Language-Team: Digital03.net <info@digital03.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 1.8.7\n"
+"X-Generator: Poedit 1.8.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
@@ -54,6 +54,26 @@ msgstr "Başlık"
 msgid "Description"
 msgstr "Açıklama"
 
+#: includes/functions.php:242
+msgid "Footer Text"
+msgstr "Altbilgi metni"
+
+#: includes/functions.php:243
+msgid "Logo width"
+msgstr "Logo genişliği"
+
+#: includes/functions.php:244
+msgid "Logo height"
+msgstr "Logo yüksekliği"
+
+#: includes/functions.php:246
+msgid "Retina logo"
+msgstr "Retina logo"
+
+#: includes/functions.php:246
+msgid "Upload Retina Logo"
+msgstr "Yükle Retina Logo"
+
 # @ maintenance
 #: includes/functions.php:222
 msgid "Logo"
@@ -82,7 +102,7 @@ msgstr "503"
 # @ maintenance
 #: includes/functions.php:227
 msgid "Service temporarily unavailable, Google analytics will be disable"
-msgstr "Servis geçici olarak mevcut değil"
+msgstr "Hizmet geçici olarak kullanılamıyor, Google analytics devre dışı bırakılacak"
 
 # @ maintenance
 #: includes/functions.php:234
@@ -235,6 +255,9 @@ msgstr "Kullanıcı adı"
 #: load/functions.php:258
 msgid "Password"
 msgstr "Şifre"
+
+#~ msgid "Sign In"
+#~ msgstr "Oturum aç"
 
 # @ anaglyph-framework
 #: includes/functions.php:161

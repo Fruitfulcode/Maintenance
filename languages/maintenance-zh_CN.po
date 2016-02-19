@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Maintenance\n"
 "POT-Creation-Date: 2015-12-14 21:40+0800\n"
-"PO-Revision-Date: 2016-02-18 18:42+0200\n"
+"PO-Revision-Date: 2015-12-14 21:51+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7\n"
+"X-Generator: Poedit 1.8.6\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: maintenance.php\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -77,6 +77,22 @@ msgstr "描述"
 msgid "Footer Text"
 msgstr "页脚文本"
 
+#: includes/functions.php:243
+msgid "Logo width"
+msgstr "徽标宽度"
+
+#: includes/functions.php:244
+msgid "Logo height"
+msgstr "徽标高度"
+
+#: includes/functions.php:246
+msgid "Retina logo"
+msgstr "Retina 标志"
+
+#: includes/functions.php:246
+msgid "Upload Retina Logo"
+msgstr "上传徽标 Retina"
+
 #: includes/functions.php:233
 msgid "Logo"
 msgstr "Logo"
@@ -99,7 +115,7 @@ msgstr "503"
 
 #: includes/functions.php:238
 msgid "Service temporarily unavailable, Google analytics will be disable"
-msgstr "服务器暂时不可用"
+msgstr "服务暂时不可用，谷歌Analytics（分析）将被禁用"
 
 #: includes/functions.php:245
 msgid "Google Analytics ID"
@@ -264,6 +280,9 @@ msgstr "忘记密码"
 #: load/functions.php:261
 msgid "Login"
 msgstr "登录"
+
+#~ msgid "Sign In"
+#~ msgstr "簽到"
 
 #. Plugin URI of the plugin/theme
 msgid "http://wordpress.org/plugins/maintenance/"

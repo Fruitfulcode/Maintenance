@@ -2,13 +2,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
 "POT-Creation-Date: 2014-02-18 12:25+0200\n"
-"PO-Revision-Date: 2016-02-18 18:41+0200\n"
+"PO-Revision-Date: 2014-08-04 15:46+0100\n"
 "Last-Translator: Pieter de Jong <pieter@de-formatie.nl>\n"
 "Language-Team: fruitfulcode\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7\n"
+"X-Generator: Poedit 1.6.7\n"
 "X-Poedit-KeywordsList: _;_e;__;_x\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -43,13 +43,41 @@ msgstr "Kop"
 msgid "Description"
 msgstr "Omschrijving"
 
+#: includes/functions.php:191
+msgid "Exclude pages"
+msgstr "Uitsluiten pagina's"
+
+#: includes/functions.php:242
+msgid "Footer Text"
+msgstr "Footer Text"
+
+#: includes/functions.php:243
+msgid "Logo width"
+msgstr "Logo breedte"
+
+#: includes/functions.php:244
+msgid "Logo height"
+msgstr "Logo hoogte"
+
+#: includes/functions.php:246
+msgid "Retina logo"
+msgstr "Retina logo"
+
+#: includes/functions.php:246
+msgid "Upload Retina Logo"
+msgstr "Retina logo uploaden"
+
+#: includes/functions.php:244
+msgid "Select the page to be displayed:"
+msgstr "Selecteer de pagina die moet worden weergegeven:"
+
 #: /includes/functions.php:127
 msgid "Logo"
 msgstr "Logo"
 
 #: /includes/functions.php:127
 msgid "Upload Logo"
-msgstr "logo uploaden"
+msgstr "Logo uploaden"
 
 #: /includes/functions.php:130
 msgid "Admin bar"
@@ -65,7 +93,7 @@ msgstr "503"
 
 #: /includes/functions.php:131
 msgid "Service temporarily unavailable, Google analytics will be disable"
-msgstr "Service momenteel niet beschikbaar"
+msgstr "Service tijdelijk niet beschikbaar is, zal Google analytics worden uitgeschakeld"
 
 #: /includes/functions.php:132
 msgid "Google Analytics ID"
@@ -196,6 +224,18 @@ msgstr "Wachtwoord"
 #: /load/functions.php:225
 msgid "Sign In"
 msgstr "Inloggen"
+
+#: load/functions.php:262
+msgid "Lost Password"
+msgstr "Vergeten wachtwoord"
+
+#: load/functions.php:263
+msgid "Login"
+msgstr "Log in"
+
+#: load/functions.php:259
+msgid "User Login"
+msgstr "Gebruiker login"
 
 #, fuzzy
 #~ msgid "maintenance"

@@ -2,13 +2,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
 "POT-Creation-Date: 2014-07-08 11:10+0200\n"
-"PO-Revision-Date: 2016-02-18 18:42+0200\n"
+"PO-Revision-Date: 2015-03-04 12:37+0200\n"
 "Last-Translator: fruitfulcode <mail@fruitfulcode.com>\n"
 "Language-Team: fruitfulcode\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7\n"
+"X-Generator: Poedit 1.7.4\n"
 "X-Poedit-KeywordsList: _;_e;__;_x\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -56,6 +56,34 @@ msgstr "Тема"
 msgid "Description"
 msgstr "Опис"
 
+#: includes/functions.php:191
+msgid "Exclude pages"
+msgstr "виняток сторінок"
+
+#: includes/functions.php:242
+msgid "Footer Text"
+msgstr "Текст футеру"
+
+#: includes/functions.php:243
+msgid "Logo width"
+msgstr "Ширина логотипу"
+
+#: includes/functions.php:244
+msgid "Logo height"
+msgstr "Висота логотипу"
+
+#: includes/functions.php:246
+msgid "Retina logo"
+msgstr "Retina логотип"
+
+#: includes/functions.php:246
+msgid "Upload Retina Logo"
+msgstr "Завантажити Retina лого"
+
+#: includes/functions.php:244
+msgid "Select the page to be displayed:"
+msgstr "Виберіть сторінку, яка буде відображатися:"
+
 #: includes/functions.php:211
 msgid "Logo"
 msgstr "Лого"
@@ -78,7 +106,7 @@ msgstr "503"
 
 #: includes/functions.php:216
 msgid "Service temporarily unavailable, Google analytics will be disable"
-msgstr "Сервіс тимчасово недоступний"
+msgstr "Сервіс тимчасово недоступний, Google Analytics буде відключена"
 
 #: includes/functions.php:222
 msgid "Google Analytics ID"

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Maintenance v2.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2016-02-18 18:41+0200\n"
+"PO-Revision-Date: 2016-02-18 16:57+0200\n"
 "Last-Translator: Digital03.net <info@digital03.net>\n"
 "Language-Team: Digital03.net <info@digital03.net>\n"
 "MIME-Version: 1.0\n"
@@ -54,6 +54,38 @@ msgstr "Cabecera"
 msgid "Description"
 msgstr "Descripción"
 
+# #-#-#-#-#  0catalog.po (Maintenance v2.3)  #-#-#-#-#
+# @ maintenance
+#: includes/functions.php:191 includes/functions.php:189
+msgid "Exclude pages"
+msgstr "Excluir páginas"
+
+#: includes/functions.php:242
+msgid "Footer Text"
+msgstr "Texto de pie de página"
+
+#: includes/functions.php:243
+msgid "Logo width"
+msgstr "Logotipo de ancho"
+
+#: includes/functions.php:244
+msgid "Logo height"
+msgstr "La altura del logotipo"
+
+#: includes/functions.php:246
+msgid "Retina logo"
+msgstr "Retina logo"
+
+#: includes/functions.php:246
+msgid "Upload Retina Logo"
+msgstr "Subir Retina Logo"
+
+# #-#-#-#-#  0catalog.po (Maintenance v2.3)  #-#-#-#-#
+# @ maintenance
+#: includes/functions.php:244 includes/functions.php:269
+msgid "Select the page to be displayed:"
+msgstr "Seleccione la página que se mostrará:"
+
 # @ maintenance
 #: includes/functions.php:222
 msgid "Logo"
@@ -82,7 +114,7 @@ msgstr "503"
 # @ maintenance
 #: includes/functions.php:227
 msgid "Service temporarily unavailable, Google analytics will be disable"
-msgstr "Servicio temporalmente no disponible"
+msgstr "Servicio temporalmente no disponible, Google Analytics se desactivará"
 
 # @ maintenance
 #: includes/functions.php:234
@@ -234,7 +266,10 @@ msgstr "Usuario"
 # @ maintenance
 #: load/functions.php:258
 msgid "Password"
-msgstr "Pass"
+msgstr "Contraseña"
+
+#~ msgid "Sign In"
+#~ msgstr "Registrarse"
 
 # @ anaglyph-framework
 #: includes/functions.php:161
@@ -252,11 +287,6 @@ msgid "Custom CSS"
 msgstr "CSS personalizado"
 
 # @ maintenance
-#: includes/functions.php:189
-msgid "Exclude pages"
-msgstr "Excluir páginas"
-
-# @ maintenance
 #: includes/functions.php:202
 msgid "Fruitful Code projects"
 msgstr "Proyectos de Fruitful Code"
@@ -265,11 +295,6 @@ msgstr "Proyectos de Fruitful Code"
 #: includes/functions.php:254
 msgid "CSS Code"
 msgstr "Código CSS"
-
-# @ maintenance
-#: includes/functions.php:269
-msgid "Select the page to be displayed:"
-msgstr "Selecciona la página a mostrar"
 
 # @ maintenance
 #: includes/functions.php:309
