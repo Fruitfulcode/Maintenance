@@ -21,8 +21,14 @@
     );
 		
 	
-	function mt_get_plugin_options() {
-    return wp_parse_args(get_option('maintenance_options', array()),  mt_get_default_array());
+	function mt_get_plugin_options($is_current = false) {
+		$saved	  = (array) get_option('maintenance_options');
+		if (!$is_current) {
+			$options  = wp_parse_args(get_option('maintenance_options', array()),  mt_get_default_array());
+		} else {
+			$options  = $saved;
+		}
+		return $options;
 	}
 	
 	function generate_input_filed($title, $id, $name, $value, $placeholder = '') {
