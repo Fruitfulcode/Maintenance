@@ -30,7 +30,7 @@
 		}
 		return $options;
 	}
-	
+
 	function generate_input_filed($title, $id, $name, $value, $placeholder = '') {
 		$out_filed = '';
 		$out_filed .= '<tr valign="top">';

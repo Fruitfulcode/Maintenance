@@ -292,6 +292,15 @@ function get_custom_login_code() {
 			echo $out_login_form;
 		}	
 	}
+
+	function reset_pass_url() {
+		include_once(ABSPATH . 'wp-admin/includes/plugin.php'); 
+		if (is_plugin_active('woocommerce/woocommerce.php')) {
+			$siteURL = get_option('siteurl');
+			return "{$siteURL}/wp-login.php?action=lostpassword";
+		}
+	}
+	add_filter( 'lostpassword_url',  'reset_pass_url', 999, 0 );
 	
 	function get_preloader_element() {
 		$out = '';
