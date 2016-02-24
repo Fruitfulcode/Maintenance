@@ -130,7 +130,6 @@ body.error .btn-open-login-form {
 	position:relative;
 	display: inline-block;
 }
-
 header {
 	position:relative;
 	display:inline-block;
@@ -178,7 +177,6 @@ footer {
 	display:inline-block;
 	width:100%;
 	color:#fff;
-	margin:20px 0px;
 }
 
 footer .center {
@@ -194,6 +192,7 @@ footer .center {
 	color:inherit;
 	font-size:16px;
 	text-align:center;
+	margin: 20px 0px;
 }
 
 .logo, .logo-retina {
@@ -205,7 +204,7 @@ footer .center {
 	display: block;
 }
 .logo-box {
-	padding: 30px 0;
+	padding: 50px 0 30px 0;
 }
 
 .logo-box-retina {
@@ -221,7 +220,7 @@ footer .center {
 	font-family: inherit;
 	font-weight:lighter;
 	text-align:center;
-	padding:20px 0;
+	padding:0 0 20px 0;
 	vertical-align:middle;
 }
 
@@ -548,12 +547,6 @@ and (orientation : landscape) {
 		overflow-y:scroll !important;
 	}
 	
-	footer {
-		top:0;
-		bottom:0;
-		margin: 40px 0 0 0;
-	}
-	
 	.center {
 		max-width:1004px;
 	}
@@ -571,7 +564,6 @@ and (orientation : landscape) {
 		transform: rotateY(0deg);
 	}
 }	
-
 @media screen and (min-width: 320px) and (max-width: 640px) and (orientation: landscape) {
 
 	#countdown .box-digits {
@@ -585,12 +577,6 @@ and (orientation : landscape) {
 	
 	#mailchimp-box {
 		margin:40px 0 0 0;
-	}
-	
-	footer {
-		top:0;
-		bottom:0;
-		margin: 10px 0 30px 0;
 	}
 
 	footer .social {
@@ -635,17 +621,9 @@ and (orientation : landscape) {
 	.login-form input[type="password"] { 
 		max-width: 170px; 
 	}
-	
-	footer {
-		top:0;
-		bottom:0;
-		margin: 10px 0 30px 0;
-	}
-
 	footer .social {
 		text-align:center;
 	}
-	
 }
 
 @media screen and (max-width: 360px) {	
@@ -664,11 +642,6 @@ and (orientation : landscape) {
 	.site-content h3.description { 
 		font-size: 18px; 
 	}
-	
-	.logo-box, .logo-box-retina  { 
-		padding:20px 0; 
-	}
-	
 	.btn-open-login-form { 
 		top:10%; 
 		font-size: 20px; 
@@ -685,12 +658,6 @@ and (orientation : landscape) {
 	.login-form input[type="password"] { 
 		max-width: 170px; 
 	}
-	
-	footer {
-		top:0;
-		bottom:0;
-		margin: 10px 0 30px 0;
-	}
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -700,10 +667,10 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) { 
 	.logo-box	{display: none;}
-	.logo-box-retina  {display:block; width:100%; margin:10px auto;}
+	.logo-box-retina  {display:block; width:100%; margin:50px auto 10px auto;}
 }
 
 @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) { 
 	.logo-box	{display: none;}
-	.logo-box-retina  {display:block; width:100%; margin:10px auto;}
+	.logo-box-retina  {display:block; width:100%; margin:50px auto 10px auto;}
 } 

@@ -187,10 +187,10 @@ function get_custom_login_code() {
 					$image_link_retina = $mt_options['retina_logo'];
 				}
 
-				if (!empty($mt_options['logo'])) echo '<div class="logo-box" rel="home"><img class="logo" style="width:'.$logo_w.'px; height:'.$logo_h.'px" src="'. esc_url($logo[0]) .'" alt="logo"/></div>';
-				if (!empty($mt_options['retina_logo'])) echo '<div class="logo-box-retina" rel="home"><img class="logo-retina" style="width:'.$logo_w.'px; height:'.$logo_h.'px" src="'. esc_url($retina_logo[0]) .'" alt="logo"/></div>';
-				if (!empty($mt_options['logo']) && empty($mt_options['retina_logo'])) echo '<div class="logo-box-retina" rel="home"><img class="logo-retina" style="width:'.$logo_w.'px; height:'.$logo_h.'px" src="'. esc_url($logo[0]) .'" alt="logo"/></div>';
-				if (empty($mt_options['logo']) && !empty($mt_options['retina_logo'])) echo '<div class="logo-box" rel="home"><img class="logo" style="width:'.$logo_w.'px; height:'.$logo_h.'px" src="'. esc_url($retina_logo[0]) .'" alt="logo"/></div>';		
+				if (!empty($mt_options['logo'])) echo '<div class="logo-box" rel="home"><img class="logo" width="'.$logo_w.'" height="'.$logo_h.'" src="'. esc_url($logo[0]) .'" alt="logo"/></div>';
+				if (!empty($mt_options['retina_logo'])) echo '<div class="logo-box-retina" rel="home"><img class="logo-retina" width="'.$logo_w.'" height="'.$logo_h.'" src="'. esc_url($retina_logo[0]) .'" alt="logo"/></div>';
+				if (!empty($mt_options['logo']) && empty($mt_options['retina_logo'])) echo '<div class="logo-box-retina" rel="home"><img class="logo-retina" width="'.$logo_w.'" height="'.$logo_h.'" src="'. esc_url($logo[0]) .'" alt="logo"/></div>';
+				if (empty($mt_options['logo']) && !empty($mt_options['retina_logo'])) echo '<div class="logo-box" rel="home"><img class="logo" width="'.$logo_w.'" height="'.$logo_h.'" src="'. esc_url($retina_logo[0]) .'" alt="logo"/></div>';		
 			
 			} else { 
 				echo '<div class="logo-box istext" rel="home" href="'.esc_url(site_url('')) .'"><h1 class="site-title">'. get_bloginfo( 'name' ) .'</h1></div>';
@@ -292,6 +292,15 @@ function get_custom_login_code() {
 			echo $out_login_form;
 		}	
 	}
+
+	function reset_pass_url() {
+		include_once(ABSPATH . 'wp-admin/includes/plugin.php'); 
+		if (is_plugin_active('woocommerce/woocommerce.php')) {
+			$siteURL = get_option('siteurl');
+			return "{$siteURL}/wp-login.php?action=lostpassword";
+		}
+	}
+	add_filter( 'lostpassword_url',  'reset_pass_url', 999, 0 );
 	
 	function get_preloader_element() {
 		$out = '';

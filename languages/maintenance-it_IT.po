@@ -43,6 +43,34 @@ msgstr "Intestazione"
 msgid "Description"
 msgstr "Descrizione"
 
+#: includes/functions.php:191
+msgid "Exclude pages"
+msgstr "Escludere le pagine"
+
+#: includes/functions.php:242
+msgid "Footer Text"
+msgstr "Piè di pagina di testo"
+
+#: includes/functions.php:243
+msgid "Logo width"
+msgstr "Larghezza logo"
+
+#: includes/functions.php:244
+msgid "Logo height"
+msgstr "Altezza logo"
+
+#: includes/functions.php:246
+msgid "Retina logo"
+msgstr "Retina logo"
+
+#: includes/functions.php:246
+msgid "Upload Retina Logo"
+msgstr "Carica Retina logo"
+
+#: includes/functions.php:244
+msgid "Select the page to be displayed:"
+msgstr "Selezionare la pagina da visualizzare:"
+
 #: /includes/functions.php:127
 msgid "Logo"
 msgstr "Logo"
@@ -65,7 +93,7 @@ msgstr "503"
 
 #: /includes/functions.php:131
 msgid "Service temporarily unavailable, Google analytics will be disable"
-msgstr "Servizio temporaneamente non disponibile"
+msgstr "Servizio temporaneamente non disponibile, Google Analytics sarà disabilitata"
 
 #: /includes/functions.php:132
 msgid "Google Analytics ID"
@@ -187,15 +215,27 @@ msgstr "Hai inserito nome utente e password errati!"
 
 #: /load/functions.php:223
 msgid "Username"
-msgstr "Username"
+msgstr "Nome utente"
 
 #: /load/functions.php:224
 msgid "Password"
-msgstr "Password"
+msgstr "Parola d'ordine"
 
 #: /load/functions.php:225
 msgid "Sign In"
 msgstr "Entra"
+
+#: load/functions.php:262
+msgid "Lost Password"
+msgstr "Password dimenticata"
+
+#: load/functions.php:263
+msgid "Login"
+msgstr "Accesso"
+
+#: load/functions.php:259
+msgid "User Login"
+msgstr "Login utente"
 
 #, fuzzy
 #~ msgid "maintenance"

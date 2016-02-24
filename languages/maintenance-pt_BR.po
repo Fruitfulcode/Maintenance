@@ -28,7 +28,7 @@ msgstr "Премиум версия"
 
 #: /includes/functions.php:116
 msgid "Support"
-msgstr ""
+msgstr "Apoio"
 
 #: /includes/functions.php:124
 msgid "Page title"
@@ -41,6 +41,34 @@ msgstr "Cabeçalho"
 #: /includes/functions.php:126
 msgid "Description"
 msgstr "Descrição"
+
+#: includes/functions.php:191
+msgid "Exclude pages"
+msgstr "Excluir páginas"
+
+#: includes/functions.php:242
+msgid "Footer Text"
+msgstr "Texto de rodapé"
+
+#: includes/functions.php:243
+msgid "Logo width"
+msgstr "Logo width"
+
+#: includes/functions.php:244
+msgid "Logo height"
+msgstr "Logo altura"
+
+#: includes/functions.php:246
+msgid "Retina logo"
+msgstr "Retina logo"
+
+#: includes/functions.php:246
+msgid "Upload Retina Logo"
+msgstr "Enviar Retina logo "
+
+#: includes/functions.php:244
+msgid "Select the page to be displayed:"
+msgstr "Seleccione a página a ser exibida:"
 
 #: /includes/functions.php:127
 msgid "Logo"
@@ -64,7 +92,7 @@ msgstr ""
 
 #: /includes/functions.php:131
 msgid "Service temporarily unavailable, Google analytics will be disable"
-msgstr "Serviço temporariamente indisponível"
+msgstr "Serviço temporariamente indisponível, o Google Analytics será desativado"
 
 #: /includes/functions.php:132
 msgid "Google Analytics ID"
@@ -185,6 +213,18 @@ msgstr "Senha"
 #: /load/functions.php:225
 msgid "Sign In"
 msgstr "Entrar"
+
+#: load/functions.php:262
+msgid "Lost Password"
+msgstr "Senha perdida"
+
+#: load/functions.php:263
+msgid "Login"
+msgstr "Entrar"
+
+#: load/functions.php:259
+msgid "User Login"
+msgstr "Login de usuário"
 
 #, fuzzy
 #~ msgid "maintenance"

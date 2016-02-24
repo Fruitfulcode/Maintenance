@@ -42,6 +42,34 @@ msgstr "Otsake"
 msgid "Description"
 msgstr "Kuvaus"
 
+#: includes/functions.php:191
+msgid "Exclude pages"
+msgstr "Sulkea pois sivut"
+
+#: includes/functions.php:242
+msgid "Footer Text"
+msgstr "Footer teksti"
+
+#: includes/functions.php:243
+msgid "Logo width"
+msgstr "Logon leveys"
+
+#: includes/functions.php:244
+msgid "Logo height"
+msgstr "Logon korkeus"
+
+#: includes/functions.php:246
+msgid "Retina logo"
+msgstr "Retina logo"
+
+#: includes/functions.php:246
+msgid "Upload Retina Logo"
+msgstr "Lataa Retina Logo"
+
+#: includes/functions.php:244
+msgid "Select the page to be displayed:"
+msgstr "Valitse sivun näkyviin:"
+
 #: /includes/functions.php:127
 msgid "Logo"
 msgstr "Logo"
@@ -64,7 +92,7 @@ msgstr "503"
 
 #: /includes/functions.php:131
 msgid "Service temporarily unavailable, Google analytics will be disable"
-msgstr "Palvelu ei ole käytettävissä"
+msgstr "Tarjoaminen tilapäisesti, Google Analytics poistetaan käytöstä"
 
 #: /includes/functions.php:132
 msgid "Google Analytics ID"
@@ -196,6 +224,18 @@ msgstr "Salasana"
 #: /load/functions.php:225
 msgid "Sign In"
 msgstr "Kirjaudu"
+
+#: load/functions.php:262
+msgid "Lost Password"
+msgstr "Kadonnut Salasana"
+
+#: load/functions.php:263
+msgid "Login"
+msgstr "Kirjaudu sisään"
+
+#: load/functions.php:259
+msgid "User Login"
+msgstr "Käyttäjän kirjautuminen"
 
 #~ msgid "Contact support"
 #~ msgstr "Служба поддержки"

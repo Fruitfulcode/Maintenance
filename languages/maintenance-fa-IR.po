@@ -43,6 +43,34 @@ msgstr "عنوان"
 msgid "Description"
 msgstr "توضیحات"
 
+#: includes/functions.php:191
+msgid "Exclude pages"
+msgstr "به غیر از صفحات"
+
+#: includes/functions.php:242
+msgid "Footer Text"
+msgstr "پاورقی متن"
+
+#: includes/functions.php:243
+msgid "Logo width"
+msgstr "عرض آرم"
+
+#: includes/functions.php:244
+msgid "Logo height"
+msgstr "ارتفاع آرم"
+
+#: includes/functions.php:246
+msgid "Retina logo"
+msgstr "آرم شبکیه چشم"
+
+#: includes/functions.php:246
+msgid "Upload Retina Logo"
+msgstr "لوگو بارگذاری شبکیه چشم"
+
+#: includes/functions.php:244
+msgid "Select the page to be displayed:"
+msgstr "صفحه نمایش داده می شود را انتخاب کنید:"
+
 #: /includes/functions.php:127
 msgid "Logo"
 msgstr "لوگو"
@@ -65,7 +93,7 @@ msgstr ""
 
 #: /includes/functions.php:131
 msgid "Service temporarily unavailable, Google analytics will be disable"
-msgstr "سرویس موقتا در دسترس نیست"
+msgstr "خدمات موقتا در دسترس، تجزیه و تحلیل گوگل غیرفعال خواهد شد"
 
 #: /includes/functions.php:132
 msgid "Google Analytics ID"
@@ -182,6 +210,18 @@ msgstr "کلمه عبور"
 #: /load/functions.php:225
 msgid "Sign In"
 msgstr "ورود"
+
+#: load/functions.php:262
+msgid "Lost Password"
+msgstr "رمز فراموش شده"
+
+#: load/functions.php:263
+msgid "Login"
+msgstr "ورود"
+
+#: load/functions.php:259
+msgid "User Login"
+msgstr "ورود کاربر"
 
 msgid "maintenance"
 msgstr "تعمیر و نگهداری"
