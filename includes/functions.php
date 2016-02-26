@@ -209,11 +209,13 @@
 						$out_filed .= '<td>';
 							$out_filed .= '<filedset>';
 								$out_filed .= '<select class="select2_customize" name="lib_options['.$name.']" id="'.esc_attr($id).'">';
-								foreach ($gg_fonts[$curr_font][$vars] as $key) {
-									$out_filed .= '<option value="'.$key['id'] .'" '. selected( $value, $key['id'], false ) .'>'.$key['name'].'</option>';
+								if(!empty($gg_fonts[$curr_font])){
+									foreach ($gg_fonts[$curr_font][$vars] as $key) {
+										$out_filed .= '<option value="'.$key['id'] .'" '. selected( $value, $key['id'], false ) .'>'.$key['name'].'</option>';
+									}
 								}
 								$out_filed .= '</select>';
-							
+								
 							$out_filed .= '<filedset>';
 						$out_filed .= '</td>';	
 					$out_filed .= '</tr>';
@@ -401,8 +403,12 @@
 	
 	function get_font_fileds_action() {
 		$mt_option = mt_get_plugin_options(true);
-		echo get_fonts_field(__('Font family', 'maintenance'), 'body_font_family', 'body_font_family', esc_attr($mt_option['body_font_family'])); 	
-		echo get_fonts_subsets(__('Subsets', 'maintenance'), 'body_font_subset', 'body_font_subset', esc_attr($mt_option['body_font_subset'])); 			
+		echo get_fonts_field(__('Font family', 'maintenance'), 'body_font_family', 'body_font_family', esc_attr($mt_option['body_font_family'])); 
+ 		$subset = '';
+		if(!empty($mt_option['body_font_subset'])) {
+			$subset = $mt_option['body_font_subset'];
+		}
+		echo get_fonts_subsets(__('Subsets', 'maintenance'), 'body_font_subset', 'body_font_subset', esc_attr($subset));		
 	}	
 	add_action ('maintenance_font_fields', 'get_font_fileds_action', 10);
 	
