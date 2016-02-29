@@ -193,8 +193,8 @@ function get_custom_login_code() {
 				if (empty($mt_options['logo']) && !empty($mt_options['retina_logo'])) echo '<div class="logo-box" rel="home"><img class="logo" width="'.$logo_w.'" height="'.$logo_h.'" src="'. esc_url($retina_logo[0]) .'" alt="logo"/></div>';		
 			
 			} else { 
-				echo '<div class="logo-box istext" rel="home" href="'.esc_url(site_url('')) .'"><h1 class="site-title">'. get_bloginfo( 'name' ) .'</h1></div>';
-				echo '<div class="logo-box-retina istext" rel="home" href="'.esc_url(site_url('')) .'"><h1 class="site-title">'. get_bloginfo( 'name' ) .'</h1></div>';
+				echo '<div class="logo-box istext" rel="home"><h1 class="site-title">'. get_bloginfo( 'name' ) .'</h1></div>';
+				echo '<div class="logo-box-retina istext" rel="home"><h1 class="site-title">'. get_bloginfo( 'name' ) .'</h1></div>';
 			} 
 			
 	}
