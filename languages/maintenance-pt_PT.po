@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Maintenance\n"
 "POT-Creation-Date: 2016-03-03 16:42+0000\n"
-"PO-Revision-Date: 2016-03-03 16:47+0000\n"
+"PO-Revision-Date: 2016-03-03 16:56+0000\n"
 "Last-Translator: Pedro Mendonça <ped.gaspar@gmail.com>\n"
 "Language-Team: Pedro Mendonça <ped.gaspar@gmail.com>\n"
 "Language: pt_PT\n"
@@ -115,8 +115,7 @@ msgstr "503"
 
 #: includes/functions.php:290
 msgid "Service temporarily unavailable, Google analytics will be disable."
-msgstr ""
-"Serviço temporariamente indisponível, o Google Analytics será desactivado."
+msgstr "Serviço temporariamente indisponível, o Google Analytics será desactivado."
 
 #: includes/functions.php:297
 msgid "Google Analytics ID"
@@ -184,20 +183,8 @@ msgstr "Tem algumas dúvidas?"
 
 #: includes/functions.php:420
 #, php-format
-msgid ""
-"You may find answers to your questions at <a target=\"_blank\" href=\"http://"
-"support.fruitfulcode.com/hc/en-us/sections/200406386\">support forum</"
-"a><br>You may  <a target=\"_blank\" href=\"http://support.fruitfulcode.com/"
-"hc/en-us/requests/new\">contact us</a> with customization requests and "
-"suggestions.<br> Please visit our website to learn about us and our services "
-"<a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
-msgstr ""
-"Poderá encontrar respostas às suas dúvidas no <a target=\"_blank\" href="
-"\"http://support.fruitfulcode.com/hc/en-us/sections/200406386\">fórum de "
-"suporte</a>.<br>Pode <a target=\"_blank\" href=\"http://support.fruitfulcode."
-"com/hc/en-us/requests/new\">contactar-nos</a> para pedidos de personalização "
-"e sugestões.<br> Por favor, visite o nosso site para nos conhecer e aos "
-"nossos serviços em <a href=\"%1$s\" title=\"%2$s\">%2$s</a>."
+msgid "You may find answers to your questions at <a target=\"_blank\" href=\"http://support.fruitfulcode.com/hc/en-us/sections/200406386\">support forum</a><br>You may  <a target=\"_blank\" href=\"http://support.fruitfulcode.com/hc/en-us/requests/new\">contact us</a> with customization requests and suggestions.<br> Please visit our website to learn about us and our services <a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
+msgstr "Poderá encontrar respostas às suas dúvidas no <a target=\"_blank\" href=\"http://support.fruitfulcode.com/hc/en-us/sections/200406386\">fórum de suporte</a>.<br>Pode <a target=\"_blank\" href=\"http://support.fruitfulcode.com/hc/en-us/requests/new\">contactar-nos</a> para pedidos de personalização e sugestões.<br> Por favor, visite o nosso site para nos conhecer e aos nossos serviços em <a href=\"%1$s\" title=\"%2$s\">%2$s</a>."
 
 #: includes/functions.php:431
 msgid "This plugin is translation friendly"
@@ -205,12 +192,8 @@ msgstr "Este plugin pode ser traduzido"
 
 #: includes/functions.php:432
 #, php-format
-msgid ""
-"Want to improve translation or make one for your native language? <a href="
-"\"%1$s\" title=\"%2$s\">%2$s</a>"
-msgstr ""
-"Quer melhorar a tradução ou fazer uma nova para o seu idioma nativo? <a href="
-"\"%1$s\" title=\"%2$s\">%2$s</a>"
+msgid "Want to improve translation or make one for your native language? <a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
+msgstr "Quer melhorar a tradução ou fazer uma nova para o seu idioma nativo? <a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
 
 #: includes/functions.php:434
 msgid "Follow this tutorial"
@@ -238,20 +221,8 @@ msgstr "Funcionalidades adicionais"
 
 #: includes/functions.php:474
 #, php-format
-msgid ""
-"Purchase <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
-"plugin/2781350?ref=fruitfulcode\" target=\"_blank\">PRO</a> version  with "
-"extended functionality. %1$s If you like our plugin please <a target=\"_blank"
-"\" href=\"http://wordpress.org/support/view/plugin-reviews/maintenance?"
-"filter=5\">rate it</a>, <a title=\"leave feedbacks\" href=\"%2$s\" target="
-"\"_blank\">leave feedbacks</a>."
-msgstr ""
-"Compre a versão <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
-"plugin/2781350?ref=fruitfulcode\" target=\"_blank\">PRO</a> com "
-"funcionalidades adicionais. %1$s Se gostar do nosso plugin, por favor <a "
-"target=\"_blank\" href=\"http://wordpress.org/support/view/plugin-reviews/"
-"maintenance?filter=5\">avalie-o</a>, <a title=\"leave feedbacks\" href=\"%2$s"
-"\" target=\"_blank\">deixe feedbacks</a>."
+msgid "Purchase <a href=\"http://codecanyon.net/item/maintenance-wordpress-plugin/2781350?ref=fruitfulcode\" target=\"_blank\">PRO</a> version  with extended functionality. %1$s If you like our plugin please <a target=\"_blank\" href=\"http://wordpress.org/support/view/plugin-reviews/maintenance?filter=5\">rate it</a>, <a title=\"leave feedbacks\" href=\"%2$s\" target=\"_blank\">leave feedbacks</a>."
+msgstr "Compre a versão <a href=\"http://codecanyon.net/item/maintenance-wordpress-plugin/2781350?ref=fruitfulcode\" target=\"_blank\">PRO</a> com funcionalidades adicionais. %1$s Se gostar do nosso plugin, por favor <a target=\"_blank\" href=\"http://wordpress.org/support/view/plugin-reviews/maintenance?filter=5\">avalie-o</a>, <a title=\"leave feedbacks\" href=\"%2$s\" target=\"_blank\">deixe feedbacks</a>."
 
 #: includes/functions.php:478
 msgid "Demo website"
@@ -267,7 +238,7 @@ msgstr "O site está em construção"
 
 #: includes/functions.php:670
 msgid "Maintenance mode is on"
-msgstr ";odo de manutenção activo"
+msgstr "Modo de manutenção activo"
 
 #: includes/functions.php:671
 msgid "Website will be available soon"
@@ -314,20 +285,8 @@ msgid "http://wordpress.org/plugins/maintenance/"
 msgstr "http://wordpress.org/plugins/maintenance/"
 
 #. Description of the plugin/theme
-msgid ""
-"Take your website for maintenance away from public view. Use maintenance "
-"plugin if your website is in development or you need to change a few things, "
-"run an upgrade. Make it only accessible by login and password. Plugin has a "
-"options to add a logo, background, headline, message, colors, login, etc. "
-"Extended PRO with more features version is available for purchase."
-msgstr ""
-"Faça a manutenção do seu site longe da vista do público. Utilize um plugin "
-"de manutenção se o seu site estiver em desenvolvimento, se precisar de "
-"alterar algumas coisas, ou executar uma actualização. Torne-o acessível "
-"através de iniciar sessão com nome de utilizador e senha. O plugin tem "
-"opções para adicionar logótipo, fundo, cabeçalho, mensagem, cores, início de "
-"sessão, etc. Está disponível para compra uma versão Pro com recursos "
-"adicionais."
+msgid "Take your website for maintenance away from public view. Use maintenance plugin if your website is in development or you need to change a few things, run an upgrade. Make it only accessible by login and password. Plugin has a options to add a logo, background, headline, message, colors, login, etc. Extended PRO with more features version is available for purchase."
+msgstr "Faça a manutenção do seu site longe da vista do público. Utilize um plugin de manutenção se o seu site estiver em desenvolvimento, se precisar de alterar algumas coisas, ou executar uma actualização. Torne-o acessível através de iniciar sessão com nome de utilizador e senha. O plugin tem opções para adicionar logótipo, fundo, cabeçalho, mensagem, cores, início de sessão, etc. Está disponível para compra uma versão Pro com recursos adicionais."
 
 #. Author of the plugin/theme
 msgid "fruitfulcode"
@@ -336,3 +295,4 @@ msgstr "fruitfulcode"
 #. Author URI of the plugin/theme
 msgid "http://fruitfulcode.com"
 msgstr "http://fruitfulcode.com"
+
