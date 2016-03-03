@@ -162,14 +162,14 @@
 					$out_filed .= '<td>';
 						$out_filed .= '<filedset>';
 						if(!empty($standart_fonts)) {
-								$out_items .= '<optgroup label="' . __('Standard Fonts', 'anaglyph-framework') . '">';
+								$out_items .= '<optgroup label="' . __('Standard Fonts', 'maintenance') . '">';
 								foreach ($standart_fonts as $key => $options) {
 									$out_items .= '<option value="'.$key.'" '. selected( $value, $key, false ) .'>'.$options.'</option>';
 								}
 						}	
 						
 						if (!empty($gg_fonts)) {
-								$out_items .= '<optgroup label="' . __('Google Web Fonts', 'anaglyph-framework') . '">';
+								$out_items .= '<optgroup label="' . __('Google Web Fonts', 'maintenance') . '">';
 							foreach ($gg_fonts as $key => $options) {
 								$out_items .= '<option value="'.$key .'" '. selected( $value, $key, false ) .'>'.$key.'</option>';
 							}

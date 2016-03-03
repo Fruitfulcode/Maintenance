@@ -3,7 +3,7 @@
 
 	function maintenance_admin_setup() {
 		global	$maintenance_variable;
-				$maintenance_variable->options_page = add_menu_page('Maintenance', 'Maintenance', 'manage_options', 'maintenance', 'manage_options',  MAINTENANCE_URI . '/images/icon-small.png');
+				$maintenance_variable->options_page = add_menu_page( __( 'Maintenance', 'maintenance' ), __( 'Maintenance', 'maintenance' ), 'manage_options', 'maintenance', 'manage_options',  MAINTENANCE_URI . '/images/icon-small.png');
 		add_action( "admin_init", 'mt_register_settings');
 		add_action( "admin_head-{$maintenance_variable->options_page}", 'maintenance_metaboxes_scripts' );
 		add_action( "admin_print_styles-{$maintenance_variable->options_page}",  'admin_print_custom_styles');
