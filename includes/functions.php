@@ -540,8 +540,6 @@
 		$vtime_start = date_i18n( 'h:i:s A', strtotime( '01:00:00 am')); 
 		$vtime_end 	 = date_i18n( 'h:i:s A', strtotime( '12:59:59 pm')); 
 			
-		
-		$mt_options	= mt_get_plugin_options(true);
 			if (!is_user_logged_in()) {
 				if ($mt_options['state']) {
 					
@@ -686,7 +684,8 @@
 			'gg_analytics_id'   => '',
 			'is_login'			=> true,
 			'custom_css'		=> '',
-			'exclude_pages'		=> ''
+			'exclude_pages'		=> '',
+			'preloader'			=> true
 		);
 		return apply_filters( 'mt_get_default_array', $defaults );
 	}
