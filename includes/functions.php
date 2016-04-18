@@ -287,7 +287,7 @@
 				do_action('maintenance_color_fields');
 				do_action('maintenance_font_fields');
 				generate_check_filed(__('Admin bar', 'maintenance'), __('Show admin bar', 'maintenance'), 'admin_bar_enabled', 'admin_bar_enabled', isset($mt_option['admin_bar_enabled']));
-				generate_check_filed(__('503', 'maintenance'), __('Service temporarily unavailable, Google analytics will be disable.', 'maintenance'), '503_enabled', '503_enabled',  $mt_option['503_enabled']);
+				generate_check_filed(__('503', 'maintenance'), __('Service temporarily unavailable, Google analytics will be disable.', 'maintenance'), '503_enabled', '503_enabled',  !empty($mt_option['503_enabled']));
 				
 				$gg_analytics_id = '';
 				if (!empty($mt_option['gg_analytics_id'])) {
@@ -541,7 +541,7 @@
 		$vtime_end 	 = date_i18n( 'h:i:s A', strtotime( '12:59:59 pm')); 
 			
 			if (!is_user_logged_in()) {
-				if ($mt_options['state']) {
+				if (!empty($mt_options['state'])) {
 					
 					if (!empty($mt_options['expiry_date_start']))
 						$vdate_start = $mt_options['expiry_date_start'];
