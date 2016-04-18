@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
-"POT-Creation-Date: 2014-07-08 11:10+0200\n"
-"PO-Revision-Date: 2016-04-13 16:39+0300\n"
+"POT-Creation-Date: 2014-02-18 12:25+0200\n"
+"PO-Revision-Date: 2016-04-18 15:42+0300\n"
 "Language-Team: fruitfulcode\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,43 +16,31 @@ msgstr ""
 "Last-Translator: \n"
 "Language: ar\n"
 
-#: includes/admin.php:88
+#: /includes/admin.php:84
 msgid "Save changes"
 msgstr "حفظ التغيرات"
 
-#: includes/functions.php:161
-msgid "Standard Fonts"
-msgstr "مستوى الخطوط"
-
-#: includes/functions.php:168
-msgid "Google Web Fonts"
-msgstr "خطوط الويب من Google"
-
-#: includes/functions.php:187
+#: /includes/functions.php:104
 msgid "General Settings"
 msgstr "الإعدادات العامة"
 
-#: includes/functions.php:188
-msgid "Custom CSS"
-msgstr "لغة تنسيق ويب حسب الطلب"
-
-#: includes/functions.php:194
+#: /includes/functions.php:110
 msgid "Pro version"
 msgstr "نسخة للمحترفين"
 
-#: includes/functions.php:200
+#: /includes/functions.php:116
 msgid "Support"
 msgstr "الدعم"
 
-#: includes/functions.php:208
+#: /includes/functions.php:124
 msgid "Page title"
 msgstr "عنوان الصفحة"
 
-#: includes/functions.php:209
+#: /includes/functions.php:125
 msgid "Headline"
 msgstr "عنوان رئيسي"
 
-#: includes/functions.php:210
+#: /includes/functions.php:126
 msgid "Description"
 msgstr "وصف"
 
@@ -84,83 +72,75 @@ msgstr "تحميل الشبكية شعار"
 msgid "Select the page to be displayed:"
 msgstr "حدد الصفحة للظهور:"
 
-#: includes/functions.php:211
+#: /includes/functions.php:127
 msgid "Logo"
-msgstr "تحميل الشعار"
+msgstr "شعار"
 
-#: includes/functions.php:211
+#: /includes/functions.php:127
 msgid "Upload Logo"
 msgstr "تحميل الشعار"
 
-#: includes/functions.php:215
+#: /includes/functions.php:130
 msgid "Admin bar"
 msgstr "شريط المشرف"
 
-#: includes/functions.php:215
+#: /includes/functions.php:130
 msgid "Show admin bar"
 msgstr "عرض شريط المشرف"
 
-#: includes/functions.php:216
+#: /includes/functions.php:131
 msgid "503"
 msgstr "503"
 
-#: includes/functions.php:216
+#: /includes/functions.php:131
 msgid "Service temporarily unavailable, Google analytics will be disable"
 msgstr "الخدمة غير متوفرة مؤقتا، سيتم تعطيل تحليلات جوجل"
 
-#: includes/functions.php:222
+#: /includes/functions.php:132
 msgid "Google Analytics ID"
-msgstr "معرف Google Analytics"
+msgstr "Google Analytics ID"
 
-#: includes/functions.php:222
+#: /includes/functions.php:132
 msgid "UA-XXXXX-X"
 msgstr "UA-XXXXX-X"
 
-#: includes/functions.php:223
+#: /includes/functions.php:133
 msgid "Blur intensity"
 msgstr "كثافة طمس"
 
-#: includes/functions.php:224
+#: /includes/functions.php:134
 msgid "Background blur"
 msgstr "طمس الخلفية"
 
-#: includes/functions.php:224
+#: /includes/functions.php:134
 msgid "Apply a blur"
 msgstr "تطبيق طمس"
 
-#: includes/functions.php:225
+#: /includes/functions.php:135
 msgid "Login On / Off"
 msgstr "تسجيل الدخول تشغيل / إيقاف"
 
-#: includes/functions.php:235
-msgid "CSS Code"
-msgstr "كود CSS"
-
-#: includes/functions.php:242
+#: /includes/functions.php:142
 msgid "Background image"
 msgstr "الصورة الخلفية"
 
-#: includes/functions.php:242
+#: /includes/functions.php:142
 msgid "Upload Background"
 msgstr "تحميل خلفية"
 
-#: includes/functions.php:248
+#: /includes/functions.php:148
 msgid "Background color"
 msgstr "لون الخلفية"
 
-#: includes/functions.php:249
+#: /includes/functions.php:149
 msgid "Font color"
 msgstr "لون الخط"
 
-#: includes/functions.php:256
-msgid "Font family"
-msgstr "خط العائلة"
-
-#: includes/functions.php:264
+#: /includes/functions.php:157
 msgid "Have any questions?"
 msgstr "لديك أي أسئلة؟"
 
-#: includes/functions.php:265
+#: /includes/functions.php:158
 #, php-format
 msgid ""
 "You may find answers to your questions at <a target=\"_blank\" href=\"http://"
@@ -170,17 +150,12 @@ msgid ""
 "Please visit our website to learn about us and our services <a href=\"%1$s\" "
 "title=\"%2$s\">%2$s</a>"
 msgstr ""
-"قد تجد إجابات على أسئلتك في <a target=\"_blank\" href=\"http://wordpress.org/"
-"support/plugin/maintenance\"> منتدى الدعم <مكنك<a target=\"_blank\" href="
-"\"mailto:mail@fruitfulcode.com?subject=Maintenance plugin\">br></a> الاتصال "
-"بنا </a> مع طلبات التخصيص والاقتراحات. <br> Please visit our website to "
-"learn about us and our services <a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
 
-#: includes/functions.php:276
+#: /includes/functions.php:169
 msgid "Extended functionality"
 msgstr "وظائف الموسعة"
 
-#: includes/functions.php:277
+#: /includes/functions.php:170
 #, php-format
 msgid ""
 "Purchase <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
@@ -190,60 +165,60 @@ msgid ""
 "filter=5\">rate it</a>, <a title=\"leave feedbacks\" href=\"%2$s\" target="
 "\"_blank\">leave feedbacks</a>."
 msgstr ""
-"شراء<a href=\"http://codecanyon.net/item/maintenance-wordpress-"
-"plugin/2781350?ref=fruitfulcode\" target=\"_blank\"> المؤيد <نسخة مع "
-"وظائف     %1$s إذا كنت ترغب المساعد لدينا من فضلك  <a target=\"_blank\" href="
-"\"http://wordpress.org/support/view/plugin-reviews/maintenance?filter=5\"> "
-"قيمه </a> , <a title=\"leave feedbacks\" href=\"%2$s\" target=\"_blank\">ترك "
-"الاصداء</a>  الموسعة.>/a>"
+"شراء <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
+"plugin/2781350?ref=fruitfulcode\" target=\"_blank\"> محترف </a> نسخة مع "
+"وظائف الموسعة.  %1$s إذا كنت ترغب المساعد لدينا من فضلك  <a target=\"_blank"
+"\" href=\"http://wordpress.org/support/view/plugin-reviews/maintenance?"
+"filter=5\"> قيمه </a>,  <a title=\"leave feedbacks\" href=\"%2$s\" target="
+"\"_blank\"> ترك الاصداء .</a>"
 
-#: includes/functions.php:281
+#: /includes/functions.php:174
 msgid "Demo website"
 msgstr "الموقع التجريبي"
 
-#: includes/functions.php:340
+#: /includes/functions.php:232
 msgid "Maintenance"
 msgstr "صيانة"
 
-#: includes/functions.php:363
+#: /includes/functions.php:255
 msgid "Website is under construction"
 msgstr "الموقع قيد الإنشاء"
 
-#: includes/functions.php:364
+#: /includes/functions.php:256
 msgid "Maintenance mode is on"
 msgstr "وضع الصيانة على"
 
-#: includes/functions.php:365
+#: /includes/functions.php:257
 msgid "Website will be available soon"
 msgstr "سيكون الموقع متاحا في وقت قريب"
 
-#: load/functions.php:37
+#: /load/functions.php:37
 msgid "Permission access denied!"
 msgstr "وصول تم رفض الإذن!"
 
-#: load/functions.php:45
+#: /load/functions.php:45
 msgid "You entered your login are incorrect!"
 msgstr "لقد أدخلت تسجيل الدخول الخاصة بك غير صحيحة!"
 
-#: load/functions.php:49
+#: /load/functions.php:49
 msgid "You entered your password are incorrect!"
 msgstr "لقد أدخلت كلمة المرور غير صحيحة!"
 
-#: load/functions.php:52
+#: /load/functions.php:52
 msgid "You entered your login and password are incorrect!"
 msgstr "لقد أدخلت اسم المستخدم وكلمة المرور غير صحيحة!"
 
-#: load/functions.php:259
-msgid "User Login"
-msgstr "دخول المستخدم"
-
-#: load/functions.php:260
+#: /load/functions.php:223
 msgid "Username"
 msgstr "اسم المستخدم"
 
-#: load/functions.php:261
+#: /load/functions.php:224
 msgid "Password"
 msgstr "كلمه السر"
+
+#: /load/functions.php:225
+msgid "Sign In"
+msgstr "تسجيل الدخول"
 
 #: load/functions.php:262
 msgid "Lost Password"
@@ -253,8 +228,12 @@ msgstr "كلمة مرور مفقودة"
 msgid "Login"
 msgstr "تسجيل الدخول"
 
-msgid "Sign In"
-msgstr "تسجيل الدخول"
+#: load/functions.php:259
+msgid "User Login"
+msgstr "دخول المستخدم"
+
+msgid "maintenance"
+msgstr "صيانة"
 
 msgid "Contact support"
 msgstr "اتصل بالدعم"
@@ -272,9 +251,9 @@ msgid ""
 "\"%2$s\" target=\"_blank\">leave feedback</a> or purchase extended version "
 "%1$s with more other features."
 msgstr ""
-"إذا كنت ترغب المساعد لدينا يرجى معدل عليه %1$s <a title=\"leave feedback\" "
-"href=\"%2$s\" target=\"_blank\">leave feedback</a> أو شراء تمديد الإصدار "
-"%1$s مع المزيد من الميزات الأخرى."
+"إذا كنت ترغب المساعد لدينا يرجى معدل لها  <a title=\"leave feedback\" href="
+"\"%2$s\" target=\"_blank\"> اترك تقييم للخدمة </a> أو شراء نسخة موسعة %1$s "
+"مع المزيد من الميزات الأخرى."
 
 msgid "Purchase"
 msgstr "شراء"
@@ -290,6 +269,9 @@ msgstr "تحقق من نسخة موسعة لدينا من البرنامج ال�
 
 msgid "Your session has expired."
 msgstr "انتهت جلسة العمل الخاصة بك."
+
+msgid "Customer login"
+msgstr "تسجيل الدخول العملاء"
 
 msgid "Please login to see website"
 msgstr "الرجاء الدخول لمعرفة الموقع"
