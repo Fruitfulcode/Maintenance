@@ -287,7 +287,7 @@
 				do_action('maintenance_color_fields');
 				do_action('maintenance_font_fields');
 				generate_check_filed(__('Admin bar', 'maintenance'), __('Show admin bar', 'maintenance'), 'admin_bar_enabled', 'admin_bar_enabled', isset($mt_option['admin_bar_enabled']));
-				generate_check_filed(__('503', 'maintenance'), __('Service temporarily unavailable, Google analytics will be disable.', 'maintenance'), '503_enabled', '503_enabled',  isset($mt_option['503_enabled']));
+				generate_check_filed(__('503', 'maintenance'), __('Service temporarily unavailable, Google analytics will be disable.', 'maintenance'), '503_enabled', '503_enabled',  $mt_option['503_enabled']);
 				
 				$gg_analytics_id = '';
 				if (!empty($mt_option['gg_analytics_id'])) {
@@ -680,7 +680,7 @@
 			'is_blur'			=> false,
 			'blur_intensity'	=> 5,	
 			'admin_bar_enabled' => true,
-			'503_enabled'		=> true,
+			'503_enabled'		=> false,
 			'gg_analytics_id'   => '',
 			'is_login'			=> true,
 			'custom_css'		=> '',
