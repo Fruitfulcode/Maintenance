@@ -331,7 +331,7 @@ function get_custom_login_code() {
 	function get_headers_503() {
 		$mt_options  = mt_get_plugin_options(true);
 		nocache_headers();
-		if (isset($mt_options['503_enabled'])) {
+		if (!empty($mt_options['503_enabled'])) {
 			$protocol = "HTTP/1.0";
 			if ( "HTTP/1.1" == $_SERVER["SERVER_PROTOCOL"] )
 				$protocol = "HTTP/1.1";

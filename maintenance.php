@@ -41,6 +41,7 @@ class maintenance {
 			add_action('wp', 		array( &$this, 'mt_template_redirect'), 1);
 			add_action('wp_logout',	array( &$this, 'mt_user_logout'));
 			add_action('init', 		array( &$this, 'mt_admin_bar'));
+			add_action('init', 		array( &$this, 'mt_set_global_options'), 1);
 		}
 		
 		function constants() {
@@ -51,6 +52,11 @@ class maintenance {
 			define( 'MAINTENANCE_URI', trailingslashit( plugin_dir_url( __FILE__ ) ) );
 			define( 'MAINTENANCE_INCLUDES', MAINTENANCE_DIR . trailingslashit( 'includes' ) );
 			define( 'MAINTENANCE_LOAD',     MAINTENANCE_DIR . trailingslashit( 'load' ) );
+		}
+		
+		function mt_set_global_options() {
+			global $mt_options;
+			$mt_options =  mt_get_plugin_options(true);		
 		}
 		
 		function lang() {
