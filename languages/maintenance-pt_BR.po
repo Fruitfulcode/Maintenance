@@ -1,160 +1,241 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
-"POT-Creation-Date: 2014-02-18 12:25+0200\n"
-"PO-Revision-Date: 2014-02-18 12:27+0200\n"
+"POT-Creation-Date: 2016-04-18 15:45+0300\n"
+"PO-Revision-Date: 2016-04-18 16:11+0300\n"
 "Last-Translator: \n"
 "Language-Team: fruitfulcode\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.8.7\n"
 "X-Poedit-KeywordsList: _;_e;__;_x\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: /includes/admin.php:84
+#: includes/admin.php:77 includes/functions.php:603
+#, fuzzy
+msgid "Maintenance"
+msgstr "Manutenção"
+
+#: includes/admin.php:77 includes/admin.php:94
 msgid "Save changes"
 msgstr "Salvar alterações"
 
-#: /includes/functions.php:104
+#: includes/functions.php:169
+msgid "Standard Fonts"
+msgstr "Fontes padrão"
+
+#: includes/functions.php:176
+msgid "Google Web Fonts"
+msgstr ""
+
+#: includes/functions.php:228
 msgid "General Settings"
 msgstr "Configurações gerais"
 
-#: /includes/functions.php:110
-#, fuzzy
-msgid "Pro version"
-msgstr "Премиум версия"
+#: includes/functions.php:229
+msgid "Custom CSS"
+msgstr "CSS customizado"
 
-#: /includes/functions.php:116
-msgid "Support"
-msgstr "Apoio"
-
-#: /includes/functions.php:124
-msgid "Page title"
-msgstr "Título da página"
-
-#: /includes/functions.php:125
-msgid "Headline"
-msgstr "Cabeçalho"
-
-#: /includes/functions.php:126
-msgid "Description"
-msgstr "Descrição"
-
-#: includes/functions.php:191
+#: includes/functions.php:230
 msgid "Exclude pages"
 msgstr "Excluir páginas"
 
-#: includes/functions.php:242
+#: includes/functions.php:236
+msgid "Pro version"
+msgstr "versão Pro"
+
+#: includes/functions.php:243
+msgid "Fruitful Code projects"
+msgstr "projetos de código frutíferas"
+
+#: includes/functions.php:249
+msgid "Support"
+msgstr "Apoio"
+
+#: includes/functions.php:255
+msgid "Translation"
+msgstr "Tradução"
+
+#: includes/functions.php:278
+msgid "Page title"
+msgstr "Título da página"
+
+#: includes/functions.php:279
+msgid "Headline"
+msgstr "Cabeçalho"
+
+#: includes/functions.php:280
+msgid "Description"
+msgstr "Descrição"
+
+#: includes/functions.php:281
 msgid "Footer Text"
 msgstr "Texto de rodapé"
 
-#: includes/functions.php:243
+#: includes/functions.php:282
 msgid "Logo width"
 msgstr "Logo width"
 
-#: includes/functions.php:244
+#: includes/functions.php:283
 msgid "Logo height"
 msgstr "Logo altura"
 
-#: includes/functions.php:246
-msgid "Retina logo"
-msgstr "Retina logo"
-
-#: includes/functions.php:246
-msgid "Upload Retina Logo"
-msgstr "Enviar Retina logo "
-
-#: includes/functions.php:244
-msgid "Select the page to be displayed:"
-msgstr "Seleccione a página a ser exibida:"
-
-#: /includes/functions.php:127
+#: includes/functions.php:284
 msgid "Logo"
 msgstr "Logo"
 
-#: /includes/functions.php:127
+#: includes/functions.php:284
 msgid "Upload Logo"
 msgstr "Enviar logo"
 
-#: /includes/functions.php:130
+#: includes/functions.php:285
+msgid "Retina logo"
+msgstr "Retina logo"
+
+#: includes/functions.php:285
+msgid "Upload Retina Logo"
+msgstr "Enviar Retina logo "
+
+#: includes/functions.php:289
 msgid "Admin bar"
 msgstr "Barra administrativa"
 
-#: /includes/functions.php:130
+#: includes/functions.php:289
 msgid "Show admin bar"
 msgstr "Mostrar barra administrativa"
 
-#: /includes/functions.php:131
+#: includes/functions.php:290
 msgid "503"
 msgstr ""
 
-#: /includes/functions.php:131
-msgid "Service temporarily unavailable, Google analytics will be disable"
-msgstr "Serviço temporariamente indisponível, o Google Analytics será desativado"
+#: includes/functions.php:290
+msgid "Service temporarily unavailable, Google analytics will be disable."
+msgstr ""
+"Serviço temporariamente indisponível, o Google Analytics será desativado."
 
-#: /includes/functions.php:132
+#: includes/functions.php:297
 msgid "Google Analytics ID"
 msgstr ""
 
-#: /includes/functions.php:132
+#: includes/functions.php:297
 msgid "UA-XXXXX-X"
 msgstr ""
 
-#: /includes/functions.php:133
+#: includes/functions.php:298
 msgid "Blur intensity"
 msgstr "Intensidade do efeito Blur"
 
-#: /includes/functions.php:134
+#: includes/functions.php:304
 msgid "Background blur"
 msgstr "Efeito blur no fundo"
 
-#: /includes/functions.php:134
+#: includes/functions.php:304
 msgid "Apply a blur"
 msgstr "Aplicar blur"
 
-#: /includes/functions.php:135
+#: includes/functions.php:305
 msgid "Login On / Off"
-msgstr ""
+msgstr "Entre On / Off"
 
-#: /includes/functions.php:142
+#: includes/functions.php:317
+msgid "CSS Code"
+msgstr "Código CSS"
+
+#: includes/functions.php:331
+msgid "Select the page to be displayed:"
+msgstr "Seleccione a página a ser exibida:"
+
+#: includes/functions.php:377
+msgid "Not available object."
+msgstr "Não disponível objeto."
+
+#: includes/functions.php:392
 msgid "Background image"
 msgstr "Imagem de fundo"
 
-#: /includes/functions.php:142
+#: includes/functions.php:392
 msgid "Upload Background"
 msgstr "Enviar imagem de fundo"
 
-#: /includes/functions.php:148
+#: includes/functions.php:398
 msgid "Background color"
 msgstr "Cor do plano de fundo"
 
-#: /includes/functions.php:149
+#: includes/functions.php:399
 msgid "Font color"
 msgstr "Cor da fonte"
 
-#: /includes/functions.php:157
-msgid "Have any questions?"
-msgstr ""
+#: includes/functions.php:406
+msgid "Font family"
+msgstr "Família de fontes"
 
-#: /includes/functions.php:158
+#: includes/functions.php:411
+msgid "Subsets"
+msgstr "subconjuntos"
+
+#: includes/functions.php:419
+msgid "Have any questions?"
+msgstr "Tem alguma pergunta?"
+
+#: includes/functions.php:420
 #, php-format
 msgid ""
 "You may find answers to your questions at <a target=\"_blank\" href=\"http://"
-"wordpress.org/support/plugin/maintenance\">support forum</a><br>You may  <a "
-"target=\"_blank\" href=\"mailto:mail@fruitfulcode.com?subject=Maintenance "
-"plugin\">contact us</a> with customization requests and suggestions.<br> "
-"Please visit our website to learn about us and our services <a href=\"%1$s\" "
-"title=\"%2$s\">%2$s</a>"
+"support.fruitfulcode.com/hc/en-us/sections/200406386\">support forum</"
+"a><br>You may  <a target=\"_blank\" href=\"http://support.fruitfulcode.com/"
+"hc/en-us/requests/new\">contact us</a> with customization requests and "
+"suggestions.<br> Please visit our website to learn about us and our services "
+"<a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
 msgstr ""
+"Você pode encontrar respostas às suas perguntas em <a target=\"_blank\" href="
+"\"http://support.fruitfulcode.com/hc/en-us/sections/200406386\">Fórum de "
+"suporte</a><br>Você pode  <a target=\"_blank\" href=\"http://support."
+"fruitfulcode.com/hc/en-us/requests/new\">Nos contate</a> com pedidos de "
+"personalização e sugestões. <br> Por favor, visite nosso site para saber "
+"mais sobre nós e nossos serviços <a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
 
-#: /includes/functions.php:169
+#: includes/functions.php:431
+msgid "This plugin is translation friendly"
+msgstr "Este plugin é a tradução amigável"
+
+#: includes/functions.php:432
+#, php-format
+msgid ""
+"Want to improve translation or make one for your native language? <a href="
+"\"%1$s\" title=\"%2$s\">%2$s</a>"
+msgstr ""
+"Quer melhorar tradução ou fazer um para a sua língua nativa? <a href=\"%1$s"
+"\" title=\"%2$s\">%2$s</a>"
+
+#: includes/functions.php:434
+msgid "Follow this tutorial"
+msgstr "Siga este tutorial"
+
+#: includes/functions.php:443
+msgid "Premium WordPress themes"
+msgstr "temas Premium WordPress"
+
+#: includes/functions.php:449
+msgid "ANAGLYPH - One page / Multi Page WordPress Theme"
+msgstr "ANAGLYPH - Uma página / Várias páginas Tema WordPress"
+
+#: includes/functions.php:454
+msgid "Love.ly - Simple & Elegant WordPress theme"
+msgstr "Love.ly - tema simples e elegante WordPress"
+
+#: includes/functions.php:460
+msgid "Zoner - Real Estate WordPress theme"
+msgstr "Zoner - Imóveis WordPress tema"
+
+#: includes/functions.php:473
 #, fuzzy
 msgid "Extended functionality"
 msgstr "Versão extendida"
 
-#: /includes/functions.php:170
+#: includes/functions.php:474
 #, php-format
 msgid ""
 "Purchase <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
@@ -164,67 +245,71 @@ msgid ""
 "filter=5\">rate it</a>, <a title=\"leave feedbacks\" href=\"%2$s\" target="
 "\"_blank\">leave feedbacks</a>."
 msgstr ""
+"Compra <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
+"plugin/2781350?ref=fruitfulcode\" target=\"_blank\">PRO</a> versão com "
+"funcionalidade estendida. %1$sSe você gosta de nosso plugin, por favor <a "
+"target=\"_blank\" href=\"http://wordpress.org/support/view/plugin-reviews/"
+"maintenance?filter=5\">rate it</a>, <a title=\"leave feedbacks\" href=\"%2$s"
+"\" target=\"_blank\">deixar feedbacks</a>."
 
-#: /includes/functions.php:174
+#: includes/functions.php:478
 msgid "Demo website"
-msgstr ""
+msgstr "website de demonstração"
 
-#: /includes/functions.php:232
-#, fuzzy
-msgid "Maintenance"
-msgstr "Manutenção"
-
-#: /includes/functions.php:255
+#: includes/functions.php:667
 msgid "Website is under construction"
 msgstr "Site em construção"
 
-#: /includes/functions.php:256
+#: includes/functions.php:668
 msgid "Maintenance mode is on"
 msgstr "Modo de manutenção ativado"
 
-#: /includes/functions.php:257
+#: includes/functions.php:669
 msgid "Website will be available soon"
 msgstr "O site estará disponível em breve"
 
-#: /load/functions.php:37
+#: load/functions.php:39
 msgid "Permission access denied!"
 msgstr "Permissão de acesso negada!"
 
-#: /load/functions.php:45
+#: load/functions.php:47
 msgid "You entered your login are incorrect!"
 msgstr "Você digitou seu usuário incorretamente!"
 
-#: /load/functions.php:49
+#: load/functions.php:51
 msgid "You entered your password are incorrect!"
 msgstr "Você digitou sua senha incorretamente!"
 
-#: /load/functions.php:52
+#: load/functions.php:54
 msgid "You entered your login and password are incorrect!"
 msgstr "Você digitou seu usuário e senha incorretamente!"
 
-#: /load/functions.php:223
+#: load/functions.php:283
+msgid "User Login"
+msgstr "Login de usuário"
+
+#: load/functions.php:284
 msgid "Username"
 msgstr "Usuário"
 
-#: /load/functions.php:224
+#: load/functions.php:285
 msgid "Password"
 msgstr "Senha"
 
-#: /load/functions.php:225
-msgid "Sign In"
-msgstr "Entrar"
-
-#: load/functions.php:262
+#: load/functions.php:286
 msgid "Lost Password"
 msgstr "Senha perdida"
 
-#: load/functions.php:263
+#: load/functions.php:287
 msgid "Login"
 msgstr "Entrar"
 
-#: load/functions.php:259
-msgid "User Login"
-msgstr "Login de usuário"
+#~ msgid "Service temporarily unavailable, Google analytics will be disable"
+#~ msgstr ""
+#~ "Serviço temporariamente indisponível, o Google Analytics será desativado"
+
+#~ msgid "Sign In"
+#~ msgstr "Entrar"
 
 #, fuzzy
 #~ msgid "maintenance"
