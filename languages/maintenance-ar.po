@@ -2,10 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
 "POT-Creation-Date: 2016-04-18 15:45+0300\n"
-"PO-Revision-Date: 2016-04-18 16:49+0300\n"
+"PO-Revision-Date: 2016-04-18 17:10+0300\n"
 "Last-Translator: \n"
 "Language-Team: fruitfulcode\n"
-"Language: zh_CN\n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,99 +13,100 @@ msgstr ""
 "X-Poedit-KeywordsList: _;_e;__;_x\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
 
 #: includes/admin.php:77 includes/functions.php:603
 msgid "Maintenance"
-msgstr "保养"
+msgstr "صيانة"
 
 #: includes/admin.php:77 includes/admin.php:94
 msgid "Save changes"
-msgstr "保存更改"
+msgstr "حفظ التغيرات"
 
 #: includes/functions.php:169
 msgid "Standard Fonts"
-msgstr "标准字体"
+msgstr "مستوى الخطوط"
 
 #: includes/functions.php:176
 msgid "Google Web Fonts"
-msgstr "谷歌字体"
+msgstr ""
 
 #: includes/functions.php:228
 msgid "General Settings"
-msgstr "一般设置"
+msgstr "الإعدادات العامة"
 
 #: includes/functions.php:229
 msgid "Custom CSS"
-msgstr "自定义CSS"
+msgstr " حسب الطلب CSS"
 
 #: includes/functions.php:230
 msgid "Exclude pages"
-msgstr "排除网页"
+msgstr "استبعاد صفحات"
 
 #: includes/functions.php:236
 msgid "Pro version"
-msgstr "专业版"
+msgstr "نسخة للمحترفين"
 
 #: includes/functions.php:243
 msgid "Fruitful Code projects"
-msgstr "春华秋实代码项目"
+msgstr "مشاريع كود مثمرة"
 
 #: includes/functions.php:249
 msgid "Support"
-msgstr "支持"
+msgstr "الدعم"
 
 #: includes/functions.php:255
 msgid "Translation"
-msgstr "翻译"
+msgstr "ترجمة"
 
 #: includes/functions.php:278
 msgid "Page title"
-msgstr "页面标题"
+msgstr "عنوان الصفحة"
 
 #: includes/functions.php:279
 msgid "Headline"
-msgstr "头条新闻"
+msgstr "عنوان رئيسي"
 
 #: includes/functions.php:280
 msgid "Description"
-msgstr "描述"
+msgstr "وصف"
 
 #: includes/functions.php:281
 msgid "Footer Text"
-msgstr "页脚文本"
+msgstr "نص تذييل"
 
 #: includes/functions.php:282
 msgid "Logo width"
-msgstr "徽标宽度"
+msgstr "عرض الشعار"
 
 #: includes/functions.php:283
 msgid "Logo height"
-msgstr "徽标高度"
+msgstr "ارتفاع الشعار"
 
 #: includes/functions.php:284
 msgid "Logo"
-msgstr "徽标"
+msgstr "شعار"
 
 #: includes/functions.php:284
 msgid "Upload Logo"
-msgstr "上传徽标"
+msgstr "تحميل الشعار"
 
 #: includes/functions.php:285
 msgid "Retina logo"
-msgstr "视网膜标志"
+msgstr "شبكية العين شعار"
 
 #: includes/functions.php:285
 msgid "Upload Retina Logo"
-msgstr "上传视网膜标志"
+msgstr "تحميل الشبكية شعار"
 
 #: includes/functions.php:289
 msgid "Admin bar"
-msgstr "管理栏"
+msgstr "شريط المشرف"
 
 #: includes/functions.php:289
 msgid "Show admin bar"
-msgstr "显示管理栏"
+msgstr "عرض شريط المشرف"
 
 #: includes/functions.php:290
 msgid "503"
@@ -113,7 +114,7 @@ msgstr "503"
 
 #: includes/functions.php:290
 msgid "Service temporarily unavailable, Google analytics will be disable."
-msgstr "服务暂时不可用，Google analytics 将被禁用。"
+msgstr "الخدمة غير متوفرة مؤقتا، سيتم تعطيل تحليلات جوجل."
 
 #: includes/functions.php:297
 msgid "Google Analytics ID"
@@ -125,59 +126,59 @@ msgstr "UA-XXXXX-X"
 
 #: includes/functions.php:298
 msgid "Blur intensity"
-msgstr "模糊强度"
+msgstr "كثافة طمس"
 
 #: includes/functions.php:304
 msgid "Background blur"
-msgstr "背景虚化"
+msgstr "طمس الخلفية"
 
 #: includes/functions.php:304
 msgid "Apply a blur"
-msgstr "应用模糊"
+msgstr "تطبيق طمس"
 
 #: includes/functions.php:305
 msgid "Login On / Off"
-msgstr "登录开/关"
+msgstr "تسجيل الدخول تشغيل / إيقاف"
 
 #: includes/functions.php:317
 msgid "CSS Code"
-msgstr "CSS代码"
+msgstr "كود CSS"
 
 #: includes/functions.php:331
 msgid "Select the page to be displayed:"
-msgstr "选择要显示的页面："
+msgstr "حدد الصفحة للظهور:"
 
 #: includes/functions.php:377
 msgid "Not available object."
-msgstr "没有可供选择的对象。"
+msgstr "كائن غير متوفر."
 
 #: includes/functions.php:392
 msgid "Background image"
-msgstr "背景图"
+msgstr "الصورة الخلفية"
 
 #: includes/functions.php:392
 msgid "Upload Background"
-msgstr "上传背景"
+msgstr "تحميل خلفية"
 
 #: includes/functions.php:398
 msgid "Background color"
-msgstr "背景颜色"
+msgstr "لون الخلفية"
 
 #: includes/functions.php:399
 msgid "Font color"
-msgstr "字体颜色"
+msgstr "لون الخط"
 
 #: includes/functions.php:406
 msgid "Font family"
-msgstr "字体系列"
+msgstr "خط العائلة"
 
 #: includes/functions.php:411
 msgid "Subsets"
-msgstr "亚"
+msgstr "فرعية"
 
 #: includes/functions.php:419
 msgid "Have any questions?"
-msgstr "有什么问题？"
+msgstr "لديك أي أسئلة؟"
 
 #: includes/functions.php:420
 #, php-format
@@ -189,15 +190,16 @@ msgid ""
 "suggestions.<br> Please visit our website to learn about us and our services "
 "<a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
 msgstr ""
-"您可以在找到问题的答案 <a target=\"_blank\" href=\"http://support."
-"fruitfulcode.com/hc/en-us/sections/200406386\">支持论坛</a><br>你可以  <a "
-"target=\"_blank\" href=\"http://support.fruitfulcode.com/hc/en-us/requests/"
-"new\">联系我们</a> 与定制要求和建议。<br> 请访问我们的网站，了解我们和我们的"
-"服务 <a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
+"قد تجد إجابات على أسئلتك في <a target=\"_blank\" href=\"http://support."
+"fruitfulcode.com/hc/en-us/sections/200406386\"> منتدى الدعم  <br></"
+"a>يمكنك    <a target=\"_blank\" href=\"http://support.fruitfulcode.com/hc/en-"
+"us/requests/new\"> اتصل بنا </a> مع طلبات التخصيص والاقتراحات.  <br> يرجى "
+"زيارة موقعنا على الانترنت لمعرفة المزيد عن لنا وخدماتنا <a href=\"%1$s\" "
+"title=\"%2$s\">%2$s</a>"
 
 #: includes/functions.php:431
 msgid "This plugin is translation friendly"
-msgstr "这个插件是翻译友好"
+msgstr "هذا هو البرنامج المساعد الترجمة دية"
 
 #: includes/functions.php:432
 #, php-format
@@ -205,31 +207,32 @@ msgid ""
 "Want to improve translation or make one for your native language? <a href="
 "\"%1$s\" title=\"%2$s\">%2$s</a>"
 msgstr ""
-"要提高翻译或制作一个自己的母语？ <a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
+"ترغب في تحسين الترجمة أو جعل واحدة لغتك الأم؟ <a href=\"%1$s\" title=\"%2$s"
+"\">%2$s</a>"
 
 #: includes/functions.php:434
 msgid "Follow this tutorial"
-msgstr "按照本教程"
+msgstr "اتبع هذا البرنامج التعليمي"
 
 #: includes/functions.php:443
 msgid "Premium WordPress themes"
-msgstr "高级WordPress主题"
+msgstr "قسط المواضيع وورد"
 
 #: includes/functions.php:449
 msgid "ANAGLYPH - One page / Multi Page WordPress Theme"
-msgstr "ANAGLYPH - 单页/多页的WordPress主题"
+msgstr "ANAGLYPH - صفحة واحدة / متعدد صفحة وورد موضوع"
 
 #: includes/functions.php:454
 msgid "Love.ly - Simple & Elegant WordPress theme"
-msgstr "Love.ly - 简单优雅与WordPress主题"
+msgstr "Love.ly - موضوع بسيط وأنيق وورد"
 
 #: includes/functions.php:460
 msgid "Zoner - Real Estate WordPress theme"
-msgstr "Zoner - 房地产WordPress主题"
+msgstr "Zoner - عقارات وورد موضوع"
 
 #: includes/functions.php:473
 msgid "Extended functionality"
-msgstr "扩展功能"
+msgstr "وظائف الموسعة"
 
 #: includes/functions.php:474
 #, php-format
@@ -241,123 +244,117 @@ msgid ""
 "filter=5\">rate it</a>, <a title=\"leave feedbacks\" href=\"%2$s\" target="
 "\"_blank\">leave feedbacks</a>."
 msgstr ""
-"采购 <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
-"plugin/2781350?ref=fruitfulcode\" target=\"_blank\">亲 </a> 版本的扩展功"
-"能。%1$s 如果你喜欢我们的插件，请 <a target=\"_blank\" href=\"http://"
-"wordpress.org/support/view/plugin-reviews/maintenance?filter=5\">评分</a>, "
-"<a title=\"leave feedbacks\" href=\"%2$s\" target=\"_blank\">离开反馈</a>."
+"شراء <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
+"plugin/2781350?ref=fruitfulcode\" target=\"_blank\"> محترف </a> نسخة مع "
+"وظائف الموسعة.  %1$s إذا كنت ترغب المساعد لدينا من فضلك  <a target=\"_blank"
+"\" href=\"http://wordpress.org/support/view/plugin-reviews/maintenance?"
+"filter=5\"> قيمه </a>,  <a title=\"leave feedbacks\" href=\"%2$s\" target="
+"\"_blank\"> ترك الاصداء .</a>"
 
 #: includes/functions.php:478
 msgid "Demo website"
-msgstr "演示网站"
+msgstr "الموقع التجريبي"
 
 #: includes/functions.php:667
 msgid "Website is under construction"
-msgstr "网站正在建设中"
+msgstr "الموقع قيد الإنشاء"
 
 #: includes/functions.php:668
 msgid "Maintenance mode is on"
-msgstr "维护模式是"
+msgstr "وضع الصيانة على"
 
 #: includes/functions.php:669
 msgid "Website will be available soon"
-msgstr "网站也将很快面市"
+msgstr "سيكون الموقع متاحا في وقت قريب"
 
 #: load/functions.php:39
 msgid "Permission access denied!"
-msgstr "权限访问被拒绝！"
+msgstr "وصول تم رفض الإذن!"
 
 #: load/functions.php:47
 msgid "You entered your login are incorrect!"
-msgstr "您输入您的登录是不正确！"
+msgstr "لقد أدخلت تسجيل الدخول الخاصة بك غير صحيحة!"
 
 #: load/functions.php:51
 msgid "You entered your password are incorrect!"
-msgstr "您输入的密码不正确！"
+msgstr "لقد أدخلت كلمة المرور غير صحيحة!"
 
 #: load/functions.php:54
 msgid "You entered your login and password are incorrect!"
-msgstr "您输入您的用户名和密码不正确！"
+msgstr "لقد أدخلت اسم المستخدم وكلمة المرور غير صحيحة!"
 
 #: load/functions.php:283
 msgid "User Login"
-msgstr "用户登录"
+msgstr "دخول المستخدم"
 
 #: load/functions.php:284
 msgid "Username"
-msgstr "用户名"
+msgstr "اسم المستخدم"
 
 #: load/functions.php:285
 msgid "Password"
-msgstr "密码"
+msgstr "كلمه السر"
 
 #: load/functions.php:286
 msgid "Lost Password"
-msgstr "忘记密码"
+msgstr "كلمة مرور مفقودة"
 
 #: load/functions.php:287
 msgid "Login"
-msgstr "登录"
+msgstr "تسجيل الدخول"
 
 #~ msgid "Service temporarily unavailable, Google analytics will be disable"
-#~ msgstr "服务暂时不可用，谷歌Analytics（分析）将被禁用"
+#~ msgstr "الخدمة غير متوفرة مؤقتا، سيتم تعطيل تحليلات جوجل"
 
 #~ msgid "Sign In"
-#~ msgstr "签到"
+#~ msgstr "تسجيل الدخول"
 
-#~ msgid ""
-#~ "You may find answers to your questions at <a target=\"_blank\" href="
-#~ "\"http://wordpress.org/support/plugin/maintenance\">support forum</"
-#~ "a><br>You may  <a target=\"_blank\" href=\"mailto:mail@fruitfulcode.com?"
-#~ "subject=Maintenance plugin\">contact us</a> with customization requests "
-#~ "and suggestions.<br> Please visit our website to learn about us and our "
-#~ "services <a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
-#~ msgstr ""
-#~ "您可以在找到问题的答案 <a target=\"_blank\" href=\"http://wordpress.org/"
-#~ "support/plugin/maintenance\">支持论坛</a><br>你可以  <a target=\"_blank\" "
-#~ "href=\"mailto:mail@fruitfulcode.com?subject=Maintenance plugin\">联系我们"
-#~ "</a> 与定制要求和建议。<br> 请访问我们的网站，了解我们和我们的服务 <a "
-#~ "href=\"%1$s\" title=\"%2$s\">%2$s</a>"
+#~ msgid "maintenance"
+#~ msgstr "صيانة"
 
 #~ msgid "Contact support"
-#~ msgstr "联系支持"
+#~ msgstr "اتصل بالدعم"
 
 #~ msgid ""
 #~ "If you faced with any problems, have a question or suggestion you always "
 #~ "can contact us with any request on our website <a href=\"%1$s\" title="
 #~ "\"%2$s\">%2$s</a>"
 #~ msgstr ""
-#~ "如果您遇到任何问题，有问题或建议，你总是可以在我们的网站的任何请求与我们联"
-#~ "系 <a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
+#~ "إذا كنت تواجه أي مشاكل، لديك سؤال أو اقتراح يمكنك دائما الاتصال بنا مع أي "
+#~ "طلب على موقعنا على الانترنت <a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
 
 #~ msgid ""
 #~ "If you like our plugin please rate it, %1$s <a title=\"leave feedback\" "
 #~ "href=\"%2$s\" target=\"_blank\">leave feedback</a> or purchase extended "
 #~ "version %1$s with more other features."
 #~ msgstr ""
-#~ "如果你喜欢我们的插件请率， %1$s <a title=\"leave feedback\" href=\"%2$s\" "
-#~ "target=\"_blank\">留下反馈</a> 或购买扩展版 %1$s 与多个其它特征。"
+#~ "إذا كنت ترغب المساعد لدينا يرجى معدل لها  <a title=\"leave feedback\" "
+#~ "href=\"%2$s\" target=\"_blank\"> اترك تقييم للخدمة </a> أو شراء نسخة "
+#~ "موسعة %1$s مع المزيد من الميزات الأخرى."
 
 #~ msgid "Purchase"
-#~ msgstr "采购"
+#~ msgstr "شراء"
 
 #~ msgid "We have time until launch"
-#~ msgstr "我们有时间，直到推出"
+#~ msgstr "لدينا الوقت حتى إطلاق"
 
 #~ msgid "Be first of your friends who will know when the website goes live."
-#~ msgstr "首先是你的朋友当网站正式上线谁知道。"
+#~ msgstr "كن أول من أصدقائك الذين سوف نعرف متى يذهب الموقع مباشرة."
 
 #~ msgid "Check out our extended version of plugin with new features"
-#~ msgstr "看看我们的新功能插件扩展版"
+#~ msgstr "تحقق من نسخة موسعة لدينا من البرنامج المساعد مع ميزات جديدة"
 
 #~ msgid "Your session has expired."
-#~ msgstr "您的会话已过期。"
+#~ msgstr "انتهت جلسة العمل الخاصة بك."
+
+#~ msgid "Customer login"
+#~ msgstr "تسجيل الدخول العملاء"
 
 #~ msgid "Please login to see website"
-#~ msgstr "请登录网站看"
+#~ msgstr "الرجاء الدخول لمعرفة الموقع"
 
 #~ msgid "User roles"
-#~ msgstr "用户角色"
+#~ msgstr "أدوار المستخدمين"
 
 #~ msgid "Choose users access permissions in maintenance mode."
-#~ msgstr "选择在维护模式下用户的访问权限。"
+#~ msgstr "اختيار أذونات للمستخدمين الوصول في وضع الصيانة."

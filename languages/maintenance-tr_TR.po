@@ -2,189 +2,281 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Maintenance v2.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-10-07 00:42+0300\n"
+"POT-Creation-Date: 2016-04-18 16:43+0300\n"
+"PO-Revision-Date: 2016-04-18 16:45+0300\n"
 "Last-Translator: Digital03.net <info@digital03.net>\n"
 "Language-Team: Digital03.net <info@digital03.net>\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 1.8.4\n"
+"X-Generator: Poedit 1.8.7\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Textdomain-Support: yes\n"
-"Language: es_ES\n"
 "X-Poedit-SearchPath-0: .\n"
 
 # @ maintenance
-#: includes/admin.php:87
+#: includes/admin.php:77 includes/functions.php:603
+msgid "Maintenance"
+msgstr "Bakım"
+
+# @ maintenance
+#: includes/admin.php:77 includes/admin.php:94
 msgid "Save changes"
 msgstr "Değişiklikleri kaydet"
 
+# @ anaglyph-framework
+#: includes/functions.php:169
+msgid "Standard Fonts"
+msgstr "Giriş"
+
+# @ anaglyph-framework
+#: includes/functions.php:176
+msgid "Google Web Fonts"
+msgstr "Google Web Fontları"
+
 # @ maintenance
-#: includes/functions.php:187
+#: includes/functions.php:228
 msgid "General Settings"
 msgstr "Genel Ayarlar"
 
 # @ maintenance
-#: includes/functions.php:195
+#: includes/functions.php:229
+msgid "Custom CSS"
+msgstr "Özel CSS"
+
+# @ maintenance
+#: includes/functions.php:230
+msgid "Exclude pages"
+msgstr "Harici sayfalar"
+
+# @ maintenance
+#: includes/functions.php:236
 msgid "Pro version"
 msgstr "Pro versiyon"
 
 # @ maintenance
-#: includes/functions.php:208
+#: includes/functions.php:243
+msgid "Fruitful Code projects"
+msgstr "Fruitful Kod projeleri"
+
+# @ maintenance
+#: includes/functions.php:249
 msgid "Support"
 msgstr "Destek"
 
+#: includes/functions.php:255
+msgid "Translation"
+msgstr "Çeviri"
+
 # @ maintenance
-#: includes/functions.php:219
+#: includes/functions.php:278
 msgid "Page title"
 msgstr "Sayfa başlığı"
 
 # @ maintenance
-#: includes/functions.php:220
+#: includes/functions.php:279
 msgid "Headline"
 msgstr "Başlık"
 
 # @ maintenance
-#: includes/functions.php:221
+#: includes/functions.php:280
 msgid "Description"
 msgstr "Açıklama"
 
-#: includes/functions.php:242
+#: includes/functions.php:281
 msgid "Footer Text"
 msgstr "Altbilgi metni"
 
-#: includes/functions.php:243
+#: includes/functions.php:282
 msgid "Logo width"
 msgstr "Logo genişliği"
 
-#: includes/functions.php:244
+#: includes/functions.php:283
 msgid "Logo height"
 msgstr "Logo yüksekliği"
 
-#: includes/functions.php:246
-msgid "Retina logo"
-msgstr "Retina logo"
-
-#: includes/functions.php:246
-msgid "Upload Retina Logo"
-msgstr "Yükle Retina Logo"
-
 # @ maintenance
-#: includes/functions.php:222
+#: includes/functions.php:284
 msgid "Logo"
 msgstr "Logo"
 
 # @ maintenance
-#: includes/functions.php:222
+#: includes/functions.php:284
 msgid "Upload Logo"
 msgstr "Logo Yükle"
 
+#: includes/functions.php:285
+msgid "Retina logo"
+msgstr "Retina logo"
+
+#: includes/functions.php:285
+msgid "Upload Retina Logo"
+msgstr "Yükle Retina Logo"
+
 # @ maintenance
-#: includes/functions.php:226
+#: includes/functions.php:289
 msgid "Admin bar"
 msgstr "Yönetici çubuğu"
 
 # @ maintenance
-#: includes/functions.php:226
+#: includes/functions.php:289
 msgid "Show admin bar"
 msgstr "Yönetici çubuğunu göster"
 
 # @ maintenance
-#: includes/functions.php:227
+#: includes/functions.php:290
 msgid "503"
 msgstr "503"
 
-# @ maintenance
-#: includes/functions.php:227
-msgid "Service temporarily unavailable, Google analytics will be disable"
-msgstr "Hizmet geçici olarak kullanılamıyor, Google analytics devre dışı bırakılacak"
+#: includes/functions.php:290
+msgid "Service temporarily unavailable, Google analytics will be disable."
+msgstr ""
+"Hizmet geçici olarak kullanılamıyor, Google analytics devre dışı bırakılacak."
 
 # @ maintenance
-#: includes/functions.php:234
+#: includes/functions.php:297
 msgid "Google Analytics ID"
 msgstr "Google Analytics ID'si"
 
 # @ maintenance
-#: includes/functions.php:234
+#: includes/functions.php:297
 msgid "UA-XXXXX-X"
 msgstr "UA-XXXXX-X"
 
 # @ maintenance
-#: includes/functions.php:235
+#: includes/functions.php:298
 msgid "Blur intensity"
 msgstr "Bulanıklık yoğunluğu"
 
 # @ maintenance
-#: includes/functions.php:241
+#: includes/functions.php:304
 msgid "Background blur"
 msgstr "Arkaplan bulanıklığı"
 
 # @ maintenance
-#: includes/functions.php:241
+#: includes/functions.php:304
 msgid "Apply a blur"
 msgstr "Bir bulanıklık uygula"
 
 # @ maintenance
-#: includes/functions.php:242
+#: includes/functions.php:305
 msgid "Login On / Off"
 msgstr "Giriş Açık / Kapalı"
 
 # @ maintenance
-#: includes/functions.php:324
+#: includes/functions.php:317
+msgid "CSS Code"
+msgstr "CSS Kodu"
+
+# @ maintenance
+#: includes/functions.php:331
+msgid "Select the page to be displayed:"
+msgstr "Görüntülenecek sayfayı seçin:"
+
+# @ maintenance
+#: includes/functions.php:377
+msgid "Not available object."
+msgstr "Mevcut olmayan nesne"
+
+# @ maintenance
+#: includes/functions.php:392
 msgid "Background image"
 msgstr "Arkaplan resmi"
 
 # @ maintenance
-#: includes/functions.php:324
+#: includes/functions.php:392
 msgid "Upload Background"
 msgstr "Arkaplan Yükle"
 
 # @ maintenance
-#: includes/functions.php:330
+#: includes/functions.php:398
 msgid "Background color"
 msgstr "Arkaplan rengi"
 
 # @ maintenance
-#: includes/functions.php:331
+#: includes/functions.php:399
 msgid "Font color"
 msgstr "Font rengi"
 
 # @ maintenance
-#: includes/functions.php:346
+#: includes/functions.php:406
+msgid "Font family"
+msgstr "Font ailesi"
+
+#: includes/functions.php:411
+msgid "Subsets"
+msgstr "alt kümeler"
+
+# @ maintenance
+#: includes/functions.php:419
 msgid "Have any questions?"
 msgstr "Sorunuz var mı?"
 
-# @ maintenance
-#: includes/functions.php:347
+#: includes/functions.php:420
 #, php-format
 msgid ""
 "You may find answers to your questions at <a target=\"_blank\" href=\"http://"
-"wordpress.org/support/plugin/maintenance\">support forum</a><br>You may  <a "
-"target=\"_blank\" href=\"mailto:mail@fruitfulcode.com?subject=Maintenance "
-"plugin\">contact us</a> with customization requests and suggestions.<br> "
-"Please visit our website to learn about us and our services <a href=\"%1$s\" "
-"title=\"%2$s\">%2$s</a>"
+"support.fruitfulcode.com/hc/en-us/sections/200406386\">support forum</"
+"a><br>You may  <a target=\"_blank\" href=\"http://support.fruitfulcode.com/"
+"hc/en-us/requests/new\">contact us</a> with customization requests and "
+"suggestions.<br> Please visit our website to learn about us and our services "
+"<a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
 msgstr ""
-"Sorularınızın cevaplarını <a target=\"_blank\" href=\"http://wordpress.org/"
-"support/plugin/maintenance\">destek forumunda</a> "
-"bulabilirsiniz<br>Özelleştirme ve önerileriniz için <a target=\"_blank\" "
-"href=\"mailto:mail@fruitfulcode.com?subject=Maintenance plugin\">bizimle "
-"iletişim</a> kurabilirsiniz.<br> Hakkımızda bilgi almak ve servislerimizi "
-"öğrenmek için lütfen web sitemizi <a href=\"%1$s\" title=\"%2$s\">%2$s</a> "
-"ziyaret ediniz."
+"En sorularınızı bulabilirsiniz <a target=\"_blank\" href=\"http://support."
+"fruitfulcode.com/hc/en-us/sections/200406386\">destek Forumu</"
+"a><br>Yapabilirsin <a target=\"_blank\" href=\"http://support.fruitfulcode."
+"com/hc/en-us/requests/new\">bizimle iletişime geçin</a> özelleştirme "
+"istekleri ve önerileri ile.<br> Иize ve hizmetlerimiz hakkında bilgi edinmek "
+"için web sitemizi ziyaret ediniz <a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
+
+#: includes/functions.php:431
+msgid "This plugin is translation friendly"
+msgstr "Bu eklenti dostu çevirisi"
+
+#: includes/functions.php:432
+#, php-format
+msgid ""
+"Want to improve translation or make one for your native language? <a href="
+"\"%1$s\" title=\"%2$s\">%2$s</a>"
+msgstr ""
+"çeviri geliştirmek veya anadil için bir yapmak ister misiniz? <a href=\"%1$s"
+"\" title=\"%2$s\">%2$s</a>"
+
+#: includes/functions.php:434
+msgid "Follow this tutorial"
+msgstr "Bu öğretici izleyin"
 
 # @ maintenance
-#: includes/functions.php:381
+#: includes/functions.php:443
+msgid "Premium WordPress themes"
+msgstr "Premium WordPress temaları"
+
+# @ maintenance
+#: includes/functions.php:449
+msgid "ANAGLYPH - One page / Multi Page WordPress Theme"
+msgstr "Anaglyph - Tekli sayfa / Çoklu Sayfa WordPress Teması"
+
+# @ maintenance
+#: includes/functions.php:454
+msgid "Love.ly - Simple & Elegant WordPress theme"
+msgstr "Love.ly - Basit ve Zarif WordPress teması"
+
+#: includes/functions.php:460
+msgid "Zoner - Real Estate WordPress theme"
+msgstr ""
+
+# @ maintenance
+#: includes/functions.php:473
 msgid "Extended functionality"
 msgstr "Genişletilmiş fonksiyonellik"
 
 # @ maintenance
-#: includes/functions.php:382
+#: includes/functions.php:474
 #, php-format
 msgid ""
 "Purchase <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
@@ -202,134 +294,92 @@ msgstr ""
 "\"%2$s\" target=\"_blank\">geri bildirimler bırakın</a>."
 
 # @ maintenance
-#: includes/functions.php:386
+#: includes/functions.php:478
 msgid "Demo website"
 msgstr "Demo websitesi"
 
 # @ maintenance
-#: includes/functions.php:497
-msgid "Maintenance"
-msgstr "Bakım"
-
-# @ maintenance
-#: includes/functions.php:562
+#: includes/functions.php:667
 msgid "Website is under construction"
 msgstr "Web sitesi yapım aşamasındadır"
 
 # @ maintenance
-#: includes/functions.php:563
+#: includes/functions.php:668
 msgid "Maintenance mode is on"
 msgstr "Bakım modu açık"
 
 # @ maintenance
-#: includes/functions.php:564
+#: includes/functions.php:669
 msgid "Website will be available soon"
 msgstr "Web sitesi yakında kullanılabilir olacak"
 
 # @ maintenance
-#: load/functions.php:37
+#: load/functions.php:39
 msgid "Permission access denied!"
 msgstr "İzin erişimi reddedildi!"
 
 # @ maintenance
-#: load/functions.php:45
+#: load/functions.php:47
 msgid "You entered your login are incorrect!"
 msgstr "Kullanıcı adınızı yanlış girdiniz!"
 
 # @ maintenance
-#: load/functions.php:49
+#: load/functions.php:51
 msgid "You entered your password are incorrect!"
 msgstr "Şifrenizi yanlış girdiniz!"
 
 # @ maintenance
-#: load/functions.php:52
+#: load/functions.php:54
 msgid "You entered your login and password are incorrect!"
 msgstr "Kullanıcı adı ve şifrenizi yanlış girdiniz!"
 
 # @ maintenance
-#: load/functions.php:257
-msgid "Username"
-msgstr "Kullanıcı adı"
-
-# @ maintenance
-#: load/functions.php:258
-msgid "Password"
-msgstr "Şifre"
-
-#~ msgid "Sign In"
-#~ msgstr "Oturum aç"
-
-# @ anaglyph-framework
-#: includes/functions.php:161
-msgid "Standard Fonts"
-msgstr "Giriş"
-
-# @ anaglyph-framework
-#: includes/functions.php:168
-msgid "Google Web Fonts"
-msgstr "Google Web Fontları"
-
-# @ maintenance
-#: includes/functions.php:188
-msgid "Custom CSS"
-msgstr "Özel CSS"
-
-# @ maintenance
-#: includes/functions.php:189
-msgid "Exclude pages"
-msgstr "Harici sayfalar"
-
-# @ maintenance
-#: includes/functions.php:202
-msgid "Fruitful Code projects"
-msgstr "Fruitful Kod projeleri"
-
-# @ maintenance
-#: includes/functions.php:254
-msgid "CSS Code"
-msgstr "CSS Kodu"
-
-# @ maintenance
-#: includes/functions.php:269
-msgid "Select the page to be displayed:"
-msgstr "Görüntülenecek sayfayı seçin:"
-
-# @ maintenance
-#: includes/functions.php:309
-msgid "Not available object."
-msgstr "Mevcut olmayan nesne"
-
-# @ maintenance
-#: includes/functions.php:338
-msgid "Font family"
-msgstr "Font ailesi"
-
-# @ maintenance
-#: includes/functions.php:358
-msgid "Premium WordPress themes"
-msgstr "Premium WordPress temaları"
-
-# @ maintenance
-#: includes/functions.php:364
-msgid "ANAGLYPH - One page / Multi Page WordPress Theme"
-msgstr "Anaglyph - Tekli sayfa / Çoklu Sayfa WordPress Teması"
-
-# @ maintenance
-#: includes/functions.php:369
-msgid "Love.ly - Simple & Elegant WordPress theme"
-msgstr "Love.ly - Basit ve Zarif WordPress teması"
-
-# @ maintenance
-#: load/functions.php:256
+#: load/functions.php:283
 msgid "User Login"
 msgstr "Kullanıcı Girişi"
 
 # @ maintenance
-#: load/functions.php:259
+#: load/functions.php:284
+msgid "Username"
+msgstr "Kullanıcı adı"
+
+# @ maintenance
+#: load/functions.php:285
+msgid "Password"
+msgstr "Şifre"
+
+# @ maintenance
+#: load/functions.php:286
 msgid "Lost Password"
 msgstr "Şifreyi Unuttum"
 
 # @ maintenance
-#: load/functions.php:260
+#: load/functions.php:287
 msgid "Login"
 msgstr "Giriş"
+
+# @ maintenance
+#~ msgid "Service temporarily unavailable, Google analytics will be disable"
+#~ msgstr ""
+#~ "Hizmet geçici olarak kullanılamıyor, Google analytics devre dışı "
+#~ "bırakılacak"
+
+# @ maintenance
+#~ msgid ""
+#~ "You may find answers to your questions at <a target=\"_blank\" href="
+#~ "\"http://wordpress.org/support/plugin/maintenance\">support forum</"
+#~ "a><br>You may  <a target=\"_blank\" href=\"mailto:mail@fruitfulcode.com?"
+#~ "subject=Maintenance plugin\">contact us</a> with customization requests "
+#~ "and suggestions.<br> Please visit our website to learn about us and our "
+#~ "services <a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
+#~ msgstr ""
+#~ "Sorularınızın cevaplarını <a target=\"_blank\" href=\"http://wordpress."
+#~ "org/support/plugin/maintenance\">destek forumunda</a> "
+#~ "bulabilirsiniz<br>Özelleştirme ve önerileriniz için <a target=\"_blank\" "
+#~ "href=\"mailto:mail@fruitfulcode.com?subject=Maintenance plugin\">bizimle "
+#~ "iletişim</a> kurabilirsiniz.<br> Hakkımızda bilgi almak ve servislerimizi "
+#~ "öğrenmek için lütfen web sitemizi <a href=\"%1$s\" title=\"%2$s\">%2$s</"
+#~ "a> ziyaret ediniz."
+
+#~ msgid "Sign In"
+#~ msgstr "Oturum aç"
