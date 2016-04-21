@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Maintenance\n"
-"POT-Creation-Date: 2016-04-18 15:45+0300\n"
-"PO-Revision-Date: 2016-04-18 15:51+0300\n"
+"POT-Creation-Date: 2016-04-21 17:56+0300\n"
+"PO-Revision-Date: 2016-04-21 17:56+0300\n"
 "Last-Translator: Petr Rohan <rohan@infinitymedia.cz>\n"
 "Language-Team: Petr Rohan <rohan@infinitymedia.cz>\n"
 "Language: cs_CZ\n"
@@ -258,6 +258,14 @@ msgstr ""
 msgid "Demo website"
 msgstr "Demo stránky"
 
+#: includes/functions.php:599
+msgid " is On"
+msgstr "zahrnuty"
+
+#: includes/functions.php:601
+msgid " is Off"
+msgstr "pryč"
+
 #: includes/functions.php:667
 msgid "Website is under construction"
 msgstr "Stránky jsou ve výstavbě"
@@ -305,6 +313,15 @@ msgstr "Reset hesla"
 #: load/functions.php:287
 msgid "Login"
 msgstr "Přihlásit"
+
+#~ msgid "is On"
+#~ msgstr "zahrnuty"
+
+#~ msgid "is Off"
+#~ msgstr "pryč"
+
+#~ msgid "Maintenance "
+#~ msgstr "Údržba"
 
 #~ msgid "Service temporarily unavailable, Google analytics will be disable"
 #~ msgstr "Služba je dočasně nedostupná, Google analytics budou vypnuty"

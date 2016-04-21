@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
-"POT-Creation-Date: 2016-04-18 15:45+0300\n"
-"PO-Revision-Date: 2016-04-18 18:21+0300\n"
+"POT-Creation-Date: 2016-04-21 17:56+0300\n"
+"PO-Revision-Date: 2016-04-21 17:56+0300\n"
 "Last-Translator: fruitfulcode <mail@fruitfulcode.com>\n"
 "Language-Team: fruitfulcode\n"
 "Language: ru_RU\n"
@@ -254,6 +254,14 @@ msgstr ""
 msgid "Demo website"
 msgstr "Демо сайт"
 
+#: includes/functions.php:599
+msgid " is On"
+msgstr "включен"
+
+#: includes/functions.php:601
+msgid " is Off"
+msgstr "выключен"
+
 #: includes/functions.php:667
 msgid "Website is under construction"
 msgstr "Сайт находится в стадии разработки"
@@ -301,6 +309,15 @@ msgstr "Потерял Пароль"
 #: load/functions.php:287
 msgid "Login"
 msgstr "Логин"
+
+#~ msgid "is On"
+#~ msgstr "включен"
+
+#~ msgid "is Off"
+#~ msgstr "выключен"
+
+#~ msgid "Maintenance "
+#~ msgstr "Режим обслуживания"
 
 #~ msgid "Service temporarily unavailable, Google analytics will be disable"
 #~ msgstr "Сервис временно недоступен, Google Analytics будет отключена"

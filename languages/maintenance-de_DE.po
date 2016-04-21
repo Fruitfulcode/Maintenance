@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
-"POT-Creation-Date: 2016-04-18 15:45+0300\n"
-"PO-Revision-Date: 2016-04-18 17:22+0300\n"
+"POT-Creation-Date: 2016-04-21 17:40+0300\n"
+"PO-Revision-Date: 2016-04-21 17:45+0300\n"
 "Last-Translator: René Maurer <rene.maurer@jamos.ch>\n"
 "Language-Team: fruitfulcode\n"
 "Language: de_CH\n"
@@ -256,6 +256,14 @@ msgstr ""
 #: includes/functions.php:478
 msgid "Demo website"
 msgstr "Demo Webseite"
+
+#: includes/functions.php:599
+msgid " is On"
+msgstr "inbegriffen"
+
+#: includes/functions.php:601
+msgid " is Off"
+msgstr "ist aus"
 
 #: includes/functions.php:667
 msgid "Website is under construction"

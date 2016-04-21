@@ -596,11 +596,11 @@
 		$url_to = admin_url( 'admin.php?page=maintenance');
 		
 		if ($mt_options['state']) { 
-			$check = 'On';
+			$check = __(' is On', 'maintenance');
 		} else {
-			$check = 'Off';
+			$check = __(' is Off', 'maintenance');
 		}
-		$wp_admin_bar->add_menu( array( 'id' => 'maintenance_options', 'title' => __( 'Maintenance', 'maintenance' ) . ' is ' . $check, 'href' => $url_to, 'meta'  => array( 'title' => __( 'Maintenance', 'maintenance' ) . ' is ' . $check)));	
+		$wp_admin_bar->add_menu( array( 'id' => 'maintenance_options', 'title' => __( 'Maintenance', 'maintenance' ) . ' ' . $check, 'href' => $url_to, 'meta'  => array( 'title' => __( 'Maintenance', 'maintenance' ) . ' ' . $check)));	
 	} 
 	
 	

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
-"POT-Creation-Date: 2016-04-18 15:45+0300\n"
-"PO-Revision-Date: 2016-04-18 16:11+0300\n"
+"POT-Creation-Date: 2016-04-21 17:52+0300\n"
+"PO-Revision-Date: 2016-04-21 17:54+0300\n"
 "Last-Translator: \n"
 "Language-Team: fruitfulcode\n"
 "Language: pt_BR\n"
@@ -14,7 +14,7 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: includes/admin.php:77 includes/functions.php:603
+#: includes/admin.php:77
 #, fuzzy
 msgid "Maintenance"
 msgstr "Manutenção"
@@ -256,6 +256,18 @@ msgstr ""
 msgid "Demo website"
 msgstr "website de demonstração"
 
+#: includes/functions.php:599
+msgid "is On"
+msgstr "incluído"
+
+#: includes/functions.php:601
+msgid "is Off"
+msgstr "fora"
+
+#: includes/functions.php:603
+msgid "Maintenance "
+msgstr "Manutenção"
+
 #: includes/functions.php:667
 msgid "Website is under construction"
 msgstr "Site em construção"
@@ -303,6 +315,12 @@ msgstr "Senha perdida"
 #: load/functions.php:287
 msgid "Login"
 msgstr "Entrar"
+
+#~ msgid " is On"
+#~ msgstr "é sobre"
+
+#~ msgid " is Off"
+#~ msgstr "está fora"
 
 #~ msgid "Service temporarily unavailable, Google analytics will be disable"
 #~ msgstr ""

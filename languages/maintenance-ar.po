@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
-"POT-Creation-Date: 2016-04-18 15:45+0300\n"
-"PO-Revision-Date: 2016-04-18 17:10+0300\n"
+"POT-Creation-Date: 2016-04-21 17:40+0300\n"
+"PO-Revision-Date: 2016-04-21 17:43+0300\n"
 "Last-Translator: \n"
 "Language-Team: fruitfulcode\n"
 "Language: ar\n"
@@ -254,6 +254,14 @@ msgstr ""
 #: includes/functions.php:478
 msgid "Demo website"
 msgstr "الموقع التجريبي"
+
+#: includes/functions.php:599
+msgid " is On"
+msgstr "على"
+
+#: includes/functions.php:601
+msgid " is Off"
+msgstr "مغلق"
 
 #: includes/functions.php:667
 msgid "Website is under construction"

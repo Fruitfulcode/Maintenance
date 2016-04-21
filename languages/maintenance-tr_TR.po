@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Maintenance v2.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-18 16:43+0300\n"
-"PO-Revision-Date: 2016-04-18 16:45+0300\n"
+"POT-Creation-Date: 2016-04-21 17:41+0300\n"
+"PO-Revision-Date: 2016-04-21 17:42+0300\n"
 "Last-Translator: Digital03.net <info@digital03.net>\n"
 "Language-Team: Digital03.net <info@digital03.net>\n"
 "Language: es_ES\n"
@@ -297,6 +297,14 @@ msgstr ""
 #: includes/functions.php:478
 msgid "Demo website"
 msgstr "Demo websitesi"
+
+#: includes/functions.php:599
+msgid " is On"
+msgstr "verildi"
+
+#: includes/functions.php:601
+msgid " is Off"
+msgstr "kapalı"
 
 # @ maintenance
 #: includes/functions.php:667
