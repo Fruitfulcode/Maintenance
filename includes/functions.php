@@ -684,8 +684,7 @@
 			'gg_analytics_id'   => '',
 			'is_login'			=> true,
 			'custom_css'		=> '',
-			'exclude_pages'		=> '',
-			'preloader'			=> true
+			'exclude_pages'		=> ''
 		);
 		return apply_filters( 'mt_get_default_array', $defaults );
 	}
