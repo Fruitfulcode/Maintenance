@@ -1,0 +1,387 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Maintenance\n"
+"POT-Creation-Date: 2016-04-18 15:45+0300\n"
+"PO-Revision-Date: 2016-06-06 12:01+0300\n"
+"Last-Translator: \n"
+"Language-Team: fruitfulcode <mail@fruitfulcode.com>\n"
+"Language: he_IL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: includes/admin.php:77 includes/functions.php:603
+msgid "Maintenance"
+msgstr "תחזוקה"
+
+#: includes/admin.php:77 includes/admin.php:94
+msgid "Save changes"
+msgstr "שמור שינויים"
+
+#: includes/functions.php:169
+msgid "Standard Fonts"
+msgstr "גופנים רגילים"
+
+#: includes/functions.php:176
+msgid "Google Web Fonts"
+msgstr "גופני Google Web"
+
+#: includes/functions.php:228
+msgid "General Settings"
+msgstr "הגדרות כלליות"
+
+#: includes/functions.php:229
+msgid "Custom CSS"
+msgstr "CSS מותאם אישית"
+
+#: includes/functions.php:230
+msgid "Exclude pages"
+msgstr "אי הכללה של דפים"
+
+#: includes/functions.php:236
+msgid "Pro version"
+msgstr "גירסת Pro"
+
+#: includes/functions.php:243
+msgid "Fruitful Code projects"
+msgstr "Fruitful Code פרויקטים"
+
+#: includes/functions.php:249
+msgid "Support"
+msgstr "תמיכה"
+
+#: includes/functions.php:255
+msgid "Translation"
+msgstr "תִרגוּם"
+
+#: includes/functions.php:278
+msgid "Page title"
+msgstr "כותרת העמוד"
+
+#: includes/functions.php:279
+msgid "Headline"
+msgstr "כּוֹתֶרֶת"
+
+#: includes/functions.php:280
+msgid "Description"
+msgstr "תיאור"
+
+#: includes/functions.php:281
+msgid "Footer Text"
+msgstr "טקסט כותרת תחתונה"
+
+#: includes/functions.php:282
+msgid "Logo width"
+msgstr "רוחב לוגו"
+
+#: includes/functions.php:283
+msgid "Logo height"
+msgstr "גובה לוגו"
+
+#: includes/functions.php:284
+msgid "Logo"
+msgstr "סֵמֶל"
+
+#: includes/functions.php:284
+msgid "Upload Logo"
+msgstr "העלאת לוגו"
+
+#: includes/functions.php:285
+msgid "Retina logo"
+msgstr "לוגו רשתית"
+
+#: includes/functions.php:285
+msgid "Upload Retina Logo"
+msgstr "לוגו רשתית העלה"
+
+#: includes/functions.php:289
+msgid "Admin bar"
+msgstr "בר Admin"
+
+#: includes/functions.php:289
+msgid "Show admin bar"
+msgstr "בר מנהל התכנית"
+
+#: includes/functions.php:290
+msgid "503"
+msgstr ""
+
+#: includes/functions.php:290
+msgid "Service temporarily unavailable, Google analytics will be disable."
+msgstr "זמנית, שירות זמין, גוגל אנליטיקס תושבת."
+
+#: includes/functions.php:297
+msgid "Google Analytics ID"
+msgstr ""
+
+#: includes/functions.php:297
+msgid "UA-XXXXX-X"
+msgstr ""
+
+#: includes/functions.php:298
+msgid "Blur intensity"
+msgstr "עוצם לטשטש"
+
+#: includes/functions.php:304
+msgid "Background blur"
+msgstr "טשטוש רקע"
+
+#: includes/functions.php:304
+msgid "Apply a blur"
+msgstr "מחיל לטשטש"
+
+#: includes/functions.php:305
+msgid "Login On / Off"
+msgstr "התחברות הפעלה / כיבוי"
+
+#: includes/functions.php:317
+msgid "CSS Code"
+msgstr "קוד CSS"
+
+#: includes/functions.php:331
+msgid "Select the page to be displayed:"
+msgstr "בחר את הדף שיוצג:"
+
+#: includes/functions.php:377
+msgid "Not available object."
+msgstr "לא זמין אובייקט."
+
+#: includes/functions.php:392
+msgid "Background image"
+msgstr "תמונת רקע"
+
+#: includes/functions.php:392
+msgid "Upload Background"
+msgstr "רקע העלאה"
+
+#: includes/functions.php:398
+msgid "Background color"
+msgstr "צבע רקע"
+
+#: includes/functions.php:399
+msgid "Font color"
+msgstr "צבע גופן"
+
+#: includes/functions.php:406
+msgid "Font family"
+msgstr "משפחת גופן"
+
+#: includes/functions.php:411
+msgid "Subsets"
+msgstr "תת"
+
+#: includes/functions.php:419
+msgid "Have any questions?"
+msgstr "יש לך שאלות?"
+
+#: includes/functions.php:420
+#, php-format
+msgid ""
+"You may find answers to your questions at <a target=\"_blank\" href=\"http://"
+"support.fruitfulcode.com/hc/en-us/sections/200406386\">support forum</"
+"a><br>You may  <a target=\"_blank\" href=\"http://support.fruitfulcode.com/"
+"hc/en-us/requests/new\">contact us</a> with customization requests and "
+"suggestions.<br> Please visit our website to learn about us and our services "
+"<a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
+msgstr ""
+"אתה עלול למצוא את התשובות לשאלות שלך <a target=\"_blank\" href=\"http://"
+"support.fruitfulcode.com/hc/en-us/sections/200406386\"> פורום תמיכה </a><br> "
+"אתה יכול <a target=\"_blank\" href=\"http://support.fruitfulcode.com/hc/en-"
+"us/requests/new\"> תיצור איתנו קשר </a> עם בקשות התאמה אישית והצעות. <br> "
+"אנא בקרו באתר שלנו כדי ללמוד עלינו ועל השירותים שלנו <a href=\"%1$s\" title="
+"\"%2$s\">%2$s</a>"
+
+#: includes/functions.php:431
+msgid "This plugin is translation friendly"
+msgstr "תוסף זה הוא תרגום ידידותי"
+
+#: includes/functions.php:432
+#, php-format
+msgid ""
+"Want to improve translation or make one for your native language? <a href="
+"\"%1$s\" title=\"%2$s\">%2$s</a>"
+msgstr ""
+"רוצים לשפר את התרגום או לעשות אחד בשפת האם שלך? <a href=\"%1$s\" title=\"%2$s"
+"\">%2$s</a>"
+
+#: includes/functions.php:434
+msgid "Follow this tutorial"
+msgstr "בצע הדרכה זו"
+
+#: includes/functions.php:443
+msgid "Premium WordPress themes"
+msgstr "WordPress נושאים Premium"
+
+#: includes/functions.php:449
+msgid "ANAGLYPH - One page / Multi Page WordPress Theme"
+msgstr "ANAGLYPH - נושא עמוד אחד / וורדפרס ריבוי דפים"
+
+#: includes/functions.php:454
+msgid "Love.ly - Simple & Elegant WordPress theme"
+msgstr "Love.ly - WordPress נושא פשוט & אלגנטי"
+
+#: includes/functions.php:460
+msgid "Zoner - Real Estate WordPress theme"
+msgstr "Zoner - וורדפרס נדל\"ן"
+
+#: includes/functions.php:473
+msgid "Extended functionality"
+msgstr "פונקציונלי מורחב"
+
+#: includes/functions.php:474
+#, php-format
+msgid ""
+"Purchase <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
+"plugin/2781350?ref=fruitfulcode\" target=\"_blank\">PRO</a> version  with "
+"extended functionality. %1$s If you like our plugin please <a target=\"_blank"
+"\" href=\"http://wordpress.org/support/view/plugin-reviews/maintenance?"
+"filter=5\">rate it</a>, <a title=\"leave feedbacks\" href=\"%2$s\" target="
+"\"_blank\">leave feedbacks</a>."
+msgstr ""
+"לִרְכּוֹשׁ <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
+"plugin/2781350?ref=fruitfulcode\" target=\"_blank\"> מִקצוֹעָן </a>גרסה עם "
+"פונקציונליות מורחבת.  %1$s אם אתה אוהב את התוסף שלנו בבקשה <a target=\"_blank"
+"\" href=\"http://wordpress.org/support/view/plugin-reviews/maintenance?"
+"filter=5\"> לדרג אותו </a>, <a title=\"leave feedbacks\" href=\"%2$s\" "
+"target=\"_blank\"> להשאיר פידבקים </a>."
+
+#: includes/functions.php:478
+msgid "Demo website"
+msgstr "אתר הדגמה"
+
+#: includes/functions.php:667
+msgid "Website is under construction"
+msgstr "אתר נמצא בבנייה"
+
+#: includes/functions.php:668
+msgid "Maintenance mode is on"
+msgstr "מצב תחזוקה הוא על"
+
+#: includes/functions.php:669
+msgid "Website will be available soon"
+msgstr "האתר יהיה זמין בקרוב"
+
+#: load/functions.php:39
+msgid "Permission access denied!"
+msgstr "גישת הרשאה נדחתה!"
+
+#: load/functions.php:47
+msgid "You entered your login are incorrect!"
+msgstr "אתה נכנס ההתחברות שלך אינה נכונה!"
+
+#: load/functions.php:51
+msgid "You entered your password are incorrect!"
+msgstr "הזנת הסיסמה אינה נכונה!"
+
+#: load/functions.php:54
+msgid "You entered your login and password are incorrect!"
+msgstr "הזנת שם המשתמש והסיסמה שלך אינם נכונים!"
+
+#: load/functions.php:283
+msgid "User Login"
+msgstr "כניסת משתמש"
+
+#: load/functions.php:284
+msgid "Username"
+msgstr "שם משתמש"
+
+#: load/functions.php:285
+msgid "Password"
+msgstr "סיסמה"
+
+#: load/functions.php:286
+msgid "Lost Password"
+msgstr "סיסמה אבודה"
+
+#: load/functions.php:287
+msgid "Login"
+msgstr "התחבר"
+
+msgid ""
+"You may find answers to your questions at <a target=\"_blank\" href=\"http://"
+"wordpress.org/support/plugin/maintenance\">support forum</a><br>You may  <a "
+"target=\"_blank\" href=\"mailto:mail@fruitfulcode.com?subject=Maintenance "
+"plugin\">contact us</a> with customization requests and suggestions.<br> "
+"Please visit our website to learn about us and our services <a href=\"%1$s\" "
+"title=\"%2$s\">%2$s</a>"
+msgstr ""
+"אתה עלול למצוא את התשובות לשאלות שלך <a target=\"_blank\" href=\"http://"
+"support.fruitfulcode.com/hc/en-us/sections/200406386\"> פורום תמיכה </a><br> "
+"אתה יכול <a target=\"_blank\" href=\"http://support.fruitfulcode.com/hc/en-"
+"us/requests/new\"> תיצור איתנו קשר </a> עם בקשות התאמה אישית והצעות. <br> "
+"אנא בקרו באתר שלנו כדי ללמוד עלינו ועל השירותים שלנו <a href=\"%1$s\" title="
+"\"%2$s\">%2$s</a>"
+
+msgid "Contact support"
+msgstr "צור קשר עם תמיכה"
+
+msgid ""
+"If you faced with any problems, have a question or suggestion you always can "
+"contact us with any request on our website <a href=\"%1$s\" title=\"%2$s\">"
+"%2$s</a>"
+msgstr ""
+"אם אתה מתמודד עם כל בעיות, יש שאלה או הצעה אתה תמיד יכול לפנות אלינו בכל "
+"בקשה באתר שלנו <a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
+
+msgid ""
+"If you like our plugin please rate it, %1$s <a title=\"leave feedback\" href="
+"\"%2$s\" target=\"_blank\">leave feedback</a> or purchase extended version "
+"%1$s with more other features."
+msgstr ""
+"אם אתה אוהב את התוסף שלנו בבקשה לדרג אותו, %1$s <a title=\"leave feedback\" "
+"href=\"%2$s\" target=\"_blank\">משוב</a>או לרכוש גרסה מורחבת %1$s עם תכונות "
+"אחרות יותר."
+
+msgid "Purchase"
+msgstr "לִרְכּוֹשׁ"
+
+msgid "We have time until launch"
+msgstr "יש לנו זמן עד ההשקה"
+
+msgid "Be first of your friends who will know when the website goes live."
+msgstr "הייה ראשון של החברים שלכם אשר ידעו מתי להפעיל את האתר."
+
+msgid "Check out our extended version of plugin with new features"
+msgstr "עזיבת הגרסה המורחבת שלנו של תוסף עם תכונות חדשות"
+
+msgid "Your session has expired."
+msgstr "המועד שלך פג."
+
+msgid "Please login to see website"
+msgstr "התחבר כדי לראות את האתר"
+
+msgid "User roles"
+msgstr "תפקיד משתמש"
+
+msgid "Choose users access permissions in maintenance mode."
+msgstr "בחר הרשאות גישה למשתמשים במצב תחזוקה."
+
+#~ msgid "Service temporarily unavailable, Google analytics will be disable"
+#~ msgstr "זמנית, שירות זמין, גוגל אנליטיקס תושבת"
+
+#~ msgid "Sign In"
+#~ msgstr "הירשם"
+
+#~ msgid " is On"
+#~ msgstr "הינו פועל"
+
+#~ msgid " is Off"
+#~ msgstr "כבוי"
+
+#~ msgid "is On"
+#~ msgstr "הינו פועל"
+
+#~ msgid "is Off"
+#~ msgstr "כבוי"
+
+#~ msgid "Maintenance "
+#~ msgstr "תחזוקה"
