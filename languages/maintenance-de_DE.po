@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
-"POT-Creation-Date: 2016-04-21 17:40+0300\n"
-"PO-Revision-Date: 2016-04-21 17:45+0300\n"
+"POT-Creation-Date: 2016-04-18 15:45+0300\n"
+"PO-Revision-Date: 2016-06-18 15:01+0200\n"
 "Last-Translator: René Maurer <rene.maurer@jamos.ch>\n"
 "Language-Team: fruitfulcode\n"
 "Language: de_CH\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7\n"
+"X-Generator: Poedit 1.8.8\n"
 "X-Poedit-KeywordsList: _;_e;__;_x\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -41,7 +41,7 @@ msgstr "Benutzerdefinierte CSS"
 
 #: includes/functions.php:230
 msgid "Exclude pages"
-msgstr "Ausschließen Seiten"
+msgstr "Seiten ausschließen"
 
 #: includes/functions.php:236
 msgid "Pro version"
@@ -73,7 +73,7 @@ msgstr "Beschreibung"
 
 #: includes/functions.php:281
 msgid "Footer Text"
-msgstr "Fusszeile"
+msgstr "Fußzeile"
 
 #: includes/functions.php:282
 msgid "Logo width"
@@ -89,23 +89,23 @@ msgstr "Logo"
 
 #: includes/functions.php:284
 msgid "Upload Logo"
-msgstr "logo hochladen"
+msgstr "Logo hochladen"
 
 #: includes/functions.php:285
 msgid "Retina logo"
-msgstr "Retina logo"
+msgstr "Retina Logo"
 
 #: includes/functions.php:285
 msgid "Upload Retina Logo"
-msgstr "Retina logo hochladen"
+msgstr "Retina Logo hochladen"
 
 #: includes/functions.php:289
 msgid "Admin bar"
-msgstr "Admin Bar"
+msgstr "Admin Leiste"
 
 #: includes/functions.php:289
 msgid "Show admin bar"
-msgstr "Zeige Admin Bar"
+msgstr "Zeige Admin Leiste"
 
 #: includes/functions.php:290
 msgid "503"
@@ -114,8 +114,7 @@ msgstr "503"
 #: includes/functions.php:290
 msgid "Service temporarily unavailable, Google analytics will be disable."
 msgstr ""
-"Dienst vorübergehend nicht verfügbar, wird Google Analytics deaktiviert "
-"werden."
+"Dienst vorübergehend nicht verfügbar, Google Analytics wird deaktiviert."
 
 #: includes/functions.php:297
 msgid "Google Analytics ID"
@@ -131,7 +130,7 @@ msgstr "Intensität des Verwischens"
 
 #: includes/functions.php:304
 msgid "Background blur"
-msgstr "Hintergrund Verwischen"
+msgstr "Hintergrund verwischen"
 
 #: includes/functions.php:304
 msgid "Apply a blur"
@@ -147,11 +146,11 @@ msgstr ""
 
 #: includes/functions.php:331
 msgid "Select the page to be displayed:"
-msgstr "Wählen Sie die Seite angezeigt werden soll:"
+msgstr "Wählen Sie die Seite die angezeigt werden soll:"
 
 #: includes/functions.php:377
 msgid "Not available object."
-msgstr "Nicht verfügbar Objekt."
+msgstr "Objekt nicht verfügbar."
 
 #: includes/functions.php:392
 msgid "Background image"
@@ -167,11 +166,11 @@ msgstr "Hintergrund Farbe"
 
 #: includes/functions.php:399
 msgid "Font color"
-msgstr "Schrift Farbe"
+msgstr "Schriftfarbe"
 
 #: includes/functions.php:406
 msgid "Font family"
-msgstr "Schriftfamilie"
+msgstr "Schriftart"
 
 #: includes/functions.php:411
 msgid "Subsets"
@@ -179,7 +178,7 @@ msgstr ""
 
 #: includes/functions.php:419
 msgid "Have any questions?"
-msgstr "Hast du bestimmte Fragen?"
+msgstr "Hast Du irgendwelche Fragen?"
 
 #: includes/functions.php:420
 #, php-format
@@ -191,17 +190,17 @@ msgid ""
 "suggestions.<br> Please visit our website to learn about us and our services "
 "<a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
 msgstr ""
-"Sie können Antworten auf Ihre Fragen finden Sie unter <a target=\"_blank\" "
-"href=\"http://support.fruitfulcode.com/hc/en-us/"
-"sections/200406386\">Hilfeforum</a><br>Du darfst  <a target=\"_blank\" href="
-"\"http://support.fruitfulcode.com/hc/en-us/requests/new\">kontaktiere uns</"
-"a> mit der Anpassung Wünsche und Anregungen. <br> Bitte besuchen Sie unsere "
-"Website über uns und unsere Dienstleistungen zu erfahren <a href=\"%1$s\" "
-"title=\"%2$s\">%2$s</a>"
+"Im <a target=\"_blank\" href=\"http://support.fruitfulcode.com/hc/en-us/"
+"sections/200406386\">Hilfeforum</a> erhältst Du Unterstützung bei Deinen "
+"Fragen.<br>Du kannst uns bei Wünschen und Anregungen auch gerne <a target="
+"\"_blank\" href=\"http://support.fruitfulcode.com/hc/en-us/requests/new"
+"\">kontaktieren</a>.<br> Besuche außerdem unsere Website um mehr über uns "
+"und unsere Dienstleistungen zu erfahren: <a href=\"%1$s\" title=\"%2$s\">"
+"%2$s</a>"
 
 #: includes/functions.php:431
 msgid "This plugin is translation friendly"
-msgstr "Dieses Plugin ist Übersetzung freundlich"
+msgstr "Dieses Plugin ist übersetzungsfreundlich."
 
 #: includes/functions.php:432
 #, php-format
@@ -209,8 +208,8 @@ msgid ""
 "Want to improve translation or make one for your native language? <a href="
 "\"%1$s\" title=\"%2$s\">%2$s</a>"
 msgstr ""
-"Wollen Übersetzung zu verbessern oder eine für Ihre Muttersprache zu machen? "
-"<a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
+"Willst Du die Übersetzungen verbessern oder eine für Deine Muttersprache "
+"erstellen? <a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
 
 #: includes/functions.php:434
 msgid "Follow this tutorial"
@@ -222,11 +221,11 @@ msgstr ""
 
 #: includes/functions.php:449
 msgid "ANAGLYPH - One page / Multi Page WordPress Theme"
-msgstr "ANAGLYPH - Eine Seite / Multi Seite Wordpress Theme"
+msgstr "ANAGLYPH - Single page / Multi page Wordpress Theme"
 
 #: includes/functions.php:454
 msgid "Love.ly - Simple & Elegant WordPress theme"
-msgstr "Love.ly - Einfache & Elegant Wordpress theme"
+msgstr "Love.ly - Einfaches & elegantes Wordpress theme"
 
 #: includes/functions.php:460
 msgid "Zoner - Real Estate WordPress theme"
@@ -256,14 +255,6 @@ msgstr ""
 #: includes/functions.php:478
 msgid "Demo website"
 msgstr "Demo Webseite"
-
-#: includes/functions.php:599
-msgid " is On"
-msgstr "inbegriffen"
-
-#: includes/functions.php:601
-msgid " is Off"
-msgstr "ist aus"
 
 #: includes/functions.php:667
 msgid "Website is under construction"
