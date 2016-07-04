@@ -25,7 +25,7 @@ input:-webkit-autofill {
 }
 
 input:-webkit-autofill:focus {
-	-webkit-box-shadow: /*your box-shadow*/,0 0 0 50px #48494a inset;
+	-webkit-box-shadow: 0 0 0 50px #48494a inset;
 	-webkit-text-fill-color: #fff;
 } 
 
