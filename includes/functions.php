@@ -296,7 +296,7 @@
 				} 
 				
 				generate_check_filed(__('Background blur', 'maintenance'), __('Apply a blur', 'maintenance'), 'is_blur', 'is_blur', $is_blur);
-				generate_check_filed(__('Login On / Off', 'maintenance'),  '', 'is_login', 'is_login', isset($mt_option['is_login']));
+				generate_check_filed(__('Login On', 'maintenance'),  '', 'is_login', 'is_login', isset($mt_option['is_login']));
 		?>		
 			</tbody>
 		</table>
