@@ -40,8 +40,14 @@ function get_custom_login_code() {
 			  $class_login 		= 'error';
 			  $class_password 	= 'error';
 		} else {
-
-			$user_connect = wp_signon( $access, false);
+			
+			if ( is_ssl() ) {
+				$ssl = true;
+			} else {
+				$ssl = false;
+			}
+			
+			$user_connect = wp_signon( $access, $ssl );
 			if ( is_wp_error($user_connect) )  {
 				if ($user_connect->get_error_code() == 'invalid_username') {
 					$error_message  =  __('You entered your login are incorrect!', 'maintenance');;
