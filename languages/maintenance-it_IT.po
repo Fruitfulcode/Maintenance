@@ -1,186 +1,178 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
-"POT-Creation-Date: 2016-04-18 15:45+0300\n"
-"PO-Revision-Date: 2016-04-18 17:41+0300\n"
+"POT-Creation-Date: 2016-08-03 16:02+0300\n"
+"PO-Revision-Date: 2016-08-03 16:17+0300\n"
 "Last-Translator: René Maurer <rene.maurer@jamos.ch>\n"
 "Language-Team: Massimo Pacifici <pacifici@eumed.it>\n"
 "Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7\n"
+"X-Generator: Poedit 1.8.8\n"
 "X-Poedit-KeywordsList: _;_e;__;_x\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: includes/admin.php:77 includes/functions.php:603
+#: includes/admin.php:76 includes/functions.php:597
 msgid "Maintenance"
 msgstr "Manutenzione"
 
-#: includes/admin.php:77 includes/admin.php:94
+#: includes/admin.php:76 includes/admin.php:93
 msgid "Save changes"
 msgstr "Salva le modifiche"
 
-#: includes/functions.php:169
+#: includes/functions.php:165
 msgid "Standard Fonts"
 msgstr ""
 
-#: includes/functions.php:176
+#: includes/functions.php:172
 msgid "Google Web Fonts"
 msgstr ""
 
-#: includes/functions.php:228
+#: includes/functions.php:222
 msgid "General Settings"
 msgstr "Impostazioni generali"
 
-#: includes/functions.php:229
+#: includes/functions.php:223
 msgid "Custom CSS"
 msgstr "CSS personalizzato"
 
-#: includes/functions.php:230
+#: includes/functions.php:224
 msgid "Exclude pages"
 msgstr "Escludere le pagine"
 
-#: includes/functions.php:236
+#: includes/functions.php:230
 msgid "Pro version"
 msgstr "Versione Pro"
 
-#: includes/functions.php:243
+#: includes/functions.php:237
 msgid "Fruitful Code projects"
 msgstr "Fruitful Code progetti"
 
-#: includes/functions.php:249
+#: includes/functions.php:243
 msgid "Support"
 msgstr "Assistenza"
 
-#: includes/functions.php:255
+#: includes/functions.php:249
 msgid "Translation"
 msgstr "Traduzione"
 
-#: includes/functions.php:278
+#: includes/functions.php:272
 msgid "Page title"
 msgstr "Titolo della pagina"
 
-#: includes/functions.php:279
+#: includes/functions.php:273
 msgid "Headline"
 msgstr "Intestazione"
 
-#: includes/functions.php:280
+#: includes/functions.php:274
 msgid "Description"
 msgstr "Descrizione"
 
-#: includes/functions.php:281
+#: includes/functions.php:275
 msgid "Footer Text"
 msgstr "Piè di pagina di testo"
 
-#: includes/functions.php:282
-msgid "Logo width"
-msgstr "Larghezza logo"
+#: includes/functions.php:276
+msgid "Set Logo width"
+msgstr "Set larghezza Logo"
 
-#: includes/functions.php:283
-msgid "Logo height"
-msgstr "Altezza logo"
+#: includes/functions.php:277
+msgid "Set Logo height"
+msgstr "Regolare l'altezza del Logo"
 
-#: includes/functions.php:284
+#: includes/functions.php:278
 msgid "Logo"
 msgstr "Logo"
 
-#: includes/functions.php:284
+#: includes/functions.php:278
 msgid "Upload Logo"
 msgstr "Carica logo"
 
-#: includes/functions.php:285
+#: includes/functions.php:279
 msgid "Retina logo"
 msgstr "Retina logo"
 
-#: includes/functions.php:285
+#: includes/functions.php:279
 msgid "Upload Retina Logo"
 msgstr "Carica Retina logo"
 
-#: includes/functions.php:289
-msgid "Admin bar"
-msgstr "Barra di Amministrazione"
-
-#: includes/functions.php:289
+#: includes/functions.php:283
 msgid "Show admin bar"
 msgstr "Mostra la barra di Amministrazione"
 
-#: includes/functions.php:290
+#: includes/functions.php:284
 msgid "503"
 msgstr "503"
 
-#: includes/functions.php:290
+#: includes/functions.php:284
 msgid "Service temporarily unavailable, Google analytics will be disable."
 msgstr ""
 "Servizio temporaneamente non disponibile, Google Analytics sarà disabilitata."
 
-#: includes/functions.php:297
+#: includes/functions.php:291
 msgid "Google Analytics ID"
 msgstr "Google Analytics ID"
 
-#: includes/functions.php:297
+#: includes/functions.php:291
 msgid "UA-XXXXX-X"
 msgstr "UA-XXXXX-X"
 
+#: includes/functions.php:292
+msgid "Set blur intensity"
+msgstr "intensità Set sfocatura"
+
 #: includes/functions.php:298
-msgid "Blur intensity"
-msgstr "Intensità sfocatura"
+msgid "Apply background blur"
+msgstr "Applicare la sfocatura dello sfondo"
 
-#: includes/functions.php:304
-msgid "Background blur"
-msgstr "Sfondo sfocato"
+#: includes/functions.php:299
+msgid "Enable frontend login"
+msgstr "Abilitare l'accesso frontend"
 
-#: includes/functions.php:304
-msgid "Apply a blur"
-msgstr "Attiva sfocatura"
-
-#: includes/functions.php:305
-msgid "Login On / Off"
-msgstr "Login Sì / No"
-
-#: includes/functions.php:317
+#: includes/functions.php:311
 msgid "CSS Code"
 msgstr "codice CSS"
 
-#: includes/functions.php:331
+#: includes/functions.php:325
 msgid "Select the page to be displayed:"
 msgstr "Selezionare la pagina da visualizzare:"
 
-#: includes/functions.php:377
+#: includes/functions.php:371
 msgid "Not available object."
 msgstr "Oggetto non disponibile."
 
-#: includes/functions.php:392
+#: includes/functions.php:386
 msgid "Background image"
 msgstr "Immagine di sfondo"
 
-#: includes/functions.php:392
+#: includes/functions.php:386
 msgid "Upload Background"
 msgstr "Carica sfondo"
 
-#: includes/functions.php:398
+#: includes/functions.php:392
 msgid "Background color"
 msgstr "Colore dello sfondo"
 
-#: includes/functions.php:399
+#: includes/functions.php:393
 msgid "Font color"
 msgstr "Colore del testo"
 
-#: includes/functions.php:406
+#: includes/functions.php:400
 msgid "Font family"
 msgstr "Famiglia di font"
 
-#: includes/functions.php:411
+#: includes/functions.php:405
 msgid "Subsets"
 msgstr "sottoinsiemi"
 
-#: includes/functions.php:419
+#: includes/functions.php:413
 msgid "Have any questions?"
 msgstr "Hai domande?"
 
-#: includes/functions.php:420
+#: includes/functions.php:414
 #, php-format
 msgid ""
 "You may find answers to your questions at <a target=\"_blank\" href=\"http://"
@@ -198,11 +190,11 @@ msgstr ""
 "per conoscere noi e dei nostri servizi <a href=\"%1$s\" title=\"%2$s\">%2$s</"
 "a>"
 
-#: includes/functions.php:431
+#: includes/functions.php:425
 msgid "This plugin is translation friendly"
 msgstr "Questo plugin è la traduzione amichevole"
 
-#: includes/functions.php:432
+#: includes/functions.php:426
 #, php-format
 msgid ""
 "Want to improve translation or make one for your native language? <a href="
@@ -211,31 +203,31 @@ msgstr ""
 "Vuoi migliorare traduzione o fare uno per la lingua nativa? <a href=\"%1$s\" "
 "title=\"%2$s\">%2$s</a>"
 
-#: includes/functions.php:434
+#: includes/functions.php:428
 msgid "Follow this tutorial"
 msgstr "Seguite questo tutorial"
 
-#: includes/functions.php:443
+#: includes/functions.php:437
 msgid "Premium WordPress themes"
 msgstr "Temi WordPress Premium"
 
-#: includes/functions.php:449
+#: includes/functions.php:443
 msgid "ANAGLYPH - One page / Multi Page WordPress Theme"
 msgstr "ANAGLYPH - Una pagina / multi pagina di WordPress Theme"
 
-#: includes/functions.php:454
+#: includes/functions.php:448
 msgid "Love.ly - Simple & Elegant WordPress theme"
 msgstr "Love.ly - tema WordPress Simple & Elegant"
 
-#: includes/functions.php:460
+#: includes/functions.php:454
 msgid "Zoner - Real Estate WordPress theme"
 msgstr "Zoner - Immobiliare tema WordPress"
 
-#: includes/functions.php:473
+#: includes/functions.php:467
 msgid "Extended functionality"
 msgstr "Funzionalità estese"
 
-#: includes/functions.php:474
+#: includes/functions.php:468
 #, php-format
 msgid ""
 "Purchase <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
@@ -252,19 +244,19 @@ msgstr ""
 "filter=5\">votalo</a> e <a title=\"\" href=\"%2$s\" target=\"_blank\">lascia "
 "un commento</a>."
 
-#: includes/functions.php:478
+#: includes/functions.php:472
 msgid "Demo website"
 msgstr "Sito web dimostrativo"
 
-#: includes/functions.php:667
+#: includes/functions.php:661
 msgid "Website is under construction"
 msgstr "Il sito web è in costruzione"
 
-#: includes/functions.php:668
+#: includes/functions.php:662
 msgid "Maintenance mode is on"
 msgstr "La modalità di manutenzione è attiva"
 
-#: includes/functions.php:669
+#: includes/functions.php:663
 msgid "Website will be available soon"
 msgstr "Il sito web sarà disponibile a breve"
 
@@ -272,37 +264,70 @@ msgstr "Il sito web sarà disponibile a breve"
 msgid "Permission access denied!"
 msgstr "Accesso negato!"
 
-#: load/functions.php:47
+#: load/functions.php:53
 msgid "You entered your login are incorrect!"
 msgstr "Hai inserito un nome utente errato!"
 
-#: load/functions.php:51
+#: load/functions.php:57
 msgid "You entered your password are incorrect!"
 msgstr "Hai inserito una password errata!"
 
-#: load/functions.php:54
+#: load/functions.php:60
 msgid "You entered your login and password are incorrect!"
 msgstr "Hai inserito nome utente e password errati!"
 
-#: load/functions.php:283
+#: load/functions.php:289
 msgid "User Login"
 msgstr "Login utente"
 
-#: load/functions.php:284
+#: load/functions.php:290
 msgid "Username"
 msgstr "Nome utente"
 
-#: load/functions.php:285
+#: load/functions.php:291
 msgid "Password"
 msgstr "Parola d'ordine"
 
-#: load/functions.php:286
+#: load/functions.php:292
 msgid "Lost Password"
 msgstr "Password dimenticata"
 
-#: load/functions.php:287
+#: load/functions.php:293
 msgid "Login"
 msgstr "Accesso"
+
+#~ msgid "Choose Logo width"
+#~ msgstr "Scegli larghezza Logo"
+
+#~ msgid "Choose Logo height"
+#~ msgstr "Scegli altezza Logo"
+
+#~ msgid "Blur intensity"
+#~ msgstr "Intensità sfocatura"
+
+#~ msgid "Enable login"
+#~ msgstr "Abilita login"
+
+#~ msgid "Put Login On"
+#~ msgstr "Mettere Accesso On"
+
+#~ msgid "Logo width"
+#~ msgstr "Larghezza logo"
+
+#~ msgid "Logo height"
+#~ msgstr "Altezza logo"
+
+#~ msgid "Admin bar"
+#~ msgstr "Barra di Amministrazione"
+
+#~ msgid "Background blur"
+#~ msgstr "Sfondo sfocato"
+
+#~ msgid "Apply a blur"
+#~ msgstr "Attiva sfocatura"
+
+#~ msgid "Login On / Off"
+#~ msgstr "Login Sì / No"
 
 #~ msgid "Service temporarily unavailable, Google analytics will be disable"
 #~ msgstr ""

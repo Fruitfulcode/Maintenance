@@ -1,186 +1,178 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
-"POT-Creation-Date: 2016-04-18 15:45+0300\n"
-"PO-Revision-Date: 2016-04-18 17:10+0300\n"
+"POT-Creation-Date: 2016-08-03 16:02+0300\n"
+"PO-Revision-Date: 2016-08-03 16:12+0300\n"
 "Last-Translator: \n"
 "Language-Team: fruitfulcode\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7\n"
+"X-Generator: Poedit 1.8.8\n"
 "X-Poedit-KeywordsList: _;_e;__;_x\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
 
-#: includes/admin.php:77 includes/functions.php:603
+#: includes/admin.php:76 includes/functions.php:597
 msgid "Maintenance"
 msgstr "صيانة"
 
-#: includes/admin.php:77 includes/admin.php:94
+#: includes/admin.php:76 includes/admin.php:93
 msgid "Save changes"
 msgstr "حفظ التغيرات"
 
-#: includes/functions.php:169
+#: includes/functions.php:165
 msgid "Standard Fonts"
 msgstr "مستوى الخطوط"
 
-#: includes/functions.php:176
+#: includes/functions.php:172
 msgid "Google Web Fonts"
 msgstr ""
 
-#: includes/functions.php:228
+#: includes/functions.php:222
 msgid "General Settings"
 msgstr "الإعدادات العامة"
 
-#: includes/functions.php:229
+#: includes/functions.php:223
 msgid "Custom CSS"
 msgstr " حسب الطلب CSS"
 
-#: includes/functions.php:230
+#: includes/functions.php:224
 msgid "Exclude pages"
 msgstr "استبعاد صفحات"
 
-#: includes/functions.php:236
+#: includes/functions.php:230
 msgid "Pro version"
 msgstr "نسخة للمحترفين"
 
-#: includes/functions.php:243
+#: includes/functions.php:237
 msgid "Fruitful Code projects"
 msgstr "مشاريع كود مثمرة"
 
-#: includes/functions.php:249
+#: includes/functions.php:243
 msgid "Support"
 msgstr "الدعم"
 
-#: includes/functions.php:255
+#: includes/functions.php:249
 msgid "Translation"
 msgstr "ترجمة"
 
-#: includes/functions.php:278
+#: includes/functions.php:272
 msgid "Page title"
 msgstr "عنوان الصفحة"
 
-#: includes/functions.php:279
+#: includes/functions.php:273
 msgid "Headline"
 msgstr "عنوان رئيسي"
 
-#: includes/functions.php:280
+#: includes/functions.php:274
 msgid "Description"
 msgstr "وصف"
 
-#: includes/functions.php:281
+#: includes/functions.php:275
 msgid "Footer Text"
 msgstr "نص تذييل"
 
-#: includes/functions.php:282
-msgid "Logo width"
-msgstr "عرض الشعار"
+#: includes/functions.php:276
+msgid "Set Logo width"
+msgstr "مجموعة عرض الشعار"
 
-#: includes/functions.php:283
-msgid "Logo height"
-msgstr "ارتفاع الشعار"
+#: includes/functions.php:277
+msgid "Set Logo height"
+msgstr "مجموعة ارتفاع الشعار"
 
-#: includes/functions.php:284
+#: includes/functions.php:278
 msgid "Logo"
 msgstr "شعار"
 
-#: includes/functions.php:284
+#: includes/functions.php:278
 msgid "Upload Logo"
 msgstr "تحميل الشعار"
 
-#: includes/functions.php:285
+#: includes/functions.php:279
 msgid "Retina logo"
 msgstr "شبكية العين شعار"
 
-#: includes/functions.php:285
+#: includes/functions.php:279
 msgid "Upload Retina Logo"
 msgstr "تحميل الشبكية شعار"
 
-#: includes/functions.php:289
-msgid "Admin bar"
-msgstr "شريط المشرف"
-
-#: includes/functions.php:289
+#: includes/functions.php:283
 msgid "Show admin bar"
 msgstr "عرض شريط المشرف"
 
-#: includes/functions.php:290
+#: includes/functions.php:284
 msgid "503"
 msgstr "503"
 
-#: includes/functions.php:290
+#: includes/functions.php:284
 msgid "Service temporarily unavailable, Google analytics will be disable."
 msgstr "الخدمة غير متوفرة مؤقتا، سيتم تعطيل تحليلات جوجل."
 
-#: includes/functions.php:297
+#: includes/functions.php:291
 msgid "Google Analytics ID"
 msgstr "Google Analytics ID"
 
-#: includes/functions.php:297
+#: includes/functions.php:291
 msgid "UA-XXXXX-X"
 msgstr "UA-XXXXX-X"
 
+#: includes/functions.php:292
+msgid "Set blur intensity"
+msgstr "تعيين كثافة طمس"
+
 #: includes/functions.php:298
-msgid "Blur intensity"
-msgstr "كثافة طمس"
+msgid "Apply background blur"
+msgstr "تطبيق طمس الخلفية"
 
-#: includes/functions.php:304
-msgid "Background blur"
-msgstr "طمس الخلفية"
+#: includes/functions.php:299
+msgid "Enable frontend login"
+msgstr "تمكين تسجيل الدخول الواجهة"
 
-#: includes/functions.php:304
-msgid "Apply a blur"
-msgstr "تطبيق طمس"
-
-#: includes/functions.php:305
-msgid "Login On / Off"
-msgstr "تسجيل الدخول تشغيل / إيقاف"
-
-#: includes/functions.php:317
+#: includes/functions.php:311
 msgid "CSS Code"
 msgstr "كود CSS"
 
-#: includes/functions.php:331
+#: includes/functions.php:325
 msgid "Select the page to be displayed:"
 msgstr "حدد الصفحة للظهور:"
 
-#: includes/functions.php:377
+#: includes/functions.php:371
 msgid "Not available object."
 msgstr "كائن غير متوفر."
 
-#: includes/functions.php:392
+#: includes/functions.php:386
 msgid "Background image"
 msgstr "الصورة الخلفية"
 
-#: includes/functions.php:392
+#: includes/functions.php:386
 msgid "Upload Background"
 msgstr "تحميل خلفية"
 
-#: includes/functions.php:398
+#: includes/functions.php:392
 msgid "Background color"
 msgstr "لون الخلفية"
 
-#: includes/functions.php:399
+#: includes/functions.php:393
 msgid "Font color"
 msgstr "لون الخط"
 
-#: includes/functions.php:406
+#: includes/functions.php:400
 msgid "Font family"
 msgstr "خط العائلة"
 
-#: includes/functions.php:411
+#: includes/functions.php:405
 msgid "Subsets"
 msgstr "فرعية"
 
-#: includes/functions.php:419
+#: includes/functions.php:413
 msgid "Have any questions?"
 msgstr "لديك أي أسئلة؟"
 
-#: includes/functions.php:420
+#: includes/functions.php:414
 #, php-format
 msgid ""
 "You may find answers to your questions at <a target=\"_blank\" href=\"http://"
@@ -197,11 +189,11 @@ msgstr ""
 "زيارة موقعنا على الانترنت لمعرفة المزيد عن لنا وخدماتنا <a href=\"%1$s\" "
 "title=\"%2$s\">%2$s</a>"
 
-#: includes/functions.php:431
+#: includes/functions.php:425
 msgid "This plugin is translation friendly"
 msgstr "هذا هو البرنامج المساعد الترجمة دية"
 
-#: includes/functions.php:432
+#: includes/functions.php:426
 #, php-format
 msgid ""
 "Want to improve translation or make one for your native language? <a href="
@@ -210,31 +202,31 @@ msgstr ""
 "ترغب في تحسين الترجمة أو جعل واحدة لغتك الأم؟ <a href=\"%1$s\" title=\"%2$s"
 "\">%2$s</a>"
 
-#: includes/functions.php:434
+#: includes/functions.php:428
 msgid "Follow this tutorial"
 msgstr "اتبع هذا البرنامج التعليمي"
 
-#: includes/functions.php:443
+#: includes/functions.php:437
 msgid "Premium WordPress themes"
 msgstr "قسط المواضيع وورد"
 
-#: includes/functions.php:449
+#: includes/functions.php:443
 msgid "ANAGLYPH - One page / Multi Page WordPress Theme"
 msgstr "ANAGLYPH - صفحة واحدة / متعدد صفحة وورد موضوع"
 
-#: includes/functions.php:454
+#: includes/functions.php:448
 msgid "Love.ly - Simple & Elegant WordPress theme"
 msgstr "Love.ly - موضوع بسيط وأنيق وورد"
 
-#: includes/functions.php:460
+#: includes/functions.php:454
 msgid "Zoner - Real Estate WordPress theme"
 msgstr "Zoner - عقارات وورد موضوع"
 
-#: includes/functions.php:473
+#: includes/functions.php:467
 msgid "Extended functionality"
 msgstr "وظائف الموسعة"
 
-#: includes/functions.php:474
+#: includes/functions.php:468
 #, php-format
 msgid ""
 "Purchase <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
@@ -251,19 +243,19 @@ msgstr ""
 "filter=5\"> قيمه </a>,  <a title=\"leave feedbacks\" href=\"%2$s\" target="
 "\"_blank\"> ترك الاصداء .</a>"
 
-#: includes/functions.php:478
+#: includes/functions.php:472
 msgid "Demo website"
 msgstr "الموقع التجريبي"
 
-#: includes/functions.php:667
+#: includes/functions.php:661
 msgid "Website is under construction"
 msgstr "الموقع قيد الإنشاء"
 
-#: includes/functions.php:668
+#: includes/functions.php:662
 msgid "Maintenance mode is on"
 msgstr "وضع الصيانة على"
 
-#: includes/functions.php:669
+#: includes/functions.php:663
 msgid "Website will be available soon"
 msgstr "سيكون الموقع متاحا في وقت قريب"
 
@@ -271,37 +263,70 @@ msgstr "سيكون الموقع متاحا في وقت قريب"
 msgid "Permission access denied!"
 msgstr "وصول تم رفض الإذن!"
 
-#: load/functions.php:47
+#: load/functions.php:53
 msgid "You entered your login are incorrect!"
 msgstr "لقد أدخلت تسجيل الدخول الخاصة بك غير صحيحة!"
 
-#: load/functions.php:51
+#: load/functions.php:57
 msgid "You entered your password are incorrect!"
 msgstr "لقد أدخلت كلمة المرور غير صحيحة!"
 
-#: load/functions.php:54
+#: load/functions.php:60
 msgid "You entered your login and password are incorrect!"
 msgstr "لقد أدخلت اسم المستخدم وكلمة المرور غير صحيحة!"
 
-#: load/functions.php:283
+#: load/functions.php:289
 msgid "User Login"
 msgstr "دخول المستخدم"
 
-#: load/functions.php:284
+#: load/functions.php:290
 msgid "Username"
 msgstr "اسم المستخدم"
 
-#: load/functions.php:285
+#: load/functions.php:291
 msgid "Password"
 msgstr "كلمه السر"
 
-#: load/functions.php:286
+#: load/functions.php:292
 msgid "Lost Password"
 msgstr "كلمة مرور مفقودة"
 
-#: load/functions.php:287
+#: load/functions.php:293
 msgid "Login"
 msgstr "تسجيل الدخول"
+
+#~ msgid "Choose Logo width"
+#~ msgstr "اختيار عرض الشعار"
+
+#~ msgid "Choose Logo height"
+#~ msgstr "اختيار ارتفاع الشعار"
+
+#~ msgid "Blur intensity"
+#~ msgstr "كثافة طمس"
+
+#~ msgid "Enable login"
+#~ msgstr "تمكين تسجيل الدخول"
+
+#~ msgid "Put Login On"
+#~ msgstr "وضع الدخول في"
+
+#~ msgid "Logo width"
+#~ msgstr "عرض الشعار"
+
+#~ msgid "Logo height"
+#~ msgstr "ارتفاع الشعار"
+
+#~ msgid "Admin bar"
+#~ msgstr "شريط المشرف"
+
+#~ msgid "Background blur"
+#~ msgstr "طمس الخلفية"
+
+#~ msgid "Apply a blur"
+#~ msgstr "تطبيق طمس"
+
+#~ msgid "Login On / Off"
+#~ msgstr "تسجيل الدخول تشغيل / إيقاف"
 
 #~ msgid "Service temporarily unavailable, Google analytics will be disable"
 #~ msgstr "الخدمة غير متوفرة مؤقتا، سيتم تعطيل تحليلات جوجل"

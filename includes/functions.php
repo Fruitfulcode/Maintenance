@@ -273,14 +273,14 @@
 				generate_input_filed(__('Headline', 'maintenance'),	'heading', 'heading', $heading);
 				generate_textarea_filed(__('Description', 'maintenance'), 'description', 'description', $description);
 				generate_input_filed(__('Footer Text', 'maintenance'),	'footer_text', 'footer_text', 	$footer_text);
-				generate_number_filed(__('Logo width', 'maintenance'), 'logo_width', 'logo_width', $logo_width);
-				generate_number_filed(__('Logo height', 'maintenance'), 'logo_height', 'logo_height', $logo_height);
+				generate_number_filed(__('Set Logo width', 'maintenance'), 'logo_width', 'logo_width', $logo_width);
+				generate_number_filed(__('Set Logo height', 'maintenance'), 'logo_height', 'logo_height', $logo_height);
 				generate_image_filed(__('Logo', 'maintenance'), 'logo', 'logo', intval($mt_option['logo']), 'boxes box-logo', __('Upload Logo', 'maintenance'), 'upload_logo upload_btn button');
 				generate_image_filed(__('Retina logo', 'maintenance'), 'retina_logo', 'retina_logo', intval($mt_option['retina_logo']), 'boxes box-logo', __('Upload Retina Logo', 'maintenance'), 'upload_logo upload_btn button');
 				do_action('maintenance_background_field');
 				do_action('maintenance_color_fields');
 				do_action('maintenance_font_fields');
-				generate_check_filed(__('Admin bar', 'maintenance'), __('Show admin bar', 'maintenance'), 'admin_bar_enabled', 'admin_bar_enabled', isset($mt_option['admin_bar_enabled']));
+				generate_check_filed(__('Show admin bar', 'maintenance'), '', 'admin_bar_enabled', 'admin_bar_enabled', isset($mt_option['admin_bar_enabled']));
 				generate_check_filed(__('503', 'maintenance'), __('Service temporarily unavailable, Google analytics will be disable.', 'maintenance'), '503_enabled', '503_enabled',  !empty($mt_option['503_enabled']));
 				
 				$gg_analytics_id = '';
@@ -289,14 +289,14 @@
 				}
 				
 				generate_input_filed(__('Google Analytics ID',  'maintenance'), 'gg_analytics_id', 'gg_analytics_id', $gg_analytics_id,  __('UA-XXXXX-X', 'maintenance'));
-				generate_input_filed(__('Blur intensity',  'maintenance'), 'blur_intensity', 'blur_intensity', intval($mt_option['blur_intensity']));
+				generate_input_filed(__('Set blur intensity',  'maintenance'), 'blur_intensity', 'blur_intensity', intval($mt_option['blur_intensity']));
 
 				if (isset($mt_option['is_blur'])) {
 					if ($mt_option['is_blur']) $is_blur = true; 
 				} 
 				
-				generate_check_filed(__('Background blur', 'maintenance'), __('Apply a blur', 'maintenance'), 'is_blur', 'is_blur', $is_blur);
-				generate_check_filed(__('Login On', 'maintenance'),  '', 'is_login', 'is_login', isset($mt_option['is_login']));
+				generate_check_filed(__('Apply background blur', 'maintenance'), '', 'is_blur', 'is_blur', $is_blur);
+				generate_check_filed(__('Enable frontend login', 'maintenance'),  '', 'is_login', 'is_login', isset($mt_option['is_login']));
 		?>		
 			</tbody>
 		</table>

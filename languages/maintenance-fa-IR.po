@@ -1,185 +1,177 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
-"POT-Creation-Date: 2016-04-18 15:45+0300\n"
-"PO-Revision-Date: 2016-04-18 17:30+0300\n"
+"POT-Creation-Date: 2016-08-03 16:02+0300\n"
+"PO-Revision-Date: 2016-08-03 16:14+0300\n"
 "Last-Translator: René Maurer <rene.maurer@jamos.ch>\n"
 "Language-Team: EWORX.IR <info@eworx.ir>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7\n"
+"X-Generator: Poedit 1.8.8\n"
 "X-Poedit-KeywordsList: _;_e;__;_x\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: includes/admin.php:77 includes/functions.php:603
+#: includes/admin.php:76 includes/functions.php:597
 msgid "Maintenance"
 msgstr "تعمیر و نگهداری"
 
-#: includes/admin.php:77 includes/admin.php:94
+#: includes/admin.php:76 includes/admin.php:93
 msgid "Save changes"
 msgstr "ذخیره  تغییرات"
 
-#: includes/functions.php:169
+#: includes/functions.php:165
 msgid "Standard Fonts"
 msgstr "فونت های استاندارد"
 
-#: includes/functions.php:176
+#: includes/functions.php:172
 msgid "Google Web Fonts"
 msgstr "فونت وب گوگل"
 
-#: includes/functions.php:228
+#: includes/functions.php:222
 msgid "General Settings"
 msgstr "تنظیمات عمومی"
 
-#: includes/functions.php:229
+#: includes/functions.php:223
 msgid "Custom CSS"
 msgstr "CSS سفارشی"
 
-#: includes/functions.php:230
+#: includes/functions.php:224
 msgid "Exclude pages"
 msgstr "به غیر از صفحات"
 
-#: includes/functions.php:236
+#: includes/functions.php:230
 msgid "Pro version"
 msgstr "نسخه حرفه ای"
 
-#: includes/functions.php:243
+#: includes/functions.php:237
 msgid "Fruitful Code projects"
 msgstr " Fruitful Code پروژه ها"
 
-#: includes/functions.php:249
+#: includes/functions.php:243
 msgid "Support"
 msgstr "پشتیبانی"
 
-#: includes/functions.php:255
+#: includes/functions.php:249
 msgid "Translation"
 msgstr "ترجمه"
 
-#: includes/functions.php:278
+#: includes/functions.php:272
 msgid "Page title"
 msgstr "عنوان صفحه"
 
-#: includes/functions.php:279
+#: includes/functions.php:273
 msgid "Headline"
 msgstr "عنوان"
 
-#: includes/functions.php:280
+#: includes/functions.php:274
 msgid "Description"
 msgstr "توضیحات"
 
-#: includes/functions.php:281
+#: includes/functions.php:275
 msgid "Footer Text"
 msgstr "پاورقی متن"
 
-#: includes/functions.php:282
-msgid "Logo width"
-msgstr "عرض آرم"
+#: includes/functions.php:276
+msgid "Set Logo width"
+msgstr "تنظیم عرض لوگو"
 
-#: includes/functions.php:283
-msgid "Logo height"
-msgstr "ارتفاع آرم"
+#: includes/functions.php:277
+msgid "Set Logo height"
+msgstr "تنظیم ارتفاع لوگو"
 
-#: includes/functions.php:284
+#: includes/functions.php:278
 msgid "Logo"
 msgstr "لوگو"
 
-#: includes/functions.php:284
+#: includes/functions.php:278
 msgid "Upload Logo"
 msgstr "لوگو خود را بارگذاری کنید."
 
-#: includes/functions.php:285
+#: includes/functions.php:279
 msgid "Retina logo"
 msgstr "آرم شبکیه چشم"
 
-#: includes/functions.php:285
+#: includes/functions.php:279
 msgid "Upload Retina Logo"
 msgstr "لوگو بارگذاری شبکیه چشم"
 
-#: includes/functions.php:289
-msgid "Admin bar"
-msgstr "منوی ادمین"
-
-#: includes/functions.php:289
+#: includes/functions.php:283
 msgid "Show admin bar"
 msgstr "نمایش نوار مدیریت"
 
-#: includes/functions.php:290
+#: includes/functions.php:284
 msgid "503"
 msgstr ""
 
-#: includes/functions.php:290
+#: includes/functions.php:284
 msgid "Service temporarily unavailable, Google analytics will be disable."
 msgstr "خدمات موقتا در دسترس، تجزیه و تحلیل گوگل غیرفعال خواهد شد."
 
-#: includes/functions.php:297
+#: includes/functions.php:291
 msgid "Google Analytics ID"
 msgstr "ID گوگل آنالیتیک"
 
-#: includes/functions.php:297
+#: includes/functions.php:291
 msgid "UA-XXXXX-X"
 msgstr ""
 
+#: includes/functions.php:292
+msgid "Set blur intensity"
+msgstr "شدت تاری تنظیم"
+
 #: includes/functions.php:298
-msgid "Blur intensity"
-msgstr "شدت محو کردن پس‌زمینه"
+msgid "Apply background blur"
+msgstr "درخواست تاری پس زمینه"
 
-#: includes/functions.php:304
-msgid "Background blur"
-msgstr "تاری پس‌زمینه"
+#: includes/functions.php:299
+msgid "Enable frontend login"
+msgstr "فعال کردن ورود ظاهر"
 
-#: includes/functions.php:304
-msgid "Apply a blur"
-msgstr "اعمال تاری"
-
-#: includes/functions.php:305
-msgid "Login On / Off"
-msgstr "ورود به سیستم روشن / خاموش"
-
-#: includes/functions.php:317
+#: includes/functions.php:311
 msgid "CSS Code"
 msgstr "کد CSS"
 
-#: includes/functions.php:331
+#: includes/functions.php:325
 msgid "Select the page to be displayed:"
 msgstr "صفحه نمایش داده می شود را انتخاب کنید:"
 
-#: includes/functions.php:377
+#: includes/functions.php:371
 msgid "Not available object."
 msgstr "شی در دسترس نیست."
 
-#: includes/functions.php:392
+#: includes/functions.php:386
 msgid "Background image"
 msgstr "تصویر پس زمینه"
 
-#: includes/functions.php:392
+#: includes/functions.php:386
 msgid "Upload Background"
 msgstr "بارگذاری تصویر پس‌زمینه"
 
-#: includes/functions.php:398
+#: includes/functions.php:392
 msgid "Background color"
 msgstr "رنگ پس زمینه"
 
-#: includes/functions.php:399
+#: includes/functions.php:393
 msgid "Font color"
 msgstr "رنگ فونت"
 
-#: includes/functions.php:406
+#: includes/functions.php:400
 msgid "Font family"
 msgstr "خانواده فونت"
 
-#: includes/functions.php:411
+#: includes/functions.php:405
 msgid "Subsets"
 msgstr "زیر مجموعه"
 
-#: includes/functions.php:419
+#: includes/functions.php:413
 msgid "Have any questions?"
 msgstr "سوال یا مشکلی دارید؟"
 
-#: includes/functions.php:420
+#: includes/functions.php:414
 #, php-format
 msgid ""
 "You may find answers to your questions at <a target=\"_blank\" href=\"http://"
@@ -190,11 +182,11 @@ msgid ""
 "<a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
 msgstr ""
 
-#: includes/functions.php:431
+#: includes/functions.php:425
 msgid "This plugin is translation friendly"
 msgstr "این افزونه ترجمه پسند"
 
-#: includes/functions.php:432
+#: includes/functions.php:426
 #, php-format
 msgid ""
 "Want to improve translation or make one for your native language? <a href="
@@ -203,31 +195,31 @@ msgstr ""
 "می خواهید برای بهبود ترجمه و یا یکی برای زبان مادری خود را؟ <a href=\"%1$s\" "
 "title=\"%2$s\">%2$s</a>"
 
-#: includes/functions.php:434
+#: includes/functions.php:428
 msgid "Follow this tutorial"
 msgstr "به دنبال این آموزش"
 
-#: includes/functions.php:443
+#: includes/functions.php:437
 msgid "Premium WordPress themes"
 msgstr "حق بیمه وردپرس تم"
 
-#: includes/functions.php:449
+#: includes/functions.php:443
 msgid "ANAGLYPH - One page / Multi Page WordPress Theme"
 msgstr ""
 
-#: includes/functions.php:454
+#: includes/functions.php:448
 msgid "Love.ly - Simple & Elegant WordPress theme"
 msgstr ""
 
-#: includes/functions.php:460
+#: includes/functions.php:454
 msgid "Zoner - Real Estate WordPress theme"
 msgstr ""
 
-#: includes/functions.php:473
+#: includes/functions.php:467
 msgid "Extended functionality"
 msgstr "کارکرد با قابلیت بیشتر"
 
-#: includes/functions.php:474
+#: includes/functions.php:468
 #, php-format
 msgid ""
 "Purchase <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
@@ -238,19 +230,19 @@ msgid ""
 "\"_blank\">leave feedbacks</a>."
 msgstr ""
 
-#: includes/functions.php:478
+#: includes/functions.php:472
 msgid "Demo website"
 msgstr "وب سایت آزمایشی"
 
-#: includes/functions.php:667
+#: includes/functions.php:661
 msgid "Website is under construction"
 msgstr "وب سایت در دست ساخت است"
 
-#: includes/functions.php:668
+#: includes/functions.php:662
 msgid "Maintenance mode is on"
 msgstr "حالت تعمیر و نگهداری روشن است"
 
-#: includes/functions.php:669
+#: includes/functions.php:663
 msgid "Website will be available soon"
 msgstr "وب سایت به زودی در دسترس خواهد"
 
@@ -258,37 +250,70 @@ msgstr "وب سایت به زودی در دسترس خواهد"
 msgid "Permission access denied!"
 msgstr "اجازه دسترسی رد شد!"
 
-#: load/functions.php:47
+#: load/functions.php:53
 msgid "You entered your login are incorrect!"
 msgstr "نام کاربری اشتباه است!"
 
-#: load/functions.php:51
+#: load/functions.php:57
 msgid "You entered your password are incorrect!"
 msgstr "رمز عبور اشتباه است!"
 
-#: load/functions.php:54
+#: load/functions.php:60
 msgid "You entered your login and password are incorrect!"
 msgstr "نام کاربری یا رمز عبور اشتباه است!"
 
-#: load/functions.php:283
+#: load/functions.php:289
 msgid "User Login"
 msgstr "ورود کاربر"
 
-#: load/functions.php:284
+#: load/functions.php:290
 msgid "Username"
 msgstr "نام کاربری"
 
-#: load/functions.php:285
+#: load/functions.php:291
 msgid "Password"
 msgstr "کلمه عبور"
 
-#: load/functions.php:286
+#: load/functions.php:292
 msgid "Lost Password"
 msgstr "رمز فراموش شده"
 
-#: load/functions.php:287
+#: load/functions.php:293
 msgid "Login"
 msgstr "ورود"
+
+#~ msgid "Choose Logo width"
+#~ msgstr "انتخاب لوگوی عرض"
+
+#~ msgid "Choose Logo height"
+#~ msgstr "انتخاب ارتفاع آرم"
+
+#~ msgid "Blur intensity"
+#~ msgstr "شدت محو کردن پس‌زمینه"
+
+#~ msgid "Enable login"
+#~ msgstr "فعال کردن ورود"
+
+#~ msgid "Put Login On"
+#~ msgstr "قرار دادن ورود به"
+
+#~ msgid "Logo width"
+#~ msgstr "عرض آرم"
+
+#~ msgid "Logo height"
+#~ msgstr "ارتفاع آرم"
+
+#~ msgid "Admin bar"
+#~ msgstr "منوی ادمین"
+
+#~ msgid "Background blur"
+#~ msgstr "تاری پس‌زمینه"
+
+#~ msgid "Apply a blur"
+#~ msgstr "اعمال تاری"
+
+#~ msgid "Login On / Off"
+#~ msgstr "ورود به سیستم روشن / خاموش"
 
 #~ msgid "Service temporarily unavailable, Google analytics will be disable"
 #~ msgstr "خدمات موقتا در دسترس، تجزیه و تحلیل گوگل غیرفعال خواهد شد"

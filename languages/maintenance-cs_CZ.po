@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Maintenance\n"
-"POT-Creation-Date: 2016-04-18 15:45+0300\n"
-"PO-Revision-Date: 2016-04-18 15:51+0300\n"
+"POT-Creation-Date: 2016-08-03 16:02+0300\n"
+"PO-Revision-Date: 2016-08-03 16:11+0300\n"
 "Last-Translator: Petr Rohan <rohan@infinitymedia.cz>\n"
 "Language-Team: Petr Rohan <rohan@infinitymedia.cz>\n"
 "Language: cs_CZ\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7\n"
+"X-Generator: Poedit 1.8.8\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -19,171 +19,163 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: includes/admin.php:77 includes/functions.php:603
+#: includes/admin.php:76 includes/functions.php:597
 msgid "Maintenance"
 msgstr "Maintenance"
 
-#: includes/admin.php:77 includes/admin.php:94
+#: includes/admin.php:76 includes/admin.php:93
 msgid "Save changes"
 msgstr "Uložit změny"
 
-#: includes/functions.php:169
+#: includes/functions.php:165
 msgid "Standard Fonts"
 msgstr "Standardní Fonty"
 
-#: includes/functions.php:176
+#: includes/functions.php:172
 msgid "Google Web Fonts"
 msgstr "Google Web Fonts"
 
-#: includes/functions.php:228
+#: includes/functions.php:222
 msgid "General Settings"
 msgstr "Základní nastavení"
 
-#: includes/functions.php:229
+#: includes/functions.php:223
 msgid "Custom CSS"
 msgstr "Vlastní CSS"
 
-#: includes/functions.php:230
+#: includes/functions.php:224
 msgid "Exclude pages"
 msgstr "Stránky s vyjímkou"
 
-#: includes/functions.php:236
+#: includes/functions.php:230
 msgid "Pro version"
 msgstr "Verze PRO"
 
-#: includes/functions.php:243
+#: includes/functions.php:237
 msgid "Fruitful Code projects"
 msgstr "Fruitful Code projects"
 
-#: includes/functions.php:249
+#: includes/functions.php:243
 msgid "Support"
 msgstr "Podpora"
 
-#: includes/functions.php:255
+#: includes/functions.php:249
 msgid "Translation"
 msgstr "Překlad"
 
-#: includes/functions.php:278
+#: includes/functions.php:272
 msgid "Page title"
 msgstr "Titulek"
 
-#: includes/functions.php:279
+#: includes/functions.php:273
 msgid "Headline"
 msgstr "Hlavní nadpis"
 
-#: includes/functions.php:280
+#: includes/functions.php:274
 msgid "Description"
 msgstr "Popis"
 
-#: includes/functions.php:281
+#: includes/functions.php:275
 msgid "Footer Text"
 msgstr "Text patičky"
 
-#: includes/functions.php:282
-msgid "Logo width"
-msgstr "šířka logo"
+#: includes/functions.php:276
+msgid "Set Logo width"
+msgstr "Set šířka Logo"
 
-#: includes/functions.php:283
-msgid "Logo height"
-msgstr "výška logo"
+#: includes/functions.php:277
+msgid "Set Logo height"
+msgstr "Set výška Logo"
 
-#: includes/functions.php:284
+#: includes/functions.php:278
 msgid "Logo"
 msgstr "Logo"
 
-#: includes/functions.php:284
+#: includes/functions.php:278
 msgid "Upload Logo"
 msgstr "Uživatelské logo"
 
-#: includes/functions.php:285
+#: includes/functions.php:279
 msgid "Retina logo"
 msgstr "Retina logo"
 
-#: includes/functions.php:285
+#: includes/functions.php:279
 msgid "Upload Retina Logo"
 msgstr "Uživatelské Retina logo"
 
-#: includes/functions.php:289
-msgid "Admin bar"
-msgstr "Admin panel"
-
-#: includes/functions.php:289
+#: includes/functions.php:283
 msgid "Show admin bar"
 msgstr "Zobrazit admin panel"
 
-#: includes/functions.php:290
+#: includes/functions.php:284
 msgid "503"
 msgstr "503"
 
-#: includes/functions.php:290
+#: includes/functions.php:284
 msgid "Service temporarily unavailable, Google analytics will be disable."
 msgstr "Služba je dočasně nedostupná, Google analytics bude zakázán."
 
-#: includes/functions.php:297
+#: includes/functions.php:291
 msgid "Google Analytics ID"
 msgstr "Google Analytics ID"
 
-#: includes/functions.php:297
+#: includes/functions.php:291
 msgid "UA-XXXXX-X"
 msgstr "UA-XXXXX-X"
 
+#: includes/functions.php:292
+msgid "Set blur intensity"
+msgstr "Nastavit intenzitu rozostření"
+
 #: includes/functions.php:298
-msgid "Blur intensity"
-msgstr "Intenzita rozostření"
+msgid "Apply background blur"
+msgstr "Použít rozostření pozadí"
 
-#: includes/functions.php:304
-msgid "Background blur"
-msgstr "Rozostření pozadí"
+#: includes/functions.php:299
+msgid "Enable frontend login"
+msgstr "Aktivovat frontend login"
 
-#: includes/functions.php:304
-msgid "Apply a blur"
-msgstr "Aplikovat rozostření"
-
-#: includes/functions.php:305
-msgid "Login On / Off"
-msgstr "Přihlášení zap/vyp"
-
-#: includes/functions.php:317
+#: includes/functions.php:311
 msgid "CSS Code"
 msgstr "CSS kód"
 
-#: includes/functions.php:331
+#: includes/functions.php:325
 msgid "Select the page to be displayed:"
 msgstr "Vyberte stránky, které se zobrazí normálně:"
 
-#: includes/functions.php:377
+#: includes/functions.php:371
 msgid "Not available object."
 msgstr "Objekt, není k dispozici."
 
-#: includes/functions.php:392
+#: includes/functions.php:386
 msgid "Background image"
 msgstr "Obrázek na pozadí"
 
-#: includes/functions.php:392
+#: includes/functions.php:386
 msgid "Upload Background"
 msgstr "Nahrát obrázek na pozadí"
 
-#: includes/functions.php:398
+#: includes/functions.php:392
 msgid "Background color"
 msgstr "Barva pozadí"
 
-#: includes/functions.php:399
+#: includes/functions.php:393
 msgid "Font color"
 msgstr "Barva písma"
 
-#: includes/functions.php:406
+#: includes/functions.php:400
 msgid "Font family"
 msgstr "Typ písma"
 
-#: includes/functions.php:411
+#: includes/functions.php:405
 msgid "Subsets"
 msgstr "podmnožiny"
 
-#: includes/functions.php:419
+#: includes/functions.php:413
 msgid "Have any questions?"
 msgstr "Máte nějaké dotazy?"
 
-#: includes/functions.php:420
+#: includes/functions.php:414
 #, php-format
 msgid ""
 "You may find answers to your questions at <a target=\"_blank\" href=\"http://"
@@ -200,11 +192,11 @@ msgstr ""
 "návrhy. <br> Prosím navštivte naše webové stránky dozvědět se o nás a našich "
 "službách <a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
 
-#: includes/functions.php:431
+#: includes/functions.php:425
 msgid "This plugin is translation friendly"
 msgstr "Tento plugin je překlad přátelský"
 
-#: includes/functions.php:432
+#: includes/functions.php:426
 #, php-format
 msgid ""
 "Want to improve translation or make one for your native language? <a href="
@@ -213,31 +205,31 @@ msgstr ""
 "Chcete zlepšit překladu nebo provést jednu pro svého rodného jazyka? <a href="
 "\"%1$s\" title=\"%2$s\">%2$s</a>"
 
-#: includes/functions.php:434
+#: includes/functions.php:428
 msgid "Follow this tutorial"
 msgstr "Postupujte podle tohoto návodu"
 
-#: includes/functions.php:443
+#: includes/functions.php:437
 msgid "Premium WordPress themes"
 msgstr "Premium WordPress témata"
 
-#: includes/functions.php:449
+#: includes/functions.php:443
 msgid "ANAGLYPH - One page / Multi Page WordPress Theme"
 msgstr "ANAGLYF - Jednostránková / Multistránková WordPress šablona"
 
-#: includes/functions.php:454
+#: includes/functions.php:448
 msgid "Love.ly - Simple & Elegant WordPress theme"
 msgstr "Love.ly - Jednoduchá & elegantní WordPress šablona"
 
-#: includes/functions.php:460
+#: includes/functions.php:454
 msgid "Zoner - Real Estate WordPress theme"
 msgstr "Zoner - Real Estate WordPress téma"
 
-#: includes/functions.php:473
+#: includes/functions.php:467
 msgid "Extended functionality"
 msgstr "Rozšířené funkcionality"
 
-#: includes/functions.php:474
+#: includes/functions.php:468
 #, php-format
 msgid ""
 "Purchase <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
@@ -254,19 +246,19 @@ msgstr ""
 "maintenance?filter=5\">ohodnoť to </a>, <a title=\"leave feedbacks\" href="
 "\"%2$s\" target=\"_blank\">opustí zpětných vazeb </a>."
 
-#: includes/functions.php:478
+#: includes/functions.php:472
 msgid "Demo website"
 msgstr "Demo stránky"
 
-#: includes/functions.php:667
+#: includes/functions.php:661
 msgid "Website is under construction"
 msgstr "Stránky jsou ve výstavbě"
 
-#: includes/functions.php:668
+#: includes/functions.php:662
 msgid "Maintenance mode is on"
 msgstr "Maintenance je zapnutý"
 
-#: includes/functions.php:669
+#: includes/functions.php:663
 msgid "Website will be available soon"
 msgstr "Webové stránky budou brzy k dispozici"
 
@@ -274,37 +266,70 @@ msgstr "Webové stránky budou brzy k dispozici"
 msgid "Permission access denied!"
 msgstr "Přístup do této části webu nemáte povolen."
 
-#: load/functions.php:47
+#: load/functions.php:53
 msgid "You entered your login are incorrect!"
 msgstr "Vaše přihlašovací údaje nejsou správné."
 
-#: load/functions.php:51
+#: load/functions.php:57
 msgid "You entered your password are incorrect!"
 msgstr "Heslo je nesprávné."
 
-#: load/functions.php:54
+#: load/functions.php:60
 msgid "You entered your login and password are incorrect!"
 msgstr "Vaše přihlašovací jméno, nebo heslo jsou zadány chybně!"
 
-#: load/functions.php:283
+#: load/functions.php:289
 msgid "User Login"
 msgstr "Přihlásit"
 
-#: load/functions.php:284
+#: load/functions.php:290
 msgid "Username"
 msgstr "Uživatelské jméno"
 
-#: load/functions.php:285
+#: load/functions.php:291
 msgid "Password"
 msgstr "Heslo"
 
-#: load/functions.php:286
+#: load/functions.php:292
 msgid "Lost Password"
 msgstr "Reset hesla"
 
-#: load/functions.php:287
+#: load/functions.php:293
 msgid "Login"
 msgstr "Přihlásit"
+
+#~ msgid "Choose Logo width"
+#~ msgstr "Vyberte si šířku Logo"
+
+#~ msgid "Choose Logo height"
+#~ msgstr "Vyberte si výšku Logo"
+
+#~ msgid "Blur intensity"
+#~ msgstr "Intenzita rozostření"
+
+#~ msgid "Enable login"
+#~ msgstr "povolit přihlášení"
+
+#~ msgid "Put Login On"
+#~ msgstr "Put přihlášení na"
+
+#~ msgid "Logo width"
+#~ msgstr "šířka logo"
+
+#~ msgid "Logo height"
+#~ msgstr "výška logo"
+
+#~ msgid "Admin bar"
+#~ msgstr "Admin panel"
+
+#~ msgid "Background blur"
+#~ msgstr "Rozostření pozadí"
+
+#~ msgid "Apply a blur"
+#~ msgstr "Aplikovat rozostření"
+
+#~ msgid "Login On / Off"
+#~ msgstr "Přihlášení zap/vyp"
 
 #~ msgid "Service temporarily unavailable, Google analytics will be disable"
 #~ msgstr "Služba je dočasně nedostupná, Google analytics budou vypnuty"
