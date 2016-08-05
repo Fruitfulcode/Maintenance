@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Maintenance v2.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-03 16:02+0300\n"
-"PO-Revision-Date: 2016-08-03 16:13+0300\n"
+"POT-Creation-Date: 2016-08-05 12:33+0300\n"
+"PO-Revision-Date: 2016-08-05 12:33+0300\n"
 "Last-Translator: Digital03.net <info@digital03.net>\n"
 "Language-Team: Digital03.net <info@digital03.net>\n"
 "Language: es_ES\n"
@@ -49,11 +49,9 @@ msgstr "Ajustes"
 msgid "Custom CSS"
 msgstr "CSS personalizado"
 
-# #-#-#-#-#  0catalog.po (Maintenance v2.3)  #-#-#-#-#
-# @ maintenance
 #: includes/functions.php:224
-msgid "Exclude pages"
-msgstr "Excluir páginas"
+msgid "Exclude pages from maintenance mode"
+msgstr "Excluir páginas de modo de mantenimiento"
 
 # @ maintenance
 #: includes/functions.php:230
@@ -346,6 +344,11 @@ msgstr "Contraseña perdida"
 #: load/functions.php:293
 msgid "Login"
 msgstr "Conectar"
+
+# #-#-#-#-#  0catalog.po (Maintenance v2.3)  #-#-#-#-#
+# @ maintenance
+#~ msgid "Exclude pages"
+#~ msgstr "Excluir páginas"
 
 #~ msgid "Choose Logo width"
 #~ msgstr "Escoge la anchura del logotipo"

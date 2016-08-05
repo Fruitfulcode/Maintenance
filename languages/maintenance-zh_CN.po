@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
-"POT-Creation-Date: 2016-08-03 16:02+0300\n"
-"PO-Revision-Date: 2016-08-03 16:29+0300\n"
+"POT-Creation-Date: 2016-08-05 12:31+0300\n"
+"PO-Revision-Date: 2016-08-05 12:40+0300\n"
 "Last-Translator: \n"
 "Language-Team: fruitfulcode\n"
 "Language: zh_CN\n"
@@ -17,7 +17,7 @@ msgstr ""
 
 #: includes/admin.php:76 includes/functions.php:597
 msgid "Maintenance"
-msgstr "保养"
+msgstr "关闭维修期满后"
 
 #: includes/admin.php:76 includes/admin.php:93
 msgid "Save changes"
@@ -40,8 +40,8 @@ msgid "Custom CSS"
 msgstr "自定义CSS"
 
 #: includes/functions.php:224
-msgid "Exclude pages"
-msgstr "排除网页"
+msgid "Exclude pages from maintenance mode"
+msgstr "排除从维护模式页"
 
 #: includes/functions.php:230
 msgid "Pro version"
@@ -291,20 +291,23 @@ msgstr "忘记密码"
 msgid "Login"
 msgstr "登录"
 
-msgid "Choose Logo width"
-msgstr "Vyberte si šířku Logo"
+#~ msgid "Exclude pages"
+#~ msgstr "排除网页"
 
-msgid "Choose Logo height"
-msgstr "Vyberte si výšku Logo"
+#~ msgid "Choose Logo width"
+#~ msgstr "Vyberte si šířku Logo"
 
-msgid "Enable login"
-msgstr "povolit přihlášení"
-
-msgid "Put Login On"
-msgstr "Put přihlášení na"
+#~ msgid "Choose Logo height"
+#~ msgstr "Vyberte si výšku Logo"
 
 #~ msgid "Blur intensity"
 #~ msgstr "模糊强度"
+
+#~ msgid "Enable login"
+#~ msgstr "povolit přihlášení"
+
+#~ msgid "Put Login On"
+#~ msgstr "Put přihlášení na"
 
 #~ msgid "Logo width"
 #~ msgstr "徽标宽度"

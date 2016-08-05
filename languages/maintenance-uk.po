@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
-"POT-Creation-Date: 2016-08-03 16:02+0300\n"
-"PO-Revision-Date: 2016-08-03 16:27+0300\n"
+"POT-Creation-Date: 2016-08-05 12:31+0300\n"
+"PO-Revision-Date: 2016-08-05 12:39+0300\n"
 "Last-Translator: fruitfulcode <mail@fruitfulcode.com>\n"
 "Language-Team: fruitfulcode\n"
 "Language: uk_UA\n"
@@ -41,8 +41,8 @@ msgid "Custom CSS"
 msgstr "Свій CSS"
 
 #: includes/functions.php:224
-msgid "Exclude pages"
-msgstr "виняток сторінок"
+msgid "Exclude pages from maintenance mode"
+msgstr "Виключити сторінки з режиму обслуговування"
 
 #: includes/functions.php:230
 msgid "Pro version"
@@ -296,20 +296,23 @@ msgstr "Забув пароль"
 msgid "Login"
 msgstr "Логін"
 
-msgid "Choose Logo width"
-msgstr "Vyberte si šířku Logo"
+#~ msgid "Exclude pages"
+#~ msgstr "виняток сторінок"
 
-msgid "Choose Logo height"
-msgstr "Vyberte si výšku Logo"
+#~ msgid "Choose Logo width"
+#~ msgstr "Vyberte si šířku Logo"
 
-msgid "Enable login"
-msgstr "povolit přihlášení"
-
-msgid "Put Login On"
-msgstr "Put přihlášení na"
+#~ msgid "Choose Logo height"
+#~ msgstr "Vyberte si výšku Logo"
 
 #~ msgid "Blur intensity"
 #~ msgstr "інтенсивність розмиття"
+
+#~ msgid "Enable login"
+#~ msgstr "povolit přihlášení"
+
+#~ msgid "Put Login On"
+#~ msgstr "Put přihlášení na"
 
 #~ msgid "Logo width"
 #~ msgstr "Ширина логотипу"

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
-"POT-Creation-Date: 2016-08-03 16:02+0300\n"
-"PO-Revision-Date: 2016-08-03 16:16+0300\n"
+"POT-Creation-Date: 2016-08-05 12:31+0300\n"
+"PO-Revision-Date: 2016-08-05 12:34+0300\n"
 "Last-Translator: René Maurer <rene.maurer@jamos.ch>\n"
 "Language-Team: Massimo Pacifici <pacifici@eumed.it>\n"
 "Language: fr\n"
@@ -40,8 +40,8 @@ msgid "Custom CSS"
 msgstr "CSS personnalisé"
 
 #: includes/functions.php:224
-msgid "Exclude pages"
-msgstr "Exclure pages"
+msgid "Exclude pages from maintenance mode"
+msgstr "Exclure les pages du mode d'entretien"
 
 #: includes/functions.php:230
 msgid "Pro version"
@@ -295,6 +295,9 @@ msgstr "Mot de passe perdu"
 #: load/functions.php:293
 msgid "Login"
 msgstr "S'identifier"
+
+#~ msgid "Exclude pages"
+#~ msgstr "Exclure pages"
 
 #~ msgid "Choose Logo width"
 #~ msgstr "Choisissez la largeur de Logo"

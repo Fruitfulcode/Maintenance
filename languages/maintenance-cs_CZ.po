@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Maintenance\n"
-"POT-Creation-Date: 2016-08-03 16:02+0300\n"
-"PO-Revision-Date: 2016-08-03 16:11+0300\n"
+"POT-Creation-Date: 2016-08-05 12:31+0300\n"
+"PO-Revision-Date: 2016-08-05 12:31+0300\n"
 "Last-Translator: Petr Rohan <rohan@infinitymedia.cz>\n"
 "Language-Team: Petr Rohan <rohan@infinitymedia.cz>\n"
 "Language: cs_CZ\n"
@@ -44,8 +44,8 @@ msgid "Custom CSS"
 msgstr "Vlastní CSS"
 
 #: includes/functions.php:224
-msgid "Exclude pages"
-msgstr "Stránky s vyjímkou"
+msgid "Exclude pages from maintenance mode"
+msgstr "Vyloučit stránky z režimu údržby"
 
 #: includes/functions.php:230
 msgid "Pro version"
@@ -297,6 +297,9 @@ msgstr "Reset hesla"
 #: load/functions.php:293
 msgid "Login"
 msgstr "Přihlásit"
+
+#~ msgid "Exclude pages"
+#~ msgstr "Stránky s vyjímkou"
 
 #~ msgid "Choose Logo width"
 #~ msgstr "Vyberte si šířku Logo"

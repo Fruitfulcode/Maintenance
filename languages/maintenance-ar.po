@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
-"POT-Creation-Date: 2016-08-03 16:02+0300\n"
-"PO-Revision-Date: 2016-08-03 16:12+0300\n"
+"POT-Creation-Date: 2016-08-05 12:31+0300\n"
+"PO-Revision-Date: 2016-08-05 12:32+0300\n"
 "Last-Translator: \n"
 "Language-Team: fruitfulcode\n"
 "Language: ar\n"
@@ -41,8 +41,8 @@ msgid "Custom CSS"
 msgstr " حسب الطلب CSS"
 
 #: includes/functions.php:224
-msgid "Exclude pages"
-msgstr "استبعاد صفحات"
+msgid "Exclude pages from maintenance mode"
+msgstr "استبعاد صفحات من وضع الصيانة"
 
 #: includes/functions.php:230
 msgid "Pro version"
@@ -294,6 +294,9 @@ msgstr "كلمة مرور مفقودة"
 #: load/functions.php:293
 msgid "Login"
 msgstr "تسجيل الدخول"
+
+#~ msgid "Exclude pages"
+#~ msgstr "Vyloučit stránky z režimu údržby"
 
 #~ msgid "Choose Logo width"
 #~ msgstr "اختيار عرض الشعار"

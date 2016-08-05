@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Maintenance v2.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-03 16:24+0300\n"
-"PO-Revision-Date: 2016-08-03 16:25+0300\n"
+"POT-Creation-Date: 2016-08-05 12:38+0300\n"
+"PO-Revision-Date: 2016-08-05 12:39+0300\n"
 "Last-Translator: Digital03.net <info@digital03.net>\n"
 "Language-Team: Digital03.net <info@digital03.net>\n"
 "Language: es_ES\n"
@@ -49,10 +49,9 @@ msgstr "Genel Ayarlar"
 msgid "Custom CSS"
 msgstr "Özel CSS"
 
-# @ maintenance
 #: includes/functions.php:224
-msgid "Exclude pages"
-msgstr "Harici sayfalar"
+msgid "Exclude pages from maintenance mode"
+msgstr "Excluir páginas de modo de mantenimiento"
 
 # @ maintenance
 #: includes/functions.php:230
@@ -344,6 +343,10 @@ msgstr "Şifreyi Unuttum"
 #: load/functions.php:293
 msgid "Login"
 msgstr "Giriş"
+
+# @ maintenance
+#~ msgid "Exclude pages"
+#~ msgstr "Harici sayfalar"
 
 #~ msgid "Logo width"
 #~ msgstr "Logo genişliği"

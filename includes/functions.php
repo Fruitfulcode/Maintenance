@@ -221,7 +221,7 @@
 		global $maintenance_variable;
 		add_meta_box( 'maintenance-general', __( 'General Settings', 'maintenance' ),  'add_data_fields', $maintenance_variable->options_page, 'normal', 'default');
 		add_meta_box( 'maintenance-css', 	 __( 'Custom CSS', 'maintenance' ),        'add_css_fields', $maintenance_variable->options_page, 'normal', 'default');
-		add_meta_box( 'maintenance-excludepages', 	 __( 'Exclude pages', 'maintenance' ), 'add_exclude_pages_fields', $maintenance_variable->options_page, 'normal', 'default');
+		add_meta_box( 'maintenance-excludepages', 	 __( 'Exclude pages from maintenance mode', 'maintenance' ), 'add_exclude_pages_fields', $maintenance_variable->options_page, 'normal', 'default');
 	}
 	add_action('add_meta_boxes', 'maintenance_page_create_meta_boxes', 10);
 	
