@@ -19,6 +19,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<?php get_page_title(esc_attr($mess_arr[0])); ?>
 	<meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1, initial-scale=1, minimum-scale=1">
+	<meta name="description" content="<?php bloginfo('description'); ?>"/>
 	<meta property="og:title" content="<?php bloginfo('name'); ?>"/>
 	<meta property="og:type" content="Maintenance"/>
 	<meta property="og:url" content="<?php echo site_url(); ?>"/>
