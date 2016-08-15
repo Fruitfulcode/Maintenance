@@ -162,14 +162,14 @@
 					$out_filed .= '<td>';
 						$out_filed .= '<filedset>';
 						if(!empty($standart_fonts)) {
-								$out_items .= '<optgroup label="' . __('Standard Fonts', 'anaglyph-framework') . '">';
+								$out_items .= '<optgroup label="' . __('Standard Fonts', 'maintenance') . '">';
 								foreach ($standart_fonts as $key => $options) {
 									$out_items .= '<option value="'.$key.'" '. selected( $value, $key, false ) .'>'.$options.'</option>';
 								}
 						}	
 						
 						if (!empty($gg_fonts)) {
-								$out_items .= '<optgroup label="' . __('Google Web Fonts', 'anaglyph-framework') . '">';
+								$out_items .= '<optgroup label="' . __('Google Web Fonts', 'maintenance') . '">';
 							foreach ($gg_fonts as $key => $options) {
 								$out_items .= '<option value="'.$key .'" '. selected( $value, $key, false ) .'>'.$key.'</option>';
 							}
@@ -594,7 +594,7 @@
 		} else {
 			$check = 'Off';
 		}
-		$wp_admin_bar->add_menu( array( 'id' => 'maintenance_options', 'title' => __( 'Maintenance', 'maintenance' ) . ' is ' . $check, 'href' => $url_to, 'meta'  => array( 'title' => __( 'Maintenance', 'maintenance' ) . ' is ' . $check)));	
+		$wp_admin_bar->add_menu( array( 'id' => 'maintenance_options', 'title' => __( 'Maintenance', 'maintenance' ) . __( ' is ', 'maintenance' ) . $check, 'href' => $url_to, 'meta'  => array( 'title' => __( 'Maintenance', 'maintenance' ) . __( ' is ', 'maintenance' ) . $check)));	
 	} 
 	
 	
