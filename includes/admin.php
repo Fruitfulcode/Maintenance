@@ -28,7 +28,7 @@
 
 			if (isset($_POST['lib_options'])) {
 			    update_option( 'maintenance_options',  $_POST['lib_options']);
-				$maintenance::mt_clear_cache();
+				maintenance::mt_clear_cache();
 			}
 		}
 	}
