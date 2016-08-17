@@ -2,10 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
 "POT-Creation-Date: 2016-08-05 12:31+0300\n"
-"PO-Revision-Date: 2016-08-05 12:34+0300\n"
-"Last-Translator: Antti Kuosmanen <antti@seravo.fi>\n"
+"PO-Revision-Date: 2016-08-05 12:32+0300\n"
+"Last-Translator: \n"
 "Language-Team: fruitfulcode\n"
-"Language: fi\n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -13,18 +13,20 @@ msgstr ""
 "X-Poedit-KeywordsList: _;_e;__;_x\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
 
 #: includes/admin.php:76 includes/functions.php:597
 msgid "Maintenance"
-msgstr "Huoltotila"
+msgstr "صيانة"
 
 #: includes/admin.php:76 includes/admin.php:93
 msgid "Save changes"
-msgstr "Tallenna muutokset"
+msgstr "حفظ التغيرات"
 
 #: includes/functions.php:165
 msgid "Standard Fonts"
-msgstr "vakiofonttia"
+msgstr "مستوى الخطوط"
 
 #: includes/functions.php:172
 msgid "Google Web Fonts"
@@ -32,75 +34,75 @@ msgstr ""
 
 #: includes/functions.php:222
 msgid "General Settings"
-msgstr "Yleiset asetukset"
+msgstr "الإعدادات العامة"
 
 #: includes/functions.php:223
 msgid "Custom CSS"
-msgstr ""
+msgstr " حسب الطلب CSS"
 
 #: includes/functions.php:224
 msgid "Exclude pages from maintenance mode"
-msgstr "Sulkea sivuja ylläpito mode"
+msgstr "استبعاد صفحات من وضع الصيانة"
 
 #: includes/functions.php:230
 msgid "Pro version"
-msgstr "Pro-versio"
+msgstr "نسخة للمحترفين"
 
 #: includes/functions.php:237
 msgid "Fruitful Code projects"
-msgstr "Fruitful Code hankkeet"
+msgstr "مشاريع كود مثمرة"
 
 #: includes/functions.php:243
 msgid "Support"
-msgstr "Tukipalvelu"
+msgstr "الدعم"
 
 #: includes/functions.php:249
 msgid "Translation"
-msgstr "Käännös"
+msgstr "ترجمة"
 
 #: includes/functions.php:272
 msgid "Page title"
-msgstr "Sivun otsikko"
+msgstr "عنوان الصفحة"
 
 #: includes/functions.php:273
 msgid "Headline"
-msgstr "Otsake"
+msgstr "عنوان رئيسي"
 
 #: includes/functions.php:274
 msgid "Description"
-msgstr "Kuvaus"
+msgstr "وصف"
 
 #: includes/functions.php:275
 msgid "Footer Text"
-msgstr "Footer teksti"
+msgstr "نص تذييل"
 
 #: includes/functions.php:276
 msgid "Set Logo width"
-msgstr "Set Logo leveys"
+msgstr "مجموعة عرض الشعار"
 
 #: includes/functions.php:277
 msgid "Set Logo height"
-msgstr "Set Logon korkeus"
+msgstr "مجموعة ارتفاع الشعار"
 
 #: includes/functions.php:278
 msgid "Logo"
-msgstr "Logo"
+msgstr "شعار"
 
 #: includes/functions.php:278
 msgid "Upload Logo"
-msgstr "Lataa Logo"
+msgstr "تحميل الشعار"
 
 #: includes/functions.php:279
 msgid "Retina logo"
-msgstr "Retina logo"
+msgstr "شبكية العين شعار"
 
 #: includes/functions.php:279
 msgid "Upload Retina Logo"
-msgstr "Lataa Retina Logo"
+msgstr "تحميل الشبكية شعار"
 
 #: includes/functions.php:283
 msgid "Show admin bar"
-msgstr "Näytä työkalupalkki"
+msgstr "عرض شريط المشرف"
 
 #: includes/functions.php:284
 msgid "503"
@@ -108,7 +110,7 @@ msgstr "503"
 
 #: includes/functions.php:284
 msgid "Service temporarily unavailable, Google analytics will be disable."
-msgstr "Tarjoaminen tilapäisesti, Google Analytics poistetaan käytöstä."
+msgstr "الخدمة غير متوفرة مؤقتا، سيتم تعطيل تحليلات جوجل."
 
 #: includes/functions.php:291
 msgid "Google Analytics ID"
@@ -120,55 +122,55 @@ msgstr "UA-XXXXX-X"
 
 #: includes/functions.php:292
 msgid "Set blur intensity"
-msgstr "Aseta hämärtää intensiteetti"
+msgstr "تعيين كثافة طمس"
 
 #: includes/functions.php:298
 msgid "Apply background blur"
-msgstr "Käytä tausta hämärtää"
+msgstr "تطبيق طمس الخلفية"
 
 #: includes/functions.php:299
 msgid "Enable frontend login"
-msgstr "Ota frontend kirjautuminen"
+msgstr "تمكين تسجيل الدخول الواجهة"
 
 #: includes/functions.php:311
 msgid "CSS Code"
-msgstr "CSS koodi"
+msgstr "كود CSS"
 
 #: includes/functions.php:325
 msgid "Select the page to be displayed:"
-msgstr "Valitse sivun näkyviin:"
+msgstr "حدد الصفحة للظهور:"
 
 #: includes/functions.php:371
 msgid "Not available object."
-msgstr "Ei saatavilla objekti."
+msgstr "كائن غير متوفر."
 
 #: includes/functions.php:386
 msgid "Background image"
-msgstr "Taustakuva"
+msgstr "الصورة الخلفية"
 
 #: includes/functions.php:386
 msgid "Upload Background"
-msgstr "Lataa taustakuva"
+msgstr "تحميل خلفية"
 
 #: includes/functions.php:392
 msgid "Background color"
-msgstr "Taustaväri"
+msgstr "لون الخلفية"
 
 #: includes/functions.php:393
 msgid "Font color"
-msgstr "Tekstin väri"
+msgstr "لون الخط"
 
 #: includes/functions.php:400
 msgid "Font family"
-msgstr "kirjasinperhe"
+msgstr "خط العائلة"
 
 #: includes/functions.php:405
 msgid "Subsets"
-msgstr "osajoukot"
+msgstr "فرعية"
 
 #: includes/functions.php:413
 msgid "Have any questions?"
-msgstr "Kysymyksiä?"
+msgstr "لديك أي أسئلة؟"
 
 #: includes/functions.php:414
 #, php-format
@@ -180,16 +182,16 @@ msgid ""
 "suggestions.<br> Please visit our website to learn about us and our services "
 "<a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
 msgstr ""
-"Saatat löytää vastauksia kysymyksiin<a target=\"_blank\" href=\"http://"
-"support.fruitfulcode.com/hc/en-us/sections/200406386\">tukifoorumi</"
-"a><br>Sinä voit <a target=\"_blank\" href=\"http://support.fruitfulcode.com/"
-"hc/en-us/requests/new\">ota meihin yhteyttä</a> muokkausta pyynnöt ja "
-"ehdotukset. <br> Käy sivuilla oppia meistä ja palveluistamme <a href=\"%1$s"
-"\" title=\"%2$s\">%2$s</a>"
+"قد تجد إجابات على أسئلتك في <a target=\"_blank\" href=\"http://support."
+"fruitfulcode.com/hc/en-us/sections/200406386\"> منتدى الدعم  <br></"
+"a>يمكنك    <a target=\"_blank\" href=\"http://support.fruitfulcode.com/hc/en-"
+"us/requests/new\"> اتصل بنا </a> مع طلبات التخصيص والاقتراحات.  <br> يرجى "
+"زيارة موقعنا على الانترنت لمعرفة المزيد عن لنا وخدماتنا <a href=\"%1$s\" "
+"title=\"%2$s\">%2$s</a>"
 
 #: includes/functions.php:425
 msgid "This plugin is translation friendly"
-msgstr "Tämä liitännäinen on käännös ystävällinen"
+msgstr "هذا هو البرنامج المساعد الترجمة دية"
 
 #: includes/functions.php:426
 #, php-format
@@ -197,32 +199,32 @@ msgid ""
 "Want to improve translation or make one for your native language? <a href="
 "\"%1$s\" title=\"%2$s\">%2$s</a>"
 msgstr ""
-"Haluavat parantaa käännöksen tai tehdä yhden oman äidinkielen? <a href=\"%1$s"
-"\" title=\"%2$s\">%2$s</a>"
+"ترغب في تحسين الترجمة أو جعل واحدة لغتك الأم؟ <a href=\"%1$s\" title=\"%2$s"
+"\">%2$s</a>"
 
 #: includes/functions.php:428
 msgid "Follow this tutorial"
-msgstr "Seuraa tätä opetusohjelma"
+msgstr "اتبع هذا البرنامج التعليمي"
 
 #: includes/functions.php:437
 msgid "Premium WordPress themes"
-msgstr "Premium WordPress teemoja"
+msgstr "قسط المواضيع وورد"
 
 #: includes/functions.php:443
 msgid "ANAGLYPH - One page / Multi Page WordPress Theme"
-msgstr "ANAGLYPH - Yksi sivu / Multi Sivu WordPress Theme"
+msgstr "ANAGLYPH - صفحة واحدة / متعدد صفحة وورد موضوع"
 
 #: includes/functions.php:448
 msgid "Love.ly - Simple & Elegant WordPress theme"
-msgstr "Love.ly - Yksinkertainen ja tyylikäs WordPress teema"
+msgstr "Love.ly - موضوع بسيط وأنيق وورد"
 
 #: includes/functions.php:454
 msgid "Zoner - Real Estate WordPress theme"
-msgstr "Zoner -Real Estate WordPress teema"
+msgstr "Zoner - عقارات وورد موضوع"
 
 #: includes/functions.php:467
 msgid "Extended functionality"
-msgstr "Lisätoiminnallisuus"
+msgstr "وظائف الموسعة"
 
 #: includes/functions.php:468
 #, php-format
@@ -234,167 +236,153 @@ msgid ""
 "filter=5\">rate it</a>, <a title=\"leave feedbacks\" href=\"%2$s\" target="
 "\"_blank\">leave feedbacks</a>."
 msgstr ""
-"Osta <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
-"plugin/2781350?ref=fruitfulcode\" target=\"_blank\">PRO</a>-versio "
-"lisätoiminnallisuuksilla. %1$s Jos pidät lisäosasta, <a target=\"_blank\" "
-"href=\"http://wordpress.org/support/view/plugin-reviews/maintenance?"
-"filter=5\">rate it</a>, <a title=\"leave feedbacks\" href=\"%2$s\" target="
-"\"_blank\">käy kirjoittamassa meille palautetta</a>."
+"شراء <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
+"plugin/2781350?ref=fruitfulcode\" target=\"_blank\"> محترف </a> نسخة مع "
+"وظائف الموسعة.  %1$s إذا كنت ترغب المساعد لدينا من فضلك  <a target=\"_blank"
+"\" href=\"http://wordpress.org/support/view/plugin-reviews/maintenance?"
+"filter=5\"> قيمه </a>,  <a title=\"leave feedbacks\" href=\"%2$s\" target="
+"\"_blank\"> ترك الاصداء .</a>"
 
 #: includes/functions.php:472
 msgid "Demo website"
-msgstr "Esimerkkiverkkosivu"
+msgstr "الموقع التجريبي"
 
 #: includes/functions.php:661
 msgid "Website is under construction"
-msgstr "Verkkosivu rakenteilla"
+msgstr "الموقع قيد الإنشاء"
 
 #: includes/functions.php:662
 msgid "Maintenance mode is on"
-msgstr "Huoltotila päällä"
+msgstr "وضع الصيانة على"
 
 #: includes/functions.php:663
 msgid "Website will be available soon"
-msgstr "Verkkosivu avataan pian"
+msgstr "سيكون الموقع متاحا في وقت قريب"
 
 #: load/functions.php:39
 msgid "Permission access denied!"
-msgstr "Pääsy kielletty!"
+msgstr "وصول تم رفض الإذن!"
 
 #: load/functions.php:53
 msgid "You entered your login are incorrect!"
-msgstr "Kirjautuminen epäonnistui."
+msgstr "لقد أدخلت تسجيل الدخول الخاصة بك غير صحيحة!"
 
 #: load/functions.php:57
 msgid "You entered your password are incorrect!"
-msgstr "Kirjautuminen epäonnistui."
+msgstr "لقد أدخلت كلمة المرور غير صحيحة!"
 
 #: load/functions.php:60
 msgid "You entered your login and password are incorrect!"
-msgstr "Kirjautuminen epäonnistui."
+msgstr "لقد أدخلت اسم المستخدم وكلمة المرور غير صحيحة!"
 
 #: load/functions.php:289
 msgid "User Login"
-msgstr "Käyttäjän kirjautuminen"
+msgstr "دخول المستخدم"
 
 #: load/functions.php:290
 msgid "Username"
-msgstr "Käyttäjänimi"
+msgstr "اسم المستخدم"
 
 #: load/functions.php:291
 msgid "Password"
-msgstr "Salasana"
+msgstr "كلمه السر"
 
 #: load/functions.php:292
 msgid "Lost Password"
-msgstr "Kadonnut Salasana"
+msgstr "كلمة مرور مفقودة"
 
 #: load/functions.php:293
 msgid "Login"
-msgstr "Kirjaudu sisään"
+msgstr "تسجيل الدخول"
 
 #~ msgid "Exclude pages"
-#~ msgstr "Sulkea pois sivut"
+#~ msgstr "Vyloučit stránky z režimu údržby"
 
 #~ msgid "Choose Logo width"
-#~ msgstr "Valitse Logon leveys"
+#~ msgstr "اختيار عرض الشعار"
 
 #~ msgid "Choose Logo height"
-#~ msgstr "Valitse Logon korkeus"
+#~ msgstr "اختيار ارتفاع الشعار"
 
 #~ msgid "Blur intensity"
-#~ msgstr "Sumeuden taso"
+#~ msgstr "كثافة طمس"
 
 #~ msgid "Enable login"
-#~ msgstr "Ota kirjautuminen"
+#~ msgstr "تمكين تسجيل الدخول"
 
 #~ msgid "Put Login On"
-#~ msgstr "Put login"
+#~ msgstr "وضع الدخول في"
 
 #~ msgid "Logo width"
-#~ msgstr "Logon leveys"
+#~ msgstr "عرض الشعار"
 
 #~ msgid "Logo height"
-#~ msgstr "Logon korkeus"
+#~ msgstr "ارتفاع الشعار"
 
 #~ msgid "Admin bar"
-#~ msgstr "Työkalupalkki"
+#~ msgstr "شريط المشرف"
 
 #~ msgid "Background blur"
-#~ msgstr "Taustan sumennus"
+#~ msgstr "طمس الخلفية"
 
 #~ msgid "Apply a blur"
-#~ msgstr "Käytä sumennusta"
+#~ msgstr "تطبيق طمس"
 
 #~ msgid "Login On / Off"
-#~ msgstr "Kirjautuminen Päällä / Pois"
+#~ msgstr "تسجيل الدخول تشغيل / إيقاف"
 
 #~ msgid "Service temporarily unavailable, Google analytics will be disable"
-#~ msgstr "Tarjoaminen tilapäisesti, Google Analytics poistetaan käytöstä"
+#~ msgstr "الخدمة غير متوفرة مؤقتا، سيتم تعطيل تحليلات جوجل"
 
 #~ msgid "Sign In"
-#~ msgstr "Kirjaudu"
+#~ msgstr "تسجيل الدخول"
 
-#~ msgid ""
-#~ "You may find answers to your questions at <a target=\"_blank\" href="
-#~ "\"http://wordpress.org/support/plugin/maintenance\">support forum</"
-#~ "a><br>You may  <a target=\"_blank\" href=\"mailto:mail@fruitfulcode.com?"
-#~ "subject=Maintenance plugin\">contact us</a> with customization requests "
-#~ "and suggestions.<br> Please visit our website to learn about us and our "
-#~ "services <a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
-#~ msgstr ""
-#~ "Saatat löytää vastaukset kysymyksiisi englanninkieliseltä <a target="
-#~ "\"_blank\" href=\"http://wordpress.org/support/plugin/maintenance"
-#~ "\">tukifoorumiltamme</a><br>Voit myös <a target=\"_blank\" href=\"mailto:"
-#~ "mail@fruitfulcode.com?subject=Maintenance plugin\">lähettää sähköpostia</"
-#~ "a> (englanniksi) räätälöinti- ja ehdotusasioista.<br> Lisätietoa meistä "
-#~ "ja palveluistamme löytyy verkkosivuiltamme <a href=\"%1$s\" title=\"%2$s"
-#~ "\">%2$s</a>"
+#~ msgid "maintenance"
+#~ msgstr "صيانة"
 
 #~ msgid "Contact support"
-#~ msgstr "Служба поддержки"
+#~ msgstr "اتصل بالدعم"
 
 #~ msgid ""
 #~ "If you faced with any problems, have a question or suggestion you always "
 #~ "can contact us with any request on our website <a href=\"%1$s\" title="
 #~ "\"%2$s\">%2$s</a>"
 #~ msgstr ""
-#~ "Если вы столкнулись с любыми проблемами, есть вопрос или предложение, вы "
-#~ "всегда можете обратиться к нам с любым предложением  на нашем сайте <a "
-#~ "href=\"%1$s\" title=\"%2$s\">%2$s</a>"
+#~ "إذا كنت تواجه أي مشاكل، لديك سؤال أو اقتراح يمكنك دائما الاتصال بنا مع أي "
+#~ "طلب على موقعنا على الانترنت <a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
 
 #~ msgid ""
 #~ "If you like our plugin please rate it, %1$s <a title=\"leave feedback\" "
 #~ "href=\"%2$s\" target=\"_blank\">leave feedback</a> or purchase extended "
 #~ "version %1$s with more other features."
 #~ msgstr ""
-#~ "Если Вам нравиться наш плагин, оцените его %1$s <a title=\"оставить "
-#~ "комментарий\" href=\"%2$s\" target=\"_blank\">оставить комментарий</a> "
-#~ "или купите расширенную версию %1$s с дополнительными возможностями."
+#~ "إذا كنت ترغب المساعد لدينا يرجى معدل لها  <a title=\"leave feedback\" "
+#~ "href=\"%2$s\" target=\"_blank\"> اترك تقييم للخدمة </a> أو شراء نسخة "
+#~ "موسعة %1$s مع المزيد من الميزات الأخرى."
 
 #~ msgid "Purchase"
-#~ msgstr "Купить"
+#~ msgstr "شراء"
 
 #~ msgid "We have time until launch"
-#~ msgstr "Осталось времени до запуска"
+#~ msgstr "لدينا الوقت حتى إطلاق"
 
 #~ msgid "Be first of your friends who will know when the website goes live."
-#~ msgstr "Будь первым из твоих друзей, кто узнает о запуске сайта."
+#~ msgstr "كن أول من أصدقائك الذين سوف نعرف متى يذهب الموقع مباشرة."
 
 #~ msgid "Check out our extended version of plugin with new features"
-#~ msgstr "Проверьте возможности расширенной версии плагина"
+#~ msgstr "تحقق من نسخة موسعة لدينا من البرنامج المساعد مع ميزات جديدة"
 
 #~ msgid "Your session has expired."
-#~ msgstr "Ваша сессия истекла."
+#~ msgstr "انتهت جلسة العمل الخاصة بك."
 
 #~ msgid "Customer login"
-#~ msgstr "Вход для клиентов"
+#~ msgstr "تسجيل الدخول العملاء"
 
 #~ msgid "Please login to see website"
-#~ msgstr "Пожалуйста авторезируйтесь"
+#~ msgstr "الرجاء الدخول لمعرفة الموقع"
 
 #~ msgid "User roles"
-#~ msgstr "Роли пользователей"
+#~ msgstr "أدوار المستخدمين"
 
 #~ msgid "Choose users access permissions in maintenance mode."
-#~ msgstr "Выберите права доступа пользователей в режиме обслуживания."
+#~ msgstr "اختيار أذونات للمستخدمين الوصول في وضع الصيانة."

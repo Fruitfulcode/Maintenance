@@ -3,7 +3,7 @@
 	Plugin Name: Maintenance
 	Plugin URI: http://wordpress.org/plugins/maintenance/
 	Description: Take your website for maintenance away from public view. Use maintenance plugin if your website is in development or you need to change a few things, run an upgrade. Make it only accessible by login and password. Plugin has a options to add a logo, background, headline, message, colors, login, etc. Extended PRO with more features version is available for purchase.
-	Version: 2.7.1
+	Version: 3.1
 	Author: fruitfulcode
 	Author URI: http://fruitfulcode.com
 	License: GPL2
@@ -41,6 +41,7 @@ class maintenance {
 			add_action('wp', 		array( &$this, 'mt_template_redirect'), 1);
 			add_action('wp_logout',	array( &$this, 'mt_user_logout'));
 			add_action('init', 		array( &$this, 'mt_admin_bar'));
+			add_action('init', 		array( &$this, 'mt_set_global_options'), 1);
 		}
 		
 		function constants() {
@@ -51,6 +52,11 @@ class maintenance {
 			define( 'MAINTENANCE_URI', trailingslashit( plugin_dir_url( __FILE__ ) ) );
 			define( 'MAINTENANCE_INCLUDES', MAINTENANCE_DIR . trailingslashit( 'includes' ) );
 			define( 'MAINTENANCE_LOAD',     MAINTENANCE_DIR . trailingslashit( 'load' ) );
+		}
+		
+		function mt_set_global_options() {
+			global $mt_options;
+			$mt_options =  mt_get_plugin_options(true);		
 		}
 		
 		function lang() {

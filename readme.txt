@@ -3,8 +3,8 @@ Contributors: fruitfulcode
 Donate link: http://fruitfulcode.com/
 Tags: maintenance, maintenance mode, coming soon, splash page, under-construction, 503 error, administration, login, customize page, background, fullscreen, blur
 Requires at least: 3.4
-Tested up to: 4.4.2
-Stable tag: 2.7.1
+Tested up to: 4.5.3
+Stable tag: 3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -70,6 +70,8 @@ https://www.youtube.com/watch?v=Z5v9Ju52nmg
 <li>Ukrainian (uk_UA)</li>
 <li>Finnish (fi_FI)</li>
 <li>Italian (it_IT)</li>
+<li>Arabic (Ar)</li>
+<li>Dutch (nl_NL)</li>
 </ul>
 
 <p>If you would like to create translation to your native language, you can send the <a target="_blank" href="http://codex.wordpress.org/Translating_WordPress">text of PO and MO files</a> to the <a href="http://fruitfulcode.com" target="_blank">Fruitful Code</a> and we'll add it to the next plugin update.</p><p> You can download the latest version of the program for work with PO and MO files <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.</p>
@@ -119,6 +121,21 @@ You can check <a href="http://wordpress.org/support/plugin/maintenance">support 
 
 
 == Change log ==
+
+= 3.1 =
+* New: Meta description
+* Improvements: Descriptions for fields
+* Improvements: Added check for ssl
+* Bug fix: Plugin Inspector call this UNSAFE
+* Bug fix: changed call to the function mt_clear_cache
+* Bug fix: Grammatical mistakes
+* Update: Translation files
+
+= 3.0 =
+* New: Additional Save changes button
+* Update: Translation files
+* Update: Core for maintenance PRO
+* Bug fix: Lost password link
 
 = 2.7.1 =
 * Update: Language files

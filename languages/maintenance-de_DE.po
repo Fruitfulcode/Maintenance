@@ -1,166 +1,234 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
-"POT-Creation-Date: 2014-02-18 12:25+0200\n"
-"PO-Revision-Date: 2014-05-02 08:16+0100\n"
+"POT-Creation-Date: 2016-08-05 12:31+0300\n"
+"PO-Revision-Date: 2016-08-05 12:32+0300\n"
 "Last-Translator: René Maurer <rene.maurer@jamos.ch>\n"
 "Language-Team: fruitfulcode\n"
+"Language: de_CH\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.5\n"
+"X-Generator: Poedit 1.8.8\n"
 "X-Poedit-KeywordsList: _;_e;__;_x\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"Language: de_CH\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: /includes/admin.php:84
+#: includes/admin.php:76 includes/functions.php:597
+msgid "Maintenance"
+msgstr "Maintenance"
+
+#: includes/admin.php:76 includes/admin.php:93
 msgid "Save changes"
 msgstr "Einstellungen speichern"
 
-#: /includes/functions.php:104
+#: includes/functions.php:165
+msgid "Standard Fonts"
+msgstr ""
+
+#: includes/functions.php:172
+msgid "Google Web Fonts"
+msgstr ""
+
+#: includes/functions.php:222
 msgid "General Settings"
 msgstr "Generelle Einstellungen"
 
-#: /includes/functions.php:110
+#: includes/functions.php:223
+msgid "Custom CSS"
+msgstr "Benutzerdefinierte CSS"
+
+#: includes/functions.php:224
+msgid "Exclude pages from maintenance mode"
+msgstr "ausschließen Seiten aus dem Wartungsmodus"
+
+#: includes/functions.php:230
 msgid "Pro version"
 msgstr "Pro Version"
 
-#: /includes/functions.php:116
+#: includes/functions.php:237
+msgid "Fruitful Code projects"
+msgstr "Fruitful Code Projekte"
+
+#: includes/functions.php:243
 msgid "Support"
 msgstr "Support"
 
-#: /includes/functions.php:124
+#: includes/functions.php:249
+msgid "Translation"
+msgstr "Übersetzung"
+
+#: includes/functions.php:272
 msgid "Page title"
 msgstr "Seiten Titel"
 
-#: /includes/functions.php:125
+#: includes/functions.php:273
 msgid "Headline"
 msgstr "Kopfzeile"
 
-#: /includes/functions.php:126
+#: includes/functions.php:274
 msgid "Description"
 msgstr "Beschreibung"
 
-#: includes/functions.php:191
-msgid "Exclude pages"
-msgstr "Ausschließen Seiten"
-
-#: includes/functions.php:242
+#: includes/functions.php:275
 msgid "Footer Text"
 msgstr "Fusszeile"
 
-#: includes/functions.php:243
-msgid "Logo width"
-msgstr "Logo Breite"
+#: includes/functions.php:276
+msgid "Set Logo width"
+msgstr "Set Logo Breite"
 
-#: includes/functions.php:244
-msgid "Logo height"
-msgstr "Logo Höhe"
+#: includes/functions.php:277
+msgid "Set Logo height"
+msgstr "Set Logo Höhe"
 
-#: includes/functions.php:246
-msgid "Retina logo"
-msgstr "Retina logo"
-
-#: includes/functions.php:246
-msgid "Upload Retina Logo"
-msgstr "Retina logo hochladen"
-
-#: includes/functions.php:244
-msgid "Select the page to be displayed:"
-msgstr "Wählen Sie die Seite angezeigt werden soll:"
-
-#: /includes/functions.php:127
+#: includes/functions.php:278
 msgid "Logo"
 msgstr "Logo"
 
-#: /includes/functions.php:127
+#: includes/functions.php:278
 msgid "Upload Logo"
 msgstr "logo hochladen"
 
-#: /includes/functions.php:130
-msgid "Admin bar"
-msgstr "Admin Bar"
+#: includes/functions.php:279
+msgid "Retina logo"
+msgstr "Retina logo"
 
-#: /includes/functions.php:130
+#: includes/functions.php:279
+msgid "Upload Retina Logo"
+msgstr "Retina logo hochladen"
+
+#: includes/functions.php:283
 msgid "Show admin bar"
 msgstr "Zeige Admin Bar"
 
-#: /includes/functions.php:131
+#: includes/functions.php:284
 msgid "503"
 msgstr "503"
 
-#: /includes/functions.php:131
-msgid "Service temporarily unavailable, Google analytics will be disable"
-msgstr "Dienst vorübergehend nicht verfügbar, Google Analytics wird deaktiviert"
+#: includes/functions.php:284
+msgid "Service temporarily unavailable, Google analytics will be disable."
+msgstr ""
+"Dienst vorübergehend nicht verfügbar, wird Google Analytics deaktiviert "
+"werden."
 
-#: /includes/functions.php:132
+#: includes/functions.php:291
 msgid "Google Analytics ID"
-msgstr "UA-XXXXX-X"
+msgstr "Google Analytics ID"
 
-#: /includes/functions.php:132
+#: includes/functions.php:291
 msgid "UA-XXXXX-X"
 msgstr "UA-XXXXX-X"
 
-#: /includes/functions.php:133
-msgid "Blur intensity"
-msgstr "Intensität des Verwischens"
+#: includes/functions.php:292
+msgid "Set blur intensity"
+msgstr "Stellen Sie Unschärfe Intensität"
 
-#: /includes/functions.php:134
-msgid "Background blur"
-msgstr "Hintergrund Verwischen"
+#: includes/functions.php:298
+msgid "Apply background blur"
+msgstr "Anwenden Hintergrund verwischen"
 
-#: /includes/functions.php:134
-msgid "Apply a blur"
-msgstr "Verwischen aktivieren"
+#: includes/functions.php:299
+msgid "Enable frontend login"
+msgstr "Aktivieren Frontend Login"
 
-#: /includes/functions.php:135
-msgid "Login On / Off"
-msgstr "Login Ein / Aus"
+#: includes/functions.php:311
+msgid "CSS Code"
+msgstr ""
 
-#: /includes/functions.php:142
+#: includes/functions.php:325
+msgid "Select the page to be displayed:"
+msgstr "Wählen Sie die Seite angezeigt werden soll:"
+
+#: includes/functions.php:371
+msgid "Not available object."
+msgstr "Nicht verfügbar Objekt."
+
+#: includes/functions.php:386
 msgid "Background image"
 msgstr "Hintergrundbild"
 
-#: /includes/functions.php:142
+#: includes/functions.php:386
 msgid "Upload Background"
 msgstr "Hintergrundbild hochladen"
 
-#: /includes/functions.php:148
+#: includes/functions.php:392
 msgid "Background color"
 msgstr "Hintergrund Farbe"
 
-#: /includes/functions.php:149
+#: includes/functions.php:393
 msgid "Font color"
 msgstr "Schrift Farbe"
 
-#: /includes/functions.php:157
+#: includes/functions.php:400
+msgid "Font family"
+msgstr "Schriftfamilie"
+
+#: includes/functions.php:405
+msgid "Subsets"
+msgstr ""
+
+#: includes/functions.php:413
 msgid "Have any questions?"
 msgstr "Hast du bestimmte Fragen?"
 
-#: /includes/functions.php:158
+#: includes/functions.php:414
 #, php-format
 msgid ""
 "You may find answers to your questions at <a target=\"_blank\" href=\"http://"
-"wordpress.org/support/plugin/maintenance\">support forum</a><br>You may  <a "
-"target=\"_blank\" href=\"mailto:mail@fruitfulcode.com?subject=Maintenance "
-"plugin\">contact us</a> with customization requests and suggestions.<br> "
-"Please visit our website to learn about us and our services <a href=\"%1$s\" "
-"title=\"%2$s\">%2$s</a>"
+"support.fruitfulcode.com/hc/en-us/sections/200406386\">support forum</"
+"a><br>You may  <a target=\"_blank\" href=\"http://support.fruitfulcode.com/"
+"hc/en-us/requests/new\">contact us</a> with customization requests and "
+"suggestions.<br> Please visit our website to learn about us and our services "
+"<a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
 msgstr ""
-"Vielleicht findest du die Antworten im <a target=\"_blank\" href=\"http://"
-"wordpress.org/support/plugin/maintenance\">Support Forum</a>.<br>Du kannst "
-"uns und auch mit deinem Anliegen <a target=\"_blank\" href=\"mailto:"
-"mail@fruitfulcode.com?subject=Maintenance plugin\">kontaktieren</a> <br> "
-"Bitte besuche zuerst unsere Webseite <a href=\"%1$s\" title=\"%2$s\">%2$s</"
-"a> um mehr über unsere Dienstleistungen zu erfahren "
+"Sie können Antworten auf Ihre Fragen finden Sie unter <a target=\"_blank\" "
+"href=\"http://support.fruitfulcode.com/hc/en-us/"
+"sections/200406386\">Hilfeforum</a><br>Du darfst  <a target=\"_blank\" href="
+"\"http://support.fruitfulcode.com/hc/en-us/requests/new\">kontaktiere uns</"
+"a> mit der Anpassung Wünsche und Anregungen. <br> Bitte besuchen Sie unsere "
+"Website über uns und unsere Dienstleistungen zu erfahren <a href=\"%1$s\" "
+"title=\"%2$s\">%2$s</a>"
 
-#: /includes/functions.php:169
+#: includes/functions.php:425
+msgid "This plugin is translation friendly"
+msgstr "Dieses Plugin ist Übersetzung freundlich"
+
+#: includes/functions.php:426
+#, php-format
+msgid ""
+"Want to improve translation or make one for your native language? <a href="
+"\"%1$s\" title=\"%2$s\">%2$s</a>"
+msgstr ""
+"Wollen Übersetzung zu verbessern oder eine für Ihre Muttersprache zu machen? "
+"<a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
+
+#: includes/functions.php:428
+msgid "Follow this tutorial"
+msgstr "Folgen Sie dieser Anleitung"
+
+#: includes/functions.php:437
+msgid "Premium WordPress themes"
+msgstr ""
+
+#: includes/functions.php:443
+msgid "ANAGLYPH - One page / Multi Page WordPress Theme"
+msgstr "ANAGLYPH - Eine Seite / Multi Seite Wordpress Theme"
+
+#: includes/functions.php:448
+msgid "Love.ly - Simple & Elegant WordPress theme"
+msgstr "Love.ly - Einfache & Elegant Wordpress theme"
+
+#: includes/functions.php:454
+msgid "Zoner - Real Estate WordPress theme"
+msgstr ""
+
+#: includes/functions.php:467
 msgid "Extended functionality"
 msgstr "Erweiterte Funktionalitäten"
 
-#: /includes/functions.php:170
+#: includes/functions.php:468
 #, php-format
 msgid ""
 "Purchase <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
@@ -177,65 +245,115 @@ msgstr ""
 "maintenance?filter=5\">bewerte es</a> oder <a title=\"leave feedbacks\" href="
 "\"%2$s\" target=\"_blank\">hinterlasse ein Feedback</a>."
 
-#: /includes/functions.php:174
+#: includes/functions.php:472
 msgid "Demo website"
 msgstr "Demo Webseite"
 
-#: /includes/functions.php:232
-msgid "Maintenance"
-msgstr "Maintenance"
-
-#: /includes/functions.php:255
+#: includes/functions.php:661
 msgid "Website is under construction"
 msgstr "Die Webseite ist im Aufbau"
 
-#: /includes/functions.php:256
+#: includes/functions.php:662
 msgid "Maintenance mode is on"
 msgstr "Der Wartungsmodus ist aktiv"
 
-#: /includes/functions.php:257
+#: includes/functions.php:663
 msgid "Website will be available soon"
 msgstr "Die Webseite wird in Kürze wieder verfügbar sein"
 
-#: /load/functions.php:37
+#: load/functions.php:39
 msgid "Permission access denied!"
 msgstr "Zugriff verweigert!"
 
-#: /load/functions.php:45
+#: load/functions.php:53
 msgid "You entered your login are incorrect!"
 msgstr "Du hast einen falschen Benutzernamen eingegeben!"
 
-#: /load/functions.php:49
+#: load/functions.php:57
 msgid "You entered your password are incorrect!"
 msgstr "Du hast ein falsches Passwort eingegeben!"
 
-#: /load/functions.php:52
+#: load/functions.php:60
 msgid "You entered your login and password are incorrect!"
 msgstr "Dein Benutzername und Passwort ist falsch"
 
-#: /load/functions.php:223
+#: load/functions.php:289
+msgid "User Login"
+msgstr "Benutzer-Anmeldung"
+
+#: load/functions.php:290
 msgid "Username"
 msgstr "Benutzername"
 
-#: /load/functions.php:224
+#: load/functions.php:291
 msgid "Password"
 msgstr "Passwort"
 
-#: /load/functions.php:225
-msgid "Sign In"
-msgstr "Anmelden"
-
-#: load/functions.php:262
+#: load/functions.php:292
 msgid "Lost Password"
 msgstr "Passwort vergessen"
 
-#: load/functions.php:263
+#: load/functions.php:293
 msgid "Login"
 msgstr "Anmeldung"
 
-#: load/functions.php:259
-msgid "User Login"
-msgstr "Benutzer-Anmeldung"
+#~ msgid "Exclude pages"
+#~ msgstr "Ausschließen Seiten"
+
+#~ msgid "Choose Logo width"
+#~ msgstr "Wählen Sie Logo Breite"
+
+#~ msgid "Choose Logo height"
+#~ msgstr "Wählen Sie Logo Höhe"
+
+#~ msgid "Blur intensity"
+#~ msgstr "Intensität des Verwischens"
+
+#~ msgid "Enable login"
+#~ msgstr "Aktivieren Login"
+
+#~ msgid "Put Login On"
+#~ msgstr "Setzen Sie die Anmeldung an"
+
+#~ msgid "Logo width"
+#~ msgstr "Logo Breite"
+
+#~ msgid "Logo height"
+#~ msgstr "Logo Höhe"
+
+#~ msgid "Admin bar"
+#~ msgstr "Admin Bar"
+
+#~ msgid "Background blur"
+#~ msgstr "Hintergrund Verwischen"
+
+#~ msgid "Apply a blur"
+#~ msgstr "Verwischen aktivieren"
+
+#~ msgid "Login On / Off"
+#~ msgstr "Login Ein / Aus"
+
+#~ msgid "Service temporarily unavailable, Google analytics will be disable"
+#~ msgstr ""
+#~ "Dienst vorübergehend nicht verfügbar, Google Analytics wird deaktiviert"
+
+#~ msgid "Sign In"
+#~ msgstr "Anmelden"
+
+#~ msgid ""
+#~ "You may find answers to your questions at <a target=\"_blank\" href="
+#~ "\"http://wordpress.org/support/plugin/maintenance\">support forum</"
+#~ "a><br>You may  <a target=\"_blank\" href=\"mailto:mail@fruitfulcode.com?"
+#~ "subject=Maintenance plugin\">contact us</a> with customization requests "
+#~ "and suggestions.<br> Please visit our website to learn about us and our "
+#~ "services <a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
+#~ msgstr ""
+#~ "Vielleicht findest du die Antworten im <a target=\"_blank\" href=\"http://"
+#~ "wordpress.org/support/plugin/maintenance\">Support Forum</a>.<br>Du "
+#~ "kannst uns und auch mit deinem Anliegen <a target=\"_blank\" href="
+#~ "\"mailto:mail@fruitfulcode.com?subject=Maintenance plugin\">kontaktieren</"
+#~ "a> <br> Bitte besuche zuerst unsere Webseite <a href=\"%1$s\" title=\"%2$s"
+#~ "\">%2$s</a> um mehr über unsere Dienstleistungen zu erfahren "
 
 #, fuzzy
 #~ msgid "maintenance"
