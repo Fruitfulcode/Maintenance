@@ -108,6 +108,20 @@ function get_custom_login_code() {
 		if(class_exists('WPCF7')) {
 			wp_register_script( '_cf7form',		MAINTENANCE_URI  .'../contact-form-7/includes/js/jquery.form.min.js', 'jquery');
 			wp_register_script( '_cf7scripts',	MAINTENANCE_URI  .'../contact-form-7/includes/js/scripts.js', 'jquery');
+			$_wpcf7 = array(
+				'loaderUrl' => wpcf7_ajax_loader(),
+				'recaptcha' => array(
+					'messages' => array(
+						'empty' => __( 'Please verify that you are not a robot.',
+							'contact-form-7' ) ) ),
+				'sending' => __( 'Sending ...', 'contact-form-7' ) );
+			if ( defined( 'WP_CACHE' ) && WP_CACHE ) {
+				$_wpcf7['cached'] = 1;
+			}
+			if ( wpcf7_support_html5_fallback() ) {
+				$_wpcf7['jqueryUi'] = 1;
+			}
+			wp_localize_script( '_cf7scripts', '_wpcf7', $_wpcf7 );
 		}
 
 
