@@ -275,9 +275,7 @@ function get_custom_login_code() {
 		$out_ftext   = null;
 
 		if (isset($mt_options['footer_text']) && !empty($mt_options['footer_text'])) {
-			$out_ftext .= '<a class="company-name" rel="footer" href="'.esc_url(site_url('')) .'">';
 				$out_ftext .= wp_kses_post(stripslashes($mt_options['footer_text']));
-			$out_ftext .= '</a>';
 		}
 		echo $out_ftext;
 	}
