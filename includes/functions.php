@@ -613,13 +613,14 @@
 		$rgb = array($r, $g, $b);
 		return implode(",", $rgb); 
 	}
-		
-		
+
+
 	function mt_insert_attach_sample_files() {
 		global $wpdb;
 		$title = '';
 		$attach_id   = 0;
 		$is_attach_exists = $wpdb->get_results( "SELECT p.ID FROM $wpdb->posts p WHERE  p.post_title LIKE '%mt-sample-background%'", OBJECT );
+
 		if (!empty($is_attach_exists)) {
 			$attach_id = current($is_attach_exists)->ID;
 		} else {
@@ -627,26 +628,26 @@
 			$upload_dir  = wp_upload_dir();
 			$image_url 	 = MAINTENANCE_URI . 'images/mt-sample-background.jpg';
 			$file_name   = basename( $image_url );
-			$upload      = wp_upload_bits( $file_name, null, $image_url, current_time( 'mysql', 0));
-				
+			$file_content = file_get_contents($image_url);
+			$upload      = wp_upload_bits( $file_name, null, $file_content, current_time( 'mysql', 0));
 			if ($upload['error'] == '') {
 				$title = preg_replace('/\.[^.]+$/', '', basename($image_url));
-						
+
 				$wp_filetype = wp_check_filetype(basename($upload['file']), null );
 				$attachment = array(
-						'guid' 			 => $upload['url'], 
+						'guid' 			 => $upload['url'],
 						'post_mime_type' => $wp_filetype['type'],
 						'post_title' 	 => $title,
 						'post_content' 	 => '',
 						'post_status' 	 => 'inherit'
 					);
-					
+
 				$attach_id   = wp_insert_attachment($attachment, $upload['file']);
 				$attach_data = wp_generate_attachment_metadata($attach_id, $upload['file']);
 				wp_update_attachment_metadata($attach_id, $attach_data);
-				
+
 			}
-		}	
+		}
 
 		if (!empty($attach_id)) {
 			return $attach_id;
