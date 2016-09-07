@@ -46,7 +46,7 @@
 			wp_enqueue_script( 'wp-lists' );
 			wp_enqueue_script( 'postbox' );
 
-			wp_enqueue_style  ('arvo', 'http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Arvo:400,400italic,700,700italic' );
+			wp_enqueue_style  ('arvo', '//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Arvo:400,400italic,700,700italic' );
 			wp_enqueue_style  ('wp-color-picker' );
 
 			wp_enqueue_script ('select2',    MAINTENANCE_URI .'js/select2/select2.min.js' );
