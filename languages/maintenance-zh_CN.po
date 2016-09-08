@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
 "POT-Creation-Date: 2016-08-05 12:31+0300\n"
-"PO-Revision-Date: 2016-08-05 12:40+0300\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2016-09-03 17:13+0800\n"
+"Last-Translator: 0xJacky <jacky-943572677@qq.com>\n"
 "Language-Team: fruitfulcode\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.8\n"
+"X-Generator: Poedit 1.8.7\n"
 "X-Poedit-KeywordsList: _;_e;__;_x\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -17,7 +17,7 @@ msgstr ""
 
 #: includes/admin.php:76 includes/functions.php:597
 msgid "Maintenance"
-msgstr "关闭维修期满后"
+msgstr "维护模式"
 
 #: includes/admin.php:76 includes/admin.php:93
 msgid "Save changes"
@@ -33,7 +33,7 @@ msgstr "谷歌字体"
 
 #: includes/functions.php:222
 msgid "General Settings"
-msgstr "一般设置"
+msgstr "常规设置"
 
 #: includes/functions.php:223
 msgid "Custom CSS"
@@ -41,7 +41,7 @@ msgstr "自定义CSS"
 
 #: includes/functions.php:224
 msgid "Exclude pages from maintenance mode"
-msgstr "排除从维护模式页"
+msgstr "禁用维护模式的页面"
 
 #: includes/functions.php:230
 msgid "Pro version"
@@ -49,7 +49,7 @@ msgstr "专业版"
 
 #: includes/functions.php:237
 msgid "Fruitful Code projects"
-msgstr "春华秋实代码项目"
+msgstr "Fruitful 代码项目"
 
 #: includes/functions.php:243
 msgid "Support"
@@ -77,27 +77,27 @@ msgstr "页脚文本"
 
 #: includes/functions.php:276
 msgid "Set Logo width"
-msgstr "设置标志宽度"
+msgstr "设置 Logo 宽度"
 
 #: includes/functions.php:277
 msgid "Set Logo height"
-msgstr "集徽标高度"
+msgstr "设置 Logo 高度"
 
 #: includes/functions.php:278
 msgid "Logo"
-msgstr "徽标"
+msgstr "Logo"
 
 #: includes/functions.php:278
 msgid "Upload Logo"
-msgstr "上传徽标"
+msgstr "上传 Logo"
 
 #: includes/functions.php:279
 msgid "Retina logo"
-msgstr "视网膜标志"
+msgstr "超清 Logo"
 
 #: includes/functions.php:279
 msgid "Upload Retina Logo"
-msgstr "上传视网膜标志"
+msgstr "上传超清 Logo"
 
 #: includes/functions.php:283
 msgid "Show admin bar"
@@ -109,7 +109,7 @@ msgstr "503"
 
 #: includes/functions.php:284
 msgid "Service temporarily unavailable, Google analytics will be disable."
-msgstr "服务暂时不可用，Google analytics 将被禁用。"
+msgstr "服务暂时不可用时，Google analytics 将被禁用。"
 
 #: includes/functions.php:291
 msgid "Google Analytics ID"
@@ -121,11 +121,11 @@ msgstr "UA-XXXXX-X"
 
 #: includes/functions.php:292
 msgid "Set blur intensity"
-msgstr "设置模糊强度"
+msgstr "设置模糊度"
 
 #: includes/functions.php:298
 msgid "Apply background blur"
-msgstr "应用背景虚化"
+msgstr "启用背景虚化"
 
 #: includes/functions.php:299
 msgid "Enable frontend login"
@@ -137,7 +137,7 @@ msgstr "CSS代码"
 
 #: includes/functions.php:325
 msgid "Select the page to be displayed:"
-msgstr "选择要显示的页面："
+msgstr "请选择要禁用维护模式的页面："
 
 #: includes/functions.php:371
 msgid "Not available object."
@@ -145,11 +145,11 @@ msgstr "没有可供选择的对象。"
 
 #: includes/functions.php:386
 msgid "Background image"
-msgstr "背景图"
+msgstr "背景图片"
 
 #: includes/functions.php:386
 msgid "Upload Background"
-msgstr "上传背景"
+msgstr "上传背景图片"
 
 #: includes/functions.php:392
 msgid "Background color"
@@ -165,11 +165,11 @@ msgstr "字体系列"
 
 #: includes/functions.php:405
 msgid "Subsets"
-msgstr "亚"
+msgstr "字体子集"
 
 #: includes/functions.php:413
 msgid "Have any questions?"
-msgstr "有什么问题？"
+msgstr "遇到了什么问题？"
 
 #: includes/functions.php:414
 #, php-format
@@ -181,15 +181,15 @@ msgid ""
 "suggestions.<br> Please visit our website to learn about us and our services "
 "<a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
 msgstr ""
-"您可以在找到问题的答案 <a target=\"_blank\" href=\"http://support."
-"fruitfulcode.com/hc/en-us/sections/200406386\">支持论坛</a><br>你可以  <a "
-"target=\"_blank\" href=\"http://support.fruitfulcode.com/hc/en-us/requests/"
-"new\">联系我们</a> 与定制要求和建议。<br> 请访问我们的网站，了解我们和我们的"
-"服务 <a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
+"您可以在找到 <a target=\"_blank\" href=\"http://support.fruitfulcode.com/hc/"
+"en-us/sections/200406386\">支持论坛</a> 问题的答案<br>您可以  <a target="
+"\"_blank\" href=\"http://support.fruitfulcode.com/hc/en-us/requests/new\">联"
+"系我们</a> 来提要求和建议。<br> 请访问我们的网站，来了解我们和我们的服务 <a "
+"href=\"%1$s\" title=\"%2$s\">%2$s</a>"
 
 #: includes/functions.php:425
 msgid "This plugin is translation friendly"
-msgstr "这个插件是翻译友好"
+msgstr "插件翻译"
 
 #: includes/functions.php:426
 #, php-format
@@ -197,27 +197,28 @@ msgid ""
 "Want to improve translation or make one for your native language? <a href="
 "\"%1$s\" title=\"%2$s\">%2$s</a>"
 msgstr ""
-"要提高翻译或制作一个自己的母语？ <a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
+"想要优化翻译或者想要把插件翻译为您的自己的母语？ <a href=\"%1$s\" title="
+"\"%2$s\">%2$s</a>"
 
 #: includes/functions.php:428
 msgid "Follow this tutorial"
-msgstr "按照本教程"
+msgstr "请按照本教程"
 
 #: includes/functions.php:437
 msgid "Premium WordPress themes"
-msgstr "高级WordPress主题"
+msgstr "更多 WordPress 主题"
 
 #: includes/functions.php:443
 msgid "ANAGLYPH - One page / Multi Page WordPress Theme"
-msgstr "ANAGLYPH - 单页/多页的WordPress主题"
+msgstr "ANAGLYPH - 单页/多页的 WordPress 主题"
 
 #: includes/functions.php:448
 msgid "Love.ly - Simple & Elegant WordPress theme"
-msgstr "Love.ly - 简单优雅与WordPress主题"
+msgstr "Love.ly - 简单优雅与 WordPress 主题"
 
 #: includes/functions.php:454
 msgid "Zoner - Real Estate WordPress theme"
-msgstr "Zoner - 房地产WordPress主题"
+msgstr "Zoner - 适合房地产商 WordPress 主题"
 
 #: includes/functions.php:467
 msgid "Extended functionality"
@@ -233,11 +234,12 @@ msgid ""
 "filter=5\">rate it</a>, <a title=\"leave feedbacks\" href=\"%2$s\" target="
 "\"_blank\">leave feedbacks</a>."
 msgstr ""
-"采购 <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
-"plugin/2781350?ref=fruitfulcode\" target=\"_blank\">亲 </a> 版本的扩展功"
-"能。%1$s 如果你喜欢我们的插件，请 <a target=\"_blank\" href=\"http://"
-"wordpress.org/support/view/plugin-reviews/maintenance?filter=5\">评分</a>, "
-"<a title=\"leave feedbacks\" href=\"%2$s\" target=\"_blank\">离开反馈</a>."
+"请购买 <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
+"plugin/2781350?ref=fruitfulcode\" target=\"_blank\"> 专业版 </a> 以获得扩展功"
+"能。%1$s 如果你喜欢我们的插件，请给我们 <a target=\"_blank\" href=\"http://"
+"wordpress.org/support/view/plugin-reviews/maintenance?filter=5\">好评</a>, 或"
+"者给我们<a title=\"leave feedbacks\" href=\"%2$s\" target=\"_blank\"> 留言反"
+"馈</a>。"
 
 #: includes/functions.php:472
 msgid "Demo website"
@@ -249,27 +251,27 @@ msgstr "网站正在建设中"
 
 #: includes/functions.php:662
 msgid "Maintenance mode is on"
-msgstr "维护模式是"
+msgstr "维护模式已开启"
 
 #: includes/functions.php:663
 msgid "Website will be available soon"
-msgstr "网站也将很快面市"
+msgstr "网站即将上线"
 
 #: load/functions.php:39
 msgid "Permission access denied!"
-msgstr "权限访问被拒绝！"
+msgstr "拒绝访问！"
 
 #: load/functions.php:53
 msgid "You entered your login are incorrect!"
-msgstr "您输入您的登录是不正确！"
+msgstr "您输入的用户名错误！"
 
 #: load/functions.php:57
 msgid "You entered your password are incorrect!"
-msgstr "您输入的密码不正确！"
+msgstr "您输入的密码错误！"
 
 #: load/functions.php:60
 msgid "You entered your login and password are incorrect!"
-msgstr "您输入您的用户名和密码不正确！"
+msgstr "您输入的用户名或密码错误！"
 
 #: load/functions.php:289
 msgid "User Login"
