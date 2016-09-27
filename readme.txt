@@ -122,8 +122,7 @@ You can check <a href="http://wordpress.org/support/plugin/maintenance">support 
 
 == Change log ==
 
-= 3.1.1 = (21.09.2016)
-
+= 3.1.1 =
 * Improvements: Google fonts - Add font: Martel Sans
 * Updated: Chinese(zh_CN) translation
 * Bug fix: Relative reference for google fonts
