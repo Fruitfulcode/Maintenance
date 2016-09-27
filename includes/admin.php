@@ -73,9 +73,9 @@
 				<?php wp_nonce_field('meta-box-order',  'meta-box-order-nonce', false ); ?>
 				<?php wp_nonce_field('closedpostboxes', 'closedpostboxesnonce', false ); ?>
 				<div class="postbox-container header-container column-1 normal">
-				<h1><?php _e('Maintenance', 'maintenance'); ?><input type="checkbox" id="state" name="lib_options[state]" <?php checked($mt_option['state'], 1); ?> /> <?php submit_button(__('Save changes', 'maintenance'), 'primary'); ?></h1>
-
+					<h1><?php _e('Maintenance', 'maintenance'); ?><input type="checkbox" id="state" name="lib_options[state]" <?php checked($mt_option['state'], 1); ?> /> <?php submit_button(__('Save changes', 'maintenance'), 'primary'); ?></h1>
 				</div>
+				
 				<div class="clear"></div>
 				<div id="poststuff">
 					 <div class="metabox-holder">

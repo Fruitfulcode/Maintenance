@@ -220,7 +220,7 @@
 	function maintenance_page_create_meta_boxes() {
 		global $maintenance_variable;
 		add_meta_box( 'maintenance-general', __( 'General Settings', 'maintenance' ),  'add_data_fields', $maintenance_variable->options_page, 'normal', 'default');
-		add_meta_box( 'maintenance-css', 	 __( 'Custom CSS', 'maintenance' ),        'add_css_fields', $maintenance_variable->options_page, 'normal', 'default');
+		add_meta_box( 'maintenance-css', 	 __( 'Custom CSS', 'maintenance' ),        'add_css_fields',  $maintenance_variable->options_page, 'normal', 'default');
 		add_meta_box( 'maintenance-excludepages', 	 __( 'Exclude pages from maintenance mode', 'maintenance' ), 'add_exclude_pages_fields', $maintenance_variable->options_page, 'normal', 'default');
 	}
 	add_action('add_meta_boxes', 'maintenance_page_create_meta_boxes', 10);
@@ -258,12 +258,24 @@
 		$page_title = $heading = $description = $logo_width = $logo_height = '';
 		
 		
-		if (isset($mt_option['page_title'])) $page_title = wp_kses_post($mt_option['page_title']);
-		if (isset($mt_option['heading']))  $heading = wp_kses_post($mt_option['heading']);
-		if (isset($mt_option['description'])) $description = wp_kses_post($mt_option['description']);
-		if (isset($mt_option['footer_text'])) $footer_text = wp_kses_post($mt_option['footer_text']);
-		if (isset($mt_option['logo_width'])) $logo_width = wp_kses_post($mt_option['logo_width']);
-		if (isset($mt_option['logo_height'])) $logo_height = wp_kses_post($mt_option['logo_height']);
+		if (isset($mt_option['page_title'])) {
+			$page_title  = wp_kses_post($mt_option['page_title']);
+		}
+		if (isset($mt_option['heading'])) {
+			$heading     = wp_kses_post($mt_option['heading']);
+		}
+		if (isset($mt_option['description'])) {
+			$description = wp_kses_post($mt_option['description']);
+		}
+		if (isset($mt_option['footer_text'])) {
+			$footer_text = wp_kses_post($mt_option['footer_text']);
+		}
+		if (isset($mt_option['logo_width']))  {
+			$logo_width  = wp_kses_post($mt_option['logo_width']);
+		}
+		if (isset($mt_option['logo_height'])) {
+			$logo_height = wp_kses_post($mt_option['logo_height']);
+		}
 		
 		?>
 		<table class="form-table">
