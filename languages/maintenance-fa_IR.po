@@ -1,0 +1,81 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Maintenance\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-21 11:35+0000\n"
+"PO-Revision-Date: 2016-10-05 14:41+0300\n"
+"Last-Translator: amir <mr.kofeiti@gmail.com>\n"
+"Language-Team: Persian\n"
+"Language: fa_IR\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#. Description of the plugin
+msgid ""
+"Take your website for maintenance away from public view. Use maintenance "
+"plugin if your website is in development or you need to change a few things, "
+"run an upgrade. Make it only accessible by login and password. Plugin has a "
+"options to add a logo, background, headline, message, colors, login, etc. "
+"Extended PRO with more features version is available for purchase."
+msgstr ""
+
+#. URI of the plugin
+msgid "http://wordpress.org/plugins/maintenance/"
+msgstr ""
+
+#. Author of the plugin
+msgid "fruitfulcode"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://fruitfulcode.com"
+msgstr ""
+
+#: load/functions.php:39
+msgid "Permission access denied!"
+msgstr "سطح دسترسی معتبر نمی باشد!"
+
+#: load/functions.php:53
+msgid "You entered your login are incorrect!"
+msgstr "اطلاعات ورودی شما صحیح نمی باشد!"
+
+#: load/functions.php:57
+msgid "You entered your password are incorrect!"
+msgstr "رمزعبور شما برای ورود صحیح نمی باشد!"
+
+#: load/functions.php:60
+msgid "You entered your login and password are incorrect!"
+msgstr "نام کاربری و رمزعبور شما برای ورود صحیح نمی باشد!"
+
+#: load/functions.php:301
+msgid "User Login"
+msgstr "ورود مدیر"
+
+#: load/functions.php:302
+msgid "Username"
+msgstr "نام کاربری"
+
+#: load/functions.php:303
+msgid "Password"
+msgstr "رمزعبور"
+
+#: load/functions.php:304
+msgid "Lost Password"
+msgstr "بازیابی رمزعبور"
+
+#: load/functions.php:305
+msgid "Login"
+msgstr "ورود"
+
+#. Name of the plugin
+#: includes/admin.php:6 includes/admin.php:76
+msgid "Maintenance"
+msgstr "حالت تعمیر"
+
+#: includes/admin.php:76 includes/admin.php:93
+msgid "Save changes"
+msgstr "ذخیره تغییرات"
