@@ -23,6 +23,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1, initial-scale=1, minimum-scale=1">
 	<meta name="description" content="<?php echo $description; ?>"/>
 	<meta property="og:title" content="<?php echo $page_title; ?>"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta property="og:type" content="Maintenance"/>
 	<meta property="og:url" content="<?php echo site_url(); ?>"/>
 	<meta property="og:description" content="<?php echo $description; ?>"/>
