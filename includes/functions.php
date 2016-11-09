@@ -327,52 +327,55 @@
 						
 			foreach ($post_types as $post_slug => $type) {
 					
-					if (($post_slug == 'attachment') || 
-						($post_slug == 'revision') || 
-						($post_slug == 'nav_menu_item')
-						) continue;
+				if (($post_slug == 'attachment') || 
+					($post_slug == 'revision') || 
+					($post_slug == 'nav_menu_item')
+					) continue;
+				
+				
+				$args = array();
+				$args = array(
+					'posts_per_page'   => -1,
+					'orderby'          => 'NAME',
+					'order'            => 'ASC',
+					'post_type'        => $post_slug,
+					'post_status'      => 'publish'); 
+
+				$posts_array = get_posts( $args );
+				$db_pages_ex = array();					
+				
+				if (!empty($posts_array)) {
+					
+					/*Exclude pages from maintenance mode*/
+					if (!empty($mt_option['exclude_pages']) && isset($mt_option['exclude_pages'][$post_slug])) { 
+						$db_pages_ex = $mt_option['exclude_pages'][$post_slug]; 
+					}
 					
 					$out_filed .= '<tr valign="top">';	
 						$out_filed .= '<th scope="row">' . $type->labels->name .'</th>';
-						
+					
 						$out_filed .= '<filedset>';	
 						$out_filed .= '<td>';	
+					
+						$out_filed .= '<select id="exclude-pages" name="lib_options[exclude_pages]['.$post_slug.'][]" style="width:100%;" class="exclude-pages multiple-select-mt" multiple="multiple">';
 						
-						$args = array();
-						$args = array(
-									'posts_per_page'   => -1,
-									'orderby'          => 'NAME',
-									'order'            => 'ASC',
-									'post_type'        => $post_slug,
-									'post_status'      => 'publish'); 
-	
-						$posts_array = get_posts( $args );
-						$db_pages_ex = array();
-						
-						/*Exclude pages from maintenance mode*/
-						if (!empty($mt_option['exclude_pages']) && isset($mt_option['exclude_pages'][$post_slug])) { $db_pages_ex = $mt_option['exclude_pages'][$post_slug]; }
-						
-						if (!empty($posts_array)) {
-							$out_filed .= '<select id="exclude-pages" name="lib_options[exclude_pages]['.$post_slug.'][]" style="width:100%;" class="exclude-pages multiple-select-mt" multiple="multiple">';
-							
-							foreach ($posts_array as $post_values) {
-								$current = '';
-								if (!empty($db_pages_ex)) {
-									if (in_array($post_values->ID, $db_pages_ex)) {
-										$current = $post_values->ID;
-									}
-								}	
-								$selected = selected($current, $post_values->ID, false);
-								$out_filed .= '<option value="'.$post_values->ID.'" '.$selected .'>'.$post_values->post_title.'</option>';
-							}
-							
-							$out_filed .= '</select>';	
-						} else {
-							$out_filed .= '<h3>'.__('Not available object.', 'maintenance').'</h3>';
+						foreach ($posts_array as $post_values) {
+							$current = null;
+							if (!empty($db_pages_ex)) {
+								if (in_array($post_values->ID, $db_pages_ex)) {
+									$current = $post_values->ID;
+								}
+							}	
+							$selected = selected($current, $post_values->ID, false);
+							$out_filed .= '<option value="'.$post_values->ID.'" '.$selected .'>'.$post_values->post_title.'</option>';
 						}
-					$out_filed .= '</filedset>';	
-				$out_filed .= '</td>';	
-			$out_filed .= '</tr>';						
+						
+						$out_filed .= '</select>';	
+				
+						$out_filed .= '</filedset>';	
+						$out_filed .= '</td>';	
+					$out_filed .= '</tr>';						
+				}
 		}
 		
 			$out_filed .= '</tbody>';

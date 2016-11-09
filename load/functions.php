@@ -90,12 +90,15 @@ function get_custom_login_code() {
 			}
 		}
 
-		wp_register_style('_iconstyle', MAINTENANCE_URI .'load/images/fonts-icon/icons.style.css');
-		wp_register_style('_style', 	MAINTENANCE_URI .'load/style.css');
-		$wp_styles->do_items('_iconstyle');
+		wp_register_style('_iconstyle_fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+		wp_register_style('_iconstyle_fi', 'https://cdn.jsdelivr.net/foundation-icons/3.0/foundation-icons.min.css');
+		wp_register_style('_style', 		MAINTENANCE_URI .'load/style.css');
+		
 
 		/*Add inline custom style*/
 		get_options_style();
+		$wp_styles->do_items('_iconstyle_fa');
+		$wp_styles->do_items('_iconstyle_fi');
 		$wp_styles->do_items('_style');
 	}
 
@@ -284,7 +287,7 @@ function get_custom_login_code() {
 	function do_button_login_form($error = -1) {
 		?>
 			<div id="btn-open-login-form" class="btn-open-login-form">
-				<i class="foundicon-lock"></i>
+				<i class="fi-lock"></i>
 			</div>
 		<?php
 
@@ -319,8 +322,7 @@ function get_custom_login_code() {
     add_filter( 'lostpassword_url',  'reset_pass_url', 999, 0 );
 
 	function get_preloader_element() {
-		$out = '';
-		$out = '<div class="preloader"><i></i></div>';
+		$out = '<div class="preloader"><i class="fi-widget" aria-hidden="true"></i></div>';
 		echo $out;
 	}
 	add_action('before_content_section', 'get_preloader_element', 5);
