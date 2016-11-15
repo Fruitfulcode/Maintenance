@@ -3,6 +3,23 @@
 
 * { margin: 0; padding: 0; border: 0; outline:none;}
 
+[class*="fi-"] {
+    display: inline;
+    width: auto;
+    height: auto;
+    line-height: inherit;
+    vertical-align: baseline;
+    background-image: none;
+    background-position: 0 0;
+    background-repeat: repeat;
+}
+
+[class*="fi-"]:before {
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit;
+}	
+	
 html {
 	height:100%;
 }
@@ -95,18 +112,19 @@ body.open-login-form > .main-container {
 
 .btn-open-login-form {
 	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.8);
-	font-size: 30px;
-	left: -54px;
-	padding: 10px 12px 8px;
-	position: absolute;
-	top: 23%;
-	-webkit-border-top-left-radius: 4px;
-	-webkit-border-bottom-left-radius: 4px;
-	-moz-border-radius-topleft: 4px;
-	-moz-border-radius-bottomleft: 4px;
-	border-top-left-radius: 4px;
-	border-bottom-left-radius: 4px;
-	cursor:pointer;
+    font-size: 36px;
+    left: -54px;
+    padding: 4px 14px 8px 15px;
+    position: absolute;
+    display: inline-block;
+    top: 23%;
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    cursor: pointer;
 }
 
 body.error .btn-open-login-form {
@@ -254,7 +272,6 @@ footer .center {
 	font-family: inherit;
 	font-size: 20px;
 	font-weight: 400;
-	line-height: 20px;
 	margin: 0 0 10px 0;
 	padding: 5px 16px 5px 40px;
 	width: 100%;
@@ -309,27 +326,19 @@ footer .center {
 
 .login-form .licon:before,
 .login-form .picon:before {
-	position:absolute;
-	font-weight: normal;
-	font-style: normal;
-	font-size:20px;
-	color:inherit;
-	text-decoration: inherit;
-	display: block;
-	width: auto;
-	height: auto;
-	line-height: inherit;
-	vertical-align: baseline;
-	background-image: none;
-	background-position: 0 0;
-	background-repeat: repeat;
-	top: 8px;
-	left: 10px;
+	position: absolute;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    color: inherit;
+    display: inline-block;
+    top: 7px;
+    left: 12px;
 }
 
 .login-form .licon:before {
-	content: "\f019";
-	font-family: "SocialFoundicons";
+	content: "\f1fe";
+	font-family: "foundation-icons";
 }
 
 .ie7 .login-form .licon:before {
@@ -338,14 +347,14 @@ footer .center {
 
 
 .login-form .picon:before {
-	content: "\f01b";
-	font-family: "GeneralFoundicons";
+	content: "\f16a";
+	font-family: "foundation-icons";
 }
 
 .login-form .licon.error:before,
 .login-form .picon.error:before {
-	content: "\f006";
-	font-family: "GeneralFoundicons";
+	content: "\f217";
+	font-family: "foundation-icons";
 	color:red;
 }
 
@@ -417,15 +426,14 @@ input[type="submit"] {
 }
 
 .preloader i {
+	font-size:56px;
 	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
-	display: block;
-	height: 58px;
+	display: inline-block;
 	left: 50%;
-	margin: -29px 0 0 -25px;
-	position: absolute;
 	top: 50%;
-	width: 50px;
-	
+	margin: -25px 0 0 -25px;
+	position: absolute;
+	color:inherit;
 	-webkit-animation-name: spin;
 	-webkit-animation-duration: 2200ms;
 	-webkit-animation-iteration-count: infinite;
@@ -443,28 +451,6 @@ input[type="submit"] {
 	animation-duration: 2200ms;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
-}
-
-.preloader i:before {
-	position:absolute;
-	font-weight: normal;
-	font-style: normal;
-	font-size:50px;
-	color:inherit;
-	text-decoration: inherit;
-	display: block;
-	width: auto;
-	height: auto;
-	line-height: inherit;
-	vertical-align: baseline;
-	background-image: none;
-	background-position: center center;
-	background-repeat: repeat;
-}
-
-.preloader i:before {
-	content: "\f000";
-	font-family: "GeneralFoundicons";
 }
 
 .wpcf7 {    
@@ -610,7 +596,7 @@ and (orientation : landscape) {
 	
 	.btn-open-login-form { 
 		top:10%; 
-		font-size: 20px; 
+		font-size: 21px; 
 		left: -44px;
 	}
 	
@@ -626,6 +612,9 @@ and (orientation : landscape) {
 	}
 	footer .social {
 		text-align:center;
+	}
+	footer {
+		padding: 0 0 20px;
 	}
 }
 
@@ -647,7 +636,7 @@ and (orientation : landscape) {
 	}
 	.btn-open-login-form { 
 		top:10%; 
-		font-size: 20px; 
+		font-size: 21px; 
 		left: -44px;
 	}
 	
