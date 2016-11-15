@@ -339,6 +339,7 @@ function get_custom_login_code() {
 				m.parentNode.insertBefore(a,m)
 			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+			ga('create', '<?php echo esc_attr($mt_options['gg_analytics_id']); ?>', 'auto');
 			ga('send', 'pageview');
 
 		</script>
