@@ -123,7 +123,6 @@ You can check <a href="http://wordpress.org/support/plugin/maintenance">support 
 == Change log ==
 
 = 3.2 =
-* Improvements: Google fonts - Add font: Martel Sans
 * New: Hungarian translation
 * New: Persian translation
 * Improvements: Get icons from CDN's
