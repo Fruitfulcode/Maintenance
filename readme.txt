@@ -4,7 +4,7 @@ Donate link: http://fruitfulcode.com/
 Tags: maintenance, maintenance mode, coming soon, splash page, under-construction, 503 error, administration, login, customize page, background, fullscreen, blur
 Requires at least: 3.4
 Tested up to: 4.6.1
-Stable tag: 3.1.1
+Stable tag: 3.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -121,6 +121,18 @@ You can check <a href="http://wordpress.org/support/plugin/maintenance">support 
 
 
 == Change log ==
+
+= 3.2 =
+* Improvements: Google fonts - Add font: Martel Sans
+* New: Hungarian translation
+* New: Persian translation
+* Improvements: Get icons from CDN's
+* Improvements: Description tinymce textarea
+* New: Swedish translation
+* Updated: German translation
+* Updated: Russian translation
+* Updated: Google Analytics script
+* Bug fix: Exclude pages - display only !empty post types
 
 = 3.1.1 =
 * Improvements: Google fonts - Add font: Martel Sans
