@@ -42,9 +42,9 @@
 			$out_filed .= '</td>';
 		$out_filed .= '</tr>';			
 		echo $out_filed;
-	}	
+	}
 
-	function generate_number_filed($title, $id, $name, $value, $placeholder = '') {
+function generate_number_filed($title, $id, $name, $value, $placeholder = '') {
 		$out_filed = '';
 		$out_filed .= '<tr valign="top">';
 		$out_filed .= '<th scope="row">' . esc_attr($title) .'</th>';
@@ -68,8 +68,26 @@
 			$out_filed .= '</td>';
 		$out_filed .= '</tr>';			
 		echo $out_filed;
-	}	
-	
+	}
+
+
+	function generate_tinymce_filed($title, $id, $name, $value) {
+		$out_filed = '';
+		$out_filed .= '<tr valign="top">';
+		$out_filed .= '<th scope="row">' . esc_attr($title) .'</th>';
+		$out_filed .= '<td>';
+		$out_filed .= '<filedset>';
+		ob_start();
+		wp_editor($value, $id, array('textarea_name' => 'lib_options['.$name.']', 'teeny'=>1, 'media_buttons'=>0) );
+		$out_filed .= ob_get_contents();
+		ob_clean();
+		$out_filed .= '</filedset>';
+		$out_filed .= '</td>';
+		$out_filed .= '</tr>';
+		echo $out_filed;
+	}
+
+
 	function generate_check_filed($title, $label, $id, $name, $value) {
 		$out_filed = '';
 		$out_filed .= '<tr valign="top">';
@@ -271,7 +289,7 @@
 		<?php	
 				generate_input_filed(__('Page title', 'maintenance'), 'page_title', 'page_title', $page_title);
 				generate_input_filed(__('Headline', 'maintenance'),	'heading', 'heading', $heading);
-				generate_textarea_filed(__('Description', 'maintenance'), 'description', 'description', $description);
+				generate_tinymce_filed(__('Description', 'maintenance'), 'description', 'description', $description);
 				generate_input_filed(__('Footer Text', 'maintenance'),	'footer_text', 'footer_text', 	$footer_text);
 				generate_number_filed(__('Set Logo width', 'maintenance'), 'logo_width', 'logo_width', $logo_width);
 				generate_number_filed(__('Set Logo height', 'maintenance'), 'logo_height', 'logo_height', $logo_height);

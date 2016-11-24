@@ -232,7 +232,8 @@ function get_custom_login_code() {
 		}
 
 		if (!empty($mt_options['description'])) {
-			$out_content .= '<h3 class="description font-center">' . wp_kses_post(stripslashes($mt_options['description'])) .'</h3>';
+			$description_content = apply_filters( 'the_content', $mt_options['description'] );
+			$out_content .= '<h3 class="description font-center">' . $description_content .'</h3>';
 		}
 
 		echo $out_content;

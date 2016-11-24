@@ -186,6 +186,12 @@ header {
 	font-weight:lighter;
 }
 
+.site-content h3.description p {
+	font-size: 28px;
+	margin: 0;
+	line-height: normal;
+}
+
 .site-content p {
 	font-size: 16px;
 	margin: 0 0 15px 0;
