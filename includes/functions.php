@@ -671,7 +671,7 @@ function maintenance_add_toolbar_items(){
     } else {
         $check = 'Off';
     }
-    $wp_admin_bar->add_menu( array( 'id' => 'maintenance_options', 'title' => __( 'Maintenance', 'maintenance' ) . __( ' is ', 'maintenance' ) . $check, 'href' => $url_to, 'meta'  => array( 'title' => __( 'Maintenance', 'maintenance' ) . __( ' is ', 'maintenance' ) . $check)));
+		$wp_admin_bar->add_menu( array( 'id' => 'maintenance_options', 'title' => _x( 'Maintenance', 'Admin screen title', 'maintenance' ) . __( ' is ', 'maintenance' ) . $check, 'href' => $url_to, 'meta'  => array( 'title' => _x( 'Maintenance', 'Admin screen title', 'maintenance' ) . __( ' is ', 'maintenance' ) . $check)));	
 }
 
 
