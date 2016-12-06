@@ -125,13 +125,14 @@ You can check <a href="http://wordpress.org/support/plugin/maintenance">support 
 = 3.2 =
 * New: Hungarian translation
 * New: Persian translation
-* Improvements: Get icons from CDN's
-* Improvements: Description tinymce textarea
 * New: Swedish translation
 * Updated: German translation
 * Updated: Russian translation
 * Updated: Google Analytics script
+* Improvements: Get icons from CDN's
+* Improvements: Description tinymce textarea
 * Bug fix: Exclude pages - display only !empty post types
+* Bug fix: function wpcf7_ajax_loader()
 
 = 3.1.1 =
 * Improvements: Google fonts - Add font: Martel Sans
