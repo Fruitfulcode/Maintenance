@@ -275,13 +275,13 @@ function generate_number_filed($title, $id, $name, $value, $placeholder = '') {
 		/*Deafult Variable*/
 		$page_title = $heading = $description = $logo_width = $logo_height = '';
 		
-		
-		if (isset($mt_option['page_title'])) $page_title = wp_kses_post($mt_option['page_title']);
-		if (isset($mt_option['heading']))  $heading = wp_kses_post($mt_option['heading']);
-		if (isset($mt_option['description'])) $description = wp_kses_post($mt_option['description']);
-		if (isset($mt_option['footer_text'])) $footer_text = wp_kses_post($mt_option['footer_text']);
-		if (isset($mt_option['logo_width'])) $logo_width = wp_kses_post($mt_option['logo_width']);
-		if (isset($mt_option['logo_height'])) $logo_height = wp_kses_post($mt_option['logo_height']);
+		$allowed_tags = wp_kses_allowed_html( 'post' );
+		if (isset($mt_option['page_title']))  $page_title 	= wp_kses_post($mt_option['page_title']);
+		if (isset($mt_option['heading']))     $heading 		= wp_kses_post($mt_option['heading']);
+		if (isset($mt_option['description'])) $description 	= wp_kses(stripslashes($mt_option['description']), $allowed_tags) ;
+		if (isset($mt_option['footer_text'])) $footer_text 	= wp_kses_post($mt_option['footer_text']);
+		if (isset($mt_option['logo_width']))  $logo_width 	= wp_kses_post($mt_option['logo_width']);
+		if (isset($mt_option['logo_height'])) $logo_height 	= wp_kses_post($mt_option['logo_height']);
 		
 		?>
 		<table class="form-table">

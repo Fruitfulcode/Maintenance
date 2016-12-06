@@ -220,18 +220,20 @@ function get_custom_login_code() {
 
 	}
 	add_action ('logo_box', 'get_logo_box', 10);
-
-
+	
 	function get_content_section() {
 		$mt_options  = mt_get_plugin_options(true);
-		$out_content = '';
+		$out_content = null;
 		if (!empty($mt_options['heading'])) {
-			$out_content .= '<h2 class="heading font-center">'     . wp_kses_post(stripslashes($mt_options['heading'])) .'</h2>';
+			$out_content .= '<h2 class="heading font-center">' . wp_kses_post(stripslashes($mt_options['heading'])) .'</h2>';
 		}
-
+		
 		if (!empty($mt_options['description'])) {
-			$description_content = apply_filters( 'the_content', $mt_options['description'] );
-			$out_content .= '<h3 class="description font-center">' . $description_content .'</h3>';
+			$description_content = apply_filters( 'the_content', wp_kses_post(stripslashes($mt_options['description'])));
+			$out_content .= '<div class="description">' . $description_content .'</div>';
+		} else {
+			$site_description = get_bloginfo('description');
+			$out_content .= '<div class="description"><h3>' . $site_description .'</h3></div>';
 		}
 
 		echo $out_content;

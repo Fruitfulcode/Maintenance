@@ -181,15 +181,58 @@ header {
 	font-weight:lighter;
 }
 
-.site-content h3.description {
+.site-content .description h3 {
 	font-size:28px; 
 	font-weight:lighter;
+	text-align:center;
 }
 
-.site-content h3.description p {
-	font-size: 28px;
+.site-content .description p {
+	font-size: 14px;
 	margin: 0;
 	line-height: normal;
+}
+
+.site-content .description ul,
+.site-content .description ol {
+	margin:5px 0;
+}
+
+.site-content .description p {
+	margin-bottom:10px;
+}
+
+.site-content .description blockquote {
+	font-size: 18px;
+	font-style: italic;
+	margin: 0.25em 0;
+	padding: 1.5em 40px 0 40px;
+	line-height: 1.45;
+	position: relative;
+	text-align:left;
+	display:block;
+}
+
+.site-content .description blockquote:before {
+	display: block;
+	font-family: Georgia, serif;
+	content: "\201C";
+	font-size: 80px;
+	position: absolute;
+	left: -5px;
+	top: -5px;
+	opacity:0.85;
+}
+
+.site-content .description blockquote cite {
+	font-size: 14px;
+	display: block;
+	margin-top: 5px;
+	opacity:0.85;
+}
+ 
+.site-content .description blockquote cite:before {
+	content: "\2014 \2009";
 }
 
 .site-content p {
@@ -596,7 +639,7 @@ and (orientation : landscape) {
 	.site-content h2.heading { 
 		font-size: 24px; 
 	}
-	.site-content h3.description { 
+	.site-content .description h3 { 
 		font-size: 18px; 
 	}
 	
@@ -637,7 +680,7 @@ and (orientation : landscape) {
 	.site-content h2.heading { 
 		font-size: 24px; 
 	}
-	.site-content h3.description { 
+	.site-content .description h3{ 
 		font-size: 18px; 
 	}
 	.btn-open-login-form { 
