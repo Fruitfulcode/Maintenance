@@ -229,7 +229,7 @@ function get_custom_login_code() {
 		}
 		
 		if (!empty($mt_options['description'])) {
-			$description_content = apply_filters( 'the_content', wp_kses_post(stripslashes($mt_options['description'])));
+			$description_content = wp_kses_post(stripslashes($mt_options['description']));
 			$out_content .= '<div class="description">' . $description_content .'</div>';
 		} else {
 			$site_description = get_bloginfo('description');
