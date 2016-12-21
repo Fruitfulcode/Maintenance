@@ -241,32 +241,32 @@ function generate_number_filed($title, $id, $name, $value, $placeholder = '') {
 		add_meta_box( 'maintenance-css', 	 __( 'Custom CSS', 'maintenance' ),        'add_css_fields', $maintenance_variable->options_page, 'normal', 'default');
 		add_meta_box( 'maintenance-excludepages', 	 __( 'Exclude pages from maintenance mode', 'maintenance' ), 'add_exclude_pages_fields', $maintenance_variable->options_page, 'normal', 'default');
 	}
-	add_action('add_meta_boxes', 'maintenance_page_create_meta_boxes', 10);
+	add_action('add_mt_meta_boxes', 'maintenance_page_create_meta_boxes', 10);
 	
 	function maintenance_page_create_meta_boxes_widget_pro() {
 		global $maintenance_variable;
 		add_meta_box( 'promo-extended',   	 __( 'Pro version', 'maintenance' ),  'maintenanace_extended_version',  $maintenance_variable->options_page, 'side',   'default' );
 	}
-	add_action('add_meta_boxes', 'maintenance_page_create_meta_boxes_widget_pro', 11);
+	add_action('add_mt_meta_boxes', 'maintenance_page_create_meta_boxes_widget_pro', 11);
 	
 
 	function maintenance_page_create_meta_boxes_our_themes() {
 		global $maintenance_variable;
 		add_meta_box( 'promo-our-themes',   	 __( 'Fruitful Code projects',  'maintenance' ),  'maintenanace_our_themes',   $maintenance_variable->options_page, 'side',   'default' );
 	}	
-	add_action('add_meta_boxes', 'maintenance_page_create_meta_boxes_our_themes', 12);	
+	add_action('add_mt_meta_boxes', 'maintenance_page_create_meta_boxes_our_themes', 12);	
 	
 	function maintenance_page_create_meta_boxes_widget_support() {
 		global $maintenance_variable;
 		add_meta_box( 'promo-content',   	 __( 'Support',  'maintenance' ),  'maintenanace_contact_support',   $maintenance_variable->options_page, 'side',   'default' );
 	}	
-	add_action('add_meta_boxes', 'maintenance_page_create_meta_boxes_widget_support', 13);	
+	add_action('add_mt_meta_boxes', 'maintenance_page_create_meta_boxes_widget_support', 13);	
 	
 	function maintenance_page_create_meta_boxes_improve_translate() {
 		global $maintenance_variable;
 		add_meta_box( 'promo-translate',   	 __( 'Translation',  'maintenance' ),  'maintenanace_improve_translate',   $maintenance_variable->options_page, 'side',   'default' );
 	}	
-	add_action('add_meta_boxes', 'maintenance_page_create_meta_boxes_improve_translate', 14);		
+	add_action('add_mt_meta_boxes', 'maintenance_page_create_meta_boxes_improve_translate', 14);		
 	
 	function add_data_fields ($object, $box) {
 		$mt_option = mt_get_plugin_options(true);
