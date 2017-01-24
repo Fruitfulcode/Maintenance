@@ -17,9 +17,8 @@
 	if (!empty($logo)) {
 		$logo = wp_get_attachment_image_src($logo, 'full');
 		$logo = esc_url($logo[0]);
-		$logo_info 	= getimagesize($logo);
-		$logo_ext 	= image_type_to_extension($logo_info[2]);
-		$logo_ext = str_replace('.', '', $logo_ext);
+        $logo_ext   = pathinfo($logo, PATHINFO_EXTENSION);
+		$logo_ext   = str_replace('.', '', $logo_ext);
 	}
 	
 	$page_description = (isset($mt_options['description']) && !empty($mt_options['description'])) ? esc_attr($mt_options['description']) : $site_description;
