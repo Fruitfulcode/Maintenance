@@ -6,11 +6,11 @@ function get_custom_login_code() {
 	$mt_options = mt_get_plugin_options(true);
 	$user_connect = false;
     if (!is_array($wp_query->query_vars)) $wp_query->query_vars = array();
-	$error_message  = 	$user_login = $user_pass = $error = '';
-	$is_role_check  = false;
+	$error_message  = $user_login = $user_pass = $error = '';
+	$is_role_check  = true;
 	$class_login 	= "user-icon";
 	$class_password = "pass-icon";
-	$using_cookie = false;
+	$using_cookie   = false;
 
 	if(isset($_POST['is_custom_login'])) {
 		$user_login = esc_attr($_POST['log']);
@@ -26,7 +26,7 @@ function get_custom_login_code() {
 		$current_role = current($user->roles);
 
 		if (!empty($mt_options['roles_array'])) {
-			foreach (array_keys($mt_options['roles_array']) as $key) {
+		    foreach (array_keys($mt_options['roles_array']) as $key) {
 				if ($key == $current_role) {
 					$is_role_check = false;
 				}
