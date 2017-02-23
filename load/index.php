@@ -10,7 +10,7 @@
 	$site_description = get_bloginfo('description');
 	
 	
-	$page_title = (isset($mt_options['page_title']) && !empty($mt_options['page_title'])) ? esc_attr($mt_options['page_title']) : $site_title;
+	$page_title = (isset($mt_options['page_title']) && !empty($mt_options['page_title'])) ? wp_kses_post(stripslashes($mt_options['page_title'])) : $site_title;
 	$logo 		= (isset($mt_options['logo']) && !empty($mt_options['logo'])) ? esc_attr($mt_options['logo']) : null;
 	$logo_ext   = null;
 	

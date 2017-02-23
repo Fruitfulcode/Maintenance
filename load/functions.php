@@ -82,8 +82,11 @@ function get_custom_login_code() {
 		if (!empty($mt_options['body_font_family'])) {
 			$font_link = '';
 			$font_link = mt_get_google_font(esc_attr($mt_options['body_font_family']));
-			$font_subset = esc_attr($mt_options['body_font_subset']);
-			$font_link .= "&subset=".$font_subset."";
+			/*Check if chooses subset for fonts*/
+			if (!empty($mt_options['body_font_subset'])) {
+			    $font_subset = esc_attr($mt_options['body_font_subset']);
+			    $font_link .= "&subset=".$font_subset."";
+            }
 			if ($font_link != '') {
 				wp_register_style('_custom_fonts', $font_link);
 				$wp_styles->do_items('_custom_fonts');
@@ -146,7 +149,7 @@ function get_custom_login_code() {
 		if (empty($mt_options['page_title'])) {
 			$options_title = wp_title( '|', false);
 		} else {
-			$options_title = $mt_options['page_title'];
+			$options_title = wp_kses_post(stripslashes($mt_options['page_title']));
 		}
 
 		if ($error_message != '') {
