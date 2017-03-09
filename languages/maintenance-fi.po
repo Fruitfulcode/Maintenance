@@ -1,20 +1,24 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
-"POT-Creation-Date: 2016-08-05 12:31+0300\n"
-"PO-Revision-Date: 2016-08-05 12:34+0300\n"
+"POT-Creation-Date: 2017-03-09 17:14+0200\n"
+"PO-Revision-Date: 2017-03-09 17:14+0200\n"
 "Last-Translator: Antti Kuosmanen <antti@seravo.fi>\n"
 "Language-Team: fruitfulcode\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.8\n"
-"X-Poedit-KeywordsList: _;_e;__;_x\n"
-"X-Poedit-Basepath: .\n"
-"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.8.12\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: includes/admin.php:76 includes/functions.php:597
+#: includes/admin.php:6 includes/admin.php:76 includes/functions.php:618
 msgid "Maintenance"
 msgstr "Huoltotila"
 
@@ -22,155 +26,152 @@ msgstr "Huoltotila"
 msgid "Save changes"
 msgstr "Tallenna muutokset"
 
-#: includes/functions.php:165
+#: includes/functions.php:183
 msgid "Standard Fonts"
-msgstr "vakiofonttia"
+msgstr "Vakiofontit"
 
-#: includes/functions.php:172
+#: includes/functions.php:190
 msgid "Google Web Fonts"
-msgstr ""
+msgstr "Google Web Fonts"
 
-#: includes/functions.php:222
+#: includes/functions.php:240
 msgid "General Settings"
 msgstr "Yleiset asetukset"
 
-#: includes/functions.php:223
+#: includes/functions.php:241
 msgid "Custom CSS"
-msgstr ""
+msgstr "Mukautettu CSS"
 
-#: includes/functions.php:224
+#: includes/functions.php:242
 msgid "Exclude pages from maintenance mode"
-msgstr "Sulkea sivuja ylläpito mode"
+msgstr "Älä ota huoltotilaa käyttöön seuraavilla sivuilla"
 
-#: includes/functions.php:230
+#: includes/functions.php:248
 msgid "Pro version"
-msgstr "Pro-versio"
+msgstr "Hanki PRO versio"
 
-#: includes/functions.php:237
+#: includes/functions.php:255
 msgid "Fruitful Code projects"
-msgstr "Fruitful Code hankkeet"
+msgstr "Fruitful Code -projektit"
 
-#: includes/functions.php:243
+#: includes/functions.php:261
 msgid "Support"
-msgstr "Tukipalvelu"
+msgstr "Tuki"
 
-#: includes/functions.php:249
+#: includes/functions.php:267
 msgid "Translation"
 msgstr "Käännös"
 
-#: includes/functions.php:272
+#: includes/functions.php:290
 msgid "Page title"
 msgstr "Sivun otsikko"
 
-#: includes/functions.php:273
+#: includes/functions.php:291
 msgid "Headline"
 msgstr "Otsake"
 
-#: includes/functions.php:274
+#: includes/functions.php:292
 msgid "Description"
 msgstr "Kuvaus"
 
-#: includes/functions.php:275
+#: includes/functions.php:293
 msgid "Footer Text"
-msgstr "Footer teksti"
+msgstr "Alatunniste"
 
-#: includes/functions.php:276
+#: includes/functions.php:294
 msgid "Set Logo width"
-msgstr "Set Logo leveys"
+msgstr "Logon leveys"
 
-#: includes/functions.php:277
+#: includes/functions.php:295
 msgid "Set Logo height"
-msgstr "Set Logon korkeus"
+msgstr "Logon korkeus"
 
-#: includes/functions.php:278
+#: includes/functions.php:296
 msgid "Logo"
 msgstr "Logo"
 
-#: includes/functions.php:278
+#: includes/functions.php:296
 msgid "Upload Logo"
-msgstr "Lataa Logo"
+msgstr "Lataa logo"
 
-#: includes/functions.php:279
+#: includes/functions.php:297
 msgid "Retina logo"
-msgstr "Retina logo"
+msgstr "Retina-logo"
 
-#: includes/functions.php:279
+#: includes/functions.php:297
 msgid "Upload Retina Logo"
-msgstr "Lataa Retina Logo"
+msgstr "Lataa Retina-logo"
 
-#: includes/functions.php:283
+#: includes/functions.php:301
 msgid "Show admin bar"
 msgstr "Näytä työkalupalkki"
 
-#: includes/functions.php:284
+#: includes/functions.php:302
 msgid "503"
 msgstr "503"
 
-#: includes/functions.php:284
+#: includes/functions.php:302
 msgid "Service temporarily unavailable, Google analytics will be disable."
-msgstr "Tarjoaminen tilapäisesti, Google Analytics poistetaan käytöstä."
+msgstr ""
+"Palvelu tilapäisesti pois käytöstä, Google Analytics poistetaan käytöstä."
 
-#: includes/functions.php:291
+#: includes/functions.php:309
 msgid "Google Analytics ID"
 msgstr "Google Analytics ID"
 
-#: includes/functions.php:291
+#: includes/functions.php:309
 msgid "UA-XXXXX-X"
 msgstr "UA-XXXXX-X"
 
-#: includes/functions.php:292
+#: includes/functions.php:310
 msgid "Set blur intensity"
-msgstr "Aseta hämärtää intensiteetti"
+msgstr "Sumennuksen voimakkuus"
 
-#: includes/functions.php:298
+#: includes/functions.php:316
 msgid "Apply background blur"
-msgstr "Käytä tausta hämärtää"
+msgstr "Ota käyttöön taustan sumennus"
 
-#: includes/functions.php:299
+#: includes/functions.php:317
 msgid "Enable frontend login"
-msgstr "Ota frontend kirjautuminen"
+msgstr "Näytä kirjautuminen"
 
-#: includes/functions.php:311
+#: includes/functions.php:329
 msgid "CSS Code"
-msgstr "CSS koodi"
+msgstr "CSS-koodi"
 
-#: includes/functions.php:325
+#: includes/functions.php:343
 msgid "Select the page to be displayed:"
-msgstr "Valitse sivun näkyviin:"
+msgstr "Valitse näytettävä sivu:"
 
-#: includes/functions.php:371
-msgid "Not available object."
-msgstr "Ei saatavilla objekti."
-
-#: includes/functions.php:386
+#: includes/functions.php:407
 msgid "Background image"
 msgstr "Taustakuva"
 
-#: includes/functions.php:386
+#: includes/functions.php:407
 msgid "Upload Background"
 msgstr "Lataa taustakuva"
 
-#: includes/functions.php:392
+#: includes/functions.php:413
 msgid "Background color"
 msgstr "Taustaväri"
 
-#: includes/functions.php:393
+#: includes/functions.php:414
 msgid "Font color"
 msgstr "Tekstin väri"
 
-#: includes/functions.php:400
+#: includes/functions.php:421
 msgid "Font family"
-msgstr "kirjasinperhe"
+msgstr "Kirjasin"
 
-#: includes/functions.php:405
+#: includes/functions.php:426
 msgid "Subsets"
-msgstr "osajoukot"
+msgstr "Osajoukot"
 
-#: includes/functions.php:413
+#: includes/functions.php:434
 msgid "Have any questions?"
 msgstr "Kysymyksiä?"
 
-#: includes/functions.php:414
+#: includes/functions.php:435
 #, php-format
 msgid ""
 "You may find answers to your questions at <a target=\"_blank\" href=\"http://"
@@ -180,51 +181,51 @@ msgid ""
 "suggestions.<br> Please visit our website to learn about us and our services "
 "<a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
 msgstr ""
-"Saatat löytää vastauksia kysymyksiin<a target=\"_blank\" href=\"http://"
-"support.fruitfulcode.com/hc/en-us/sections/200406386\">tukifoorumi</"
-"a><br>Sinä voit <a target=\"_blank\" href=\"http://support.fruitfulcode.com/"
-"hc/en-us/requests/new\">ota meihin yhteyttä</a> muokkausta pyynnöt ja "
-"ehdotukset. <br> Käy sivuilla oppia meistä ja palveluistamme <a href=\"%1$s"
-"\" title=\"%2$s\">%2$s</a>"
+"Saatat löytää vastauksia kysymyksiisi <a target=\"_blank\" href=\"http://"
+"support.fruitfulcode.com/hc/en-us/sections/200406386\">tukifoorumilta</a>."
+"<br>Voit <a target=\"_blank\" href=\"http://support.fruitfulcode.com/hc/en-"
+"us/requests/new\">ottaa meihin yhteyttä</a> muokkauspyynnöistä- ja "
+"ehdotuksista.<br>Käy sivustollamme tutustuaksesi lisää meihin ja "
+"palveluihimme <a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
 
-#: includes/functions.php:425
+#: includes/functions.php:446
 msgid "This plugin is translation friendly"
-msgstr "Tämä liitännäinen on käännös ystävällinen"
+msgstr "Tämä lisäosa on käännösystävällinen"
 
-#: includes/functions.php:426
+#: includes/functions.php:447
 #, php-format
 msgid ""
 "Want to improve translation or make one for your native language? <a href="
 "\"%1$s\" title=\"%2$s\">%2$s</a>"
 msgstr ""
-"Haluavat parantaa käännöksen tai tehdä yhden oman äidinkielen? <a href=\"%1$s"
-"\" title=\"%2$s\">%2$s</a>"
+"Haluatko parantaa käännöstä tai käänää lisäosan äidinkielellesi? <a href="
+"\"%1$s\" title=\"%2$s\">%2$s</a>"
 
-#: includes/functions.php:428
+#: includes/functions.php:449
 msgid "Follow this tutorial"
-msgstr "Seuraa tätä opetusohjelma"
+msgstr "Seuraa opastusta"
 
-#: includes/functions.php:437
+#: includes/functions.php:458
 msgid "Premium WordPress themes"
-msgstr "Premium WordPress teemoja"
+msgstr "Premium WordPress-teemat"
 
-#: includes/functions.php:443
+#: includes/functions.php:464
 msgid "ANAGLYPH - One page / Multi Page WordPress Theme"
-msgstr "ANAGLYPH - Yksi sivu / Multi Sivu WordPress Theme"
+msgstr "ANAGLYPH - Yksi- tai monisivuinen WordPress-teema"
 
-#: includes/functions.php:448
+#: includes/functions.php:469
 msgid "Love.ly - Simple & Elegant WordPress theme"
-msgstr "Love.ly - Yksinkertainen ja tyylikäs WordPress teema"
+msgstr "Love.ly - Yksinkertainen ja tyylikäs WordPress-teema"
 
-#: includes/functions.php:454
+#: includes/functions.php:475
 msgid "Zoner - Real Estate WordPress theme"
-msgstr "Zoner -Real Estate WordPress teema"
+msgstr "Zoner - WordPress-teema kiinteistöalalle"
 
-#: includes/functions.php:467
+#: includes/functions.php:488
 msgid "Extended functionality"
 msgstr "Lisätoiminnallisuus"
 
-#: includes/functions.php:468
+#: includes/functions.php:489
 #, php-format
 msgid ""
 "Purchase <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
@@ -235,25 +236,29 @@ msgid ""
 "\"_blank\">leave feedbacks</a>."
 msgstr ""
 "Osta <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
-"plugin/2781350?ref=fruitfulcode\" target=\"_blank\">PRO</a>-versio "
+"plugin/2781350?ref=fruitfulcode\" target=\"_blank\">PRO-versio</a> "
 "lisätoiminnallisuuksilla. %1$s Jos pidät lisäosasta, <a target=\"_blank\" "
 "href=\"http://wordpress.org/support/view/plugin-reviews/maintenance?"
-"filter=5\">rate it</a>, <a title=\"leave feedbacks\" href=\"%2$s\" target="
-"\"_blank\">käy kirjoittamassa meille palautetta</a>."
+"filter=5\">arvostele se</a> tai <a title=\"anna meille palautetta\" href="
+"\"%2$s\" target=\"_blank\">anna meille palautetta</a>."
 
-#: includes/functions.php:472
+#: includes/functions.php:493
 msgid "Demo website"
-msgstr "Esimerkkiverkkosivu"
+msgstr "Esimerkkisivu"
 
-#: includes/functions.php:661
+#: includes/functions.php:618
+msgid " is "
+msgstr ""
+
+#: includes/functions.php:683
 msgid "Website is under construction"
 msgstr "Verkkosivu rakenteilla"
 
-#: includes/functions.php:662
+#: includes/functions.php:684
 msgid "Maintenance mode is on"
-msgstr "Huoltotila päällä"
+msgstr "Huoltotila aktivoitu"
 
-#: includes/functions.php:663
+#: includes/functions.php:685
 msgid "Website will be available soon"
 msgstr "Verkkosivu avataan pian"
 
@@ -273,25 +278,32 @@ msgstr "Kirjautuminen epäonnistui."
 msgid "You entered your login and password are incorrect!"
 msgstr "Kirjautuminen epäonnistui."
 
-#: load/functions.php:289
+#: load/functions.php:120
+msgid "Please verify that you are not a robot."
+msgstr ""
+
+#: load/functions.php:308
 msgid "User Login"
-msgstr "Käyttäjän kirjautuminen"
+msgstr "Kirjaudu sisään"
 
-#: load/functions.php:290
+#: load/functions.php:309
 msgid "Username"
-msgstr "Käyttäjänimi"
+msgstr "Käyttäjä"
 
-#: load/functions.php:291
+#: load/functions.php:310
 msgid "Password"
 msgstr "Salasana"
 
-#: load/functions.php:292
+#: load/functions.php:311
 msgid "Lost Password"
-msgstr "Kadonnut Salasana"
+msgstr "Unohditko salasanasi?"
 
-#: load/functions.php:293
+#: load/functions.php:312
 msgid "Login"
-msgstr "Kirjaudu sisään"
+msgstr "Kirjaudu"
+
+#~ msgid "Not available object."
+#~ msgstr "Objekti ei saatavilla."
 
 #~ msgid "Exclude pages"
 #~ msgstr "Sulkea pois sivut"
