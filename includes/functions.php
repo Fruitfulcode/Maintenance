@@ -586,7 +586,6 @@ function generate_number_filed($title, $id, $name, $value, $placeholder = '') {
             } else {
                 $isMaintenance = false;
             }
-            var_dump($isMaintenance);
             if ($isMaintenance) {
                 if ( file_exists (MAINTENANCE_LOAD . 'index.php')) {
                     return MAINTENANCE_LOAD . 'index.php';
