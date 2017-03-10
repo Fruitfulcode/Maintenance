@@ -38,7 +38,7 @@ class maintenance {
 			register_activation_hook  ( __FILE__, array( &$this,  'mt_activation' ));
 			register_deactivation_hook( __FILE__, array( &$this, 'mt_deactivation') );
 			
-			add_action('wp', 		array( &$this, 'mt_template_redirect'), 1);
+			add_action('template_include', array( &$this, 'mt_template_include'), 9999);
 			add_action('wp_logout',	array( &$this, 'mt_user_logout'));
 			add_action('init', 		array( &$this, 'mt_admin_bar'));
 			add_action('init', 		array( &$this, 'mt_set_global_options'), 1);
@@ -95,9 +95,10 @@ class maintenance {
 			wp_safe_redirect(get_bloginfo('url'));
 			exit; 
 		}
-		
-		function mt_template_redirect() {
-			load_maintenance_page();
+
+		function mt_template_include($original_template) {
+            $original_template = load_maintenance_page($original_template);
+            return $original_template;
 		}
 		
 		function mt_admin_bar() {
