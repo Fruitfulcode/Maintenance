@@ -243,22 +243,21 @@ function get_custom_login_code() {
 	}
 	add_action('content_section', 'get_content_section', 10);
 
-
 	function add_single_background() {
 		$out_ = '';
 		$mt_options  = mt_get_plugin_options(true);
 		$intensity = 5;
 		if (!empty($mt_options['body_bg'])) {
 			if (empty($mt_options['gallery_array']['attachment_ids'])) {
-			$out_ .= '<script type="text/javascript">'. "\r\n";
-				$out_ .= 'jQuery(document).ready(function() { ' . "\r\n";
+			$out_ .= '<script type="text/javascript">';
+				$out_ .= 'jQuery(document).ready(function() { ';
 					if (!empty($mt_options['body_bg'])) {
 						$bg    =  wp_get_attachment_image_src( $mt_options['body_bg'], 'full');
-						$out_ .= 'if (jQuery(window).height() < 768) {'. "\r\n" ;
-							$out_ .= 'jQuery("body").backstretch("'. esc_url($bg[0]) .'");' . "\r\n" ;
-						$out_ .= '}	else {'. "\r\n" ;
-							$out_ .= 'jQuery(".main-container").backstretch("'. esc_url($bg[0]) .'");' . "\r\n" ;
-						$out_ .= '}'. "\r\n" ;
+						$out_ .= 'if (jQuery(window).height() < 768) { ';
+							$out_ .= 'jQuery("body").backstretch("'. esc_url($bg[0]) .'"); ';
+						$out_ .= '}	else { ';
+							$out_ .= ' jQuery(".main-container").backstretch(["'. esc_url($bg[0]).'"], {bypassCss: true}); ';
+						$out_ .= '} ';
 					}
 
 					if (!empty($mt_options['is_blur'])) {
@@ -266,9 +265,8 @@ function get_custom_login_code() {
 						if (!empty($mt_options['blur_intensity'])) {
 						    $intensity = absint($mt_options['blur_intensity']);
 						}
-						$out_ .= 'var vblur = jQuery(".backstretch").Vague({intensity:'.$intensity.'}); vblur.blur()' . "\r\n";
+						$out_ .= 'var vblur = jQuery(".backstretch").Vague({intensity:'.$intensity.'}); vblur.blur() ';
 					}
-
 				$out_ .= '});';
 			$out_ .= '</script>';
 			}
