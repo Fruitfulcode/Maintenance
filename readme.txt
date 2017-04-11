@@ -122,6 +122,13 @@ You can check <a href="http://wordpress.org/support/plugin/maintenance">support 
 
 == Change log ==
 
+= 3.4 =
+* Improvements: WP Hide & Security plugin compatible
+* Bug fix: Update localization files
+* Bug fix: Subset fonts
+* Bug fix: Permission access by user role
+* Bug fix: Remove deprecated function getimagesize
+
 = 3.3 =
 * New: Add og meta content
 * New: Default site title
