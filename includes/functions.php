@@ -590,8 +590,9 @@ function generate_number_filed($title, $id, $name, $value, $placeholder = '') {
                 if ( file_exists (MAINTENANCE_LOAD . 'index.php')) {
                     return MAINTENANCE_LOAD . 'index.php';
                 }
+            } else {
+                return $original_template;
             }
-
         } else {
             return $original_template;
         }
