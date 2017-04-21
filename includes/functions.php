@@ -553,7 +553,6 @@ function generate_number_filed($title, $id, $name, $value, $placeholder = '') {
 		$vdate_start = $vdate_end = date_i18n( 'Y-m-d', strtotime( current_time('mysql', 0) ));
 		$vtime_start = date_i18n( 'h:i:s A', strtotime( '01:00:00 am')); 
 		$vtime_end 	 = date_i18n( 'h:i:s A', strtotime( '12:59:59 pm')); 
-		$isMaintenance = true;
 
         if (!is_user_logged_in()) {
             if (!empty($mt_options['state'])) {
@@ -568,31 +567,30 @@ function generate_number_filed($title, $id, $name, $value, $placeholder = '') {
                 if (!empty($mt_options['expiry_time_end']))
                     $vtime_end = $mt_options['expiry_time_end'];
 
-                    $vCurrTime 		 = strtotime(current_time('mysql', 0));
+				$vCurrTime 		 = strtotime(current_time('mysql', 0));
 
-                    $vCurrDate_start = strtotime($vdate_start . ' ' . $vtime_start);
-                    $vCurrDate_end 	 = strtotime($vdate_end   . ' ' . $vtime_end);
+				$vCurrDate_start = strtotime($vdate_start . ' ' . $vtime_start);
+				$vCurrDate_end 	 = strtotime($vdate_end   . ' ' . $vtime_end);
 
-                    if (mtCheckExclude()) {
-                        $isMaintenance = false;
-                    }
+				if (mtCheckExclude()) {
+					return $original_template;
+				}
 
-                    if (($vCurrTime > $vCurrDate_start) && ($vCurrTime > $vCurrDate_end)) {
-                        if (!empty($mt_options['is_down'])) {
-                            $isMaintenance = false;
-                        }
-                    }
+				if (($vCurrTime > $vCurrDate_start) && ($vCurrTime > $vCurrDate_end)) {
+					if (!empty($mt_options['is_down'])) {
+						return $original_template;
+					}
+				}
 
-            } else {
-                $isMaintenance = false;
-            }
-            if ($isMaintenance) {
-                if ( file_exists (MAINTENANCE_LOAD . 'index.php')) {
-                    return MAINTENANCE_LOAD . 'index.php';
-                }
             } else {
                 return $original_template;
             }
+
+			if ( file_exists (MAINTENANCE_LOAD . 'index.php')) {
+				return MAINTENANCE_LOAD . 'index.php';
+			} else {
+				return $original_template;
+			}
         } else {
             return $original_template;
         }

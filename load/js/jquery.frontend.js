@@ -8,9 +8,8 @@ jQuery(document).ready(function() {
 	jQuery('input[placeholder], textarea[placeholder]').placeholder();
 	jQuery(window).resize();
 	jQuery('.main-container > div:not(".preloader")').each(function() {
-		jQuery(this).css({'visibility': 'hidden'});
-	});
-	
+		jQuery(this).css({'visibility': 'visible'});
+	});	
 	if (jQuery('#btn-open-login-form').length > 0) {
 		jQuery('#btn-open-login-form').on('click', function() {
 			jQuery('body').toggleClass('open-login-form');
