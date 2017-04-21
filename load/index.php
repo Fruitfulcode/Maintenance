@@ -55,9 +55,6 @@
 	<?php } ?>
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-	<?php do_action('load_custom_scripts'); ?>
-	<?php do_action('options_style'); ?>
-	<?php do_action('add_single_backstretch_background'); ?>
 	<?php do_action('add_gg_analytics_code'); ?>
 </head>
 <body <?php body_class('maintenance ' . $ebody_class); ?>>
@@ -93,7 +90,9 @@
 			<?php do_login_form(esc_attr($mess_arr[3]), esc_attr($mess_arr[1]), esc_attr($mess_arr[2])); ?>
 			<?php do_button_login_form(); ?>
 		</div>	
-	<?php } ?>	
-	
+	<?php } ?>
+	<?php do_action('options_style'); ?>
+	<?php do_action('load_custom_style_footer'); ?>
+	<?php do_action('load_custom_scripts'); ?>
 </body>
 </html>
