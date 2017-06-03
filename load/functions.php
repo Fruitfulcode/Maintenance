@@ -75,7 +75,7 @@ function get_custom_login_code() {
 		return array($error_message, $class_login, $class_password, $user_login);
 	}
 
-	function add_custom_style_footer() {
+	function add_custom_style() {
 		global $wp_styles;
 		$mt_options = mt_get_plugin_options(true);
 
@@ -108,8 +108,8 @@ function get_custom_login_code() {
 		wp_register_script( '_frontend', 		MAINTENANCE_URI  .'load/js/jquery.frontend.min.js', 'jquery');
 		wp_register_script( '_blur',			MAINTENANCE_URI  .'load/js/jquery.blur.min.js', 'jquery');
 		if(class_exists('WPCF7')) {
-			wp_register_script( '_cf7form',		MAINTENANCE_URI  .'../contact-form-7/includes/js/jquery.form.min.js', 'jquery');
-			wp_register_script( '_cf7scripts',	MAINTENANCE_URI  .'../contact-form-7/includes/js/scripts.js', 'jquery');
+			wp_register_script( '_cf7form',		MAINTENANCE_URI  .'../contact-form-7/includes/js/jquery.form.min.js');
+			wp_register_script( '_cf7scripts',	MAINTENANCE_URI  .'../contact-form-7/includes/js/scripts.js');
 			$_wpcf7 = array(
 			'recaptcha' => array(
 				'messages' => array(
@@ -123,45 +123,54 @@ function get_custom_login_code() {
 			}
 			wp_localize_script( '_cf7scripts', '_wpcf7', $_wpcf7 );
 		}
-		
-		if (file_exists(MAINTENANCE_URI  .'load/js/jquery.all.min.js')) {
-			wp_register_script( '_all', 	MAINTENANCE_URI  .'load/js/jquery.all.min.js');
-			$wp_scripts->do_items('_all');			
-		} else {
-			$united_js .= '/* CREATED AUTOMATICALLY DO NOT MODIFY */';
-			$united_js .= file_get_contents(ABSPATH . $wp_scripts->registered['jquery-core']->src);
-			$united_js .= file_get_contents(ABSPATH . $wp_scripts->registered['jquery-migrate']->src);
-			$united_js .= file_get_contents($wp_scripts->registered['_placeholder']->src);
-			$united_js .= file_get_contents($wp_scripts->registered['_backstretch']->src);
-			$united_js .= file_get_contents($wp_scripts->registered['_frontend']->src);
-			$united_js .= file_get_contents($wp_scripts->registered['_blur']->src);
-			
-			if(class_exists('WPCF7')) {
-				$united_js .= file_get_contents($wp_scripts->registered['_cf7form']->src);
-				$united_js .= file_get_contents($wp_scripts->registered['_cf7scripts']->src);
-			}
-			
-			$united_js .= add_single_background_ret();
-
-			if(@file_put_contents(MAINTENANCE_DIR  .'load/js/jquery.all.assembled.min.js', $united_js)) {
-				wp_register_script( '_all', 	MAINTENANCE_URI  .'load/js/jquery.all.assembled.min.js');
-				$wp_scripts->do_items('_all');
+		if (!class_exists('maintenance_pro')) {
+			if (file_exists(MAINTENANCE_DIR  .'load/js/jquery.all.assembled.min.js')) {
+				wp_register_script( 'maintenance_all', 	MAINTENANCE_URI  .'load/js/jquery.all.assembled.min.js');
+				$wp_scripts->do_items('maintenance_all');			
 			} else {
-				$wp_scripts->do_items('jquery');
-				$wp_scripts->do_items('_placeholder');
-				$wp_scripts->do_items('_backstretch');
-				$wp_scripts->do_items('_blur');
-				$wp_scripts->do_items('_frontend');
+				$united_js .= '/* CREATED AUTOMATICALLY DO NOT MODIFY */';
+				$united_js .= file_get_contents(ABSPATH . $wp_scripts->registered['jquery-core']->src);
+				$united_js .= file_get_contents(ABSPATH . $wp_scripts->registered['jquery-migrate']->src);
+				$united_js .= file_get_contents($wp_scripts->registered['_placeholder']->src);
+				$united_js .= file_get_contents($wp_scripts->registered['_backstretch']->src);
+				$united_js .= file_get_contents($wp_scripts->registered['_frontend']->src);
+				$united_js .= file_get_contents($wp_scripts->registered['_blur']->src);
+				
 				if(class_exists('WPCF7')) {
-					$wp_scripts->do_items('_cf7form');
-					$wp_scripts->do_items('_cf7scripts');
-				}			
+					$united_js .= file_get_contents($wp_scripts->registered['_cf7form']->src);
+					$united_js .= file_get_contents($wp_scripts->registered['_cf7scripts']->src);
+				}
+				
+				$united_js .= add_single_background_ret();
+
+				if(@file_put_contents(MAINTENANCE_DIR  .'load/js/jquery.all.assembled.min.js', $united_js)) {
+					wp_register_script( 'maintenance_all', 	MAINTENANCE_URI  .'load/js/jquery.all.assembled.min.js');
+					$wp_scripts->do_items('maintenance_all');
+				} else {
+					$wp_scripts->do_items('jquery');
+					$wp_scripts->do_items('_placeholder');
+					$wp_scripts->do_items('_backstretch');
+					$wp_scripts->do_items('_blur');
+					$wp_scripts->do_items('_frontend');
+					add_single_background();
+				}
 			}
+		} else {
+			$wp_scripts->do_items('jquery');
+			$wp_scripts->do_items('_placeholder');
+			$wp_scripts->do_items('_backstretch');
+			$wp_scripts->do_items('_blur');
+			$wp_scripts->do_items('_frontend');
+			add_single_background();
 		}
+		if(class_exists('WPCF7')) {
+			$wp_scripts->do_items('_cf7form');
+			$wp_scripts->do_items('_cf7scripts');
+		}		
 	}
 
 	add_action ('load_custom_scripts', 'add_custom_scripts', 15);
-	add_action ('load_custom_style_footer', 'add_custom_style_footer', 20);
+	add_action ('load_custom_style', 'add_custom_style', 20);
 
 	
 	function _async_scripts($url) {
@@ -173,7 +182,9 @@ function get_custom_login_code() {
 			 return $url;
 		}
     }
-	add_filter( 'clean_url', '_async_scripts', 11, 1 );
+	if (!class_exists('maintenance_pro')) {
+		add_filter( 'clean_url', '_async_scripts', 11, 1 );
+	}
 
 
 	function get_page_title($error_message) {
@@ -313,7 +324,6 @@ function get_custom_login_code() {
 		$intensity = 5;
 		if (!empty($mt_options['body_bg'])) {
 			if (empty($mt_options['gallery_array']['attachment_ids'])) {
-			//$out_ .= '<script type="text/javascript">';
 				$out_ .= 'jQuery(document).ready(function() { ';
 					if (!empty($mt_options['body_bg'])) {
 						$bg    =  wp_get_attachment_image_src( $mt_options['body_bg'], 'full');
@@ -332,7 +342,6 @@ function get_custom_login_code() {
 						$out_ .= 'var vblur = jQuery(".backstretch").Vague({intensity:'.$intensity.'}); vblur.blur() ';
 					}
 				$out_ .= '});';
-			//$out_ .= '</script>';
 			}
 		return $out_;
 		}
