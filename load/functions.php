@@ -327,7 +327,9 @@ function get_custom_login_code() {
 				$out_ .= 'jQuery(document).ready(function() { ';
 					if (!empty($mt_options['body_bg'])) {
 						$bg    =  wp_get_attachment_image_src( $mt_options['body_bg'], 'full');
-						$out_ .= 'if (jQuery(window).height() < 768) { ';
+						$domain = get_site_url();
+						$bg[0] = str_replace( $domain, '', $bg[0] );
+  						$out_ .= 'if (jQuery(window).height() < 768) { ';
 							$out_ .= 'jQuery("body").backstretch("'. esc_url($bg[0]) .'"); ';
 						$out_ .= '}	else { ';
 							$out_ .= ' jQuery(".main-container").backstretch(["'. esc_url($bg[0]).'"], {bypassCss: true}); ';
@@ -346,7 +348,6 @@ function get_custom_login_code() {
 		return $out_;
 		}
 	}
-	add_action ('add_single_backstretch_background', 'add_single_background', 10);
 
 	function get_footer_section() {
 		$mt_options  = mt_get_plugin_options(true);
