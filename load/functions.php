@@ -327,8 +327,6 @@ function get_custom_login_code() {
 				$out_ .= 'jQuery(document).ready(function() { ';
 					if (!empty($mt_options['body_bg'])) {
 						$bg    =  wp_get_attachment_image_src( $mt_options['body_bg'], 'full');
-						$domain = get_site_url();
-						$bg[0] = str_replace( $domain, '', $bg[0] );
   						$out_ .= 'if (jQuery(window).height() < 768) { ';
 							$out_ .= 'jQuery("body").backstretch("'. esc_url($bg[0]) .'"); ';
 						$out_ .= '}	else { ';
