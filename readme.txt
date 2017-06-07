@@ -2,9 +2,9 @@
 Contributors: fruitfulcode
 Donate link: http://fruitfulcode.com/
 Tags: maintenance, maintenance mode, coming soon, splash page, under-construction, 503 error, administration, login, customize page, background, fullscreen, blur
-Requires at least: 3.4.1
+Requires at least: 3.5
 Tested up to: 4.8
-Stable tag: 3.4.1
+Stable tag: 3.4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
