@@ -174,17 +174,11 @@ function get_custom_login_code() {
 
 	
 	function _async_scripts($url) {
-        $mt_options = mt_get_plugin_options(true);
-        if (!empty($mt_options['state'])) {
+        if (strpos($url, 'all.assembled.min.js')) {
             
-            if (strpos($url, '.js')) {
-                
-                return $url . "' async='async";
-            } else {
-                 return $url;
-            }
+            return $url . "' async='async";
         } else {
-            return $url;
+             return $url;
         }
     }
 	if (!class_exists('maintenance_pro')) {
