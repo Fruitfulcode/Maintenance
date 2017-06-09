@@ -122,6 +122,10 @@ You can check <a href="http://wordpress.org/support/plugin/maintenance">support 
 
 == Change log ==
 
+= 3.5 =
+* Optimization: Plugin speed optimization
+* Bugfix: Clear js cache
+
 = 3.4.2 =
 * Optimization: Plugin speed optimization (Google PageSpeed 95)
 * Tested up to: Wordpress 4.8
