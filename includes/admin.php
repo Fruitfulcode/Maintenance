@@ -61,7 +61,6 @@
 
 	function manage_options()  {
 		generate_plugin_page();
-		clear_js_cache();
 	}
 
 	function generate_plugin_page() {
@@ -96,10 +95,4 @@
 			</form>
 		</div>
 	<?php
-	}
-	
-	function clear_js_cache(){
-		if (file_exists(MAINTENANCE_DIR  .'load/js/jquery.all.assembled.min.js')) {
-			unlink(MAINTENANCE_DIR  .'load/js/jquery.all.assembled.min.js');
-		}
 	}

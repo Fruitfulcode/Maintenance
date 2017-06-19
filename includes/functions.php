@@ -154,14 +154,12 @@ function generate_number_filed($title, $id, $name, $value, $placeholder = '') {
 		if (property_exists ($gg_fonts, $font)) {
 			$curr_font = $gg_fonts->{$font};
 			if (!empty($curr_font)) {
-				$name_font = str_replace(' ','+',$font);
 				foreach ($curr_font->variants as $values) {
 					$font_params .= $values->id . ',';
 				}
 			
 				$font_params = trim($font_params, ",");
-				$full_link = $name_font . ':' . $font_params;
-				$full_link = 'http'. ( is_ssl() ? 's' : '' ) .'://fonts.googleapis.com/css?family=' . $full_link;
+				$full_link = $font . ':' . $font_params;
 			}	
 		}	
 		
@@ -587,6 +585,7 @@ function generate_number_filed($title, $id, $name, $value, $placeholder = '') {
             }
 
 			if ( file_exists (MAINTENANCE_LOAD . 'index.php')) {
+				add_filter('script_loader_tag', 'maintenance_defer_scripts', 10, 2);
 				return MAINTENANCE_LOAD . 'index.php';
 			} else {
 				return $original_template;
@@ -596,6 +595,12 @@ function generate_number_filed($title, $id, $name, $value, $placeholder = '') {
         }
 	}
 	
+	function maintenance_defer_scripts($tag, $handle) {
+		if (strpos($handle, '_ie') != 0 ) {
+			return $tag;
+		}
+		return str_replace( ' src', ' defer="defer" src', $tag );
+	}
 	
 	function maintenance_metaboxes_scripts() {
 		global $maintenance_variable; 
