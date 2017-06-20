@@ -25,7 +25,7 @@ jQuery(document).ready(function() {
 	}
 	if (typeof(maintenanceoptions.font_link) != "undefined") {
 	  WebFontConfig = {
-		google: { families: [maintenanceoptions.font_link] }
+		google: { families: maintenanceoptions.font_link }
 	  };
 	  (function() {
 		var wf = document.createElement('script');

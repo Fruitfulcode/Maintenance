@@ -90,18 +90,22 @@ function get_custom_login_code() {
 	function add_google_fonts() {
 		global $wp_scripts;
 		$mt_options = mt_get_plugin_options(true);
+		$font_link = array();
 		
 		if (!empty($mt_options['body_font_family'])) {
-			$font_link = '';
-			$font_link = mt_get_google_font(esc_attr($mt_options['body_font_family']));
+			$font_link[0] = mt_get_google_font(esc_attr($mt_options['body_font_family']));
 			/*Check if chooses subset for fonts*/
 			if (!empty($mt_options['body_font_subset'])) {
 			    $font_subset = esc_attr($mt_options['body_font_subset']);
-			    $font_link .= ":".$font_subset."";
+			    $font_link[0] .= ":".$font_subset."";
             }
-			if ($font_link != '') {
-				return $font_link;
-			}
+		}
+		if (!empty($mt_options['countdown_font_family'])) {
+			$font_link[1] = mt_get_google_font(esc_attr($mt_options['countdown_font_family']));
+		}
+		
+		if ($font_link) {
+			return $font_link;
 		}
 		return '';
 
