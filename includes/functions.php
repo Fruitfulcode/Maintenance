@@ -408,7 +408,7 @@ function generate_number_filed($title, $id, $name, $value, $placeholder = '') {
 	
 	function get_color_fileds_action() {
 		$mt_option = mt_get_plugin_options(true);
-		get_color_field(__('Background color', 'maintenance'), 'body_bg_color', 'body_bg_color', esc_attr($mt_option['body_bg_color']), '#1111111');
+		get_color_field(__('Background color', 'maintenance'), 'body_bg_color', 'body_bg_color', esc_attr($mt_option['body_bg_color']), '#111111');
 		get_color_field(__('Font color', 'maintenance'), 'font_color', 'font_color', esc_attr($mt_option['font_color']), 	  '#ffffff');
 	}	
 	add_action ('maintenance_color_fields', 'get_color_fileds_action', 10);
