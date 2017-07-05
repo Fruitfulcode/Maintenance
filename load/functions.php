@@ -87,7 +87,7 @@ function get_custom_login_code() {
 		
 	}
 
-	function add_google_fonts() {
+	function mt_add_google_fonts() {
 		global $wp_scripts;
 		$mt_options = mt_get_plugin_options(true);
 		$font_link = array();
@@ -163,7 +163,7 @@ function get_custom_login_code() {
 				}
 			}
 		}
-		$js_options['font_link'] = add_google_fonts();
+		$js_options['font_link'] = mt_add_google_fonts();
 		wp_localize_script( '_frontend', 'maintenanceoptions', $js_options );		
 		
 		$wp_scripts->do_items('jquery_ie');
