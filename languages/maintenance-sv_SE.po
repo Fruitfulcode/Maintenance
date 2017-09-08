@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Maintenance\n"
 "POT-Creation-Date: 2017-03-09 17:11+0200\n"
-"PO-Revision-Date: 2017-03-09 17:11+0200\n"
-"Last-Translator: Kozley Bloodchaser <jessehijet@gmail.com>\n"
+"PO-Revision-Date: 2017-09-06 16:54+0200\n"
+"Last-Translator: Erik Betshammar <info@verkan.se>\n"
 "Language-Team: Kozley Bloodchaser <jessehijet@gmail.com>\n"
 "Language: sv_SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.12\n"
+"X-Generator: Poedit 2.0.3\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: maintenance.php\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -47,7 +47,7 @@ msgstr "Anpassad CSS"
 
 #: includes/functions.php:242
 msgid "Exclude pages from maintenance mode"
-msgstr "Uteslut sidor från underhållsläge "
+msgstr "Uteslut sidor från underhållsläge"
 
 #: includes/functions.php:248
 msgid "Pro version"
@@ -83,15 +83,15 @@ msgstr "Sidfotstext"
 
 #: includes/functions.php:294
 msgid "Set Logo width"
-msgstr "Sätt logobredd"
+msgstr "Sätt logotypens bredd"
 
 #: includes/functions.php:295
 msgid "Set Logo height"
-msgstr "Sätt logohöjd"
+msgstr "Sätt logotypens höjd"
 
 #: includes/functions.php:296
 msgid "Logo"
-msgstr "Logo"
+msgstr "Logotyp"
 
 #: includes/functions.php:296
 msgid "Upload Logo"
@@ -99,11 +99,11 @@ msgstr "Ladda upp logotyp"
 
 #: includes/functions.php:297
 msgid "Retina logo"
-msgstr "Retina logo"
+msgstr "Högupplöst logotyp (Retina)"
 
 #: includes/functions.php:297
 msgid "Upload Retina Logo"
-msgstr "Uppladda Retina logo"
+msgstr "Ladda upp högupplöst logotyp (Retina)"
 
 #: includes/functions.php:301
 msgid "Show admin bar"
@@ -116,7 +116,8 @@ msgstr "503"
 #: includes/functions.php:302
 msgid "Service temporarily unavailable, Google analytics will be disable."
 msgstr ""
-"Tjänsten tillfälligt otillgänglig, kommer Google Analytics att inaktiveras."
+"När du anger kod 503, Service temporarily unavailable , kommer Google "
+"Analytics att inaktiveras."
 
 #: includes/functions.php:309
 msgid "Google Analytics ID"
@@ -128,7 +129,7 @@ msgstr "UA-XXXXX-X"
 
 #: includes/functions.php:310
 msgid "Set blur intensity"
-msgstr "Ställ in oskärpa intensitet"
+msgstr "Ställ in oskärpans intensitet"
 
 #: includes/functions.php:316
 msgid "Apply background blur"
@@ -152,7 +153,7 @@ msgstr "Bakgrundsbild"
 
 #: includes/functions.php:407
 msgid "Upload Background"
-msgstr "Ladda upp Bakgrund"
+msgstr "Ladda upp bakgrundbild"
 
 #: includes/functions.php:413
 msgid "Background color"
@@ -168,7 +169,7 @@ msgstr "Typsnittsfamilj"
 
 #: includes/functions.php:426
 msgid "Subsets"
-msgstr "Undergrupp"
+msgstr "Typsnittets undergrupp"
 
 #: includes/functions.php:434
 msgid "Have any questions?"
@@ -193,7 +194,7 @@ msgstr ""
 
 #: includes/functions.php:446
 msgid "This plugin is translation friendly"
-msgstr "Denna plugin är översättningsvänlig"
+msgstr "Detta tillägg är översättningsvänligt"
 
 #: includes/functions.php:447
 #, php-format
@@ -201,7 +202,7 @@ msgid ""
 "Want to improve translation or make one for your native language? <a href="
 "\"%1$s\" title=\"%2$s\">%2$s</a>"
 msgstr ""
-"Vill förbättra översättningen eller göra en för ditt modersmål? <a href="
+"Vill du förbättra översättningen eller göra en för ditt modersmål? <a href="
 "\"%1$s\" title=\"%2$s\">%2$s</a>"
 
 #: includes/functions.php:449
@@ -238,56 +239,56 @@ msgid ""
 "filter=5\">rate it</a>, <a title=\"leave feedbacks\" href=\"%2$s\" target="
 "\"_blank\">leave feedbacks</a>."
 msgstr ""
-"Köpa <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
-"plugin/2781350?ref=fruitfulcode\" target=\"_blank\">PRO</a> version med "
-"utökad funktionalitet. %1$s om du gillar vår plugin vänligen <a target="
+"Köp <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
+"plugin/2781350?ref=fruitfulcode\" target=\"_blank\">PRO-versionen</a> med "
+"utökad funktionalitet. %1$s om du gillar vårt tillägg vänligen <a target="
 "\"_blank\" href=\"http://wordpress.org/support/view/plugin-reviews/"
-"maintenance?filter=5\">betygsätta det</a>, <a title=\"lämna feedback\" href="
-"\"%2$s\" target=\"_blank\">lämna feedback</a>."
+"maintenance?filter=5\">betygsätt det</a> och <a title=\"lämna feedback\" "
+"href=\"%2$s\" target=\"_blank\">lämna feedback</a>."
 
 #: includes/functions.php:493
 msgid "Demo website"
-msgstr "Visa webbsida"
+msgstr "Demo webbplats"
 
 #: includes/functions.php:618
 msgid " is "
-msgstr "är"
+msgstr " är "
 
 #: includes/functions.php:683
 msgid "Website is under construction"
-msgstr "Webbsida är under uppbyggnad"
+msgstr "Webbplats är under uppbyggnad"
 
 #: includes/functions.php:684
 msgid "Maintenance mode is on"
-msgstr "Uppbyggnadsläge är på"
+msgstr "Underhållsläge är på"
 
 #: includes/functions.php:685
 msgid "Website will be available soon"
-msgstr "Hemsida kommer snart"
+msgstr "Webbplatsen kommer snart vara tillgänglig"
 
 #: load/functions.php:39
 msgid "Permission access denied!"
-msgstr "Tillstånd åtkomst nekad!"
+msgstr "Åtkomst nekad!"
 
 #: load/functions.php:53
 msgid "You entered your login are incorrect!"
-msgstr "Dina angivna inloggningsuppgifter är felaktiga."
+msgstr "Dina angivna inloggningsuppgifter är felaktiga!"
 
 #: load/functions.php:57
 msgid "You entered your password are incorrect!"
-msgstr "Dina angivna inloggningsuppgifter är felaktiga."
+msgstr "Dina angivna inloggningsuppgifter är felaktiga!"
 
 #: load/functions.php:60
 msgid "You entered your login and password are incorrect!"
-msgstr "Dina angivna inloggningsuppgifter är felaktiga."
+msgstr "Dina angivna inloggningsuppgifter är felaktiga!"
 
 #: load/functions.php:120
 msgid "Please verify that you are not a robot."
-msgstr "Kontrollera att du inte är en robot."
+msgstr "Verifiera att du inte är en robot."
 
 #: load/functions.php:308
 msgid "User Login"
-msgstr "Användarinloggning"
+msgstr "Inloggning"
 
 #: load/functions.php:309
 msgid "Username"
@@ -317,12 +318,12 @@ msgid ""
 "options to add a logo, background, headline, message, colors, login, etc. "
 "Extended PRO with more features version is available for purchase."
 msgstr ""
-"Ta din webbplats för underhåll borta från offentligheten. Använda underhåll "
-"plugin om din webbplats är under utveckling eller om du behöver ändra några "
-"saker, köra en uppgradering. Gör det bara nås med login och lösenord. "
-"Insticksprogrammet har ett alternativ att lägga till en logotyp, bakgrund, "
-"rubrik, meddelande, färger, inloggning, etc. Utökade PRO med fler funktioner "
-"version finns att köpa."
+"Ta din webbplats för underhåll borta från offentligheten. Använd tillägget "
+"Underhåll om din webbplats är under utveckling eller om du behöver ändra "
+"några saker eller köra en uppgradering. Gör den enbart tillgänglig med login "
+"och lösenord. Tilläget erbjuder möjligheten att lägga till en logotyp, "
+"bakgrund, rubrik, meddelande, färger, inloggning, etc. Utökad PRO-version "
+"med fler funktioner finns att köpa."
 
 #. Author of the plugin/theme
 msgid "fruitfulcode"
