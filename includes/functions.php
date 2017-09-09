@@ -37,7 +37,7 @@
 		$out_filed .= '<th scope="row">' . esc_attr($title) .'</th>';
 			$out_filed .= '<td>';
 				$out_filed .= '<filedset>';
-					$out_filed .= '<input type="text" id="'.esc_attr($id).'" name="lib_options['.$name.']" value="'. wp_kses_post(stripslashes($value)) .'" placeholder="'.$placeholder.'"/>';
+					$out_filed .= '<input type="text" id="'.esc_attr($id).'" name="lib_options['.$name.']" value="'. esc_attr($value) .'" placeholder="'.$placeholder.'"/>';
 				$out_filed .= '</filedset>';
 			$out_filed .= '</td>';
 		$out_filed .= '</tr>';			
