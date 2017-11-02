@@ -175,6 +175,7 @@ function get_custom_login_code() {
 		echo '<!--[if !IE]><!-->';
 		$wp_scripts->do_items('jquery');
 		echo '<!--<![endif]-->';
+		$wp_scripts->do_items('jquery-migrate');
 		
 		$wp_scripts->do_items('_backstretch');
 		$wp_scripts->do_items('_blur');
