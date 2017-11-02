@@ -49,6 +49,8 @@
 			wp_enqueue_style  ('arvo', '//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Arvo:400,400italic,700,700italic' );
 			wp_enqueue_style  ('wp-color-picker' );
 
+			// fix a bug with WooCommerce 3.2.2
+			wp_dequeue_script ('select2' );
 			wp_enqueue_script ('select2',    MAINTENANCE_URI .'js/select2/select2.min.js' );
 			wp_enqueue_style  ('select2',    MAINTENANCE_URI .'js/select2/select2.css' );
 
