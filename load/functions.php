@@ -198,7 +198,7 @@ function get_custom_login_code() {
 		if (empty($mt_options['page_title'])) {
 			$options_title = wp_title( '|', false);
 		} else {
-			$options_title = wp_kses_post(stripslashes($mt_options['page_title']));
+			$options_title = strip_tags(stripslashes($mt_options['page_title']));
 		}
 
 		if ($error_message != '') {
