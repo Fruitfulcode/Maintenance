@@ -39,6 +39,11 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<?php get_page_title(esc_attr($mess_arr[0])); ?>
+	<?php
+		if (function_exists('wp_site_icon')) {
+			wp_site_icon();
+		}
+	?>
 	<meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1, initial-scale=1, minimum-scale=1">
 	<meta name="description" content="<?php echo $site_description; ?>"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
