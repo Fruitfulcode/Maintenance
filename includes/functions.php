@@ -156,7 +156,8 @@ function mt_get_google_font($font = null) {
         $curr_font = $gg_fonts->{$font};
         if (!empty($curr_font)) {
             foreach ($curr_font->variants as $values) {
-                $font_params .= $values->id . ',';
+                if(!empty($values->id)) $font_params .= $values->id . ',';
+                elseif(!empty($values)) $font_params .= $values . ',';
             }
 
             $font_params = trim($font_params, ",");
@@ -416,6 +417,7 @@ function get_color_fileds_action() {
     $mt_option = mt_get_plugin_options(true);
     get_color_field(__('Background color', 'maintenance'), 'body_bg_color', 'body_bg_color', esc_attr($mt_option['body_bg_color']), '#111111');
     get_color_field(__('Font color', 'maintenance'), 'font_color', 'font_color', esc_attr($mt_option['font_color']), 	  '#ffffff');
+    get_color_field(__('Login block background color', 'maintenance'), 'controls_bg_color', 'controls_bg_color', esc_attr($mt_option['controls_bg_color']), 	  '#000000');
 }
 add_action ('maintenance_color_fields', 'get_color_fileds_action', 10);
 
@@ -552,6 +554,7 @@ function mtCheckExclude() {
 
 function load_maintenance_page($original_template) {
     global $mt_options;
+    $preview = (isset($_GET['preview']) && $_GET['preview'] == 1)?true:false;
 
     $vCurrDate_start = $vCurrDate_end = $vCurrTime = '';
     $vdate_start = $vdate_end = date_i18n( 'Y-m-d', strtotime( current_time('mysql', 0) ));
@@ -596,9 +599,10 @@ function load_maintenance_page($original_template) {
         } else {
             return $original_template;
         }
-    } else {
-        return $original_template;
-    }
+    } else if ($preview && file_exists (MAINTENANCE_LOAD . 'index.php')){
+        add_filter('script_loader_tag', 'maintenance_defer_scripts', 10, 2);
+        return MAINTENANCE_LOAD . 'index.php';
+    } else return $original_template;
 }
 
 function maintenance_defer_scripts($tag, $handle) {

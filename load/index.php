@@ -38,7 +38,7 @@ if (!empty($mt_options['bg_image_portrait'])) {
 <html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
-    <?php get_page_title(esc_attr($mess_arr[0])); ?>
+    <?php get_page_title(); ?>
     <?php
     if (function_exists('wp_site_icon')) {
         wp_site_icon();
@@ -68,10 +68,12 @@ if (!empty($mt_options['bg_image_portrait'])) {
     <style type="text/css">
 
     </style>
+    <script type="text/javascript" src="<?php echo MAINTENANCE_URI.'load/js/jquery.backstretch.min.js'; ?>"></script>
     <![endif]-->
 </head>
 
 <body <?php body_class('maintenance ' . $ebody_class); ?>>
+
 <?php do_action('before_main_container'); ?>
 <div class="main-container">
     <?php do_action('before_content_section'); ?>
@@ -98,17 +100,18 @@ if (!empty($mt_options['bg_image_portrait'])) {
     if(empty($body_bg) && !empty($bg_image_portrait)) $body_bg = $bg_image_portrait;
     if(!empty($body_bg)) { ?>
         <picture class="bg-img">
-            <?php if($bg_image_portrait) { ?>
+            <?php if(!empty($bg_image_portrait)) { ?>
                 <source media="(max-width: 100vh)" srcset="<?php echo $bg_image_portrait; ?>">
             <?php } ?>
             <img src="<?php echo $body_bg; ?>">
         </picture>
     <?php } ?>
 </div>
+
 <?php do_action('after_main_container'); ?>
 <?php if (isset($mt_options['is_login'])) { ?>
     <div class="login-form-container">
-        <?php do_login_form(esc_attr($mess_arr[3]), esc_attr($mess_arr[1]), esc_attr($mess_arr[2])); ?>
+        <?php do_login_form(esc_attr($mess_arr[3]), esc_attr($mess_arr[1]), esc_attr($mess_arr[2]), esc_attr($mess_arr[0])); ?>
         <?php do_button_login_form(); ?>
     </div>
 <?php } ?>

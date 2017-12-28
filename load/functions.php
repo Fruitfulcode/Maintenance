@@ -50,14 +50,14 @@ function get_custom_login_code() {
             $user_connect = wp_signon( $access, $ssl );
             if ( is_wp_error($user_connect) )  {
                 if ($user_connect->get_error_code() == 'invalid_username') {
-                    $error_message  =  __('You entered your login are incorrect!', 'maintenance');;
+                    $error_message  =  __('Login is incorrect!', 'maintenance');;
                     $class_login 	= 'error';
                     $class_password = 'error';
                 } else if ($user_connect->get_error_code() == 'incorrect_password') {
-                    $error_message  =  __('You entered your password are incorrect!', 'maintenance');
+                    $error_message  =  __('Password is incorrect!', 'maintenance');
                     $class_password = 'error';
                 } else {
-                    $error_message  =  __('You entered your login and password are incorrect!', 'maintenance');
+                    $error_message  =  __('Login and password are incorrect!', 'maintenance');
                     $class_login = 'error';
                     $class_password = 'error';
                 }
@@ -192,7 +192,7 @@ function add_custom_scripts() {
 add_action ('load_custom_scripts', 'add_custom_scripts', 15);
 add_action ('load_custom_style', 'add_custom_style', 20);
 
-function get_page_title($error_message) {
+function get_page_title($error_message = null) {
     $mt_options = mt_get_plugin_options(true);
     $title = $options_title = '';
     if (empty($mt_options['page_title'])) {
@@ -201,11 +201,11 @@ function get_page_title($error_message) {
         $options_title = strip_tags(stripslashes($mt_options['page_title']));
     }
 
-    if ($error_message != '') {
-        $title =  $options_title . ' - ' . $error_message;
-    } else {
+//    if ($error_message != '') {
+//        $title =  $options_title . ' - ' . $error_message;
+//    } else {
         $title =  $options_title;
-    }
+//    }
     echo "<title>$title</title>";
 }
 
@@ -218,7 +218,7 @@ function get_options_style() {
     }
 
 
-    if ($mt_options['is_blur'] && !empty($mt_options['blur_intensity'])) {
+    if (!empty($mt_options['is_blur']) && !empty($mt_options['blur_intensity'])) {
         /*Blur image background*/
         if (!empty($mt_options['blur_intensity'])) {
             $options_style .= '.bg-img img, .bg-img source{';
@@ -239,10 +239,21 @@ function get_options_style() {
 
     if ( !empty($mt_options['font_color']) ) {
         $font_color = esc_attr($mt_options['font_color']);
-        $options_style .= '.site-title, .preloader i, .login-form, .login-form a.lost-pass, .btn-open-login-form, .site-content, .user-content-wrapper, .user-content, footer, .maintenance a {color: '. $font_color .';} ';
-        $options_style .= '.ie7 .login-form input[type="text"], .ie7 .login-form input[type="password"], .ie7 .login-form input[type="submit"]  {color: '. $font_color .'} ';
+        $options_style .= '.site-title, .preloader i, .login-form, .login-form a.lost-pass, .btn-open-login-form, .site-content, .user-content-wrapper, .user-content, footer, .maintenance a{color: '. $font_color .';} ';
+//        $options_style .= '.ie7 .login-form input[type="text"], .ie7 .login-form input[type="password"], .ie7 .login-form input[type="submit"]  {color: '. $font_color .'} ';
         $options_style .= 'a.close-user-content, #mailchimp-box form input[type="submit"], .login-form input#submit.button  {border-color:'. $font_color .'} ';
-        $options_style .= '.ie7 .company-name {color: '. $font_color .'} ';
+        $options_style .= 'input[type="submit"]:hover{background-color:'. $font_color .'} ';
+        $options_style .= 'input:-webkit-autofill, input:-webkit-autofill:focus{-webkit-text-fill-color:'. $font_color .'} ';
+
+//        $options_style .= '.ie7 .company-name {color: '. $font_color .'} ';
+    }
+
+    if ( !empty($mt_options['controls_bg_color']) ) {
+        $options_style .= "body > .login-form-container{background-color:{$mt_options['controls_bg_color']}CC}";
+        $options_style .= ".btn-open-login-form{background-color:{$mt_options['controls_bg_color']}CC}";
+        $options_style .= "input:-webkit-autofill, input:-webkit-autofill:focus{-webkit-box-shadow:0 0 0 50px {$mt_options['controls_bg_color']} inset}";
+        $options_style .= "input[type='submit']:hover{color:{$mt_options['controls_bg_color']}} ";
+        $options_style .= "#custom-subscribe #submit-subscribe:before, body > .main-container:after{background-color:{$mt_options['controls_bg_color']}} ";
     }
 
     if (!empty($mt_options['custom_css'])) {
@@ -263,8 +274,8 @@ function get_logo_box() {
     if ( !empty($mt_options['logo_width']) ) { $logo_w = $mt_options['logo_width']; }
     if ( !empty($mt_options['logo_height']) ) { $logo_h = $mt_options['logo_height']; }
     if ( !empty($mt_options['logo']) || !empty($mt_options['retina_logo']) ) {
-        $logo = wp_get_attachment_image_src( $mt_options['logo'], 'full');
-        $retina_logo = wp_get_attachment_image_src( $mt_options['retina_logo'], 'full');
+        $logo = wp_get_attachment_image_src( $mt_options['logo']);
+        $retina_logo = wp_get_attachment_image_src( $mt_options['retina_logo']);
         if (!empty($logo)) {
             $image_link = esc_url_raw($logo[0]);
         }
@@ -339,7 +350,7 @@ function do_button_login_form($error = -1) {
 
 }
 
-function do_login_form($user_login, $class_login, $class_password) {
+function do_login_form($user_login, $class_login, $class_password, $error = null) {
     $mt_options  = mt_get_plugin_options(true);
     $out_login_form = $form_error = '';
     if (($class_login == 'error') || ($class_password == 'error')) {
@@ -348,6 +359,7 @@ function do_login_form($user_login, $class_login, $class_password) {
 
     $out_login_form .= '<form name="login-form" id="login-form" class="login-form'.$form_error.'" method="post">';
     $out_login_form .= '<label>'. __('User Login', 'maintenance') .'</label>';
+    $out_login_form .= '<span class="login-error">'.$error.'</span>';
     $out_login_form .= '<span class="licon '.$class_login.'"><input type="text" name="log" id="log" value="'.  $user_login .'" size="20"  class="input username" placeholder="'. __('Username', 'maintenance') .'"/></span>';
     $out_login_form .= '<span class="picon '.$class_password.'"><input type="password" name="pwd" id="login_password" value="" size="20"  class="input password" placeholder="'. __('Password', 'maintenance') .'" /></span>';
     $out_login_form .= '<a class="lost-pass" href="'.esc_url(wp_lostpassword_url()).'" title="'.__('Lost Password', 'maintenance') .'">'.__('Lost Password', 'maintenance') .'</a>';

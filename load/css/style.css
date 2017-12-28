@@ -44,7 +44,9 @@ body {
     padding: 0;
     overflow: hidden;
 }
-
+body, .preloader {
+    background-color: #111111;
+}
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 50px #292b2c inset;
     -webkit-text-fill-color: #fff
@@ -73,7 +75,20 @@ body > .main-container {
     z-index: 0;
     overflow: hidden;
     position: initial!important;
-    overflow-y: auto
+    overflow-y: auto;
+
+}
+body > .main-container:after{
+    content: "";
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #111;
+    opacity: 0.4;
+    z-index: -1;
+    position: absolute;
 }
 
 body > .login-form-container {
@@ -131,13 +146,23 @@ body.open-login-form > .main-container {
     -moz-border-radius-bottomleft: 4px;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
-    cursor: pointer
+    cursor: pointer;
 }
 
 body.error .btn-open-login-form {
     color: red
 }
-
+.btn-open-login-form i:before{
+    transition: all 0.3s linear;
+}
+.btn-open-login-form:hover i:before{
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+    opacity: 0.8;
+}
 .center {
     clear: both;
     content: "";
@@ -254,7 +279,8 @@ footer {
     top: 0;
     display: inline-block;
     width: 100%;
-    color: #fff
+    color: #fff;
+    margin: 25px 0 20px;
 }
 
 footer .center {
@@ -420,11 +446,8 @@ footer .center {
     font-size: 20px;
     font-family: inherit;
     background: none;
-    font-weight: 700;
-    float: left;
     cursor: pointer;
     border: 2px solid #fff;
-    padding: 5px 10px;
     font-weight: bold;
     margin: 10px 0 0;
     padding: 5px 10px;
@@ -438,12 +461,16 @@ input[type="submit"] {
     padding: 5px 10px;
     font-weight: 700;
     margin: 10px 0 0;
-    padding: 5px 10px;
     color: inherit;
     font-size: 20px;
     font-family: inherit;
     background: none;
-    cursor: pointer
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+input[type="submit"]:hover{
+    background-color: rgba(255, 255, 255, .7);
+    color: #222;
 }
 
 .login-form:hover {
@@ -502,7 +529,9 @@ input[type="submit"] {
     width: 100%;
     padding: 10px
 }
-
+.site-title, .preloader i, .login-form, .login-form a.lost-pass, .btn-open-login-form, .site-content, .user-content-wrapper, .user-content, footer, .maintenance a{
+    color: #ffffff;
+}
 @-ms-keyframes spin {
     from {
         -ms-transform: translate(-50%, -50%) rotate(0deg)
@@ -750,6 +779,8 @@ input[type="submit"] {
     transform: translate(-50%, -50%);
     width: auto;
     height: auto;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 @supports (object-fit: cover){
@@ -762,7 +793,11 @@ input[type="submit"] {
     }
 
 }
-
+.login-error{
+    margin-bottom: 10px;
+    color: red;
+    display: inline-block;
+}
 /*!--------------------------------------------------------------------
 STYLES "Outdated Browser"
 Version:    1.1.2 - 2015

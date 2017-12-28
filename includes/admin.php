@@ -55,7 +55,7 @@
 			wp_enqueue_style  ('select2',    MAINTENANCE_URI .'js/select2/select2.css' );
 
 			wp_enqueue_script ('uplaods_',    MAINTENANCE_URI .'js/uploads_.min.js' );
-			wp_register_script ('maintenance', MAINTENANCE_URI .'js/init.min.js', array( 'wp-color-picker' ), false, true );
+			wp_register_script ('maintenance', MAINTENANCE_URI .'js/init.js', array( 'wp-color-picker' ), false, true );
 			wp_localize_script( 'maintenance', 'maintenance', 	array( 	'path' 	=> MAINTENANCE_URI)	);
 			wp_enqueue_script  ('maintenance');
 			wp_enqueue_style  ('maintenance', MAINTENANCE_URI .'css/admin.css' );
