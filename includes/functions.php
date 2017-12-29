@@ -717,6 +717,7 @@ function mt_get_default_array() {
         'body_bg'	  		=> mt_insert_attach_sample_files(),
         'body_bg_portrait'	  		=> '',
         'body_bg_color' => '#111111',
+        'controls_bg_color' => '#111111',
         'font_color' 		=> '#ffffff',
         'body_font_family' 	=> 'Open Sans',
         'body_font_subset'	=> 'Latin',
