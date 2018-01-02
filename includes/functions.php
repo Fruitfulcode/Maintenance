@@ -298,8 +298,8 @@ function add_data_fields ($object, $box) {
         generate_image_filed(__('Logo', 'maintenance'), 'logo', 'logo', intval($mt_option['logo']), 'boxes box-logo', __('Upload Logo', 'maintenance'), 'upload_logo upload_btn button');
         generate_image_filed(__('Retina logo', 'maintenance'), 'retina_logo', 'retina_logo', intval($mt_option['retina_logo']), 'boxes box-logo', __('Upload Retina Logo', 'maintenance'), 'upload_logo upload_btn button');
         do_action('maintenance_background_field');
-        generate_image_filed(__('Background image (portrait mode)', 'maintenance'), 'bg_image_portrait', 'bg_image_portrait', intval($mt_option['bg_image_portrait']), 'boxes box-logo', __('Upload image for portrait device orientation', 'maintenance'), 'upload_logo upload_btn button');
-        generate_image_filed(__('Page preloader image', 'maintenance'), 'preloader_img', 'preloader_img', intval($mt_option['preloader_img']), 'boxes box-logo', __('Upload preloader', 'maintenance'), 'upload_logo upload_btn button');
+        generate_image_filed(__('Background image (portrait mode)', 'maintenance'), 'bg_image_portrait', 'bg_image_portrait', (isset($mt_option['bg_image_portrait']))?intval($mt_option['bg_image_portrait']):'', 'boxes box-logo', __('Upload image for portrait device orientation', 'maintenance'), 'upload_logo upload_btn button');
+        generate_image_filed(__('Page preloader image', 'maintenance'), 'preloader_img', 'preloader_img', (isset($mt_option['preloader_img']))?intval($mt_option['preloader_img']):'', 'boxes box-logo', __('Upload preloader', 'maintenance'), 'upload_logo upload_btn button');
 
         do_action('maintenance_color_fields');
         do_action('maintenance_font_fields');
@@ -417,7 +417,7 @@ function get_color_fileds_action() {
     $mt_option = mt_get_plugin_options(true);
     get_color_field(__('Background color', 'maintenance'), 'body_bg_color', 'body_bg_color', esc_attr($mt_option['body_bg_color']), '#111111');
     get_color_field(__('Font color', 'maintenance'), 'font_color', 'font_color', esc_attr($mt_option['font_color']), 	  '#ffffff');
-    get_color_field(__('Login block background color', 'maintenance'), 'controls_bg_color', 'controls_bg_color', esc_attr($mt_option['controls_bg_color']), 	  '#000000');
+    get_color_field(__('Login block background color', 'maintenance'), 'controls_bg_color', 'controls_bg_color', (isset($mt_option['controls_bg_color']))?esc_attr($mt_option['controls_bg_color']):'', 	  '#000000');
 }
 add_action ('maintenance_color_fields', 'get_color_fileds_action', 10);
 
