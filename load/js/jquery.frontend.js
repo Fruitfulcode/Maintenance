@@ -23,19 +23,20 @@ jQuery(document).ready(function() {
 
         });
     }
-    if (typeof(maintenanceoptions.font_link) != "undefined") {
-        WebFontConfig = {
-            google: { families: maintenanceoptions.font_link }
-        };
-        (function() {
-            var wf = document.createElement('script');
-            wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
-            wf.type = 'text/javascript';
-            wf.async = 'true';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(wf, s);
-        })();
-    }
+
+    // if (typeof(maintenanceoptions.font_link) != "undefined") {
+    //     WebFontConfig = {
+    //         google: { families: maintenanceoptions.font_link }
+    //     };
+    //     (function() {
+    //         var wf = document.createElement('script');
+    //         wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+    //         wf.type = 'text/javascript';
+    //         wf.async = 'true';
+    //         var s = document.getElementsByTagName('script')[0];
+    //         s.parentNode.insertBefore(wf, s);
+    //     })();
+    // }
     if (maintenanceoptions.body_bg) {
         // if (jQuery(window).height() < 768) {
         // 	jQuery("body").backstretch(maintenanceoptions.body_bg);

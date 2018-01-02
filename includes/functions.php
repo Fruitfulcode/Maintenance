@@ -222,11 +222,11 @@ function get_fonts_subsets($title, $id, $name, $value) {
         $out_filed .= '<filedset>';
         $out_filed .= '<select class="select2_customize" name="lib_options['.$name.']" id="'.esc_attr($id).'">';
         if(!empty($gg_fonts[$curr_font])){
-            if(!empty($gg_fonts[$curr_font][$vars])){
-                foreach ($gg_fonts[$curr_font][$vars] as $key) {
-                    $out_filed .= '<option value="'.$key['id'] .'" '. selected( $value, $key['id'], false ) .'>'.$key['name'].'</option>';
+//            if(!empty($gg_fonts[$curr_font][$vars])){
+                foreach ($gg_fonts[$curr_font]['variants'] as $key=>$v) {
+                    $out_filed .= '<option value="'.$v .'" '. selected( $value, $v, false ) .'>'.$v.'</option>';
                 }
-            }
+//            }
         }
         $out_filed .= '</select>';
 
@@ -299,7 +299,7 @@ function add_data_fields ($object, $box) {
         generate_image_filed(__('Retina logo', 'maintenance'), 'retina_logo', 'retina_logo', intval($mt_option['retina_logo']), 'boxes box-logo', __('Upload Retina Logo', 'maintenance'), 'upload_logo upload_btn button');
         do_action('maintenance_background_field');
         generate_image_filed(__('Background image (portrait mode)', 'maintenance'), 'bg_image_portrait', 'bg_image_portrait', intval($mt_option['bg_image_portrait']), 'boxes box-logo', __('Upload image for portrait device orientation', 'maintenance'), 'upload_logo upload_btn button');
-        generate_image_filed(__('Page preloader image', 'maintenance'), 'preloader', 'preloader', intval($mt_option['preloader']), 'boxes box-logo', __('Upload preloader', 'maintenance'), 'upload_logo upload_btn button');
+        generate_image_filed(__('Page preloader image', 'maintenance'), 'preloader_img', 'preloader_img', intval($mt_option['preloader_img']), 'boxes box-logo', __('Upload preloader', 'maintenance'), 'upload_logo upload_btn button');
 
         do_action('maintenance_color_fields');
         do_action('maintenance_font_fields');
@@ -426,6 +426,7 @@ function get_font_fileds_action() {
     $mt_option = mt_get_plugin_options(true);
     echo get_fonts_field(__('Font family', 'maintenance'), 'body_font_family', 'body_font_family', esc_attr($mt_option['body_font_family']));
     $subset = '';
+
     if(!empty($mt_option['body_font_subset'])) {
         $subset = $mt_option['body_font_subset'];
     }

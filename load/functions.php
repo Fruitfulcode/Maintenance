@@ -381,8 +381,8 @@ add_filter( 'lostpassword_url',  'reset_pass_url', 999, 0 );
 
 function get_preloader_element() {
     $mt_options  = mt_get_plugin_options(true);
-    if (!empty($mt_options['preloader'])) {
-        $preloader_img = wp_get_attachment_image_src($mt_options['preloader'], 'full');
+    if (!empty($mt_options['preloader_img'])) {
+        $preloader_img = wp_get_attachment_image_src($mt_options['preloader_img'], 'full');
         $preloader_img = (!empty($preloader_img))?$preloader_img[0]:false;
     }
 
