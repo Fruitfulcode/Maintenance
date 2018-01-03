@@ -59,8 +59,7 @@ $google_fonts = mt_add_google_fonts();
     <?php } ?>
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-    <link type="text/css" rel="stylesheet" href="<?php echo MAINTENANCE_URI.'load/css/fonts.css'; ?>">
-    <link type="text/css" rel="stylesheet" href="<?php echo MAINTENANCE_URI.'load/css/style.css'; ?>">
+<!--    <link type="text/css" rel="stylesheet" href="--><?php //echo MAINTENANCE_URI.'load/css/style.css'; ?><!--">-->
     <?php do_action('load_custom_style'); ?>
     <?php do_action('add_gg_analytics_code'); ?>
     <!--[if IE]>
@@ -117,8 +116,15 @@ $google_fonts = mt_add_google_fonts();
 <?php } ?>
 <?php do_action('load_options_style'); ?>
 <?php do_action('load_custom_scripts'); ?>
-<div id="outdated"></div>
-<script type="text/javascript" src="<?php echo MAINTENANCE_URI.'load/js/outdatedbrowser/outdatedbrowser.js'; ?>"></script>
+<div id="outdated">
+    <h1><?php _e('Your browser is outdated.', 'maintenance') ?></h1>
+    <h4>
+        <?php _e('For a better experience, keep your browser up to date. Check ', 'maintenance');
+        echo '<a target="_blank" href="http://outdatedbrowser.com/">'.__('here', 'maintenance').'</a>';
+        _e(' for latest versions.', 'maintenance'); ?>
+    </h4>
+</div>
+
 
 </body>
 </html>

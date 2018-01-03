@@ -80,7 +80,10 @@ function add_custom_style() {
 
     // all.css loading in index.php inline by 2 steps
     //wp_register_style('_style', 		MAINTENANCE_URI .'load/all.css');
-
+    wp_register_style('maintenance-style', 		MAINTENANCE_URI .'load/css/style.css');
+    wp_register_style('maintenance-fonts', 		MAINTENANCE_URI .'load/css/fonts.css');
+    $wp_styles->do_items('maintenance-style');
+    $wp_styles->do_items('maintenance-fonts');
     get_options_style();
 }
 

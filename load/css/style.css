@@ -806,7 +806,7 @@ website:    http://www.burocratik.com
 * @preserve
 -----------------------------------------------------------------------*/
 #outdated{
-    display: none; position: fixed; top: 0; left: 0; width: 100%; height: 170px;
+    position: fixed; top: 0; left: 0; width: 100%; height: 170px;
     text-align: center; text-transform: uppercase; z-index:1500;
     background-color: #f25648; color: #ffffff;
 }
@@ -823,4 +823,15 @@ website:    http://www.burocratik.com
 #outdated #btnCloseUpdateBrowser{
     display: block; position: relative; width: 100%; height: 100%;
     text-decoration: none; color: #ffffff; font-size: 36px; line-height: 36px;
+}
+
+@supports (transform: translate(0, 0)) {
+    #outdated {
+        display: none;
+    }
+}
+@supports (webkit-transform: translate(0, 0)) {
+    #outdated {
+        display: none;
+    }
 }
