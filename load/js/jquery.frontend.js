@@ -86,6 +86,4 @@ jQuery.fn.center = function () {
 }
 
 
-jQuery(document).ready(function() {
-    outdatedBrowser();
-})
+

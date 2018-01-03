@@ -830,7 +830,7 @@ website:    http://www.burocratik.com
         display: none;
     }
 }
-@supports (webkit-transform: translate(0, 0)) {
+@supports (-webkit-transform: translate(0, 0)) {
     #outdated {
         display: none;
     }
