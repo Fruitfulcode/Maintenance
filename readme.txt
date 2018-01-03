@@ -121,6 +121,15 @@ You can check <a href="http://wordpress.org/support/plugin/maintenance">support 
 
 
 == Change log ==
+= 3.5.3 =
+- Update: Optimized js libs
+- Update: Replaced some features by new css and html5 capabilities
+- Update: Refreshed google fonts
+- New: Change preloader icon in admin panel
+- New: Uploading image for portrait device orientation
+- New: Add authorization error text to login panel
+- New: Select login panel bg color
+- New: Add some css effects
 
 = 3.5.1 =
 - Bugfix: Js cache with server options
