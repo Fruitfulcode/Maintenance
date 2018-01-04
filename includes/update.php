@@ -23,7 +23,7 @@
 		$settings  = get_option( 'maintenance_options' );
 		
 		update_option( 'maintenance_db_version', MAINTENANCE_DB_VERSION);
-		
+
 		foreach ( $options as $key => $value ) {
 		if ( !isset( $settings[$key] ) )
 					 $settings[$key] = $value;

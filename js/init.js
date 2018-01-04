@@ -39,7 +39,7 @@ jQuery(window).ready(function(){
 			palettes: true
 		};
 	
-	jQuery('#body_bg_color, #font_color, #body_bg_blur_color').wpColorPicker(vColorPickerOptions);
+	jQuery('#body_bg_color, #font_color, #body_bg_blur_color, #controls_bg_color').wpColorPicker(vColorPickerOptions);
 	
 	if (jQuery('.select2_customize, .multiple-select-mt').length > 0) {
 		jQuery('.select2_customize, .multiple-select-mt').select2({});
@@ -61,5 +61,7 @@ jQuery(window).ready(function(){
 		}
 		
 	});
-	
+
+    var t=null,t=jQuery.getJSON(maintenance.path+"includes/fonts/googlefonts.json");jQuery("#body_font_family").on("change",function(){var e=jQuery(this).val();n(e)});var n=function(e){jQuery("#body_font_subset").html(""),jQuery("#s2id_body_font_subset .select2-choice .select2-chosen").empty(),font=JSON.parse(t.responseText);for(var n in font)if(n==e)for(var o=0;o<font[n].variants.length;o++)0==o&&jQuery("#s2id_body_font_subset .select2-choice .select2-chosen").append(font[n].variants[o]),jQuery("#body_font_subset").append("<option>"+font[n].variants[o]+"</option>")}
 });
+
