@@ -116,20 +116,12 @@ function add_custom_scripts() {
     $mt_options  = mt_get_plugin_options(true);
     $js_options = array('body_bg' => '', 'gallery_array' => array(), 'blur_intensity' => 0, 'font_link' => '');
 
-//    wp_register_script( '_backstretch', 	MAINTENANCE_URI  .'load/js/jquery.backstretch.min.js', 'jquery');
     wp_register_script( '_frontend', 		MAINTENANCE_URI  .'load/js/jquery.frontend.js', 'jquery');
-//		wp_register_script( '_blur',			MAINTENANCE_URI  .'load/js/jquery.blur.min.js', 'jquery');
 
     // IE scripts
     wp_register_script( 'jquery_ie', 	$wp_scripts->registered['jquery-core']->src);
-//		wp_register_script( 'jquery_migrate_ie', 	$wp_scripts->registered['/jquery-migrate']->src);
-//		wp_register_script( '_placeholder_ie', 	MAINTENANCE_URI  .'load/js/jquery.placeholder.js');
-//		wp_register_script( '_frontend_ie', 	MAINTENANCE_URI  .'load/js/jquery.frontend.ie.js');
 
     wp_script_add_data('jquery_ie', 'conditional', 'lte IE 10');
-//		wp_script_add_data('jquery_migrate_ie', 'conditional', 'lte IE 10');
-//		wp_script_add_data('_placeholder_ie', 'conditional', 'lte IE 10');
-//		wp_script_add_data('_frontend_ie', 'conditional', 'lte IE 10');
 
     if(class_exists('WPCF7')) {
         wp_register_script( '_cf7scripts',	MAINTENANCE_URI  .'../contact-form-7/includes/js/scripts.js');
@@ -204,11 +196,8 @@ function get_page_title($error_message = null) {
         $options_title = strip_tags(stripslashes($mt_options['page_title']));
     }
 
-//    if ($error_message != '') {
-//        $title =  $options_title . ' - ' . $error_message;
-//    } else {
-        $title =  $options_title;
-//    }
+    $title =  $options_title;
+
     echo "<title>$title</title>";
 }
 
@@ -299,12 +288,6 @@ function get_logo_box() {
         ?>
         <div class="logo-box" rel="home">
             <img src="<?php echo $image_link; ?>" srcset="<?php echo $image_link_retina; ?> 2x" width="<?php echo $logo_w; ?>" <?php echo (!empty($logo_h))?'height="'.$logo_h.'"':''; ?> alt="logo">
-<!--            <picture class="logo">-->
-<!--                --><?php //if($image_link_retina) { ?>
-<!--                    <source srcset="--><?php //echo $image_link_retina; ?><!-- 2x" width="--><?php //echo $logo_w; ?><!--" --><?php //echo (!empty($logo_h))?'height="'.$logo_h.'"':''; ?><!-->
-<!--                --><?php //} ?>
-<!--                <img src="--><?php //echo $image_link; ?><!--" width="--><?php //echo $logo_w; ?><!--" --><?php //echo (!empty($logo_h))?'height="'.$logo_h.'"':''; ?><!-- alt="logo">-->
-<!--            </picture>-->
         </div>
         <?php
     } else {

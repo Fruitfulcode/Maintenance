@@ -181,7 +181,7 @@ body.error .btn-open-login-form {
 
 #wrapper {
     width: 100%;
-    height: 90%;
+    height: calc(100% - 72px);
     position: relative;
     display: inline-block
 }
@@ -697,7 +697,7 @@ input[type="submit"]:hover{
     }
 
     footer {
-        padding: 0 0 20px
+        /*padding: 0 0 20px*/
     }
 }
 
