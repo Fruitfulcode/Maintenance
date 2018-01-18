@@ -312,7 +312,7 @@ footer .center {
     padding: 50px 0 30px
 }
 .logo-box img {
-    max-width: 1000px
+    max-width: 100%;
 }
 
 /*.logo-box-retina {*/
