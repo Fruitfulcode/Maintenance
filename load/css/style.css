@@ -311,6 +311,9 @@ footer .center {
 .logo-box {
     padding: 50px 0 30px
 }
+.logo-box img {
+    max-width: 1000px
+}
 
 /*.logo-box-retina {*/
     /*display: none*/
