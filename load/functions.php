@@ -125,18 +125,30 @@ function add_custom_scripts() {
 
     if(class_exists('WPCF7')) {
         wp_register_script( '_cf7scripts',	MAINTENANCE_URI  .'../contact-form-7/includes/js/scripts.js');
-        $_wpcf7 = array(
+        $wpcf7 = array(
+            'apiSettings' => array(
+                'root' => esc_url_raw( rest_url( 'contact-form-7/v1' ) ),
+                'namespace' => 'contact-form-7/v1',
+            ),
             'recaptcha' => array(
                 'messages' => array(
-                    'empty' => __( 'Please verify that you are not a robot.',
-                        'contact-form-7' ) ) ) );
+                    'empty' =>
+                        __( 'Please verify that you are not a robot.', 'contact-form-7' ),
+                ),
+            ),
+        );
+
         if ( defined( 'WP_CACHE' ) && WP_CACHE ) {
-            $_wpcf7['cached'] = 1;
+            $wpcf7['cached'] = 1;
         }
+
         if ( wpcf7_support_html5_fallback() ) {
-            $_wpcf7['jqueryUi'] = 1;
+            $wpcf7['jqueryUi'] = 1;
         }
-        wp_localize_script( '_cf7scripts', '_wpcf7', $_wpcf7 );
+
+        wp_localize_script( '_cf7scripts', 'wpcf7', $wpcf7 );
+
+//        do_action( 'wpcf7_enqueue_scripts' );
     }
 
 

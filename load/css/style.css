@@ -530,7 +530,8 @@ input[type="submit"]:hover{
 
 .wpcf7 input,.wpcf7 textarea {
     width: 100%;
-    padding: 10px
+    padding: 10px;
+    box-sizing: border-box;
 }
 .site-title, .preloader i, .login-form, .login-form a.lost-pass, .btn-open-login-form, .site-content, .user-content-wrapper, .user-content, footer, .maintenance a{
     color: #ffffff;
