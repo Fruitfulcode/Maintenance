@@ -38,7 +38,7 @@ class maintenance {
 			register_activation_hook  ( __FILE__, array( &$this,  'mt_activation' ));
 			register_deactivation_hook( __FILE__, array( &$this, 'mt_deactivation') );
 			
-			add_action('template_include', array( &$this, 'mt_template_include'), 10);
+			add_action('template_include', array( &$this, 'mt_template_include'), 999999);
 			add_action('wp_logout',	array( &$this, 'mt_user_logout'));
 			add_action('init', 		array( &$this, 'mt_admin_bar'));
 			add_action('init', 		array( &$this, 'mt_set_global_options'), 1);
