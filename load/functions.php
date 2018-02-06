@@ -278,8 +278,8 @@ function get_logo_box() {
     if ( !empty($mt_options['logo_width']) ) { $logo_w = $mt_options['logo_width']; }
     if ( !empty($mt_options['logo_height']) ) { $logo_h = $mt_options['logo_height']; }
     if ( !empty($mt_options['logo']) || !empty($mt_options['retina_logo']) ) {
-        $logo = wp_get_attachment_image_src( $mt_options['logo'], full, true);
-        $retina_logo = wp_get_attachment_image_src( $mt_options['retina_logo'], full, true);
+        $logo = wp_get_attachment_image_src( $mt_options['logo'], 'full', true);
+        $retina_logo = wp_get_attachment_image_src( $mt_options['retina_logo'], 'full', true);
         if (!empty($logo)) {
             $image_link = esc_url_raw($logo[0]);
         }

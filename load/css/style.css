@@ -129,7 +129,8 @@ body.open-login-form > .main-container {
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
-    backface-visibility: hidden
+    backface-visibility: hidden;
+    overflow: hidden;
 }
 
 .btn-open-login-form {
