@@ -380,7 +380,7 @@ function add_exclude_pages_fields() {
             $out_filed .= '<filedset>';
             $out_filed .= '<td>';
 
-            $out_filed .= '<select id="exclude-pages" name="lib_options[exclude_pages]['.$post_slug.'][]" style="width:100%;" class="exclude-pages multiple-select-mt" multiple="multiple">';
+            $out_filed .= '<select id="exclude-pages-'.$post_slug.'" name="lib_options[exclude_pages]['.$post_slug.'][]" style="width:100%;" class="exclude-pages multiple-select-mt" multiple="multiple">';
 
             foreach ($posts_array as $post_values) {
                 $current = null;

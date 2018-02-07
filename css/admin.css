@@ -3,7 +3,7 @@
 #maintenance-options input.upload_btn { clear: left; display: block; float: left; margin: 20px 0; padding: 5px; text-align: center; width: 100%; }
 #wpbody-content .metabox-holder {float:left; width:100%;}
 .form-table th {font-weight: normal}
-
+#body_font_subset {min-width:115px}
 .thumbnail { margin:0; padding:0; line-height:inherit; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; border:0 none; background-color:inherit; display:inherit; }
 
 /*Checkbox*/

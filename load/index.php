@@ -69,7 +69,7 @@ $google_fonts = mt_add_google_fonts();
     <script type="text/javascript" src="<?php echo MAINTENANCE_URI.'load/js/jquery.backstretch.min.js'; ?>"></script>
     <![endif]-->
     <?php if ( !empty($google_fonts[1]) ) {
-        echo '<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=' . $google_fonts[0] . '+' . $google_fonts[1] . '">';
+        echo '<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=' . $google_fonts[1] . '|' . $google_fonts[0] . '">';
     }
     else echo '<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=' . $google_fonts[0] . '">';
     ?>
