@@ -119,6 +119,12 @@ No, it will be display error on current maintenance page, without redirect to wp
 = I haven’t found an answer to my question, what should I do? = 
 You can check <a href="http://wordpress.org/support/plugin/maintenance">support forum</a> or <a class="send-mail" target="_blank" href="mailto:mail@fruitfulcode.com?subject=Maintenance%20Plugin">send email to us</a>
 
+== Change log ==
+= 3.6.1 =
+- Improvement: setting max width logo size
+- Bug fix: Change template_include hook priority
+- Bug fix: Fix container height
+- Bug fix: logo size cropping
 
 == Change log ==
 = 3.6 =
