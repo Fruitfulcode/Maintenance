@@ -311,17 +311,22 @@ add_action ('logo_box', 'get_logo_box', 10);
 
 function get_content_section() {
     $mt_options  = mt_get_plugin_options(true);
+    if (!empty($mt_options['body_font_subset'])) {
+        $current_subset = esc_attr($mt_options['body_font_subset']);
+        $font_weight = (string)((int)$current_subset);
+        $font_style = str_replace($font_weight, '', $current_subset);
+    }
     $out_content = null;
     if (!empty($mt_options['heading'])) {
-        $out_content .= '<h2 class="heading font-center">' . wp_kses_post(stripslashes($mt_options['heading'])) .'</h2>';
+        $out_content .= '<h2 class="heading font-center" style="font-weight:'.$font_weight.';font-style:'.$font_style.'">' . wp_kses_post(stripslashes($mt_options['heading'])) .'</h2>';
     }
 
     if (!empty($mt_options['description'])) {
         $description_content = wpautop(wp_kses_post(stripslashes($mt_options['description'])), true);
-        $out_content .= '<div class="description">' . $description_content .'</div>';
+        $out_content .= '<div class="description" style="font-weight:'.$font_weight.';font-style:'.$font_style.'">' . $description_content .'</div>';
     } else {
         $site_description = get_bloginfo('description');
-        $out_content .= '<div class="description"><h3>' . $site_description .'</h3></div>';
+        $out_content .= '<div class="description" style="font-weight:'.$font_weight.';font-style:'.$font_style.'"><h3>' . $site_description .'</h3></div>';
     }
 
     echo $out_content;
@@ -330,10 +335,15 @@ add_action('content_section', 'get_content_section', 10);
 
 function get_footer_section() {
     $mt_options  = mt_get_plugin_options(true);
+    if (!empty($mt_options['body_font_subset'])) {
+        $current_subset = esc_attr($mt_options['body_font_subset']);
+        $font_weight = (string)((int)$current_subset);
+        $font_style = str_replace($font_weight, '', $current_subset);
+    }
     $out_ftext   = null;
 
     if (isset($mt_options['footer_text']) && !empty($mt_options['footer_text'])) {
-        $out_ftext .= wp_kses_post(stripslashes($mt_options['footer_text']));
+        $out_ftext .= '<div style="font-weight:'.$font_weight.';font-style:'.$font_style.'">' . wp_kses_post(stripslashes($mt_options['footer_text'])) . '</div>';
     }
     echo $out_ftext;
 }
