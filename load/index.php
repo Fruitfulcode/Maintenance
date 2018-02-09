@@ -120,14 +120,7 @@ $google_fonts = mt_add_google_fonts();
 <?php } ?>
 <?php do_action('load_options_style'); ?>
 <?php do_action('load_custom_scripts'); ?>
-<div id="outdated">
-    <h1><?php _e('Your browser is outdated.', 'maintenance') ?></h1>
-    <h4>
-        <?php _e('For a better experience, keep your browser up to date. Check ', 'maintenance');
-        echo '<a target="_blank" href="http://outdatedbrowser.com/">'.__('here', 'maintenance').'</a>';
-        _e(' for latest versions.', 'maintenance'); ?>
-    </h4>
-</div>
+
 
 
 </body>
