@@ -316,6 +316,13 @@ function get_content_section() {
         $font_weight = (string)((int)$current_subset);
         $font_style = str_replace($font_weight, '', $current_subset);
     }
+	
+	if (empty($font_style) || $font_style == 'regular') {
+		$font_style = 'normal';
+	}
+	if (empty($font_weight)) {
+		$font_weight = 'normal';
+	}
     $out_content = null;
     if (!empty($mt_options['heading'])) {
         $out_content .= '<h2 class="heading font-center" style="font-weight:'.$font_weight.';font-style:'.$font_style.'">' . wp_kses_post(stripslashes($mt_options['heading'])) .'</h2>';
@@ -340,6 +347,14 @@ function get_footer_section() {
         $font_weight = (string)((int)$current_subset);
         $font_style = str_replace($font_weight, '', $current_subset);
     }
+	
+	if (empty($font_style) || $font_style == 'regular') {
+		$font_style = 'normal';
+	}
+	if (empty($font_weight)) {
+		$font_weight = 'normal';
+	}
+	
     $out_ftext   = null;
 
     if (isset($mt_options['footer_text']) && !empty($mt_options['footer_text'])) {
