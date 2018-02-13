@@ -3,7 +3,7 @@ Contributors: fruitfulcode
 Donate link: http://fruitfulcode.com/
 Tags: maintenance, maintenance mode, coming soon, splash page, under-construction, 503 error, administration, login, customize page, background, fullscreen, blur
 Requires at least: 3.5
-Tested up to: 4.9
+Tested up to: 4.9.4
 Stable tag: 3.6.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -125,6 +125,7 @@ You can check <a href="http://wordpress.org/support/plugin/maintenance">support 
 - Bug fix: Change template_include hook priority
 - Bug fix: Fix container height
 - Bug fix: logo size cropping
+- Bug fix: fonts subsets fix
 
 == Change log ==
 = 3.6 =
