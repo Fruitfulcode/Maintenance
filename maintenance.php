@@ -115,6 +115,5 @@ class maintenance {
 }
 
 $maintenance = new maintenance();
-//global $wp_filter;
-//print_r($wp_filter);
+
 ?>
