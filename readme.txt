@@ -127,7 +127,6 @@ You can check <a href="http://wordpress.org/support/plugin/maintenance">support 
 - Bug fix: logo size cropping
 - Bug fix: fonts subsets fix
 
-== Change log ==
 = 3.6 =
 - Update: Optimized js libs
 - Update: Replaced some features by new css and html5 capabilities
