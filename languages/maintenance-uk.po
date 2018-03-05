@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
 "POT-Creation-Date: 2018-03-05 13:38+0200\n"
-"PO-Revision-Date: 2018-03-05 14:14+0200\n"
+"PO-Revision-Date: 2018-03-05 14:52+0200\n"
 "Last-Translator: fruitfulcode <mail@fruitfulcode.com>\n"
 "Language-Team: fruitfulcode\n"
 "Language: uk_UA\n"
@@ -103,23 +103,18 @@ msgid "Upload Retina Logo"
 msgstr "Завантажити Retina лого"
 
 #: includes/functions.php:301
-#, fuzzy
 msgid "Background image (portrait mode)"
 msgstr "Фонове зображення (портретний режим)"
 
 #: includes/functions.php:301
-#, fuzzy
 msgid "Upload image for portrait device orientation"
 msgstr "Завантажити зображення для портретної орієнтації девайсу"
 
 #: includes/functions.php:302
-#, fuzzy
 msgid "Page preloader image"
 msgstr "Зображення прелоадеру"
 
 #: includes/functions.php:302
-#, fuzzy
-#| msgid "Upload Background"
 msgid "Upload preloader"
 msgstr "Завантажити фон"
 
@@ -180,8 +175,6 @@ msgid "Font color"
 msgstr "Колір шрифту"
 
 #: includes/functions.php:420
-#, fuzzy
-#| msgid "Background color"
 msgid "Login block background color"
 msgstr "Колір фону"
 
@@ -190,7 +183,6 @@ msgid "Font family"
 msgstr "Шрифт"
 
 #: includes/functions.php:433
-#, fuzzy
 msgid "Subsets"
 msgstr "Підмножина"
 
@@ -237,17 +229,14 @@ msgid "Premium WordPress themes"
 msgstr "Преміум WordPress теми"
 
 #: includes/functions.php:471
-#, fuzzy
 msgid "ANAGLYPH - One page / Multi Page WordPress Theme"
 msgstr "ANAGLYPH - Односторінкова / Багатосторінкова WordPress тема"
 
 #: includes/functions.php:476
-#, fuzzy
 msgid "Love.ly - Simple & Elegant WordPress theme"
 msgstr "Love.ly - Проста та елегантна WordPress тема"
 
 #: includes/functions.php:482
-#, fuzzy
 msgid "Zoner - Real Estate WordPress theme"
 msgstr "Zoner - WordPress тема по нерухотості"
 
@@ -278,7 +267,6 @@ msgid "Demo website"
 msgstr "Демо сайт"
 
 #: includes/functions.php:641
-#, fuzzy
 msgid " is "
 msgstr " це "
 
@@ -299,24 +287,18 @@ msgid "Permission access denied!"
 msgstr "Дозвіл на доступ заборонений!"
 
 #: load/functions.php:53
-#, fuzzy
 msgid "Login is incorrect!"
 msgstr "Не вірний логін!"
 
 #: load/functions.php:57
-#, fuzzy
-#| msgid "You entered your password are incorrect!"
 msgid "Password is incorrect!"
-msgstr "Наданий пароль невірний!"
+msgstr "Не вірний пароль!"
 
 #: load/functions.php:60
-#, fuzzy
-#| msgid "You entered your login and password are incorrect!"
 msgid "Login and password are incorrect!"
-msgstr "Наданий логін і пароль невірні!"
+msgstr "Логін та пароль не вірні!"
 
 #: load/functions.php:136
-#, fuzzy
 msgid "Please verify that you are not a robot."
 msgstr "Підтвердить будь ласка що ви не робот."
 
@@ -334,7 +316,7 @@ msgstr "Пароль"
 
 #: load/functions.php:388
 msgid "Lost Password"
-msgstr "Забув пароль"
+msgstr "Забули пароль?"
 
 #: load/functions.php:389
 msgid "Login"
