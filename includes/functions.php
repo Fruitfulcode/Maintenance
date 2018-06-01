@@ -242,6 +242,7 @@ function maintenance_page_create_meta_boxes() {
     add_meta_box( 'maintenance-general', __( 'General Settings', 'maintenance' ),  'add_data_fields', $maintenance_variable->options_page, 'normal', 'default');
     add_meta_box( 'maintenance-css', 	 __( 'Custom CSS', 'maintenance' ),        'add_css_fields', $maintenance_variable->options_page, 'normal', 'default');
     add_meta_box( 'maintenance-excludepages', 	 __( 'Exclude pages from maintenance mode', 'maintenance' ), 'add_exclude_pages_fields', $maintenance_variable->options_page, 'normal', 'default');
+    add_meta_box( 'maintenance-stats', 	 __( 'Maintenance statistics', 'maintenance' ), 'add_stats_fields', $maintenance_variable->options_page, 'normal', 'default');
 }
 add_action('add_mt_meta_boxes', 'maintenance_page_create_meta_boxes', 10);
 
@@ -406,6 +407,29 @@ function add_exclude_pages_fields() {
 
     echo $out_filed;
 }
+
+
+function add_stats_fields(){
+	$mt_option = mt_get_plugin_options(true);
+	?>
+
+    <table class="form-table">
+        <tbody>
+
+        <?php generate_check_filed('Fruitful Code statistic', '', 'ffc_statistic', 'ffc_statistic', 1); ?>
+        <?php generate_check_filed('Subscribe to Newsletters', '', 'ffc_subscribe', 'ffc_subscribe', 0); ?>
+
+        <?php generate_input_filed('Name', 'ffc_subscribe_name', 'ffc_subscribe_name', '', 'Your name'); ?>
+        <?php generate_input_filed('E-mail', 'ffc_subscribe_email', 'ffc_subscribe_email', '', 'Your e-mail'); ?>
+
+        <?php generate_check_filed('is_hide', '', 'ffc_is_hide_subscribe_notification', 'ffc_is_hide_subscribe_notification', 0); ?>
+
+        </tbody>
+    </table>
+
+    <?php
+}
+
 
 function get_background_fileds_action() {
     $mt_option = mt_get_plugin_options(true);
