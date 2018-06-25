@@ -320,6 +320,9 @@ function add_data_fields ($object, $box) {
 
         generate_check_filed(__('Apply background blur', 'maintenance'), '', 'is_blur', 'is_blur', $is_blur);
         generate_check_filed(__('Enable frontend login', 'maintenance'),  '', 'is_login', 'is_login', isset($mt_option['is_login']));
+
+        //Load view of fruitful statistic settings
+        do_action('ff_maintenance_display_settings_page');
         ?>
         </tbody>
     </table>

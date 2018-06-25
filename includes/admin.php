@@ -32,6 +32,7 @@
 			    update_option( 'maintenance_options',  $_POST['lib_options']);
 				maintenance::mt_clear_cache();
 			}
+		// Save action for fruitful statistic settings
 		do_action('ff_maintenance_plugin_setting_save');
 		}
 	}
@@ -96,7 +97,7 @@
 
 							<?php do_meta_boxes($maintenance_variable->options_page,'normal',null); ?>
 							<?php do_meta_boxes($maintenance_variable->options_page,'advanced',null); ?>
-							<?php do_action('ff_maintenance_display_settings_page'); ?>
+
 						</div>
 
 						 <div id="promo" class="postbox-container column-2 normal">

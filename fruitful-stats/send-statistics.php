@@ -220,38 +220,6 @@ class ffc_maintenance_stats
 	}
 
 	/**
-	 * Function update general ffc statistics options on save theme customizer option
-	 *
-	 * @param $value
-	 * @param $old_value
-	 *
-	 * @return mixed
-	 */
-	public function ffc_fruitful_send_stats_on_save( $value, $old_value ) {
-
-		if( isset($value['ffc_subscribe'], $old_value['ffc_subscribe'], $value['ffc_subscribe_name'], $old_value['ffc_subscribe_name'],
-				$value['ffc_subscribe_email'], $old_value['ffc_subscribe_email'], $value['ffc_statistic'], $old_value['ffc_statistic']) ) {
-
-			if ($value['ffc_subscribe'] !== $old_value['ffc_subscribe'] ||
-				$value['ffc_subscribe_name'] !== $old_value['ffc_subscribe_name'] ||
-				$value['ffc_subscribe_email'] !== $old_value['ffc_subscribe_email'] ||
-				$value['ffc_statistic'] !== $old_value['ffc_statistic']
-			) {
-				$ffc_statistics_option = get_option('ffc_statistics_option');
-
-				$ffc_statistics_option['ffc_statistic'] = ($value['ffc_statistic'] === 'on') ? 1 : 0;
-				$ffc_statistics_option['ffc_subscribe'] = ($value['ffc_subscribe'] === 'on') ? 1 : 0;
-				$ffc_statistics_option['ffc_subscribe_email'] = $value['ffc_subscribe_email'];
-				$ffc_statistics_option['ffc_subscribe_name'] = $value['ffc_subscribe_name'];
-
-				update_option('ffc_statistics_option', $ffc_statistics_option);
-				do_action('fruitful_send_stats');
-			}
-		}
-		return $value;
-	}
-
-	/**
 	 * Send stat on ffc stat option update
 	 */
 	public function ffc_theme_fruitful_stats_settings_update() {

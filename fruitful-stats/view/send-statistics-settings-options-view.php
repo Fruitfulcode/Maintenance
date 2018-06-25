@@ -1,6 +1,6 @@
-<div class="ff-maintenance-settings-form postbox" id="subscribe-notification-container">
+<tr class="ff-maintenance-settings-form postbox" id="subscribe-notification-container">
 
-	<div class="frtfl-modal__content">
+	<td colspan="2" class="frtfl-modal__content">
 		<h2><?php _e( 'Fruitful Code statistic', 'maintenance' ); ?></h2>
 		<p class="description">
 			<?php _e( 'We would be happy if you assist us in becoming better. Share your site statistic to help us
@@ -40,9 +40,9 @@
 			</div>
 		</div>
 
-	</div>
+	</td>
 
-</div>
+</tr>
 
 
 
