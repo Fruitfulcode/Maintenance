@@ -72,6 +72,8 @@ class maintenance {
 		function admin() {
 			if ( is_admin() ) {
 				require_once( MAINTENANCE_INCLUDES . 'admin.php' );
+				require_once( MAINTENANCE_DIR 	   . 'fruitful-stats/send-statistics-settings-options.php' );
+				$ffc_maintenance_stats_option = new ffc_maintenance_stats_option();
 			}	
 		}
 		
