@@ -48,10 +48,10 @@ class ffc_maintenance_stats_option
 		if( $ffc_statistics_option ) {
 
 			if( isset($ffc_statistics_option['ffc_statistic']) ) {
-				$ffc_statistic = $ffc_statistics_option['ffc_statistic'];
+				$ffc_statistic = (int) $ffc_statistics_option['ffc_statistic'];
 			}
 			if( isset($ffc_statistics_option['ffc_subscribe']) ) {
-				$ffc_subscribe = $ffc_statistics_option['ffc_subscribe'];
+				$ffc_subscribe = (int) $ffc_statistics_option['ffc_subscribe'];
 			}
 			if( isset($ffc_statistics_option['ffc_subscribe_email']) ) {
 				$ffc_email = $ffc_statistics_option['ffc_subscribe_email'];
