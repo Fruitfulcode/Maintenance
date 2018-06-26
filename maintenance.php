@@ -75,7 +75,7 @@ class maintenance {
 
 				// Load fruitful statistics settings
 				require_once( MAINTENANCE_DIR 	   . 'fruitful-stats/send-statistics.php' );
-				$ffc_maintenance_stats_option = new ffc_maintenance_stats();
+				$maintenance_stat = new ffc_maintenance_stats();
 			}	
 		}
 		

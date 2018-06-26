@@ -27,6 +27,9 @@ class ffc_maintenance_stats_option
 		if(!wp_style_is( 'fruitful-stats-modal-styles', 'enqueued' )) {
 			wp_enqueue_style( 'fruitful-stats-modal-styles', plugins_url( '/assets/styles/admin_styles.css', __FILE__ ) );
 		}
+		if(!wp_style_is( 'fruitful-stats-settings-options-styles', 'enqueued' )) {
+			wp_enqueue_style( 'fruitful-stats-settings-options-styles', plugins_url( '/assets/styles/admin_settings_form_styles.css', __FILE__ ) );
+		}
 	}
 
 	/**

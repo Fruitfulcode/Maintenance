@@ -1,4 +1,4 @@
-<tr class="ff-maintenance-settings-form postbox" id="subscribe-notification-container">
+<tr class="ff-settings-options-form postbox" id="subscribe-notification-container">
 
 	<td colspan="2" class="frtfl-modal__content">
 		<h2><?php _e( 'Fruitful Code statistic', 'maintenance' ); ?></h2>
