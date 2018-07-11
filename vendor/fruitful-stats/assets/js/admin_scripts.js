@@ -1,4 +1,4 @@
-(function () {
+;(function () {
 	"use strict";
 
 	// 	Allow Subscribe for news
@@ -9,21 +9,17 @@
 		}
 		var statsInput = document.getElementById('modal-ffc-statistic');
 		var subscribeInput = document.getElementById('modal-ffc-subscribe');
-		var userInfoContainer = document.getElementById("frtfl-modal__content_user-info");
+		var userInfoContainer = document.getElementById("ffst-modal__content_user-info");
 
-		var modalForm = document.getElementById("frtfl-modal-form");
-		var submitBtn = document.getElementById("frtfl-modal__submit-btn");
+		var modalForm = document.getElementById("ffst-modal-form");
+		var submitBtn = document.getElementById("ffst-modal__submit-btn");
 		var modalData = {};
 
 		modalContainer.addEventListener("click", function (e) {
 
 			//Statistics checkbox event. If checked value=1
 			if (e.target === statsInput) {
-				if (statsInput.checked) {
-					statsInput.value = 1;
-				} else {
-					statsInput.value = 0;
-				}
+				statsInput.value = statsInput.checked ?  1 : 0;
 			}
 
 			//Subscribe checkbox event. If checked show additional inputs If checked value=1
@@ -37,11 +33,8 @@
 					userInfoContainer.querySelector('input[type="text"]').removeAttribute('disabled');
 				}
 
-				if (subscribeInput.checked) {
-					subscribeInput.value = 1;
-				} else {
-					subscribeInput.value = 0;
-				}
+				subscribeInput.value = subscribeInput.checked ?  1 : 0;
+
 			}
 
 			// Subscribe to newsletter click event - create modalData
@@ -59,15 +52,7 @@
 
 			// Dismiss subscribe notification Event
 			if (e.target.classList.contains("notice-dismiss")) {
-				var data = {
-					action: "fruitful_maintenance_dismiss_subscribe_notification",
-					type: "json",
-				};
-
-				jQuery.post(ajaxurl, data, function (response) {
-					modalContainer.remove();
-					location.reload();
-				});
+				modalContainer.remove();
 			}
 
 		});
@@ -78,10 +63,10 @@
 
 					e.preventDefault();
 
-					var __notificationText = modalForm.querySelector('.frtfl-modal__content');
+					var __notificationText = modalForm.querySelector('.ffst-modal__content');
 
 					var data = {
-						action: "fruitful_maintenance_submit_modal",
+						action: "fruitful_statistic_submit_modal",
 						type: "json",
 						data: modalData
 					};

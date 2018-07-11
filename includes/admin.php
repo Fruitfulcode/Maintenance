@@ -32,8 +32,6 @@
 			    update_option( 'maintenance_options',  $_POST['lib_options']);
 				maintenance::mt_clear_cache();
 			}
-		// Save action for fruitful statistic settings
-		do_action('ff_maintenance_plugin_setting_save');
 		}
 	}
 

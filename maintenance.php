@@ -73,9 +73,10 @@ class maintenance {
 			if ( is_admin() ) {
 				require_once( MAINTENANCE_INCLUDES . 'admin.php' );
 
-				// Load fruitful statistics settings
-				require_once( MAINTENANCE_DIR 	   . 'fruitful-stats/send-statistics.php' );
-				$maintenance_stat = new ffc_maintenance_stats();
+				// Fruitful statistics
+				require_once( MAINTENANCE_DIR 	   . 'vendor/fruitful-stats/send-statistics.php' );
+				$Maintenance_Stats = new Maintenance_Stats( __FILE__ );
+				$Maintenance_Stats->dispatch();
 			}	
 		}
 		

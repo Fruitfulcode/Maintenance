@@ -242,6 +242,7 @@ function maintenance_page_create_meta_boxes() {
     add_meta_box( 'maintenance-general', __( 'General Settings', 'maintenance' ),  'add_data_fields', $maintenance_variable->options_page, 'normal', 'default');
     add_meta_box( 'maintenance-css', 	 __( 'Custom CSS', 'maintenance' ),        'add_css_fields', $maintenance_variable->options_page, 'normal', 'default');
     add_meta_box( 'maintenance-excludepages', 	 __( 'Exclude pages from maintenance mode', 'maintenance' ), 'add_exclude_pages_fields', $maintenance_variable->options_page, 'normal', 'default');
+    add_meta_box( 'maintenance-statistic', 	 __( 'Please, help us perform better!', 'maintenance' ), 'maintenance_statistic_options', $maintenance_variable->options_page, 'normal', 'default');
 }
 add_action('add_mt_meta_boxes', 'maintenance_page_create_meta_boxes', 10);
 
@@ -321,8 +322,6 @@ function add_data_fields ($object, $box) {
         generate_check_filed(__('Apply background blur', 'maintenance'), '', 'is_blur', 'is_blur', $is_blur);
         generate_check_filed(__('Enable frontend login', 'maintenance'),  '', 'is_login', 'is_login', isset($mt_option['is_login']));
 
-        //Load view of fruitful statistic settings
-        do_action('ff_maintenance_display_settings_page');
         ?>
         </tbody>
     </table>
@@ -408,6 +407,37 @@ function add_exclude_pages_fields() {
     $out_filed .= '</table>';
 
     echo $out_filed;
+}
+
+function maintenance_statistic_options(){
+		
+		/** Default values statistics options */
+		$ffc_email = $ffc_name = '';
+		$ffc_statistic = 1;
+		$ffc_subscribe = 0;
+
+		/** General statistics option for all fruitfulcode products */
+		$ffc_statistics_option = get_option('ffc_statistics_option');
+
+		if( $ffc_statistics_option ) {
+
+			if( isset($ffc_statistics_option['ffc_statistic']) ) {
+				$ffc_statistic = (int) $ffc_statistics_option['ffc_statistic'];
+			}
+			if( isset($ffc_statistics_option['ffc_subscribe']) ) {
+				$ffc_subscribe = (int) $ffc_statistics_option['ffc_subscribe'];
+			}
+			if( isset($ffc_statistics_option['ffc_subscribe_email']) ) {
+				$ffc_email = $ffc_statistics_option['ffc_subscribe_email'];
+			}
+			if( isset($ffc_statistics_option['ffc_subscribe_name']) ) {
+				$ffc_name = $ffc_statistics_option['ffc_subscribe_name'];
+			}
+		}
+		
+		/**  Require view */
+		require plugin_dir_path( __FILE__ ). 'admin-view/send-statistics-settings-options-view.php';
+
 }
 
 function get_background_fileds_action() {
