@@ -37,9 +37,9 @@ function generate_input_filed($title, $id, $name, $value, $placeholder = '') {
     $out_filed .= '<tr valign="top">';
     $out_filed .= '<th scope="row">' . esc_attr($title) .'</th>';
     $out_filed .= '<td>';
-    $out_filed .= '<filedset>';
+    $out_filed .= '<fieldset>';
     $out_filed .= '<input type="text" id="'.esc_attr($id).'" name="lib_options['.$name.']" value="'. esc_attr(stripslashes($value)) .'" placeholder="'.$placeholder.'"/>';
-    $out_filed .= '</filedset>';
+    $out_filed .= '</fieldset>';
     $out_filed .= '</td>';
     $out_filed .= '</tr>';
     echo $out_filed;
@@ -50,9 +50,9 @@ function generate_number_filed($title, $id, $name, $value, $placeholder = '') {
     $out_filed .= '<tr valign="top">';
     $out_filed .= '<th scope="row">' . esc_attr($title) .'</th>';
     $out_filed .= '<td>';
-    $out_filed .= '<filedset>';
+    $out_filed .= '<fieldset>';
     $out_filed .= '<input type="number" min="0" step="1" pattern="[0-9]{10}" id="'.esc_attr($id).'" name="lib_options['.$name.']" value="'. esc_attr(stripslashes($value)) .'" placeholder="'.$placeholder.'"/>';
-    $out_filed .= '</filedset>';
+    $out_filed .= '</fieldset>';
     $out_filed .= '</td>';
     $out_filed .= '</tr>';
     echo $out_filed;
@@ -63,9 +63,9 @@ function generate_textarea_filed($title, $id, $name, $value) {
     $out_filed .= '<tr valign="top">';
     $out_filed .= '<th scope="row">' . esc_attr($title) .'</th>';
     $out_filed .= '<td>';
-    $out_filed .= '<filedset>';
+    $out_filed .= '<fieldset>';
     $out_filed .= '<textarea name="lib_options['.$name.']" id="'.esc_attr($id).'" cols="30" rows="10">'. wp_kses_post(stripslashes($value)) .'</textarea>';
-    $out_filed .= '</filedset>';
+    $out_filed .= '</fieldset>';
     $out_filed .= '</td>';
     $out_filed .= '</tr>';
     echo $out_filed;
@@ -77,12 +77,12 @@ function generate_tinymce_filed($title, $id, $name, $value) {
     $out_filed .= '<tr valign="top">';
     $out_filed .= '<th scope="row">' . esc_attr($title) .'</th>';
     $out_filed .= '<td>';
-    $out_filed .= '<filedset>';
+    $out_filed .= '<fieldset>';
     ob_start();
     wp_editor($value, $id, array('textarea_name' => 'lib_options['.$name.']', 'teeny'=>1, 'media_buttons'=>0) );
     $out_filed .= ob_get_contents();
     ob_clean();
-    $out_filed .= '</filedset>';
+    $out_filed .= '</fieldset>';
     $out_filed .= '</td>';
     $out_filed .= '</tr>';
     echo $out_filed;
@@ -94,12 +94,12 @@ function generate_check_filed($title, $label, $id, $name, $value) {
     $out_filed .= '<tr valign="top">';
     $out_filed .= '<th scope="row">' . esc_attr($title) .'</th>';
     $out_filed .= '<td>';
-    $out_filed .= '<filedset>';
+    $out_filed .= '<fieldset>';
     $out_filed .= '<label for='.esc_attr($id).'>';
     $out_filed .= '<input type="checkbox"  id="'.esc_attr($id).'" name="lib_options['.$name.']" value="1" '. checked( true, $value, false ) .'/>';
     $out_filed .= $label;
     $out_filed .= '</label>';
-    $out_filed .= '</filedset>';
+    $out_filed .= '</fieldset>';
     $out_filed .= '</td>';
     $out_filed .= '</tr>';
     echo $out_filed;
@@ -111,7 +111,7 @@ function generate_image_filed($title, $id, $name, $value, $class, $name_btn, $cl
     $out_filed .= '<tr valign="top">';
     $out_filed .= '<th scope="row">' . esc_attr($title) .'</th>';
     $out_filed .= '<td>';
-    $out_filed .= '<filedset>';
+    $out_filed .= '<fieldset>';
     $out_filed .= '<input type="hidden" id="'.esc_attr($id).'" name="lib_options['.$name.']" value="'.esc_attr($value).'" />';
     $out_filed .= '<div class="img-container">';
     $url = '';
@@ -128,7 +128,7 @@ function generate_image_filed($title, $id, $name, $value, $class, $name_btn, $cl
     $out_filed .= '<input type="button" class="'.esc_attr($class_btn).'" value="'.esc_attr($name_btn).'"/>';
 
     $out_filed .= '</div>';
-    $out_filed .= '</filedset>';
+    $out_filed .= '</fieldset>';
     $out_filed .= '</td>';
     $out_filed .= '</tr>';
     echo $out_filed;
@@ -139,9 +139,9 @@ function get_color_field($title, $id, $name, $value, $default_color) {
     $out_filed .= '<tr valign="top">';
     $out_filed .= '<th scope="row">'. esc_attr($title) .'</th>';
     $out_filed .= '<td>';
-    $out_filed .= '<filedset>';
+    $out_filed .= '<fieldset>';
     $out_filed .= '<input type="text" id="'.esc_attr($id).'" name="lib_options['.$name.']" data-default-color="'.esc_attr($default_color).'" value="'. wp_kses_post(stripslashes($value)) .'" />';
-    $out_filed .= '<filedset>';
+    $out_filed .= '<fieldset>';
     $out_filed .= '</td>';
     $out_filed .= '</tr>';
     echo $out_filed;
@@ -178,7 +178,7 @@ function get_fonts_field($title, $id, $name, $value) {
     $out_filed .= '<tr valign="top">';
     $out_filed .= '<th scope="row">'. esc_attr($title) .'</th>';
     $out_filed .= '<td>';
-    $out_filed .= '<filedset>';
+    $out_filed .= '<fieldset>';
     if(!empty($standart_fonts)) {
         $out_items .= '<optgroup label="' . __('Standard Fonts', 'maintenance') . '">';
         foreach ($standart_fonts as $key => $options) {
@@ -198,7 +198,7 @@ function get_fonts_field($title, $id, $name, $value) {
         $out_filed .= $out_items;
         $out_filed .= '</select>';
     }
-    $out_filed .= '<filedset>';
+    $out_filed .= '<fieldset>';
     $out_filed .= '</td>';
     $out_filed .= '</tr>';
     return $out_filed;
@@ -219,7 +219,7 @@ function get_fonts_subsets($title, $id, $name, $value) {
         $out_filed .= '<tr valign="top">';
         $out_filed .= '<th scope="row">'. esc_attr($title) .'</th>';
         $out_filed .= '<td>';
-        $out_filed .= '<filedset>';
+        $out_filed .= '<fieldset>';
         $out_filed .= '<select class="select2_customize" name="lib_options['.$name.']" id="'.esc_attr($id).'">';
         if(!empty($gg_fonts[$curr_font])){
 //            if(!empty($gg_fonts[$curr_font][$vars])){
@@ -230,7 +230,7 @@ function get_fonts_subsets($title, $id, $name, $value) {
         }
         $out_filed .= '</select>';
 
-        $out_filed .= '<filedset>';
+        $out_filed .= '<fieldset>';
         $out_filed .= '</td>';
         $out_filed .= '</tr>';
     }
@@ -377,7 +377,7 @@ function add_exclude_pages_fields() {
             $out_filed .= '<tr valign="top">';
             $out_filed .= '<th scope="row">' . $type->labels->name .'</th>';
 
-            $out_filed .= '<filedset>';
+            $out_filed .= '<fieldset>';
             $out_filed .= '<td>';
 
             $out_filed .= '<select id="exclude-pages-'.$post_slug.'" name="lib_options[exclude_pages]['.$post_slug.'][]" style="width:100%;" class="exclude-pages multiple-select-mt" multiple="multiple">';
@@ -395,7 +395,7 @@ function add_exclude_pages_fields() {
 
             $out_filed .= '</select>';
 
-            $out_filed .= '</filedset>';
+            $out_filed .= '</fieldset>';
             $out_filed .= '</td>';
             $out_filed .= '</tr>';
         }
