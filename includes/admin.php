@@ -95,11 +95,13 @@
 
 							<?php do_meta_boxes($maintenance_variable->options_page,'normal',null); ?>
 							<?php do_meta_boxes($maintenance_variable->options_page,'advanced',null); ?>
+
 						</div>
 
 						 <div id="promo" class="postbox-container column-2 normal">
 							<?php do_meta_boxes($maintenance_variable->options_page,'side',null); ?>
 						</div>
+
 					</div>
 					<?php submit_button(__('Save changes', 'maintenance'), 'primary'); ?>
 				</div>
