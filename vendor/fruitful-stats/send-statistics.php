@@ -12,7 +12,7 @@
  * @author     Fruitful code <support@fruitfulcode.com>
  * @link       https://fruitfulcode.com
  * @copyright  2018 Fruitful code
- * @version    1.0
+ * @version    1.1.1
  * @license    GPL-2.0+
  * @textdomain fruitful-stats
  */
@@ -60,15 +60,9 @@ if ( !class_exists('FruitfulStatistic')) {
 			* Sync PRODUCT options by ffc_statistics_option (add|update_option_{$option})
 			* And SENDING STATS by ffc_statistics_option changes
 			*/
-			add_action( 'add_option_ffc_statistics_option', function () {
-				$this->product_stats_settings_update();
-				$this->send_stats();
-			} );
+			add_action( 'add_option_ffc_statistics_option', array( $this, 'sync_stat' ) );
 			
-			add_action( 'update_option_ffc_statistics_option', function () {
-				$this->product_stats_settings_update();
-				$this->send_stats();
-			} );
+			add_action( 'update_option_ffc_statistics_option', array( $this, 'sync_stat' ) );
 			
 			if ( $this->product_type == 'theme' ) {
 				add_action( 'after_switch_theme', array( $this, 'product_stats_settings_update' ) ); 
@@ -94,7 +88,16 @@ if ( !class_exists('FruitfulStatistic')) {
 			//Custom action to send stats (need do_action( 'fruitful_send_stats'))
 			add_action( 'fruitful_send_stats', array( $this, 'send_stats' ) );
 		}
-		
+
+		/**
+		 * Call product function for sync ffc_statistics_option with product options
+		 * Call sending statistic function
+		 */
+		public function sync_stat () {
+			$this->product_stats_settings_update();
+			$this->send_stats();
+		}
+
 		/**
 		 * Load and instantiate all application
 		 * classes necessary for ffc statistics
@@ -104,7 +107,7 @@ if ( !class_exists('FruitfulStatistic')) {
 			$this->controller = new stdClass();
 			
 			// Controller for modal notification
-			require_once __DIR__ . '/send-statistics-modal.php';
+			require_once dirname(__FILE__) . '/send-statistics-modal.php'; //dirname(__FILE__) used for php 5.2 compatibility
 			$this->controller->modal = new FruitfulStatisticModal( $this->data );
 		}
 		
@@ -189,9 +192,10 @@ if ( !class_exists('FruitfulStatistic')) {
 			
 			if ( $this->product_type == 'theme' ) {
 				$basic_info = array(
-					'product_name' => $theme_info->get( 'Name' ),
+					'product_name' => !empty($theme_info->parent_theme) ? $theme_info->parent_theme:$theme_info->get( 'Name' ),
 					'domain'       => esc_url(site_url()),
 				);
+				
 			} else { // this block for plugins only
 				if( !function_exists('get_plugin_data') ){  //Need when theme options update by ajax
 					require_once ABSPATH . 'wp-admin/includes/plugin.php';
@@ -234,11 +238,14 @@ if ( !class_exists('FruitfulStatistic')) {
 						'product_ver'  => $theme_info->get( 'Version' ),
 						'platform'     => 1,
 						'platform_ver' => $wp_version,
-						'service_info' => json_encode( array(
-							'plugins' => get_option( 'active_plugins' )
-						) )
+						'service_info' => array()
 					);
-
+					if (!empty($theme_info->parent_theme)) {
+						$stat_info['service_info']['child_theme'] = $theme_info->get( 'Name' );
+					}
+					$stat_info['service_info']['plugins'] =  get_option( 'active_plugins' );
+					$stat_info['service_info'] = json_encode( $stat_info['service_info'] );
+					
 				} else {
 					$stat_info = array(
 						'site_name'    => get_option( 'blogname' ),
