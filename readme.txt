@@ -120,6 +120,12 @@ No, it will be display error on current maintenance page, without redirect to wp
 You can check <a href="http://wordpress.org/support/plugin/maintenance">support forum</a> or <a class="send-mail" target="_blank" href="mailto:mail@fruitfulcode.com?subject=Maintenance%20Plugin">send email to us</a>
 
 == Change log ==
+= 3.6.2 =
+- New: Added child theme support
+- New: Added statistics
+- Update: Updated translations
+
+
 = 3.6.1 =
 - Improvement: setting max width logo size
 - Bug fix: Change template_include hook priority
