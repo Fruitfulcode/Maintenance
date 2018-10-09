@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Maintenance\n"
-"POT-Creation-Date: 2018-07-31 11:29+0300\n"
-"PO-Revision-Date: 2018-07-31 11:29+0300\n"
+"POT-Creation-Date: 2018-10-09 15:44+0100\n"
+"PO-Revision-Date: 2018-10-09 16:05+0100\n"
 "Last-Translator: Pedro Mendonça <ped.gaspar@gmail.com>\n"
 "Language-Team: Pedro Mendonça <ped.gaspar@gmail.com>\n"
 "Language: pt_PT\n"
@@ -10,9 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.1.1\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -20,16 +18,14 @@ msgstr ""
 
 #: includes/admin-view/send-statistics-settings-options-view.php:2
 msgid ""
-"We would be happy if you assist us in becoming better. Share your site "
-"anonymous technical data to help us\n"
-"\t\t\t\t\timprove our products and services. Also, don’t forget to subscribe "
-"to the Fruitful Code\n"
+"We would be happy if you assist us in becoming better. Share your site anonymous technical data to help us\n"
+"\t\t\t\t\timprove our products and services. Also, don’t forget to subscribe to the Fruitful Code\n"
 "\t\t\t\t\tnewsletters for the latest updates!"
 msgstr ""
 
 #: includes/admin-view/send-statistics-settings-options-view.php:10
 msgid "Send configuration information"
-msgstr ""
+msgstr "Enviar informações de configuração"
 
 #: includes/admin-view/send-statistics-settings-options-view.php:16
 #: includes/admin-view/send-statistics-settings-options-view.php:27
@@ -39,17 +35,17 @@ msgstr ""
 #: includes/admin-view/send-statistics-settings-options-view.php:21
 #: vendor/fruitful-stats/view/send-statistics-modal-view.php:25
 msgid "Subscribe to the Fruitful Code newsletters"
-msgstr ""
+msgstr "Subscrever as newsletters da Fruitful Code"
 
 #: includes/admin-view/send-statistics-settings-options-view.php:32
 #: vendor/fruitful-stats/view/send-statistics-modal-view.php:31
 msgid "Name"
-msgstr ""
+msgstr "Nome"
 
 #: includes/admin-view/send-statistics-settings-options-view.php:40
 #: vendor/fruitful-stats/view/send-statistics-modal-view.php:35
 msgid "E-mail"
-msgstr ""
+msgstr "Email"
 
 #: includes/admin.php:6 includes/admin.php:88 includes/functions.php:674
 msgid "Maintenance"
@@ -82,7 +78,7 @@ msgstr "Excluir páginas do modo de manutenção"
 #: includes/functions.php:245
 #: vendor/fruitful-stats/view/send-statistics-modal-view.php:4
 msgid "Please, help us perform better!"
-msgstr ""
+msgstr "Por favor, ajude-nos a melhorar!"
 
 #: includes/functions.php:251
 msgid "Pro version"
@@ -141,14 +137,12 @@ msgid "Upload Retina Logo"
 msgstr "Carregar logótipo Retina"
 
 #: includes/functions.php:302
-#, fuzzy
-#| msgid "Background image"
 msgid "Background image (portrait mode)"
-msgstr "Imagem de fundo"
+msgstr "Imagem de fundo (ao alto)"
 
 #: includes/functions.php:302
 msgid "Upload image for portrait device orientation"
-msgstr ""
+msgstr "Carregar imagem para dispositivo com orientação ao alto"
 
 #: includes/functions.php:303
 #, fuzzy
@@ -172,8 +166,7 @@ msgstr "503"
 
 #: includes/functions.php:308
 msgid "Service temporarily unavailable, Google analytics will be disable."
-msgstr ""
-"Serviço temporariamente indisponível, o Google Analytics será desactivado."
+msgstr "Serviço temporariamente indisponível, o Google Analytics será desactivado."
 
 #: includes/functions.php:315
 msgid "Google Analytics ID"
@@ -220,10 +213,8 @@ msgid "Font color"
 msgstr "Cor da fonte"
 
 #: includes/functions.php:453
-#, fuzzy
-#| msgid "Background color"
 msgid "Login block background color"
-msgstr "Cor de fundo"
+msgstr "Cor de fundo da caixa de início de sessão"
 
 #: includes/functions.php:460
 msgid "Font family"
@@ -239,20 +230,8 @@ msgstr "Tem algumas dúvidas?"
 
 #: includes/functions.php:475
 #, php-format
-msgid ""
-"You may find answers to your questions at <a target=\"_blank\" href=\"http://"
-"support.fruitfulcode.com/hc/en-us/sections/200406386\">support forum</"
-"a><br>You may  <a target=\"_blank\" href=\"http://support.fruitfulcode.com/"
-"hc/en-us/requests/new\">contact us</a> with customization requests and "
-"suggestions.<br> Please visit our website to learn about us and our services "
-"<a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
-msgstr ""
-"Poderá encontrar respostas às suas dúvidas no <a target=\"_blank\" href="
-"\"http://support.fruitfulcode.com/hc/en-us/sections/200406386\">fórum de "
-"suporte</a>.<br>Pode <a target=\"_blank\" href=\"http://support.fruitfulcode."
-"com/hc/en-us/requests/new\">contactar-nos</a> para pedidos de personalização "
-"e sugestões.<br> Por favor, visite o nosso site para nos conhecer e aos "
-"nossos serviços em <a href=\"%1$s\" title=\"%2$s\">%2$s</a>."
+msgid "You may find answers to your questions at <a target=\"_blank\" href=\"http://support.fruitfulcode.com/hc/en-us/sections/200406386\">support forum</a><br>You may  <a target=\"_blank\" href=\"http://support.fruitfulcode.com/hc/en-us/requests/new\">contact us</a> with customization requests and suggestions.<br> Please visit our website to learn about us and our services <a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
+msgstr "Poderá encontrar respostas às suas dúvidas no <a target=\"_blank\" href=\"http://support.fruitfulcode.com/hc/en-us/sections/200406386\">fórum de suporte</a>.<br>Pode <a target=\"_blank\" href=\"http://support.fruitfulcode.com/hc/en-us/requests/new\">contactar-nos</a> para pedidos de personalização e sugestões.<br> Por favor, visite o nosso site para nos conhecer e aos nossos serviços em <a href=\"%1$s\" title=\"%2$s\">%2$s</a>."
 
 #: includes/functions.php:486
 msgid "This plugin is translation friendly"
@@ -260,12 +239,8 @@ msgstr "Este plugin pode ser traduzido"
 
 #: includes/functions.php:487
 #, php-format
-msgid ""
-"Want to improve translation or make one for your native language? <a href="
-"\"%1$s\" title=\"%2$s\">%2$s</a>"
-msgstr ""
-"Quer melhorar a tradução ou fazer uma nova para o seu idioma nativo? <a href="
-"\"%1$s\" title=\"%2$s\">%2$s</a>"
+msgid "Want to improve translation or make one for your native language? <a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
+msgstr "Quer melhorar a tradução ou fazer uma nova para o seu idioma nativo? <a href=\"%1$s\" title=\"%2$s\">%2$s</a>"
 
 #: includes/functions.php:489
 msgid "Follow this tutorial"
@@ -293,20 +268,8 @@ msgstr "Funcionalidades adicionais"
 
 #: includes/functions.php:529
 #, php-format
-msgid ""
-"Purchase <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
-"plugin/2781350?ref=fruitfulcode\" target=\"_blank\">PRO</a> version  with "
-"extended functionality. %1$s If you like our plugin please <a target=\"_blank"
-"\" href=\"http://wordpress.org/support/view/plugin-reviews/maintenance?"
-"filter=5\">rate it</a>, <a title=\"leave feedbacks\" href=\"%2$s\" target="
-"\"_blank\">leave feedbacks</a>."
-msgstr ""
-"Compre a versão <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
-"plugin/2781350?ref=fruitfulcode\" target=\"_blank\">PRO</a> com "
-"funcionalidades adicionais. %1$s Se gostar do nosso plugin, por favor <a "
-"target=\"_blank\" href=\"http://wordpress.org/support/view/plugin-reviews/"
-"maintenance?filter=5\">avalie-o</a>, <a title=\"leave feedbacks\" href=\"%2$s"
-"\" target=\"_blank\">deixe feedbacks</a>."
+msgid "Purchase <a href=\"http://codecanyon.net/item/maintenance-wordpress-plugin/2781350?ref=fruitfulcode\" target=\"_blank\">PRO</a> version  with extended functionality. %1$s If you like our plugin please <a target=\"_blank\" href=\"http://wordpress.org/support/view/plugin-reviews/maintenance?filter=5\">rate it</a>, <a title=\"leave feedbacks\" href=\"%2$s\" target=\"_blank\">leave feedbacks</a>."
+msgstr "Compre a versão <a href=\"http://codecanyon.net/item/maintenance-wordpress-plugin/2781350?ref=fruitfulcode\" target=\"_blank\">PRO</a> com funcionalidades adicionais. %1$s Se gostar do nosso plugin, por favor <a target=\"_blank\" href=\"http://wordpress.org/support/view/plugin-reviews/maintenance?filter=5\">avalie-o</a>, <a title=\"leave feedbacks\" href=\"%2$s\" target=\"_blank\">deixe feedbacks</a>."
 
 #: includes/functions.php:533
 msgid "Demo website"
@@ -334,23 +297,19 @@ msgstr "Acesso negado!"
 
 #: load/functions.php:53
 msgid "Login is incorrect!"
-msgstr ""
+msgstr "Nome de utilizador incorrecto!"
 
 #: load/functions.php:57
-#, fuzzy
-#| msgid "You entered your password are incorrect!"
 msgid "Password is incorrect!"
-msgstr "A senha que introduziu está incorrecta!"
+msgstr "Senha incorrecta!"
 
 #: load/functions.php:60
-#, fuzzy
-#| msgid "You entered your login and password are incorrect!"
 msgid "Login and password are incorrect!"
-msgstr "O nome de utilizador e senha que introduziu estão incorrectos!"
+msgstr "Nome de utilizador e senha incorrectos!"
 
 #: load/functions.php:136
 msgid "Please verify that you are not a robot."
-msgstr ""
+msgstr "Por favor, confirme que não é um robô."
 
 #: load/functions.php:384
 msgid "User Login"
@@ -374,57 +333,44 @@ msgstr "Entrar"
 
 #: vendor/fruitful-stats/send-statistics-modal.php:54
 msgid "Uh oh!"
-msgstr ""
+msgstr "Ups!"
 
 #: vendor/fruitful-stats/send-statistics-modal.php:55
-msgid ""
-"Sorry, something went wrong, and we failed to receive the shared data from "
-"you."
-msgstr ""
+msgid "Sorry, something went wrong, and we failed to receive the shared data from you."
+msgstr "Desculpe, algo correu mal, não foi possível receber os dados partilhados que partilhou connosco."
 
 #: vendor/fruitful-stats/send-statistics-modal.php:56
-msgid ""
-"No worries; go to the theme option to enter the required data manually and "
-"save changes."
-msgstr ""
+msgid "No worries; go to the theme option to enter the required data manually and save changes."
+msgstr "Não se preocupe, vá às opções do tema, insira manualmente os dados e guarde as alterações."
 
 #: vendor/fruitful-stats/send-statistics-modal.php:81
 msgid "Thank you!"
-msgstr ""
+msgstr "Obrigado!"
 
 #: vendor/fruitful-stats/send-statistics-modal.php:84
-msgid ""
-"Thank you for being supportive, we appreciate your understanding and "
-"assistance!"
-msgstr ""
+msgid "Thank you for being supportive, we appreciate your understanding and assistance!"
+msgstr "Obrigado por ser solidário, agradecemos a sua compreensão e assistência!"
 
 #: vendor/fruitful-stats/send-statistics-modal.php:85
-msgid ""
-"Don't forget to check your inbox for our latest letter - you'll like that!"
-msgstr ""
+msgid "Don't forget to check your inbox for our latest letter - you'll like that!"
+msgstr "Não se esqueça de consultar as nossas novidades na sua caixa de correio!"
 
 #: vendor/fruitful-stats/send-statistics-modal.php:90
 msgid "What a pity!"
-msgstr ""
+msgstr "Que pena!"
 
 #: vendor/fruitful-stats/send-statistics-modal.php:93
-msgid ""
-"We wish you could have shared your site anonymous technical data and joined "
-"our community."
+msgid "We wish you could have shared your site anonymous technical data and joined our community."
 msgstr ""
 
 #: vendor/fruitful-stats/send-statistics-modal.php:94
-msgid ""
-"But if you ever change your mind, you can always do that in the theme "
-"options."
+msgid "But if you ever change your mind, you can always do that in the theme options."
 msgstr ""
 
 #: vendor/fruitful-stats/view/send-statistics-modal-view.php:6
 msgid ""
-"We would be happy if you assist us in becoming better. Share your site "
-"anonymous technical data to help us\n"
-"                        improve our products and services. Also, don’t "
-"forget to subscribe to the Fruitful Code\n"
+"We would be happy if you assist us in becoming better. Share your site anonymous technical data to help us\n"
+"                        improve our products and services. Also, don't forget to subscribe to the Fruitful Code\n"
 "                        newsletters for the latest updates!"
 msgstr ""
 
@@ -434,7 +380,7 @@ msgstr ""
 
 #: vendor/fruitful-stats/view/send-statistics-modal-view.php:42
 msgid "Submit"
-msgstr ""
+msgstr "Submeter"
 
 #~ msgid "You entered your login are incorrect!"
 #~ msgstr "O nome de utilizador que introduziu está incorrecto!"
@@ -442,21 +388,8 @@ msgstr ""
 #~ msgid "http://wordpress.org/plugins/maintenance/"
 #~ msgstr "http://wordpress.org/plugins/maintenance/"
 
-#~ msgid ""
-#~ "Take your website for maintenance away from public view. Use maintenance "
-#~ "plugin if your website is in development or you need to change a few "
-#~ "things, run an upgrade. Make it only accessible by login and password. "
-#~ "Plugin has a options to add a logo, background, headline, message, "
-#~ "colors, login, etc. Extended PRO with more features version is available "
-#~ "for purchase."
-#~ msgstr ""
-#~ "Faça a manutenção do seu site longe da vista do público. Utilize um "
-#~ "plugin de manutenção se o seu site estiver em desenvolvimento, se "
-#~ "precisar de alterar algumas coisas, ou executar uma actualização. Torne-o "
-#~ "acessível através de iniciar sessão com nome de utilizador e senha. O "
-#~ "plugin tem opções para adicionar logótipo, fundo, cabeçalho, mensagem, "
-#~ "cores, início de sessão, etc. Está disponível para compra uma versão Pro "
-#~ "com recursos adicionais."
+#~ msgid "Take your website for maintenance away from public view. Use maintenance plugin if your website is in development or you need to change a few things, run an upgrade. Make it only accessible by login and password. Plugin has a options to add a logo, background, headline, message, colors, login, etc. Extended PRO with more features version is available for purchase."
+#~ msgstr "Faça a manutenção do seu site longe da vista do público. Utilize um plugin de manutenção se o seu site estiver em desenvolvimento, se precisar de alterar algumas coisas, ou executar uma actualização. Torne-o acessível através de iniciar sessão com nome de utilizador e senha. O plugin tem opções para adicionar logótipo, fundo, cabeçalho, mensagem, cores, início de sessão, etc. Está disponível para compra uma versão Pro com recursos adicionais."
 
 #~ msgid "fruitfulcode"
 #~ msgstr "fruitfulcode"
