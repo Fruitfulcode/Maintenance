@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Maintenance\n"
 "POT-Creation-Date: 2018-10-09 15:44+0100\n"
-"PO-Revision-Date: 2018-10-09 16:05+0100\n"
+"PO-Revision-Date: 2018-10-09 16:09+0100\n"
 "Last-Translator: Pedro Mendonça <ped.gaspar@gmail.com>\n"
 "Language-Team: Pedro Mendonça <ped.gaspar@gmail.com>\n"
 "Language: pt_PT\n"
@@ -22,6 +22,9 @@ msgid ""
 "\t\t\t\t\timprove our products and services. Also, don’t forget to subscribe to the Fruitful Code\n"
 "\t\t\t\t\tnewsletters for the latest updates!"
 msgstr ""
+"Ficaremos muito gratos se nos ajudar a melhorar.\n"
+"Partilhe connosco algumas informações técnicas anónimas para nos ajudar a melhorar os nossos produtos e serviços.\n"
+"Não se esqueça de subscrever as newsletters da Fruitful Code para receber as últimas novidades!"
 
 #: includes/admin-view/send-statistics-settings-options-view.php:10
 msgid "Send configuration information"
@@ -30,7 +33,7 @@ msgstr "Enviar informações de configuração"
 #: includes/admin-view/send-statistics-settings-options-view.php:16
 #: includes/admin-view/send-statistics-settings-options-view.php:27
 msgid "checked"
-msgstr ""
+msgstr "seleccionado"
 
 #: includes/admin-view/send-statistics-settings-options-view.php:21
 #: vendor/fruitful-stats/view/send-statistics-modal-view.php:25
@@ -145,16 +148,12 @@ msgid "Upload image for portrait device orientation"
 msgstr "Carregar imagem para dispositivo com orientação ao alto"
 
 #: includes/functions.php:303
-#, fuzzy
-#| msgid "Background image"
 msgid "Page preloader image"
-msgstr "Imagem de fundo"
+msgstr ""
 
 #: includes/functions.php:303
-#, fuzzy
-#| msgid "Upload Background"
 msgid "Upload preloader"
-msgstr "Carregar fundo"
+msgstr ""
 
 #: includes/functions.php:307
 msgid "Show admin bar"
@@ -373,10 +372,13 @@ msgid ""
 "                        improve our products and services. Also, don't forget to subscribe to the Fruitful Code\n"
 "                        newsletters for the latest updates!"
 msgstr ""
+"Ficaremos muito gratos se nos ajudar a melhorar.\n"
+"Partilhe connosco algumas informações técnicas anónimas para nos ajudar a melhorar os nossos produtos e serviços.\n"
+"Não se esqueça de subscrever as newsletters da Fruitful Code para receber as últimas novidades!"
 
 #: vendor/fruitful-stats/view/send-statistics-modal-view.php:16
 msgid "Send configuration information to Fruitful Code"
-msgstr ""
+msgstr "Enviar informações de configuração para a Fruitful Code"
 
 #: vendor/fruitful-stats/view/send-statistics-modal-view.php:42
 msgid "Submit"
