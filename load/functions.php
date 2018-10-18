@@ -368,6 +368,10 @@ function do_button_login_form($error = -1) {
     ?>
     <div id="btn-open-login-form" class="btn-open-login-form">
         <i class="fi-lock"></i>
+        
+    </div>
+    <div id="btn-sound" class="btn-open-login-form sound">
+        <i id="value_botton" class="fa fa-volume-off" aria-hidden="true"></i>
     </div>
     <?php
 

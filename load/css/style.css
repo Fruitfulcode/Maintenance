@@ -803,6 +803,11 @@ input[type="submit"]:hover{
     color: red;
     display: inline-block;
 }
+#btn-sound {
+    width: 100%;
+    margin-top: 60px;
+    display: none;
+}
 /*!--------------------------------------------------------------------
 STYLES "Outdated Browser"
 Version:    1.1.2 - 2015
