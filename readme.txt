@@ -4,7 +4,7 @@ Donate link: http://fruitfulcode.com/
 Tags: maintenance, maintenance mode, coming soon, splash page, under-construction, 503 error, administration, login, customize page, background, fullscreen, blur
 Requires at least: 3.5
 Tested up to: 4.9.4
-Stable tag: 3.6.1
+Stable tag: 3.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -120,6 +120,11 @@ No, it will be display error on current maintenance page, without redirect to wp
 You can check <a href="http://wordpress.org/support/plugin/maintenance">support forum</a> or <a class="send-mail" target="_blank" href="mailto:mail@fruitfulcode.com?subject=Maintenance%20Plugin">send email to us</a>
 
 == Change log ==
+= 3.7 =
+- New: Added option to switch sound on video
+- Bug fix: background color for login form
+
+
 = 3.6.2 =
 - New: Added child theme support
 - New: Added statistics
