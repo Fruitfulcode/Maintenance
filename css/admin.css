@@ -35,14 +35,16 @@
 .form-table .cb-ssv{
     float:left;
 }
-.form-table .cb-ssv-help {
+.form-table .cb-ssv-help,
+.form-table .cb-mobvideo-help {
     margin-left:25px;
     margin-top:0;
     font-size:13px;
 }
-.form-table tr {
-
+.form-table .cb-mobvideo-help {
+    color:green;
 }
+
 .form-table th {
     font-weight: normal
 }
