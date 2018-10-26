@@ -1,16 +1,29 @@
 <?php
 
 class Maintenance_Stats extends FruitfulStatistic {
-	
-	public $product_type = 'plugin';
-	
-    public $product_option_name = 'maintenance_options';
-    
+
+    public $product_type;
+
+    public $product_option_name;
+
 	/**
 	 * Constructor
 	 **/
-	public function __construct( $root_file ) {
-		parent::__construct( $root_file );
+	public function __construct( $root_file, $product_type, $product_option_name ) {
+
+        $this->product_type = $product_type;
+        $this->product_option_name = $product_option_name;
+
+        parent::__construct( $root_file );
+
+        //Redeclare path and uri ( in FruitfulStatistic construct it declared without /fruitful-app/ )
+        if($product_type === 'plugin') {
+            $this->data['stats_path'] = plugin_dir_path($root_file) . '/vendor/fruitful-app/';
+            $this->data['stats_uri'] = plugin_dir_url($root_file) . '/vendor/fruitful-app/';
+        } else {
+            $this->data['stats_path'] = get_template_directory() . '/vendor/fruitful-app/';
+            $this->data['stats_uri'] = get_template_directory_uri() . '/vendor/fruitful-app/';
+        }
 	}
     
     /**
@@ -48,6 +61,7 @@ class Maintenance_Stats extends FruitfulStatistic {
 			}
 
 			update_option( $this->product_option_name, $options );
+            $this->send_stats();
 		}
 	}
 	

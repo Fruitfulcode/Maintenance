@@ -69,17 +69,12 @@ class maintenance {
 			require_once( MAINTENANCE_DIR 	   . 'load/functions.php' ); 
 		}
 		
-		function admin() {
-			if ( is_admin() ) {
-				require_once( MAINTENANCE_INCLUDES . 'admin.php' );
-
-				// Fruitful statistics
-				require_once( MAINTENANCE_DIR 	   . 'vendor/fruitful-stats/send-statistics.php' );
-				$Maintenance_Stats = new Maintenance_Stats( __FILE__ );
-				$Maintenance_Stats->dispatch();
-			}	
-		}
-		
+		function admin()
+        {
+            if (is_admin()) {
+                require_once( MAINTENANCE_INCLUDES . 'admin.php' );
+            }
+        }
 		function mt_activation() {
 			/*Activation Plugin*/
 			self::mt_clear_cache();
@@ -121,4 +116,12 @@ class maintenance {
 
 $maintenance = new maintenance();
 
+if (is_admin()) {
+    // Fruitful apps
+    require plugin_dir_path(__FILE__) . '/vendor/fruitful-app/fruitful-app-core.php';
+
+    global $FF_Maintenance_App;
+    $FF_Maintenance_App = new FruitfulMaintenanceApp(__FILE__);
+    $FF_Maintenance_App->dispatch();
+}
 ?>
