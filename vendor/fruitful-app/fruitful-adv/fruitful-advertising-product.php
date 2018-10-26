@@ -5,7 +5,7 @@
 		public $root_file;
 		public $root_url;
 		public $root_path;
-		public $product_type; //{theme|plugin}
+		public $product_type;
 
 		/**
 		 * Constructor
@@ -36,49 +36,56 @@
 		/**
 		 * Function enqueue styles and scripts for all admin pages
 		 */
-		public function add_admin_scripts() {
+        public function add_admin_scripts() {
 
-			$adv = get_option( 'ffc_advertising_option' );
+            $adv = get_option( 'ffc_advertising_option' );
 
-			//enqueue scripts for advertising
-			if( ! empty($adv['js']) ) {
-				if ( ! wp_script_is( 'fruitful-app-advertising-scripts', 'enqueued' ) ) {
-					wp_enqueue_script( 'fruitful-app-advertising-scripts', $this->root_url . 'fruitful-adv/assets/js/scripts.js', array( 'jquery' ) );
-					wp_add_inline_script( 'fruitful-app-advertising-scripts', $adv['js'] );
-				}
-			}
+            $product_info = $this->get_product_info_array();
 
-			//enqueue styles for advertising
-			if( ! empty($adv['css']) ) {
-				if ( ! wp_style_is( 'fruitful-app-advertising-styles', 'enqueued' ) ) {
-					wp_enqueue_style( 'fruitful-app-advertising-styles', $this->root_url . 'fruitful-adv/assets/styles/styles.css');
-					wp_add_inline_style( 'fruitful-app-advertising-styles', $adv['css'] );
-				}
-			}
-		}
+            //enqueue scripts for advertising
+            if( ! empty($adv[ $product_info['product_name'] ]['js']) ) {
+                if ( ! wp_script_is( 'fruitful-app-advertising-scripts', 'enqueued' ) ) {
+                    wp_enqueue_script( 'fruitful-app-advertising-scripts', $this->root_url . 'fruitful-adv/assets/js/scripts.js', array( 'jquery' ) );
+                    wp_add_inline_script( 'fruitful-app-advertising-scripts', $adv[ $product_info['product_name'] ]['js'] );
+                }
+            }
 
-		/**
-		 * Display advertising on fruitfulcode product option page
-		 */
-		public function display_advertising() {
+            //enqueue styles for advertising
+            if( ! empty($adv[ $product_info['product_name'] ]['css']) ) {
+                if ( ! wp_style_is( 'fruitful-app-advertising-styles', 'enqueued' ) ) {
+                    wp_enqueue_style( 'fruitful-app-advertising-styles', $this->root_url . 'fruitful-adv/assets/styles/styles.css');
+                    wp_add_inline_style( 'fruitful-app-advertising-styles', $adv[ $product_info['product_name'] ]['css'] );
+                }
+            }
+        }
 
-			$adv = get_option( 'ffc_advertising_option' );
+        /**
+         * Display advertising on fruitfulcode product option page
+         */
+        public function display_advertising( $return_value = false ) {
 
-			if( ! empty($adv['html']) ) {
-				echo $adv['html'];
-			}
-		}
+            $adv = get_option( 'ffc_advertising_option' );
+            $product_info = $this->get_product_info_array();
+
+            if( ! empty($adv[ $product_info['product_name'] ]['html']) ) {
+                if($return_value) {
+                    return $adv[ $product_info['product_name'] ]['html'];
+                }
+                echo $adv[ $product_info['product_name'] ]['html'];
+            }
+        }
 
 		/**
 		* Check is advertising enabled
 		*/
 		public function is_advertising_enabled() {
-			$adv = get_option( 'ffc_advertising_option' );
+            $adv = get_option( 'ffc_advertising_option' );
+            $product_info = $this->get_product_info_array();
 
-			if( ! empty($adv['html']) ) {
-				return true;
-			}
+            if( ! empty($adv[ $product_info['product_name'] ]['html']) ) {
+                return true;
+            }
 
-			return false;
+            return false;
 		}
 	}

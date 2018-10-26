@@ -249,6 +249,7 @@ add_action('add_mt_meta_boxes', 'maintenance_page_create_meta_boxes', 10);
 function maintenance_page_create_meta_boxes_widget_pro() {
     global $maintenance_variable;
     add_meta_box( 'promo-extended',   	 __( 'Pro version', 'maintenance' ),  'maintenanace_extended_version',  $maintenance_variable->options_page, 'side',   'default' );
+
 }
 add_action('add_mt_meta_boxes', 'maintenance_page_create_meta_boxes_widget_pro', 11);
 
@@ -493,9 +494,14 @@ function maintenanace_improve_translate() {
 }
 
 function maintenanace_our_themes() {
-    $promo_text  = '';
+
+    global $FF_Maintenance_App;
+	if( $FF_Maintenance_App->controller->advertising->is_advertising_enabled() ) {
+        echo $FF_Maintenance_App->controller->advertising->display_advertising(true);
+    } else {
+	$promo_text  = '';
     $promo_text .= '<div class="sidebar-promo" id="sidebar-themes">';
-    $promo_text .= '<h4 class="themes">'. __('Premium WordPress themes','maintenance'). '</h3>';
+    $promo_text .= '<h4 class="themes">'. __('Premium WordPress themes','maintenance'). '</h4>';
 
     $rand_banner = rand(0, 2);
 
@@ -520,6 +526,7 @@ function maintenanace_our_themes() {
 
     $promo_text .= '</div>';
     echo $promo_text;
+	}
 }
 
 function maintenanace_extended_version() {
