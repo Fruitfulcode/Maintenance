@@ -495,9 +495,9 @@ function maintenanace_improve_translate() {
 
 function maintenanace_our_themes() {
 
-    global $FF_Maintenance_App;
-	if( $FF_Maintenance_App->controller->advertising->is_advertising_enabled() ) {
-        echo $FF_Maintenance_App->controller->advertising->display_advertising(true);
+
+	if( apply_filters('ffc_is_advertising_enabled_maintenance', null) ) {
+        echo apply_filters('ffc_advertising_maintenance', null);
     } else {
 	$promo_text  = '';
     $promo_text .= '<div class="sidebar-promo" id="sidebar-themes">';
