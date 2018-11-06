@@ -246,17 +246,9 @@ function maintenance_page_create_meta_boxes() {
 }
 add_action('add_mt_meta_boxes', 'maintenance_page_create_meta_boxes', 10);
 
-function maintenance_page_create_meta_boxes_widget_pro() {
-    global $maintenance_variable;
-    add_meta_box( 'promo-extended',   	 __( 'Pro version', 'maintenance' ),  'maintenanace_extended_version',  $maintenance_variable->options_page, 'side',   'default' );
-
-}
-add_action('add_mt_meta_boxes', 'maintenance_page_create_meta_boxes_widget_pro', 11);
-
-
 function maintenance_page_create_meta_boxes_our_themes() {
     global $maintenance_variable;
-    add_meta_box( 'promo-our-themes',   	 __( 'Fruitful Code projects',  'maintenance' ),  'maintenanace_our_themes',   $maintenance_variable->options_page, 'side',   'default' );
+    add_meta_box( 'promo-our-themes',   	 __( 'More projects',  'maintenance' ),  'maintenanace_our_themes',   $maintenance_variable->options_page, 'side',   'default' );
 }
 add_action('add_mt_meta_boxes', 'maintenance_page_create_meta_boxes_our_themes', 12);
 
@@ -495,11 +487,24 @@ function maintenanace_improve_translate() {
 
 function maintenanace_our_themes() {
 
-
-	if( apply_filters('ffc_is_advertising_enabled_maintenance', null) ) {
+	if( apply_filters('ffc_is_advertising_enabled_maintenance_pro', null) ) {
+		echo apply_filters('ffc_advertising_maintenance_pro', null);
+	} else if( apply_filters('ffc_is_advertising_enabled_maintenance', null) ) {
         echo apply_filters('ffc_advertising_maintenance', null);
     } else {
+
 	$promo_text  = '';
+	$promo_text .= '<div class="sidebar-promo worker" id="sidebar-promo">';
+	$promo_text .= '<h4 class="star">'. __('Extended functionality','maintenance') .'</h3>';
+	$promo_text .= '<p>' . sprintf(__('Purchase <a href="http://codecanyon.net/item/maintenance-wordpress-plugin/2781350?ref=fruitfulcode" target="_blank">PRO</a> version  with extended functionality. %1$s If you like our plugin please <a target="_blank" href="http://wordpress.org/support/view/plugin-reviews/maintenance?filter=5">rate it</a>, <a title="leave feedbacks" href="%2$s" target="_blank">leave feedbacks</a>.', 'maintenance'),
+			'<br />',
+			'http://wordpress.org/support/view/plugin-reviews/maintenance') .'</p>';
+	$promo_text .= sprintf('<a class="button button-primary" title="%1$s" href="%2$s" target="_blank">%1$s</a>',
+		__('Demo website', 'maintenance'),
+		'http://plugins.fruitfulcode.com/maintenance/'
+	);
+	$promo_text .= '</div>';
+
     $promo_text .= '<div class="sidebar-promo" id="sidebar-themes">';
     $promo_text .= '<h4 class="themes">'. __('Premium WordPress themes','maintenance'). '</h4>';
 
@@ -527,21 +532,6 @@ function maintenanace_our_themes() {
     $promo_text .= '</div>';
     echo $promo_text;
 	}
-}
-
-function maintenanace_extended_version() {
-    $promo_text  = '';
-    $promo_text .= '<div class="sidebar-promo worker" id="sidebar-promo">';
-    $promo_text .= '<h4 class="star">'. __('Extended functionality','maintenance') .'</h3>';
-    $promo_text .= '<p>' . sprintf(__('Purchase <a href="http://codecanyon.net/item/maintenance-wordpress-plugin/2781350?ref=fruitfulcode" target="_blank">PRO</a> version  with extended functionality. %1$s If you like our plugin please <a target="_blank" href="http://wordpress.org/support/view/plugin-reviews/maintenance?filter=5">rate it</a>, <a title="leave feedbacks" href="%2$s" target="_blank">leave feedbacks</a>.', 'maintenance'),
-            '<br />',
-            'http://wordpress.org/support/view/plugin-reviews/maintenance') .'</p>';
-    $promo_text .= sprintf('<a class="button button-primary" title="%1$s" href="%2$s" target="_blank">%1$s</a>',
-        __('Demo website', 'maintenance'),
-        'http://plugins.fruitfulcode.com/maintenance/'
-    );
-    $promo_text .= '</div>';
-    echo $promo_text;
 }
 
 function mt_curPageURL() {

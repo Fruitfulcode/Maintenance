@@ -89,7 +89,7 @@ msgid "Pro version"
 msgstr "Hanki PRO versio"
 
 #: includes/functions.php:258
-msgid "Fruitful Code projects"
+msgid "More projects"
 msgstr "Fruitful Code -projektit"
 
 #: includes/functions.php:264

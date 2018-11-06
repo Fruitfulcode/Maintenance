@@ -120,7 +120,6 @@ if (is_admin()) {
     // Fruitful apps
     require plugin_dir_path(__FILE__) . '/vendor/fruitful-app/fruitful-app-core.php';
 
-    global $FF_Maintenance_App;
     $FF_Maintenance_App = new FruitfulMaintenanceApp(__FILE__);
     $FF_Maintenance_App->dispatch();
 }

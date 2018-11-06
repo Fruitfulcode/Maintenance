@@ -100,7 +100,7 @@ msgstr "Versión Pro"
 
 # @ maintenance
 #: includes/functions.php:258
-msgid "Fruitful Code projects"
+msgid "More projects"
 msgstr "Proyectos de Fruitful Code"
 
 # @ maintenance

@@ -89,7 +89,7 @@ msgid "Pro version"
 msgstr "Version Pro"
 
 #: includes/functions.php:258
-msgid "Fruitful Code projects"
+msgid "More projects"
 msgstr "Fruitful Code des projets"
 
 #: includes/functions.php:264
