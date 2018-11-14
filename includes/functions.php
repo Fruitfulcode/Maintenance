@@ -617,8 +617,8 @@ function load_maintenance_page($original_template) {
                 return $original_template;
             }
 
-            if (($vCurrTime > $vCurrDate_start) && ($vCurrTime > $vCurrDate_end)) {
-                if (!empty($mt_options['is_down'])) {
+            if (($vCurrTime < $vCurrDate_start) || ($vCurrTime > $vCurrDate_end)) {
+                if (!empty($mt_options['is_down'])) { //is down - is flag for "Open website after countdown expired"
                     return $original_template;
                 }
             }
