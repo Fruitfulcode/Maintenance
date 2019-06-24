@@ -3,7 +3,7 @@
 	Plugin Name: Maintenance
 	Plugin URI: http://wordpress.org/plugins/maintenance/
 	Description: Take your website for maintenance away from public view. Use maintenance plugin if your website is in development or you need to change a few things, run an upgrade. Make it only accessible by login and password. Plugin has a options to add a logo, background, headline, message, colors, login, etc. Extended PRO with more features version is available for purchase.
-	Version: 3.6.2
+	Version: 3.6.3
 	Author: fruitfulcode
 	Author URI: https://fruitfulcode.com
 	License: GPL2
@@ -74,9 +74,9 @@ class maintenance {
 				require_once( MAINTENANCE_INCLUDES . 'admin.php' );
 
 				// Fruitful statistics
-				require_once( MAINTENANCE_DIR 	   . 'vendor/fruitful-stats/send-statistics.php' );
-				$Maintenance_Stats = new Maintenance_Stats( __FILE__ );
-				$Maintenance_Stats->dispatch();
+				//require_once( MAINTENANCE_DIR 	   . 'vendor/fruitful-stats/send-statistics.php' );
+				//$Maintenance_Stats = new Maintenance_Stats( __FILE__ );
+				//$Maintenance_Stats->dispatch();
 			}	
 		}
 		
