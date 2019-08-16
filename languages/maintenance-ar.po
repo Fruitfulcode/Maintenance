@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maintenance\n"
-"POT-Creation-Date: 2018-07-31 11:20+0300\n"
-"PO-Revision-Date: 2018-07-31 11:21+0300\n"
+"POT-Creation-Date: 2019-08-15 13:20+0300\n"
+"PO-Revision-Date: 2019-08-15 13:20+0300\n"
 "Last-Translator: \n"
 "Language-Team: fruitfulcode\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.2.3\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
@@ -18,40 +18,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: includes/admin-view/send-statistics-settings-options-view.php:2
-msgid ""
-"We would be happy if you assist us in becoming better. Share your site "
-"anonymous technical data to help us\n"
-"\t\t\t\t\timprove our products and services. Also, don’t forget to subscribe "
-"to the Fruitful Code\n"
-"\t\t\t\t\tnewsletters for the latest updates!"
-msgstr ""
-
-#: includes/admin-view/send-statistics-settings-options-view.php:10
-msgid "Send configuration information"
-msgstr ""
-
-#: includes/admin-view/send-statistics-settings-options-view.php:16
-#: includes/admin-view/send-statistics-settings-options-view.php:27
-msgid "checked"
-msgstr ""
-
-#: includes/admin-view/send-statistics-settings-options-view.php:21
-#: vendor/fruitful-stats/view/send-statistics-modal-view.php:25
-msgid "Subscribe to the Fruitful Code newsletters"
-msgstr ""
-
-#: includes/admin-view/send-statistics-settings-options-view.php:32
-#: vendor/fruitful-stats/view/send-statistics-modal-view.php:31
-msgid "Name"
-msgstr ""
-
-#: includes/admin-view/send-statistics-settings-options-view.php:40
-#: vendor/fruitful-stats/view/send-statistics-modal-view.php:35
-msgid "E-mail"
-msgstr ""
-
-#: includes/admin.php:6 includes/admin.php:88 includes/functions.php:674
+#: includes/admin.php:6 includes/admin.php:88 includes/functions.php:643
 msgid "Maintenance"
 msgstr "صيانة"
 
@@ -79,164 +46,159 @@ msgstr " حسب الطلب CSS"
 msgid "Exclude pages from maintenance mode"
 msgstr "استبعاد صفحات من وضع الصيانة"
 
-#: includes/functions.php:245
-#: vendor/fruitful-stats/view/send-statistics-modal-view.php:4
-msgid "Please, help us perform better!"
-msgstr ""
-
-#: includes/functions.php:251
+#: includes/functions.php:250
 msgid "Pro version"
 msgstr "نسخة للمحترفين"
 
-#: includes/functions.php:258
+#: includes/functions.php:257
 msgid "Fruitful Code projects"
 msgstr "مشاريع كود مثمرة"
 
-#: includes/functions.php:264
+#: includes/functions.php:263
 msgid "Support"
 msgstr "الدعم"
 
-#: includes/functions.php:270
+#: includes/functions.php:269
 msgid "Translation"
 msgstr "ترجمة"
 
-#: includes/functions.php:293
+#: includes/functions.php:292
 msgid "Page title"
 msgstr "عنوان الصفحة"
 
-#: includes/functions.php:294
+#: includes/functions.php:293
 msgid "Headline"
 msgstr "عنوان رئيسي"
 
-#: includes/functions.php:295
+#: includes/functions.php:294
 msgid "Description"
 msgstr "وصف"
 
-#: includes/functions.php:296
+#: includes/functions.php:295
 msgid "Footer Text"
 msgstr "نص تذييل"
 
-#: includes/functions.php:297
+#: includes/functions.php:296
 msgid "Set Logo width"
 msgstr "مجموعة عرض الشعار"
 
-#: includes/functions.php:298
+#: includes/functions.php:297
 msgid "Set Logo height"
 msgstr "مجموعة ارتفاع الشعار"
 
-#: includes/functions.php:299
+#: includes/functions.php:298
 msgid "Logo"
 msgstr "شعار"
 
-#: includes/functions.php:299
+#: includes/functions.php:298
 msgid "Upload Logo"
 msgstr "تحميل الشعار"
 
-#: includes/functions.php:300
+#: includes/functions.php:299
 msgid "Retina logo"
 msgstr "شبكية العين شعار"
 
-#: includes/functions.php:300
+#: includes/functions.php:299
 msgid "Upload Retina Logo"
 msgstr "تحميل الشبكية شعار"
 
-#: includes/functions.php:302
+#: includes/functions.php:301
 #, fuzzy
 #| msgid "Background image"
 msgid "Background image (portrait mode)"
 msgstr "الصورة الخلفية"
 
-#: includes/functions.php:302
+#: includes/functions.php:301
 msgid "Upload image for portrait device orientation"
 msgstr ""
 
-#: includes/functions.php:303
+#: includes/functions.php:302
 #, fuzzy
 #| msgid "Background image"
 msgid "Page preloader image"
 msgstr "الصورة الخلفية"
 
-#: includes/functions.php:303
+#: includes/functions.php:302
 #, fuzzy
 #| msgid "Upload Background"
 msgid "Upload preloader"
 msgstr "تحميل خلفية"
 
-#: includes/functions.php:307
+#: includes/functions.php:306
 msgid "Show admin bar"
 msgstr "عرض شريط المشرف"
 
-#: includes/functions.php:308
+#: includes/functions.php:307
 msgid "503"
 msgstr "503"
 
-#: includes/functions.php:308
+#: includes/functions.php:307
 msgid "Service temporarily unavailable, Google analytics will be disable."
 msgstr "الخدمة غير متوفرة مؤقتا، سيتم تعطيل تحليلات جوجل."
 
-#: includes/functions.php:315
+#: includes/functions.php:314
 msgid "Google Analytics ID"
 msgstr "Google Analytics ID"
 
-#: includes/functions.php:315
+#: includes/functions.php:314
 msgid "UA-XXXXX-X"
 msgstr "UA-XXXXX-X"
 
-#: includes/functions.php:316
+#: includes/functions.php:315
 msgid "Set blur intensity"
 msgstr "تعيين كثافة طمس"
 
-#: includes/functions.php:322
+#: includes/functions.php:321
 msgid "Apply background blur"
 msgstr "تطبيق طمس الخلفية"
 
-#: includes/functions.php:323
+#: includes/functions.php:322
 msgid "Enable frontend login"
 msgstr "تمكين تسجيل الدخول الواجهة"
 
-#: includes/functions.php:336
+#: includes/functions.php:335
 msgid "CSS Code"
 msgstr "كود CSS"
 
-#: includes/functions.php:350
+#: includes/functions.php:349
 msgid "Select the page to be displayed:"
 msgstr "حدد الصفحة للظهور:"
 
-#: includes/functions.php:445
+#: includes/functions.php:411
 msgid "Background image"
 msgstr "الصورة الخلفية"
 
-#: includes/functions.php:445
+#: includes/functions.php:411
 msgid "Upload Background"
 msgstr "تحميل خلفية"
 
-#: includes/functions.php:451
+#: includes/functions.php:417
 msgid "Background color"
 msgstr "لون الخلفية"
 
-#: includes/functions.php:452
+#: includes/functions.php:418
 msgid "Font color"
 msgstr "لون الخط"
 
-#: includes/functions.php:453
+#: includes/functions.php:419
 #, fuzzy
 #| msgid "Background color"
 msgid "Login block background color"
 msgstr "لون الخلفية"
 
-#: includes/functions.php:460
+#: includes/functions.php:426
 msgid "Font family"
 msgstr "خط العائلة"
 
-#: includes/functions.php:466
+#: includes/functions.php:432
 msgid "Subsets"
 msgstr "فرعية"
 
-#: includes/functions.php:474
+#: includes/functions.php:440
 msgid "Have any questions?"
 msgstr "لديك أي أسئلة؟"
 
-#: includes/functions.php:475
+#: includes/functions.php:441
 #, php-format
 msgid ""
 "You may find answers to your questions at <a target=\"_blank\" href=\"http://"
@@ -253,11 +215,11 @@ msgstr ""
 "زيارة موقعنا على الانترنت لمعرفة المزيد عن لنا وخدماتنا <a href=\"%1$s\" "
 "title=\"%2$s\">%2$s</a>"
 
-#: includes/functions.php:486
+#: includes/functions.php:452
 msgid "This plugin is translation friendly"
 msgstr "هذا هو البرنامج المساعد الترجمة دية"
 
-#: includes/functions.php:487
+#: includes/functions.php:453
 #, php-format
 msgid ""
 "Want to improve translation or make one for your native language? <a href="
@@ -266,31 +228,31 @@ msgstr ""
 "ترغب في تحسين الترجمة أو جعل واحدة لغتك الأم؟ <a href=\"%1$s\" title=\"%2$s"
 "\">%2$s</a>"
 
-#: includes/functions.php:489
+#: includes/functions.php:455
 msgid "Follow this tutorial"
 msgstr "اتبع هذا البرنامج التعليمي"
 
-#: includes/functions.php:498
+#: includes/functions.php:464
 msgid "Premium WordPress themes"
 msgstr "قسط المواضيع وورد"
 
-#: includes/functions.php:504
+#: includes/functions.php:470
 msgid "ANAGLYPH - One page / Multi Page WordPress Theme"
 msgstr "ANAGLYPH - صفحة واحدة / متعدد صفحة وورد موضوع"
 
-#: includes/functions.php:509
+#: includes/functions.php:475
 msgid "Love.ly - Simple & Elegant WordPress theme"
 msgstr "Love.ly - موضوع بسيط وأنيق وورد"
 
-#: includes/functions.php:515
+#: includes/functions.php:481
 msgid "Zoner - Real Estate WordPress theme"
 msgstr "Zoner - عقارات وورد موضوع"
 
-#: includes/functions.php:528
+#: includes/functions.php:494
 msgid "Extended functionality"
 msgstr "وظائف الموسعة"
 
-#: includes/functions.php:529
+#: includes/functions.php:495
 #, php-format
 msgid ""
 "Purchase <a href=\"http://codecanyon.net/item/maintenance-wordpress-"
@@ -307,23 +269,23 @@ msgstr ""
 "filter=5\"> قيمه </a>,  <a title=\"leave feedbacks\" href=\"%2$s\" target="
 "\"_blank\"> ترك الاصداء .</a>"
 
-#: includes/functions.php:533
+#: includes/functions.php:499
 msgid "Demo website"
 msgstr "الموقع التجريبي"
 
-#: includes/functions.php:674
+#: includes/functions.php:643
 msgid " is "
 msgstr ""
 
-#: includes/functions.php:743
+#: includes/functions.php:712
 msgid "Website is under construction"
 msgstr "الموقع قيد الإنشاء"
 
-#: includes/functions.php:744
+#: includes/functions.php:713
 msgid "Maintenance mode is on"
 msgstr "وضع الصيانة على"
 
-#: includes/functions.php:745
+#: includes/functions.php:714
 msgid "Website will be available soon"
 msgstr "سيكون الموقع متاحا في وقت قريب"
 
@@ -351,89 +313,25 @@ msgstr "لقد أدخلت اسم المستخدم وكلمة المرور غير
 msgid "Please verify that you are not a robot."
 msgstr ""
 
-#: load/functions.php:384
+#: load/functions.php:377
 msgid "User Login"
 msgstr "دخول المستخدم"
 
-#: load/functions.php:386
+#: load/functions.php:379
 msgid "Username"
 msgstr "اسم المستخدم"
 
-#: load/functions.php:387
+#: load/functions.php:380
 msgid "Password"
 msgstr "كلمه السر"
 
-#: load/functions.php:388
+#: load/functions.php:381
 msgid "Lost Password"
 msgstr "كلمة مرور مفقودة"
 
-#: load/functions.php:389
+#: load/functions.php:382
 msgid "Login"
 msgstr "تسجيل الدخول"
-
-#: vendor/fruitful-stats/send-statistics-modal.php:54
-msgid "Uh oh!"
-msgstr ""
-
-#: vendor/fruitful-stats/send-statistics-modal.php:55
-msgid ""
-"Sorry, something went wrong, and we failed to receive the shared data from "
-"you."
-msgstr ""
-
-#: vendor/fruitful-stats/send-statistics-modal.php:56
-msgid ""
-"No worries; go to the theme option to enter the required data manually and "
-"save changes."
-msgstr ""
-
-#: vendor/fruitful-stats/send-statistics-modal.php:81
-msgid "Thank you!"
-msgstr ""
-
-#: vendor/fruitful-stats/send-statistics-modal.php:84
-msgid ""
-"Thank you for being supportive, we appreciate your understanding and "
-"assistance!"
-msgstr ""
-
-#: vendor/fruitful-stats/send-statistics-modal.php:85
-msgid ""
-"Don't forget to check your inbox for our latest letter - you'll like that!"
-msgstr ""
-
-#: vendor/fruitful-stats/send-statistics-modal.php:90
-msgid "What a pity!"
-msgstr ""
-
-#: vendor/fruitful-stats/send-statistics-modal.php:93
-msgid ""
-"We wish you could have shared your site anonymous technical data and joined "
-"our community."
-msgstr ""
-
-#: vendor/fruitful-stats/send-statistics-modal.php:94
-msgid ""
-"But if you ever change your mind, you can always do that in the theme "
-"options."
-msgstr ""
-
-#: vendor/fruitful-stats/view/send-statistics-modal-view.php:6
-msgid ""
-"We would be happy if you assist us in becoming better. Share your site "
-"anonymous technical data to help us\n"
-"                        improve our products and services. Also, don’t "
-"forget to subscribe to the Fruitful Code\n"
-"                        newsletters for the latest updates!"
-msgstr ""
-
-#: vendor/fruitful-stats/view/send-statistics-modal-view.php:16
-msgid "Send configuration information to Fruitful Code"
-msgstr ""
-
-#: vendor/fruitful-stats/view/send-statistics-modal-view.php:42
-msgid "Submit"
-msgstr ""
 
 #~ msgid "You entered your login are incorrect!"
 #~ msgstr "لقد أدخلت تسجيل الدخول الخاصة بك غير صحيحة!"
