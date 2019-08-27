@@ -3,7 +3,7 @@
 	Plugin Name: Maintenance
 	Plugin URI: http://wordpress.org/plugins/maintenance/
 	Description: Take your website for maintenance away from public view. Use maintenance plugin if your website is in development or you need to change a few things, run an upgrade. Make it only accessible by login and password. Plugin has a options to add a logo, background, headline, message, colors, login, etc. Extended PRO with more features version is available for purchase.
-	Version: 3.7.0
+	Version: 3.7.1
 	Author: fruitfulcode
 	Author URI: https://fruitfulcode.com
 	License: GPL2
@@ -39,11 +39,12 @@ class MTNC {
 
 		add_action( 'template_include', array( &$this, 'mtnc_template_include' ), 999999 );
 		add_action( 'wp_logout', array( &$this, 'mtnc_user_logout' ) );
-		add_action( 'init', array( &$this, 'mtnc_set_global_options' ), 1 );
+        add_action( 'init', array( &$this, 'mtnc_admin_bar' ) );
+        add_action( 'init', array( &$this, 'mtnc_set_global_options' ), 1 );
 	}
 
 	public function mtnc_constants() {
-		define( 'MTNC_VERSION', '3.7.0' );
+		define( 'MTNC_VERSION', '3.7.1' );
 		define( 'MTNC_DB_VERSION', 1 );
 		define( 'MTNC_WP_VERSION', get_bloginfo( 'version' ) );
 		define( 'MTNC_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
@@ -101,6 +102,10 @@ class MTNC {
 	public function mtnc_template_include( $original_template ) {
 		$original_template = mtnc_load_maintenance_page( $original_template );
 		return $original_template;
+	}
+
+	public function mtnc_admin_bar() {
+		add_action( 'admin_bar_menu', 'mtnc_add_toolbar_items', 100 );
 	}
 
 }
