@@ -125,11 +125,9 @@ You can check <a href="http://wordpress.org/support/plugin/maintenance">support 
 - Bug fix: Preview mode
 - Update: Translations
 
-== Change log ==
 = 3.7.0 =
 - Improvement: Code optimization
 
-== Change log ==
 = 3.6.4 =
 - Improvement: Code optimization
 - Update: Removed 'Show admin bar' option
@@ -137,11 +135,9 @@ You can check <a href="http://wordpress.org/support/plugin/maintenance">support 
 - Update: Removed subscription
 - Update: Translations
 
-== Change log ==
 = 3.6.3 =
 - Bug fix: Deactivated statistics
 
-== Change log ==
 = 3.6.2 =
 - New: Added option to switch sound on video
 - New: Added child theme support
