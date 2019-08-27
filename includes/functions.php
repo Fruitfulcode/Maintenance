@@ -595,10 +595,6 @@ function mtnc_check_exclude() {
 
 function mtnc_load_maintenance_page( $original_template ) {
 	global $mt_options;
-	if ( is_preview() && ! wp_verify_nonce( $_GET['preview_nonce'], 'post_preview_' . (int) $_GET['preview_id'] ) ) {
-		return;
-	}
-	$preview = isset( $_GET['preview'] );
 
 	$v_curr_date_start = $v_curr_date_end = $v_curr_time = '';
 	$vdate_start       = $vdate_end = date_i18n( 'Y-m-d', strtotime( current_time( 'mysql', 0 ) ) );
@@ -645,9 +641,6 @@ function mtnc_load_maintenance_page( $original_template ) {
 		} else {
 			return $original_template;
 		}
-	} elseif ( $preview && file_exists( MTNC_LOAD . 'index.php' ) ) {
-		add_filter( 'script_loader_tag', 'mtnc_defer_scripts', 10, 2 );
-		return MTNC_LOAD . 'index.php';
 	} else {
 		return $original_template;
 	}
@@ -690,7 +683,7 @@ function mtnc_add_toolbar_items() {
 	}
 	$wp_admin_bar->add_menu(
 		array(
-			'id'    => 'mtnc_options',
+			'id'    => 'maintenance_options',
 			'title' => __( 'Maintenance', 'maintenance' ) . __( ' is ', 'maintenance' ) . $check,
 			'href'  => $url_to,
 			'meta'  => array(
