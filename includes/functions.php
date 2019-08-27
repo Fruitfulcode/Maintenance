@@ -20,59 +20,58 @@ $standart_fonts = array(
 	'Verdana, Geneva, sans-serif'                      => 'Verdana, Geneva, sans-serif',
 );
 
-
-function mt_get_plugin_options( $is_current = false ) {
+function mtnc_get_plugin_options( $is_current = false ) {
 	$saved = (array) get_option( 'maintenance_options' );
 
 	if ( ! $is_current ) {
-		$options = wp_parse_args( get_option( 'maintenance_options', array() ), mt_get_default_array() );
+		$options = wp_parse_args( get_option( 'maintenance_options', array() ), mtnc_get_default_array() );
 	} else {
 		$options = $saved;
 	}
 	return $options;
 }
 
-function generate_input_filed( $title, $id, $name, $value, $placeholder = '' ) {
+function mtnc_generate_input_filed( $title, $id, $name, $value, $placeholder = '' ) {
 	$out_filed  = '';
 	$out_filed .= '<tr valign="top">';
 	$out_filed .= '<th scope="row">' . esc_attr( $title ) . '</th>';
 	$out_filed .= '<td>';
 	$out_filed .= '<fieldset>';
-	$out_filed .= '<input type="text" id="' . esc_attr( $id ) . '" name="lib_options[' . $name . ']" value="' . esc_attr( stripslashes( $value ) ) . '" placeholder="' . $placeholder . '"/>';
+	$out_filed .= '<input type="text" id="' . esc_attr( $id ) . '" name="lib_options[' . $name . ']" value="' . esc_attr( stripslashes( $value ) ) . '" placeholder="' . esc_attr( $placeholder ) . '"/>';
 	$out_filed .= '</fieldset>';
 	$out_filed .= '</td>';
 	$out_filed .= '</tr>';
-	echo $out_filed;
+	echo $out_filed; // phpcs:ignore WordPress.Security.EscapeOutput
 }
 
-function generate_number_filed( $title, $id, $name, $value, $placeholder = '' ) {
+function mtnc_generate_number_filed( $title, $id, $name, $value, $placeholder = '' ) {
 	$out_filed  = '';
 	$out_filed .= '<tr valign="top">';
 	$out_filed .= '<th scope="row">' . esc_attr( $title ) . '</th>';
 	$out_filed .= '<td>';
 	$out_filed .= '<fieldset>';
-	$out_filed .= '<input type="number" min="0" step="1" pattern="[0-9]{10}" id="' . esc_attr( $id ) . '" name="lib_options[' . $name . ']" value="' . esc_attr( stripslashes( $value ) ) . '" placeholder="' . $placeholder . '"/>';
+	$out_filed .= '<input type="number" min="0" step="1" pattern="[0-9]{10}" id="' . esc_attr( $id ) . '" name="lib_options[' . $name . ']" value="' . esc_attr( stripslashes( $value ) ) . '" placeholder="' . esc_attr( $placeholder ) . '"/>';
 	$out_filed .= '</fieldset>';
 	$out_filed .= '</td>';
 	$out_filed .= '</tr>';
-	echo $out_filed;
+	echo $out_filed; // phpcs:ignore WordPress.Security.EscapeOutput
 }
 
-function generate_textarea_filed( $title, $id, $name, $value ) {
+function mtnc_generate_textarea_filed( $title, $id, $name, $value ) {
 	$out_filed  = '';
 	$out_filed .= '<tr valign="top">';
 	$out_filed .= '<th scope="row">' . esc_attr( $title ) . '</th>';
 	$out_filed .= '<td>';
 	$out_filed .= '<fieldset>';
-	$out_filed .= '<textarea name="lib_options[' . $name . ']" id="' . esc_attr( $id ) . '" cols="30" rows="10">' . wp_kses_post( stripslashes( $value ) ) . '</textarea>';
+	$out_filed .= '<textarea name="lib_options[' . $name . ']" id="' . esc_attr( $id ) . '" cols="30" rows="10">' . esc_textarea( $value ) . '</textarea>';
 	$out_filed .= '</fieldset>';
 	$out_filed .= '</td>';
 	$out_filed .= '</tr>';
-	echo $out_filed;
+	echo $out_filed; // phpcs:ignore WordPress.Security.EscapeOutput
 }
 
 
-function generate_tinymce_filed( $title, $id, $name, $value ) {
+function mtnc_generate_tinymce_filed( $title, $id, $name, $value ) {
 	$out_filed  = '';
 	$out_filed .= '<tr valign="top">';
 	$out_filed .= '<th scope="row">' . esc_attr( $title ) . '</th>';
@@ -93,11 +92,11 @@ function generate_tinymce_filed( $title, $id, $name, $value ) {
 	$out_filed .= '</fieldset>';
 	$out_filed .= '</td>';
 	$out_filed .= '</tr>';
-	echo $out_filed;
+	echo $out_filed; // phpcs:ignore WordPress.Security.EscapeOutput
 }
 
 
-function generate_check_filed( $title, $label, $id, $name, $value ) {
+function mtnc_generate_check_filed( $title, $label, $id, $name, $value ) {
 	$out_filed  = '';
 	$out_filed .= '<tr valign="top">';
 	$out_filed .= '<th scope="row">' . esc_attr( $title ) . '</th>';
@@ -110,10 +109,10 @@ function generate_check_filed( $title, $label, $id, $name, $value ) {
 	$out_filed .= '</fieldset>';
 	$out_filed .= '</td>';
 	$out_filed .= '</tr>';
-	echo $out_filed;
+	echo $out_filed; // phpcs:ignore WordPress.Security.EscapeOutput
 }
 
-function generate_image_filed( $title, $id, $name, $value, $class, $name_btn, $class_btn ) {
+function mtnc_generate_image_filed( $title, $id, $name, $value, $class, $name_btn, $class_btn ) {
 	$out_filed = '';
 
 	$out_filed .= '<tr valign="top">';
@@ -139,10 +138,10 @@ function generate_image_filed( $title, $id, $name, $value, $class, $name_btn, $c
 	$out_filed .= '</fieldset>';
 	$out_filed .= '</td>';
 	$out_filed .= '</tr>';
-	echo $out_filed;
+	echo $out_filed; // phpcs:ignore WordPress.Security.EscapeOutput
 }
 
-function get_color_field( $title, $id, $name, $value, $default_color ) {
+function mtnc_get_color_field( $title, $id, $name, $value, $default_color ) {
 	$out_filed  = '';
 	$out_filed .= '<tr valign="top">';
 	$out_filed .= '<th scope="row">' . esc_attr( $title ) . '</th>';
@@ -152,13 +151,13 @@ function get_color_field( $title, $id, $name, $value, $default_color ) {
 	$out_filed .= '<fieldset>';
 	$out_filed .= '</td>';
 	$out_filed .= '</tr>';
-	echo $out_filed;
+	echo $out_filed; // phpcs:ignore WordPress.Security.EscapeOutput
 }
 
-function mt_get_google_font( $font = null ) {
+function mtnc_get_google_font( $font = null ) {
 	$font_params = $full_link = $gg_fonts = '';
 
-	$gg_fonts = json_decode( mt_get_google_fonts() );
+	$gg_fonts = json_decode( mtnc_get_google_fonts() );
 
 	if ( property_exists( $gg_fonts, $font ) ) {
 		$curr_font = $gg_fonts->{$font};
@@ -179,11 +178,17 @@ function mt_get_google_font( $font = null ) {
 	return $full_link;
 }
 
+/*
+ * Function get_fonts_field is backward compatibility with Maintenance PRO Version 3.6.2 and below */
 function get_fonts_field( $title, $id, $name, $value ) {
+	return mtnc_get_fonts_field( $title, $id, $name, $value );
+}
+
+function mtnc_get_fonts_field( $title, $id, $name, $value ) {
 	global $standart_fonts;
 	$out_items = $gg_fonts = '';
 
-	$gg_fonts = json_decode( mt_get_google_fonts() );
+	$gg_fonts = json_decode( mtnc_get_google_fonts() );
 
 	$out_filed  = '';
 	$out_filed .= '<tr valign="top">';
@@ -212,17 +217,17 @@ function get_fonts_field( $title, $id, $name, $value ) {
 	$out_filed .= '<fieldset>';
 	$out_filed .= '</td>';
 	$out_filed .= '</tr>';
-	return $out_filed;
+	return $out_filed; // phpcs:ignore WordPress.Security.EscapeOutput
 }
 
-function get_fonts_subsets( $title, $id, $name, $value ) {
+function mtnc_get_fonts_subsets( $title, $id, $name, $value ) {
 	global $standart_fonts;
 	$out_items = $gg_fonts = $curr_font = $mt_option = '';
-	$mt_option = mt_get_plugin_options( true );
+	$mt_option = mtnc_get_plugin_options( true );
 	$curr_font = esc_attr( $mt_option['body_font_family'] );
 	$vars      = 'subsets';
 
-	$gg_fonts = json_decode( mt_get_google_fonts(), true );
+	$gg_fonts = json_decode( mtnc_get_google_fonts(), true );
 
 	if ( ! empty( $gg_fonts ) ) {
 
@@ -233,11 +238,9 @@ function get_fonts_subsets( $title, $id, $name, $value ) {
 		$out_filed .= '<fieldset>';
 		$out_filed .= '<select class="select2_customize" name="lib_options[' . $name . ']" id="' . esc_attr( $id ) . '">';
 		if ( ! empty( $gg_fonts[ $curr_font ] ) ) {
-			// if(!empty($gg_fonts[$curr_font][$vars])){
 			foreach ( $gg_fonts[ $curr_font ]['variants'] as $key => $v ) {
 				$out_filed .= '<option value="' . $v . '" ' . selected( $value, $v, false ) . '>' . $v . '</option>';
 			}
-			// }
 		}
 		$out_filed .= '</select>';
 
@@ -245,44 +248,44 @@ function get_fonts_subsets( $title, $id, $name, $value ) {
 		$out_filed .= '</td>';
 		$out_filed .= '</tr>';
 	}
-	return $out_filed;
+	return $out_filed; // phpcs:ignore WordPress.Security.EscapeOutput
 }
 
-function maintenance_page_create_meta_boxes() {
-	global $maintenance_variable;
-	add_meta_box( 'maintenance-general', __( 'General Settings', 'maintenance' ), 'add_data_fields', $maintenance_variable->options_page, 'normal', 'default' );
-	add_meta_box( 'maintenance-css', __( 'Custom CSS', 'maintenance' ), 'add_css_fields', $maintenance_variable->options_page, 'normal', 'default' );
-	add_meta_box( 'maintenance-excludepages', __( 'Exclude pages from maintenance mode', 'maintenance' ), 'add_exclude_pages_fields', $maintenance_variable->options_page, 'normal', 'default' );
+function mtnc_page_create_meta_boxes() {
+	global $mtnc_variable;
+	add_meta_box( 'mtnc-general', __( 'General Settings', 'maintenance' ), 'mtnc_add_data_fields', $mtnc_variable->options_page, 'normal', 'default' );
+	add_meta_box( 'mtnc-css', __( 'Custom CSS', 'maintenance' ), 'mtnc_add_css_fields', $mtnc_variable->options_page, 'normal', 'default' );
+	add_meta_box( 'mtnc-excludepages', __( 'Exclude pages from maintenance mode', 'maintenance' ), 'mtnc_add_exclude_pages_fields', $mtnc_variable->options_page, 'normal', 'default' );
 }
-add_action( 'add_mt_meta_boxes', 'maintenance_page_create_meta_boxes', 10 );
+add_action( 'add_mt_meta_boxes', 'mtnc_page_create_meta_boxes', 10 );
 
-function maintenance_page_create_meta_boxes_widget_pro() {
-	global $maintenance_variable;
-	add_meta_box( 'promo-extended', __( 'Pro version', 'maintenance' ), 'maintenanace_extended_version', $maintenance_variable->options_page, 'side', 'default' );
+function mtnc_page_create_meta_boxes_widget_pro() {
+	global $mtnc_variable;
+	add_meta_box( 'promo-extended', __( 'Pro version', 'maintenance' ), 'mtnc_extended_version', $mtnc_variable->options_page, 'side', 'default' );
 }
-add_action( 'add_mt_meta_boxes', 'maintenance_page_create_meta_boxes_widget_pro', 11 );
+add_action( 'add_mt_meta_boxes', 'mtnc_page_create_meta_boxes_widget_pro', 11 );
 
 
-function maintenance_page_create_meta_boxes_our_themes() {
-	global $maintenance_variable;
-	add_meta_box( 'promo-our-themes', __( 'Fruitful Code projects', 'maintenance' ), 'maintenanace_our_themes', $maintenance_variable->options_page, 'side', 'default' );
+function mtnc_page_create_meta_boxes_our_themes() {
+	global $mtnc_variable;
+	add_meta_box( 'promo-our-themes', __( 'Fruitful Code projects', 'maintenance' ), 'mtnc_our_themes', $mtnc_variable->options_page, 'side', 'default' );
 }
-add_action( 'add_mt_meta_boxes', 'maintenance_page_create_meta_boxes_our_themes', 12 );
+add_action( 'add_mt_meta_boxes', 'mtnc_page_create_meta_boxes_our_themes', 12 );
 
-function maintenance_page_create_meta_boxes_widget_support() {
-	global $maintenance_variable;
-	add_meta_box( 'promo-content', __( 'Support', 'maintenance' ), 'maintenanace_contact_support', $maintenance_variable->options_page, 'side', 'default' );
+function mtnc_page_create_meta_boxes_widget_support() {
+	global $mtnc_variable;
+	add_meta_box( 'promo-content', __( 'Support', 'maintenance' ), 'mtnc_contact_support', $mtnc_variable->options_page, 'side', 'default' );
 }
-add_action( 'add_mt_meta_boxes', 'maintenance_page_create_meta_boxes_widget_support', 13 );
+add_action( 'add_mt_meta_boxes', 'mtnc_page_create_meta_boxes_widget_support', 13 );
 
-function maintenance_page_create_meta_boxes_improve_translate() {
-	global $maintenance_variable;
-	add_meta_box( 'promo-translate', __( 'Translation', 'maintenance' ), 'maintenanace_improve_translate', $maintenance_variable->options_page, 'side', 'default' );
+function mtnc_page_create_meta_boxes_improve_translate() {
+	global $mtnc_variable;
+	add_meta_box( 'promo-translate', __( 'Translation', 'maintenance' ), 'mtnc_improve_translate', $mtnc_variable->options_page, 'side', 'default' );
 }
-add_action( 'add_mt_meta_boxes', 'maintenance_page_create_meta_boxes_improve_translate', 14 );
+add_action( 'add_mt_meta_boxes', 'mtnc_page_create_meta_boxes_improve_translate', 14 );
 
-function add_data_fields( $object, $box ) {
-	$mt_option = mt_get_plugin_options( true );
+function mtnc_add_data_fields( $object, $box ) {
+	$mt_option = mtnc_get_plugin_options( true );
 	$is_blur   = false;
 
 	/*Deafult Variable*/
@@ -312,29 +315,29 @@ function add_data_fields( $object, $box ) {
 	<table class="form-table">
 		<tbody>
 		<?php
-		generate_input_filed( __( 'Page title', 'maintenance' ), 'page_title', 'page_title', $page_title );
-		generate_input_filed( __( 'Headline', 'maintenance' ), 'heading', 'heading', $heading );
-		generate_tinymce_filed( __( 'Description', 'maintenance' ), 'description', 'description', $description );
-		generate_input_filed( __( 'Footer Text', 'maintenance' ), 'footer_text', 'footer_text', $footer_text );
-		generate_number_filed( __( 'Set Logo width', 'maintenance' ), 'logo_width', 'logo_width', $logo_width );
-		generate_number_filed( __( 'Set Logo height', 'maintenance' ), 'logo_height', 'logo_height', $logo_height );
-		generate_image_filed( __( 'Logo', 'maintenance' ), 'logo', 'logo', (int)$mt_option['logo'], 'boxes box-logo', __( 'Upload Logo', 'maintenance' ), 'upload_logo upload_btn button' );
-		generate_image_filed( __( 'Retina logo', 'maintenance' ), 'retina_logo', 'retina_logo', (int)$mt_option['retina_logo'], 'boxes box-logo', __( 'Upload Retina Logo', 'maintenance' ), 'upload_logo upload_btn button' );
-		do_action( 'maintenance_background_field' );
-		generate_image_filed( __( 'Background image (portrait mode)', 'maintenance' ), 'bg_image_portrait', 'bg_image_portrait', isset( $mt_option['bg_image_portrait'] ) ? (int)$mt_option['bg_image_portrait'] : '', 'boxes box-logo', __( 'Upload image for portrait device orientation', 'maintenance' ), 'upload_logo upload_btn button' );
-		generate_image_filed( __( 'Page preloader image', 'maintenance' ), 'preloader_img', 'preloader_img', isset( $mt_option['preloader_img'] ) ? (int)$mt_option['preloader_img'] : '', 'boxes box-logo', __( 'Upload preloader', 'maintenance' ), 'upload_logo upload_btn button' );
+		mtnc_generate_input_filed( __( 'Page title', 'maintenance' ), 'page_title', 'page_title', $page_title );
+		mtnc_generate_input_filed( __( 'Headline', 'maintenance' ), 'heading', 'heading', $heading );
+		mtnc_generate_tinymce_filed( __( 'Description', 'maintenance' ), 'description', 'description', $description );
+		mtnc_generate_input_filed( __( 'Footer Text', 'maintenance' ), 'footer_text', 'footer_text', $footer_text );
+		mtnc_generate_number_filed( __( 'Set Logo width', 'maintenance' ), 'logo_width', 'logo_width', $logo_width );
+		mtnc_generate_number_filed( __( 'Set Logo height', 'maintenance' ), 'logo_height', 'logo_height', $logo_height );
+		mtnc_generate_image_filed( __( 'Logo', 'maintenance' ), 'logo', 'logo', (int) $mt_option['logo'], 'boxes box-logo', __( 'Upload Logo', 'maintenance' ), 'upload_logo upload_btn button' );
+		mtnc_generate_image_filed( __( 'Retina logo', 'maintenance' ), 'retina_logo', 'retina_logo', (int) $mt_option['retina_logo'], 'boxes box-logo', __( 'Upload Retina Logo', 'maintenance' ), 'upload_logo upload_btn button' );
+		do_action( 'mtnc_background_field' );
+		mtnc_generate_image_filed( __( 'Background image (portrait mode)', 'maintenance' ), 'bg_image_portrait', 'bg_image_portrait', isset( $mt_option['bg_image_portrait'] ) ? (int) $mt_option[ 'bg_image_portrait' ] : '', 'boxes box-logo', __( 'Upload image for portrait device orientation', 'maintenance' ), 'upload_logo upload_btn button' );
+		mtnc_generate_image_filed( __( 'Page preloader image', 'maintenance' ), 'preloader_img', 'preloader_img', isset( $mt_option['preloader_img'] ) ? (int) $mt_option['preloader_img'] : '', 'boxes box-logo', __( 'Upload preloader', 'maintenance' ), 'upload_logo upload_btn button' );
 
-		do_action( 'maintenance_color_fields' );
-		do_action( 'maintenance_font_fields' );
-		generate_check_filed( __( '503', 'maintenance' ), __( 'Service temporarily unavailable, Google analytics will be disable.', 'maintenance' ), '503_enabled', '503_enabled', ! empty( $mt_option['503_enabled'] ) );
+		do_action( 'mtnc_color_fields' );
+		do_action( 'mtnc_font_fields' );
+		mtnc_generate_check_filed( __( '503', 'maintenance' ), __( 'Service temporarily unavailable, Google analytics will be disable.', 'maintenance' ), '503_enabled', '503_enabled', ! empty( $mt_option['503_enabled'] ) );
 
 		$gg_analytics_id = '';
 		if ( ! empty( $mt_option['gg_analytics_id'] ) ) {
 			$gg_analytics_id = esc_js( $mt_option['gg_analytics_id'] );
 		}
 
-		generate_input_filed( __( 'Google Analytics ID', 'maintenance' ), 'gg_analytics_id', 'gg_analytics_id', $gg_analytics_id, __( 'UA-XXXXX-X', 'maintenance' ) );
-		generate_input_filed( __( 'Set blur intensity', 'maintenance' ), 'blur_intensity', 'blur_intensity', (int) $mt_option['blur_intensity'] );
+		mtnc_generate_input_filed( __( 'Google Analytics ID', 'maintenance' ), 'gg_analytics_id', 'gg_analytics_id', $gg_analytics_id, __( 'UA-XXXXX-X', 'maintenance' ) );
+		mtnc_generate_input_filed( __( 'Set blur intensity', 'maintenance' ), 'blur_intensity', 'blur_intensity', (int) $mt_option['blur_intensity'] );
 
 		if ( isset( $mt_option['is_blur'] ) ) {
 			if ( $mt_option['is_blur'] ) {
@@ -342,8 +345,8 @@ function add_data_fields( $object, $box ) {
 			}
 		}
 
-		generate_check_filed( __( 'Apply background blur', 'maintenance' ), '', 'is_blur', 'is_blur', $is_blur );
-		generate_check_filed( __( 'Enable frontend login', 'maintenance' ), '', 'is_login', 'is_login', isset( $mt_option['is_login'] ) );
+		mtnc_generate_check_filed( __( 'Apply background blur', 'maintenance' ), '', 'is_blur', 'is_blur', $is_blur );
+		mtnc_generate_check_filed( __( 'Enable frontend login', 'maintenance' ), '', 'is_login', 'is_login', isset( $mt_option['is_login'] ) );
 
 		?>
 		</tbody>
@@ -352,17 +355,17 @@ function add_data_fields( $object, $box ) {
 }
 
 
-function add_css_fields() {
-	$mt_option = mt_get_plugin_options( true );
+function mtnc_add_css_fields() {
+	$mt_option = mtnc_get_plugin_options( true );
 	echo '<table class="form-table">';
 	echo '<tbody>';
-	generate_textarea_filed( __( 'CSS Code', 'maintenance' ), 'custom_css', 'custom_css', wp_kses_stripslashes( $mt_option['custom_css'] ) );
+	mtnc_generate_textarea_filed( __( 'CSS Code', 'maintenance' ), 'custom_css', 'custom_css', wp_kses_stripslashes( $mt_option['custom_css'] ) );
 	echo '</tbody>';
 	echo '</table>';
 }
 
-function add_exclude_pages_fields() {
-	$mt_option = mt_get_plugin_options( true );
+function mtnc_add_exclude_pages_fields() {
+	$mt_option = mtnc_get_plugin_options( true );
 	$out_filed = '';
 
 	$post_types = get_post_types(
@@ -434,38 +437,38 @@ function add_exclude_pages_fields() {
 	$out_filed .= '</tbody>';
 	$out_filed .= '</table>';
 
-	echo $out_filed;
+	echo $out_filed; // phpcs:ignore WordPress.Security.EscapeOutput
 }
 
-function get_background_fileds_action() {
-	$mt_option = mt_get_plugin_options( true );
-	generate_image_filed( __( 'Background image', 'maintenance' ), 'body_bg', 'body_bg', esc_attr( $mt_option['body_bg'] ), 'boxes box-bg', __( 'Upload Background', 'maintenance' ), 'upload_background upload_btn button' );
+function mtnc_get_background_fileds_action() {
+	$mt_option = mtnc_get_plugin_options( true );
+	mtnc_generate_image_filed( __( 'Background image', 'maintenance' ), 'body_bg', 'body_bg', esc_attr( $mt_option['body_bg'] ), 'boxes box-bg', __( 'Upload Background', 'maintenance' ), 'upload_background upload_btn button' );
 }
-add_action( 'maintenance_background_field', 'get_background_fileds_action', 10 );
+add_action( 'mtnc_background_field', 'mtnc_get_background_fileds_action', 10 );
 
-function get_color_fileds_action() {
-	$mt_option = mt_get_plugin_options( true );
-	get_color_field( __( 'Background color', 'maintenance' ), 'body_bg_color', 'body_bg_color', esc_attr( $mt_option['body_bg_color'] ), '#111111' );
-	get_color_field( __( 'Font color', 'maintenance' ), 'font_color', 'font_color', esc_attr( $mt_option['font_color'] ), '#ffffff' );
-	get_color_field( __( 'Login block background color', 'maintenance' ), 'controls_bg_color', 'controls_bg_color', isset( $mt_option['controls_bg_color'] ) ? esc_attr( $mt_option['controls_bg_color'] ) : '', '#000000' );
+function mtnc_get_color_fileds_action() {
+	$mt_option = mtnc_get_plugin_options( true );
+	mtnc_get_color_field( __( 'Background color', 'maintenance' ), 'body_bg_color', 'body_bg_color', esc_attr( $mt_option['body_bg_color'] ), '#111111' );
+	mtnc_get_color_field( __( 'Font color', 'maintenance' ), 'font_color', 'font_color', esc_attr( $mt_option['font_color'] ), '#ffffff' );
+	mtnc_get_color_field( __( 'Login block background color', 'maintenance' ), 'controls_bg_color', 'controls_bg_color', isset( $mt_option['controls_bg_color'] ) ? esc_attr( $mt_option['controls_bg_color'] ) : '', '#000000' );
 }
-add_action( 'maintenance_color_fields', 'get_color_fileds_action', 10 );
+add_action( 'mtnc_color_fields', 'mtnc_get_color_fileds_action', 10 );
 
 
-function get_font_fileds_action() {
-	$mt_option = mt_get_plugin_options( true );
-	echo get_fonts_field( __( 'Font family', 'maintenance' ), 'body_font_family', 'body_font_family', esc_attr( $mt_option['body_font_family'] ) );
+function mtnc_get_font_fileds_action() {
+	$mt_option = mtnc_get_plugin_options( true );
+	echo mtnc_get_fonts_field( __( 'Font family', 'maintenance' ), 'body_font_family', 'body_font_family', esc_attr( $mt_option['body_font_family'] ) ); // phpcs:ignore WordPress.Security.EscapeOutput
 	$subset = '';
 
 	if ( ! empty( $mt_option['body_font_subset'] ) ) {
 		$subset = $mt_option['body_font_subset'];
 	}
-	echo get_fonts_subsets( __( 'Subsets', 'maintenance' ), 'body_font_subset', 'body_font_subset', esc_attr( $subset ) );
+	echo mtnc_get_fonts_subsets( __( 'Subsets', 'maintenance' ), 'body_font_subset', 'body_font_subset', esc_attr( $subset ) ); // phpcs:ignore WordPress.Security.EscapeOutput
 }
-add_action( 'maintenance_font_fields', 'get_font_fileds_action', 10 );
+add_action( 'mtnc_font_fields', 'mtnc_get_font_fileds_action', 10 );
 
 
-function maintenanace_contact_support() {
+function mtnc_contact_support() {
 	$promo_text  = '';
 	$promo_text .= '<div class="sidebar-promo" id="sidebar-promo">';
 	$promo_text .= '<h4 class="support">' . __( 'Have any questions?', 'maintenance' ) . '</h3>';
@@ -475,10 +478,10 @@ function maintenanace_contact_support() {
 		'fruitfulcode.com'
 	) . '</p>';
 	$promo_text .= '</div>';
-	echo $promo_text;
+	echo $promo_text; // phpcs:ignore WordPress.Security.EscapeOutput
 }
 
-function maintenanace_improve_translate() {
+function mtnc_improve_translate() {
 	$promo_text  = '';
 	$promo_text .= '<div class="sidebar-promo" id="sidebar-translate">';
 	$promo_text .= '<h4 class="translate">' . __( 'This plugin is translation friendly', 'maintenance' ) . '</h3>';
@@ -488,10 +491,10 @@ function maintenanace_improve_translate() {
 		__( 'Follow this tutorial', 'maintenance' )
 	) . '</p>';
 	$promo_text .= '</div>';
-	echo $promo_text;
+	echo $promo_text; // phpcs:ignore WordPress.Security.EscapeOutput
 }
 
-function maintenanace_our_themes() {
+function mtnc_our_themes() {
 	$promo_text  = '';
 	$promo_text .= '<div class="sidebar-promo" id="sidebar-themes">';
 	$promo_text .= '<h4 class="themes">' . __( 'Premium WordPress themes', 'maintenance' ) . '</h3>';
@@ -517,10 +520,10 @@ function maintenanace_our_themes() {
 	$promo_text .= '<p>' . sprintf( '<a target="_blank" class="%1s" href="%2s" title="%3s"></a>', $class, $link, $title ) . '</p>';
 
 	$promo_text .= '</div>';
-	echo $promo_text;
+	echo $promo_text; // phpcs:ignore WordPress.Security.EscapeOutput
 }
 
-function maintenanace_extended_version() {
+function mtnc_extended_version() {
 	$promo_text  = '';
 	$promo_text .= '<div class="sidebar-promo worker" id="sidebar-promo">';
 	$promo_text .= '<h4 class="star">' . __( 'Extended functionality', 'maintenance' ) . '</h3>';
@@ -535,10 +538,10 @@ function maintenanace_extended_version() {
 		'http://plugins.fruitfulcode.com/maintenance/'
 	);
 	$promo_text .= '</div>';
-	echo $promo_text;
+	echo $promo_text; // phpcs:ignore WordPress.Security.EscapeOutput
 }
 
-function mt_cur_page_url() {
+function mtnc_cur_page_url() {
 	$page_url = 'http';
 	if ( isset( $_SERVER['HTTPS'] ) ) {
 		$page_url .= 's';}
@@ -551,25 +554,25 @@ function mt_cur_page_url() {
 	return $page_url;
 }
 
-function mt_check_exclude() {
+function mtnc_check_exclude() {
 	global $mt_options, $post;
-	$mt_options = mt_get_plugin_options( true );
+	$mt_options = mtnc_get_plugin_options( true );
 	$is_skip    = false;
-	$cur_url     = mt_cur_page_url();
+	$cur_url    = mtnc_cur_page_url();
 	if ( is_page() || is_single() ) {
-		$curr_ID = $post->ID;
+		$curr_id = $post->ID;
 	} else {
 		if ( is_home() ) {
 			$blog_id = get_option( 'page_for_posts' );
 			if ( $blog_id ) {
-				$curr_ID = $blog_id;
+				$curr_id = $blog_id;
 			}
 		}
 
 		if ( is_front_page() ) {
 			$front_page_id = get_option( 'show_on_front' );
 			if ( $front_page_id ) {
-				$curr_ID = $front_page_id;
+				$curr_id = $front_page_id;
 			}
 		}
 	}
@@ -578,7 +581,7 @@ function mt_check_exclude() {
 		$exlude_objs = $mt_options['exclude_pages'];
 		foreach ( $exlude_objs as $objs_id ) {
 			foreach ( $objs_id as $obj_id ) {
-				if ( $curr_ID === (int) $obj_id ) {
+				if ( $curr_id === (int) $obj_id ) {
 					$is_skip = true;
 					break;
 				}
@@ -590,14 +593,17 @@ function mt_check_exclude() {
 }
 
 
-function load_maintenance_page( $original_template ) {
+function mtnc_load_maintenance_page( $original_template ) {
 	global $mt_options;
-	$preview = ( isset( $_GET['preview'] ) && $_GET['preview'] === 1 );
+	if ( is_preview() && ! wp_verify_nonce( $_GET['preview_nonce'], 'post_preview_' . (int) $_GET['preview_id'] ) ) {
+		return;
+	}
+	$preview = isset( $_GET['preview'] );
 
 	$v_curr_date_start = $v_curr_date_end = $v_curr_time = '';
-	$vdate_start     = $vdate_end = date_i18n( 'Y-m-d', strtotime( current_time( 'mysql', 0 ) ) );
-	$vtime_start     = date_i18n( 'h:i:s A', strtotime( '01:00:00 am' ) );
-	$vtime_end       = date_i18n( 'h:i:s A', strtotime( '12:59:59 pm' ) );
+	$vdate_start       = $vdate_end = date_i18n( 'Y-m-d', strtotime( current_time( 'mysql', 0 ) ) );
+	$vtime_start       = date_i18n( 'h:i:s A', strtotime( '01:00:00 am' ) );
+	$vtime_end         = date_i18n( 'h:i:s A', strtotime( '12:59:59 pm' ) );
 
 	if ( ! is_user_logged_in() ) {
 		if ( ! empty( $mt_options['state'] ) ) {
@@ -620,7 +626,7 @@ function load_maintenance_page( $original_template ) {
 			$v_curr_date_start = strtotime( $vdate_start . ' ' . $vtime_start );
 			$v_curr_date_end   = strtotime( $vdate_end . ' ' . $vtime_end );
 
-			if ( mt_check_exclude() ) {
+			if ( mtnc_check_exclude() ) {
 				return $original_template;
 			}
 
@@ -633,44 +639,44 @@ function load_maintenance_page( $original_template ) {
 			return $original_template;
 		}
 
-		if ( file_exists( MAINTENANCE_LOAD . 'index.php' ) ) {
-			add_filter( 'script_loader_tag', 'maintenance_defer_scripts', 10, 2 );
-			return MAINTENANCE_LOAD . 'index.php';
+		if ( file_exists( MTNC_LOAD . 'index.php' ) ) {
+			add_filter( 'script_loader_tag', 'mtnc_defer_scripts', 10, 2 );
+			return MTNC_LOAD . 'index.php';
 		} else {
 			return $original_template;
 		}
-	} elseif ( $preview && file_exists( MAINTENANCE_LOAD . 'index.php' ) ) {
-		add_filter( 'script_loader_tag', 'maintenance_defer_scripts', 10, 2 );
-		return MAINTENANCE_LOAD . 'index.php';
+	} elseif ( $preview && file_exists( MTNC_LOAD . 'index.php' ) ) {
+		add_filter( 'script_loader_tag', 'mtnc_defer_scripts', 10, 2 );
+		return MTNC_LOAD . 'index.php';
 	} else {
 		return $original_template;
 	}
 }
 
-function maintenance_defer_scripts( $tag, $handle ) {
+function mtnc_defer_scripts( $tag, $handle ) {
 	if ( strpos( $handle, '_ie' ) !== 0 ) {
 		return $tag;
 	}
 	return str_replace( ' src', ' defer="defer" src', $tag );
 }
 
-function maintenance_metaboxes_scripts() {
-	global $maintenance_variable;
+function mtnc_metaboxes_scripts() {
+	global $mtnc_variable;
 	?>
 	<script type="text/javascript">
 		//<![CDATA[
 		jQuery(document).ready( function() {
 			jQuery('.if-js-closed').removeClass('if-js-closed').addClass('closed');
-			postboxes.add_postbox_toggles( '<?php echo esc_js( $maintenance_variable->options_page ); ?>' );
+			postboxes.add_postbox_toggles( '<?php echo esc_js( $mtnc_variable->options_page ); ?>' );
 		});
 		//]]>
 	</script>
 	<?php
 }
 
-function maintenance_add_toolbar_items() {
+function mtnc_add_toolbar_items() {
 	global $wp_admin_bar, $wpdb;
-	$mt_options = mt_get_plugin_options( true );
+	$mt_options = mtnc_get_plugin_options( true );
 	$check      = '';
 	if ( ! is_super_admin() || ! is_admin_bar_showing() ) {
 		return;
@@ -684,7 +690,7 @@ function maintenance_add_toolbar_items() {
 	}
 	$wp_admin_bar->add_menu(
 		array(
-			'id'    => 'maintenance_options',
+			'id'    => 'mtnc_options',
 			'title' => __( 'Maintenance', 'maintenance' ) . __( ' is ', 'maintenance' ) . $check,
 			'href'  => $url_to,
 			'meta'  => array(
@@ -701,7 +707,7 @@ function maintenance_add_toolbar_items() {
 }
 
 
-function maintenance_hex2rgb( $hex ) {
+function mtnc_hex2rgb( $hex ) {
 	$hex = str_replace( '#', '', $hex );
 
 	if ( strlen( $hex ) === 3 ) {
@@ -718,7 +724,7 @@ function maintenance_hex2rgb( $hex ) {
 }
 
 
-function mt_insert_attach_sample_files() {
+function mtnc_insert_attach_sample_files() {
 	global $wpdb;
 
 	$title            = '';
@@ -730,7 +736,7 @@ function mt_insert_attach_sample_files() {
 	} else {
 		require_once ABSPATH . 'wp-admin/includes/image.php';
 		$upload_dir   = wp_upload_dir();
-		$image_url    = MAINTENANCE_URI . 'images/mt-sample-background.jpg';
+		$image_url    = MTNC_URI . 'images/mt-sample-background.jpg';
 		$file_name    = basename( $image_url );
 		$file_content = wp_remote_get( $image_url );
 		$upload       = wp_upload_bits( $file_name, null, $file_content['body'], current_time( 'mysql', 0 ) );
@@ -761,7 +767,7 @@ function mt_insert_attach_sample_files() {
 	}
 }
 
-function mt_get_default_array() {
+function mtnc_get_default_array() {
 
 	$defaults = array(
 		'state'             => true,
@@ -773,7 +779,7 @@ function mt_get_default_array() {
 		'logo_height'       => '',
 		'logo'              => '',
 		'retina_logo'       => '',
-		'body_bg'           => mt_insert_attach_sample_files(),
+		'body_bg'           => mtnc_insert_attach_sample_files(),
 		'bg_image_portrait' => '',
 		'preloader_img'     => '',
 		'body_bg_color'     => '#111111',
@@ -789,12 +795,12 @@ function mt_get_default_array() {
 		'custom_css'        => '',
 		'exclude_pages'     => '',
 	);
-	return apply_filters( 'mt_get_default_array', $defaults );
+	return apply_filters( 'mtnc_get_default_array', $defaults );
 }
 
-if ( ! function_exists( 'mt_get_google_fonts' ) ) {
-	function mt_get_google_fonts() {
-		$gg_fonts = wp_remote_get( MAINTENANCE_URI . 'includes/fonts/googlefonts.json' );
+if ( ! function_exists( 'mtnc_get_google_fonts' ) ) {
+	function mtnc_get_google_fonts() {
+		$gg_fonts = wp_remote_get( MTNC_URI . 'includes/fonts/googlefonts.json' );
 		return $gg_fonts['body'];
 	}
 }

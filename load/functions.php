@@ -1,9 +1,9 @@
 <?php
 
-function get_custom_login_code() {
+function mtnc_get_custom_login_code() {
 	global $wp_query,
 	$error;
-	$mt_options   = mt_get_plugin_options( true );
+	$mt_options   = mtnc_get_plugin_options( true );
 	$user_connect = false;
 	if ( ! is_array( $wp_query->query_vars ) ) {
 		$wp_query->query_vars = array();
@@ -15,14 +15,14 @@ function get_custom_login_code() {
 	$using_cookie   = false;
 
 	if ( isset( $_POST['is_custom_login'] ) ) {
-		$user_login              = '';
-		if ( isset( $_POST['log'] ) ) {
-			$user_login          = wp_unslash( $_POST['log'] );
+		$user_login = '';
+		if ( isset( $_POST['log'] ) && wp_verify_nonce( $_POST['mtnc_login_check'], 'mtnc_login' ) ) {
+			$user_login = sanitize_post( wp_unslash( $_POST['log'] ) );
 		}
-		$user_login              = sanitize_user( $user_login );
-        $user_pass              = '';
-		if ( isset( $_POST['pwd'] ) ) {
-			$user_pass           = $_POST['pwd'];
+		$user_login = sanitize_user( $user_login );
+		$user_pass  = '';
+		if ( isset( $_POST['pwd'] ) && wp_verify_nonce( $_POST['mtnc_login_check'], 'mtnc_login' ) ) {
+			$user_pass = $_POST['pwd'];
 		}
 		$access                  = array();
 		$access['user_login']    = esc_attr( $user_login );
@@ -78,30 +78,30 @@ function get_custom_login_code() {
 	}
 
 	if ( ! $user_connect ) {
-		get_headers_503();
+		mtnc_get_headers_503();
 	}
 
 	return array( $error_message, $class_login, $class_password, $user_login );
 }
 
-function add_custom_style() {
+function mtnc_add_custom_style() {
 	global $wp_styles;
 
 	// all.css loading in index.php inline by 2 steps
-	wp_register_style( 'maintenance-style', MAINTENANCE_URI . 'load/css/style.css', '', MAINTENANCE_CACHE_TIME );
-	wp_register_style( 'maintenance-fonts', MAINTENANCE_URI . 'load/css/fonts.css', '', MAINTENANCE_CACHE_TIME );
-	$wp_styles->do_items( 'maintenance-style' );
-	$wp_styles->do_items( 'maintenance-fonts' );
-	get_options_style();
+	wp_register_style( 'mtnc-style', MTNC_URI . 'load/css/style.css', '', filemtime( MTNC_DIR . 'load/css/style.css' ) );
+	wp_register_style( 'mtnc-fonts', MTNC_URI . 'load/css/fonts.css', '', filemtime( MTNC_DIR . 'load/css/fonts.css' ) );
+	$wp_styles->do_items( 'mtnc-style' );
+	$wp_styles->do_items( 'mtnc-fonts' );
+	mtnc_get_options_style();
 }
 
-function mt_add_google_fonts() {
+function mtnc_add_google_fonts() {
 	global $wp_scripts;
-	$mt_options = mt_get_plugin_options( true );
+	$mt_options = mtnc_get_plugin_options( true );
 	$font_link  = array();
 
 	if ( ! empty( $mt_options['body_font_family'] ) ) {
-		$font_link[0] = mt_get_google_font( esc_attr( $mt_options['body_font_family'] ) );
+		$font_link[0] = mtnc_get_google_font( esc_attr( $mt_options['body_font_family'] ) );
 		/*Check if chooses subset for fonts*/
 		if ( ! empty( $mt_options['body_font_subset'] ) ) {
 			$font_subset   = esc_attr( $mt_options['body_font_subset'] );
@@ -109,7 +109,7 @@ function mt_add_google_fonts() {
 		}
 	}
 	if ( ! empty( $mt_options['countdown_font_family'] ) ) {
-		$font_link[1] = mt_get_google_font( esc_attr( $mt_options['countdown_font_family'] ) );
+		$font_link[1] = mtnc_get_google_font( esc_attr( $mt_options['countdown_font_family'] ) );
 	}
 
 	if ( $font_link ) {
@@ -119,9 +119,9 @@ function mt_add_google_fonts() {
 
 }
 
-function add_custom_scripts() {
+function mtnc_add_custom_scripts() {
 	global $wp_scripts;
-	$mt_options = mt_get_plugin_options( true );
+	$mt_options = mtnc_get_plugin_options( true );
 	$js_options = array(
 		'body_bg'        => '',
 		'gallery_array'  => array(),
@@ -129,15 +129,15 @@ function add_custom_scripts() {
 		'font_link'      => '',
 	);
 
-	wp_register_script( '_frontend', MAINTENANCE_URI . 'load/js/jquery.frontend.js', 'jquery', MAINTENANCE_CACHE_TIME, true );
+	wp_register_script( '_frontend', MTNC_URI . 'load/js/jquery.frontend.js', 'jquery', filemtime( MTNC_DIR . 'load/js/jquery.frontend.js' ), true );
 
 	// IE scripts
-	wp_register_script( 'jquery_ie', $wp_scripts->registered['jquery-core']->src, '', MAINTENANCE_CACHE_TIME, true );
+	wp_register_script( 'jquery_ie', $wp_scripts->registered['jquery-core']->src, '', '', true );
 
 	wp_script_add_data( 'jquery_ie', 'conditional', 'lte IE 10' );
 
 	if ( class_exists( 'WPCF7' ) ) {
-		wp_register_script( '_cf7scripts', MAINTENANCE_URI . '../contact-form-7/includes/js/scripts.js', '', MAINTENANCE_CACHE_TIME, true );
+		wp_register_script( '_cf7scripts', MTNC_URI . '../contact-form-7/includes/js/scripts.js', '', filemtime( MTNC_DIR . '../contact-form-7/includes/js/scripts.js' ), true );
 		$wpcf7 = array(
 			'apiSettings' => array(
 				'root'      => esc_url_raw( rest_url( 'contact-form-7/v1' ) ),
@@ -168,8 +168,8 @@ function add_custom_scripts() {
 		$js_options['body_bg'] = esc_url( $bg[0] );
 	}
 
-	$js_options['font_link'] = mt_add_google_fonts();
-	wp_localize_script( '_frontend', 'maintenanceoptions', $js_options );
+	$js_options['font_link'] = mtnc_add_google_fonts();
+	wp_localize_script( '_frontend', 'mtnc_front_options', $js_options );
 
 	$wp_scripts->do_items( 'jquery_ie' );
 	$wp_scripts->do_items( 'jquery_migrate_ie' );
@@ -190,23 +190,23 @@ function add_custom_scripts() {
 
 }
 
-add_action( 'load_custom_scripts', 'add_custom_scripts', 15 );
-add_action( 'load_custom_style', 'add_custom_style', 20 );
+add_action( 'load_custom_scripts', 'mtnc_add_custom_scripts', 15 );
+add_action( 'load_custom_style', 'mtnc_add_custom_style', 20 );
 
-function get_page_title( $error_message = null ) {
-	$mt_options = mt_get_plugin_options( true );
-	$title = '';
+function mtnc_get_page_title( $error_message = null ) {
+	$mt_options = mtnc_get_plugin_options( true );
+	$title      = '';
 	if ( empty( $mt_options['page_title'] ) ) {
 		$title = wp_title( '|', false );
 	} else {
 		$title = wp_strip_all_tags( stripslashes( $mt_options['page_title'] ) );
 	}
 
-	echo "<title>$title</title>";
+	echo "<title>$title</title>"; // phpcs:ignore WordPress.Security.EscapeOutput
 }
 
-function get_options_style() {
-	$mt_options    = mt_get_plugin_options( true );
+function mtnc_get_options_style() {
+	$mt_options    = mtnc_get_plugin_options( true );
 	$options_style = '';
 	if ( ! empty( $mt_options['body_bg_color'] ) ) {
 		$options_style .= 'body {background-color: ' . esc_attr( $mt_options['body_bg_color'] ) . '}';
@@ -253,13 +253,13 @@ function get_options_style() {
 	}
 
 	echo '<style type="text/css">';
-	echo $options_style;
+	echo $options_style; // phpcs:ignore WordPress.Security.EscapeOutput
 	echo '</style>';
 
 }
 
-function get_logo_box() {
-	$mt_options = mt_get_plugin_options( true );
+function mtnc_get_logo_box() {
+	$mt_options = mtnc_get_plugin_options( true );
 	$logo_w     = $logo_h = '';
 
 	if ( ! empty( $mt_options['logo_width'] ) ) {
@@ -285,18 +285,18 @@ function get_logo_box() {
 
 		?>
 		<div class="logo-box" rel="home">
-			<img src="<?php echo $image_link; ?>" srcset="<?php echo $image_link_retina; ?> 2x" width="<?php echo $logo_w; ?>" <?php echo ( ! empty( $logo_h ) ) ? 'height="' . $logo_h . '"' : ''; ?> alt="logo">
+			<img src="<?php echo esc_url( $image_link ); ?>" srcset="<?php echo esc_url( $image_link_retina ); ?> 2x" width="<?php echo esc_attr( $logo_w ); ?>" <?php echo ( ! empty( $logo_h ) ) ? 'height="' . esc_attr( $logo_h ) . '"' : ''; ?> alt="logo">
 		</div>
 		<?php
 	} else {
-		echo '<div class="logo-box istext" rel="home"><h1 class="site-title">' . get_bloginfo( 'name' ) . '</h1></div>';
+		echo '<div class="logo-box istext" rel="home"><h1 class="site-title">' . esc_html( get_bloginfo( 'name' ) ) . '</h1></div>';
 	}
 
 }
-add_action( 'logo_box', 'get_logo_box', 10 );
+add_action( 'logo_box', 'mtnc_get_logo_box', 10 );
 
-function get_content_section() {
-	$mt_options = mt_get_plugin_options( true );
+function mtnc_get_content_section() {
+	$mt_options = mtnc_get_plugin_options( true );
 	if ( ! empty( $mt_options['body_font_subset'] ) ) {
 		$current_subset = esc_attr( $mt_options['body_font_subset'] );
 		$font_weight    = (string) ( (int) $current_subset );
@@ -322,12 +322,12 @@ function get_content_section() {
 		$out_content     .= '<div class="description" style="font-weight:' . $font_weight . ';font-style:' . $font_style . '"><h3>' . $site_description . '</h3></div>';
 	}
 
-	echo $out_content;
+	echo $out_content; // phpcs:ignore WordPress.Security.EscapeOutput
 }
-add_action( 'content_section', 'get_content_section', 10 );
+add_action( 'content_section', 'mtnc_get_content_section', 10 );
 
-function get_footer_section() {
-	$mt_options = mt_get_plugin_options( true );
+function mtnc_get_footer_section() {
+	$mt_options = mtnc_get_plugin_options( true );
 	if ( ! empty( $mt_options['body_font_subset'] ) ) {
 		$current_subset = esc_attr( $mt_options['body_font_subset'] );
 		$font_weight    = (string) ( (int) $current_subset );
@@ -346,11 +346,11 @@ function get_footer_section() {
 	if ( isset( $mt_options['footer_text'] ) && ! empty( $mt_options['footer_text'] ) ) {
 		$out_ftext .= '<div style="font-weight:' . $font_weight . ';font-style:' . $font_style . '">' . wp_kses_post( stripslashes( $mt_options['footer_text'] ) ) . '</div>';
 	}
-	echo $out_ftext;
+	echo $out_ftext; // phpcs:ignore WordPress.Security.EscapeOutput
 }
-add_action( 'footer_section', 'get_footer_section', 10 );
+add_action( 'footer_section', 'mtnc_get_footer_section', 10 );
 
-function do_button_login_form( $error = -1 ) {
+function mtnc_do_button_login_form( $error = -1 ) {
 	?>
 	<div id="btn-open-login-form" class="btn-open-login-form">
 		<i class="fi-lock"></i>
@@ -363,8 +363,8 @@ function do_button_login_form( $error = -1 ) {
 
 }
 
-function do_login_form( $user_login, $class_login, $class_password, $error = null ) {
-	$mt_options     = mt_get_plugin_options( true );
+function mtnc_do_login_form( $user_login, $class_login, $class_password, $error = null ) {
+	$mt_options     = mtnc_get_plugin_options( true );
 	$out_login_form = $form_error = '';
 	if ( ( $class_login === 'error' ) || ( $class_password === 'error' ) ) {
 		$form_error = ' active error';
@@ -378,22 +378,23 @@ function do_login_form( $user_login, $class_login, $class_password, $error = nul
 	$out_login_form .= '<a class="lost-pass" href="' . esc_url( wp_lostpassword_url() ) . '" title="' . __( 'Lost Password', 'maintenance' ) . '">' . __( 'Lost Password', 'maintenance' ) . '</a>';
 	$out_login_form .= '<input type="submit" class="button" name="submit" id="submit" value="' . __( 'Login', 'maintenance' ) . '" tabindex="4" />';
 	$out_login_form .= '<input type="hidden" name="is_custom_login" value="1" />';
+	$out_login_form .= wp_nonce_field( 'mtnc_login', 'mtnc_login_check' );
 	$out_login_form .= '</form>';
 
 	if ( isset( $mt_options['is_login'] ) ) {
-		echo $out_login_form;
+		echo $out_login_form; // phpcs:ignore WordPress.Security.EscapeOutput
 	}
 }
 
-function reset_pass_url() {
+function mtnc_reset_pass_url() {
 	$args             = array( 'action' => 'lostpassword' );
 	$lostpassword_url = add_query_arg( $args, network_site_url( 'wp-login.php', 'login' ) );
 	return $lostpassword_url;
 }
-add_filter( 'lostpassword_url', 'reset_pass_url', 999, 0 );
+add_filter( 'lostpassword_url', 'mtnc_reset_pass_url', 999, 0 );
 
-function get_preloader_element() {
-	$mt_options = mt_get_plugin_options( true );
+function mtnc_get_preloader_element() {
+	$mt_options = mtnc_get_plugin_options( true );
 	if ( ! empty( $mt_options['preloader_img'] ) ) {
 		$preloader_img = wp_get_attachment_image_src( $mt_options['preloader_img'], 'full' );
 		$preloader_img = ! empty( $preloader_img ) ? $preloader_img[0] : false;
@@ -401,12 +402,12 @@ function get_preloader_element() {
 
 	$preloader = ! empty( $preloader_img ) ? '<img src="' . $preloader_img . '">' : '<i class="fi-widget" aria-hidden="true"></i>';
 	$out       = '<div class="preloader">' . $preloader . '</div>';
-	echo $out;
+	echo $out; // phpcs:ignore WordPress.Security.EscapeOutput
 }
-add_action( 'before_content_section', 'get_preloader_element', 5 );
+add_action( 'before_content_section', 'mtnc_get_preloader_element', 5 );
 
-function maintenance_gg_analytics_code() {
-	$mt_options = mt_get_plugin_options( true );
+function mtnc_gg_analytics_code() {
+	$mt_options = mtnc_get_plugin_options( true );
 	if ( ! isset( $mt_options['503_enabled'] ) && isset( $mt_options['gg_analytics_id'] ) && ( $mt_options['gg_analytics_id'] !== '' ) ) {
 		?>
 		<script type="text/javascript">
@@ -426,21 +427,21 @@ function maintenance_gg_analytics_code() {
 		<?php
 	}
 }
-add_action( 'add_gg_analytics_code', 'maintenance_gg_analytics_code' );
+add_action( 'add_gg_analytics_code', 'mtnc_gg_analytics_code' );
 
-function get_headers_503() {
-	$mt_options = mt_get_plugin_options( true );
+function mtnc_get_headers_503() {
+	$mt_options = mtnc_get_plugin_options( true );
 	nocache_headers();
 	if ( ! empty( $mt_options['503_enabled'] ) ) {
 		$protocol = 'HTTP/1.0';
-		if ( 'HTTP/1.1' === $_SERVER['SERVER_PROTOCOL'] ) {
+		if ( isset( $_SERVER['SERVER_PROTOCOL'] ) && 'HTTP/1.1' === $_SERVER['SERVER_PROTOCOL'] ) {
 			$protocol = 'HTTP/1.1';
 		}
 		header( "$protocol 503 Service Unavailable", true, 503 );
 
 		$v_curr_date_end = '';
-		$vdate_end     = date_i18n( 'Y-m-d', strtotime( current_time( 'mysql', 0 ) ) );
-		$vtime_end     = date_i18n( 'h:i a', strtotime( '12:00 pm' ) );
+		$vdate_end       = date_i18n( 'Y-m-d', strtotime( current_time( 'mysql', 0 ) ) );
+		$vtime_end       = date_i18n( 'h:i a', strtotime( '12:00 pm' ) );
 
 		if ( ! empty( $mt_options['expiry_date_end'] ) ) {
 			$vdate_end = $mt_options['expiry_date_end'];
@@ -450,7 +451,7 @@ function get_headers_503() {
 		}
 		if ( $mt_options['state'] && ( ! empty( $mt_options['expiry_date_end'] && ! empty( $mt_options['expiry_time_end'] ) ) ) ) {
 			$date_concat = $vdate_end . ' ' . $vtime_end;
-			$v_curr_date   = strtotime( $date_concat );
+			$v_curr_date = strtotime( $date_concat );
 			if ( strtotime( current_time( 'mysql', 0 ) ) < $v_curr_date ) {
 				header( 'Retry-After: ' . gmdate( 'D, d M Y H:i:s', $v_curr_date ) );
 			} else {

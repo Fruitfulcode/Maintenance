@@ -1,11 +1,11 @@
 <?php
 $mess_arr    = array();
 $ebody_class = null;
-$mess_arr    = get_custom_login_code();
+$mess_arr    = mtnc_get_custom_login_code();
 if ( ! empty( $mess_arr[0] ) ) {
 	$ebody_class = 'error';
 }
-$mt_options       = mt_get_plugin_options( true );
+$mt_options       = mtnc_get_plugin_options( true );
 $site_title       = get_bloginfo( 'title' );
 $site_description = get_bloginfo( 'description' );
 
@@ -31,51 +31,51 @@ if ( ! empty( $mt_options['bg_image_portrait'] ) ) {
 	$bg_image_portrait = wp_get_attachment_image_src( $mt_options['bg_image_portrait'], 'full' );
 	$bg_image_portrait = ! empty( $bg_image_portrait ) ? $bg_image_portrait[0] : false;
 }
-$google_fonts = mt_add_google_fonts();
+$google_fonts = mtnc_add_google_fonts();
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	<?php get_page_title(); ?>
+	<meta charset="<?php esc_attr( bloginfo( 'charset' ) ); ?>" />
+	<?php mtnc_get_page_title(); ?>
 	<?php
 	if ( function_exists( 'wp_site_icon' ) ) {
 		wp_site_icon();
 	}
 	?>
 	<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, minimum-scale=1">
-	<meta name="description" content="<?php echo $site_description; ?>"/>
+	<meta name="description" content="<?php echo esc_attr( $site_description ); ?>"/>
 	<meta http-equiv="X-UA-Compatible" content="" />
-	<meta property="og:site_name" content="<?php echo $site_title . ' - ' . $site_description; ?>"/>
-	<meta property="og:title" content="<?php echo $page_title; ?>"/>
+	<meta property="og:site_name" content="<?php echo esc_attr( $site_title ) . ' - ' . esc_attr( $site_description ); ?>"/>
+	<meta property="og:title" content="<?php echo esc_attr( $page_title ); ?>"/>
 	<meta property="og:type" content="Maintenance"/>
-	<meta property="og:url" content="<?php echo site_url(); ?>"/>
-	<meta property="og:description" content="<?php echo $page_description; ?>"/>
+	<meta property="og:url" content="<?php echo esc_url( site_url() ); ?>"/>
+	<meta property="og:description" content="<?php echo esc_attr( $page_description ); ?>"/>
 	<?php
 	if ( ! empty( $logo ) ) {
 		?>
-				<meta property="og:image" content="<?php echo $logo; ?>" />
-				<meta property="og:image:url" content="<?php echo $logo; ?>"/>
-				<meta property="og:image:secure_url" content="<?php echo $logo; ?>"/>
-				<meta property="og:image:type" content="<?php echo $logo_ext; ?>"/>
+				<meta property="og:image" content="<?php echo esc_url( $logo ); ?>" />
+				<meta property="og:image:url" content="<?php echo esc_url( $logo ); ?>"/>
+				<meta property="og:image:secure_url" content="<?php echo esc_url( $logo ); ?>"/>
+				<meta property="og:image:type" content="<?php echo esc_attr( $logo_ext ); ?>"/>
 			<?php
 	}
 	?>
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+	<link rel="pingback" href="<?php esc_url( bloginfo( 'pingback_url' ) ); ?>" />
 	<?php do_action( 'load_custom_style' ); ?>
 	<?php do_action( 'add_gg_analytics_code' ); ?>
 	<!--[if IE]>
 	<style type="text/css">
 
 	</style>
-	<script type="text/javascript" src="<?php echo MAINTENANCE_URI . 'load/js/jquery.backstretch.min.js'; ?>"></script>
+	<script type="text/javascript" src="<?php echo esc_url( MTNC_URI . 'load/js/jquery.backstretch.min.js' ); ?>"></script>
 	<![endif]-->
 	<?php
 	if ( ! empty( $google_fonts[1] ) ) {
-		echo '<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=' . $google_fonts[1] . '|' . $google_fonts[0] . '">';
+		echo '<link rel="stylesheet" href="' . esc_url( 'https://fonts.googleapis.com/css?family=' . esc_attr( $google_fonts[1] ) . '|' . esc_attr( $google_fonts[0] ) ) . '">';
 	} elseif ( ! empty( $google_fonts[0] ) ) {
-		echo '<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=' . $google_fonts[0] . '">';
+		echo '<link rel="stylesheet" href="' . esc_url( 'https://fonts.googleapis.com/css?family=' . esc_attr( $google_fonts[0] ) ) . '">';
 	}
 	?>
 </head>
@@ -114,9 +114,9 @@ $google_fonts = mt_add_google_fonts();
 			<?php
 			if ( ! empty( $bg_image_portrait ) ) :
 				?>
-				<source media="(max-width: 100vh)" srcset="<?php echo $bg_image_portrait; ?>">
+				<source media="(max-width: 100vh)" srcset="<?php echo esc_url( $bg_image_portrait ); ?>">
 			<?php endif; ?>
-			<img src="<?php echo $body_bg; ?>">
+			<img src="<?php echo esc_url( $body_bg ); ?>">
 		</picture>
 	<?php endif; ?>
 </div>
@@ -124,8 +124,8 @@ $google_fonts = mt_add_google_fonts();
 <?php do_action( 'after_main_container' ); ?>
 <?php if ( isset( $mt_options['is_login'] ) ) : ?>
 	<div class="login-form-container">
-		<?php do_login_form( esc_attr( $mess_arr[3] ), esc_attr( $mess_arr[1] ), esc_attr( $mess_arr[2] ), esc_attr( $mess_arr[0] ) ); ?>
-		<?php do_button_login_form(); ?>
+		<?php mtnc_do_login_form( esc_attr( $mess_arr[3] ), esc_attr( $mess_arr[1] ), esc_attr( $mess_arr[2] ), esc_attr( $mess_arr[0] ) ); ?>
+		<?php mtnc_do_button_login_form(); ?>
 	</div>
 <?php endif; ?>
 <?php do_action( 'load_options_style' ); ?>

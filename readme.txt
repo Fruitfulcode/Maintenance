@@ -4,7 +4,7 @@ Donate link: http://fruitfulcode.com/
 Tags: maintenance, maintenance mode, coming soon, splash page, under-construction, 503 error, administration, login, customize page, background, fullscreen, blur
 Requires at least: 3.5
 Tested up to: 5.2.2
-Stable tag: 3.6.4
+Stable tag: 3.7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,13 +38,13 @@ https://www.youtube.com/watch?v=Z5v9Ju52nmg
 
 
 <h3>Maintenance PRO</h3>
-<strong>Required Free version.</strong> All features from FREE version included + 
+<strong>Required Free version.</strong> All features from FREE version included +
 
 <ul>
 <li>Unique scheduler countdown</li>
 <li>User permissions</li>
 <li>Fullscreen background gallery</li>
-<li>Gallery patterns overlays</li> 
+<li>Gallery patterns overlays</li>
 <li>Background gallery with overlay</li>
 <li>Background video from media gallery</li>
 <li>Background video from Youtube/Vimeo</li>
@@ -108,7 +108,7 @@ Try to check in different browser. If you a logged as wordpress user you see web
 
 The site will not be visible to search engines. "503 Service Temporarily Unavailable" can be changed in plugin options.
 
-= Where can I find out the username and password to get to the site? = 
+= Where can I find out the username and password to get to the site? =
 
 You can use your administrator access or create new user in wordpress dashboard
 http://yousite.com/wp-admin/users.php
@@ -116,8 +116,12 @@ http://yousite.com/wp-admin/users.php
 = If I incorrectly write a login and password I will see the error on the page wp-login? =
 No, it will be display error on current maintenance page, without redirect to wp-login page
 
-= I haven’t found an answer to my question, what should I do? = 
+= I haven’t found an answer to my question, what should I do? =
 You can check <a href="http://wordpress.org/support/plugin/maintenance">support forum</a> or <a class="send-mail" target="_blank" href="mailto:mail@fruitfulcode.com?subject=Maintenance%20Plugin">send email to us</a>
+
+== Change log ==
+= 3.7.0 =
+- Improvement: Code optimization
 
 == Change log ==
 = 3.6.4 =
@@ -250,11 +254,11 @@ You can check <a href="http://wordpress.org/support/plugin/maintenance">support 
 * Bug fix: save content and settings if plugin disabled
 * Bug fix: if footer text is empty not showing text
 
-= 2.5 = 
+= 2.5 =
 * New: French translation
 * Update: WordPress 4.3 support
 * Bug fix: Footer and social media icons for mobiles
-* Bug fix: Exclude pages now by post id 
+* Bug fix: Exclude pages now by post id
 * Bug fix: Check exclude pages with empty reading options
 
 = 2.4 =
@@ -291,12 +295,12 @@ You can check <a href="http://wordpress.org/support/plugin/maintenance">support 
 * Added scroll for extra height
 * Translation updates
 
-= 2.1 = 
+= 2.1 =
 * New option Login on/off
 * New option Google Analytics field
 * Responsive bug fix
 
-= 2.0.1 = 
+= 2.0.1 =
 * New translation Brazilian Portuguese
 * Bug fix in title
 * Bug fix blur background image scroll
@@ -314,7 +318,7 @@ You can check <a href="http://wordpress.org/support/plugin/maintenance">support 
 
 = 1.2.3 =
 * Wordpress 3.6 support
-* Bug fix 
+* Bug fix
 * Warning Messages, open_basedir conflict - resolved.
 
 = 1.2.2 =

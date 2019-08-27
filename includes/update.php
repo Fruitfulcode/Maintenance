@@ -1,35 +1,35 @@
 <?php
 
-add_action( 'admin_init', 'maintenance_version_check' );
-function maintenance_version_check() {
-	$old_version = get_option( 'maintenance_db_version' );
+add_action( 'admin_init', 'mtnc_version_check' );
+function mtnc_version_check() {
+	$old_version = get_option( 'mtnc_db_version' );
 	$options     = get_option( 'maintenance_options' );
 
 	if ( empty( $old_version ) && false === $options ) {
-		maintenance_install();
+		mtnc_install();
 	} elseif ( empty( $old_version ) && ! empty( $options ) ) {
-		maintenance_update();
-	} elseif ( (int) $old_version < MAINTENANCE_DB_VERSION ) {
-		maintenance_update();
+		mtnc_update();
+	} elseif ( (int) $old_version < MTNC_DB_VERSION ) {
+		mtnc_update();
 	}
 }
 
-function maintenance_install() {
-    $options = mt_get_plugin_options();
-    add_option( 'maintenance_db_version', MAINTENANCE_DB_VERSION );
-    add_option( 'maintenance_options', $options );
+function mtnc_install() {
+	$options = mtnc_get_plugin_options();
+	add_option( 'mtnc_db_version', MTNC_DB_VERSION );
+	add_option( 'maintenance_options', $options );
 }
 
-function maintenance_update() {
-    $options  = mt_get_plugin_options();
-    $settings = get_option( 'maintenance_options' );
+function mtnc_update() {
+	$options  = mtnc_get_plugin_options();
+	$settings = get_option( 'maintenance_options' );
 
-    update_option( 'maintenance_db_version', MAINTENANCE_DB_VERSION );
+	update_option( 'mtnc_db_version', MTNC_DB_VERSION );
 
-    foreach ( $options as $key => $value ) {
-        if ( ! isset( $settings[ $key ] ) ) {
-            $settings[ $key ] = $value;
-        }
-    }
-    update_option( 'maintenance_options', $options );
+	foreach ( $options as $key => $value ) {
+		if ( ! isset( $settings[ $key ] ) ) {
+			$settings[ $key ] = $value;
+		}
+	}
+	update_option( 'maintenance_options', $options );
 }
